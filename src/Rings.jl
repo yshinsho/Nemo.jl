@@ -6,7 +6,7 @@
 
 import Base: length, call, exp, promote_rule, zero, one, show, divrem, mod, hash, factor
 
-export Ring, Field, RingElem
+export Ring, Field, RingElem, Fraction
 
 export PolyElem
 
@@ -154,7 +154,31 @@ include("fmpz_poly.jl")
 
 # include("PariRings.jl")
 
-include("Fields.jl")
+
+# temporarily define these so that Fields.jl and Fraction.jl don't have to be loaded
+FractionDict = ObjectIdDict()
+
+type FractionField{T <:RingElem} <: Field
+   base_ring::Ring
+
+   function FractionField(R::Ring)
+      return try
+         FractionDict[R]
+      catch
+         FractionDict[R] = new(R)
+      end
+   end
+end
+
+type Fraction{T <: RingElem} <: FieldElem
+   num::T
+   den::T
+   parent::FractionField{T}
+
+   Fraction(num::T, den::T) = new(num, den) 
+end
+
+# include("Fields.jl")
 
 # include("PariFields.jl")
 
