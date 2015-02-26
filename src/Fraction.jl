@@ -161,14 +161,14 @@ end
 #
 ###########################################################################################
 
-function +{T <: RingElem}(a::Fraction{T}, b::Fraction{T})
-   num = a.num*b.den + b.num*a.den
-   den = a.den*b.den
-   g = gcd(num, den)
-   z = Fraction{T}(divexact(num, g), divexact(den, g))
-   z.parent = parent(a)
-   return z
-end
+#function +{T <: RingElem}(a::Fraction{T}, b::Fraction{T})
+#   num = a.num*b.den + b.num*a.den
+#   den = a.den*b.den
+#   g = gcd(num, den)
+#   z = Fraction{T}(divexact(num, g), divexact(den, g))
+#   z.parent = parent(a)
+#   return z
+#end
 
 function -{T <: RingElem}(a::Fraction{T}, b::Fraction{T})
    num = a.num*b.den - b.num*a.den
@@ -234,14 +234,14 @@ function *{T <: RingElem}(a::T, b::Fraction{T})
    return z
 end
 
-function +{T <: RingElem}(a::Fraction{T}, b::Integer)
-   num = a.num + a.den*b
-   den = a.den
-   g = gcd(num, den)
-   z = Fraction{T}(divexact(num, g), divexact(den, g))
-   z.parent = parent(a)
-   return z
-end
+#function +{T <: RingElem}(a::Fraction{T}, b::Integer)
+#   num = a.num + a.den*b
+#   den = a.den
+#   g = gcd(num, den)
+#   z = Fraction{T}(divexact(num, g), divexact(den, g))
+#   z.parent = parent(a)
+#   return z
+#end
 
 function -{T <: RingElem}(a::Fraction{T}, b::Integer)
    num = a.num - a.den*b
@@ -252,7 +252,7 @@ function -{T <: RingElem}(a::Fraction{T}, b::Integer)
    return z
 end
 
-+{T <: RingElem}(a::Integer, b::Fraction{T}) = b + a
+# +{T <: RingElem}(a::Integer, b::Fraction{T}) = b + a
 
 function -{T <: RingElem}(a::Integer, b::Fraction{T})
    num = a*b.den - b.num
@@ -263,14 +263,14 @@ function -{T <: RingElem}(a::Integer, b::Fraction{T})
    return z
 end
 
-function +{T <: RingElem}(a::Fraction{T}, b::T)
-   num = a.num + a.den*b
-   den = a.den
-   g = gcd(num, den)
-   z = Fraction{T}(divexact(num, g), divexact(den, g))
-   z.parent = parent(a)
-   return z
-end
+#function +{T <: RingElem}(a::Fraction{T}, b::T)
+#   num = a.num + a.den*b
+#   den = a.den
+#   g = gcd(num, den)
+#   z = Fraction{T}(divexact(num, g), divexact(den, g))
+#   z.parent = parent(a)
+#   return z
+#end
 
 function -{T <: RingElem}(a::Fraction{T}, b::T)
    num = a.num - a.den*b
@@ -281,7 +281,7 @@ function -{T <: RingElem}(a::Fraction{T}, b::T)
    return z
 end
 
-+{T <: RingElem}(a::T, b::Fraction{T}) = b + a
+#+{T <: RingElem}(a::T, b::Fraction{T}) = b + a
 
 function -{T <: RingElem}(a::T, b::Fraction{T})
    num = a*b.den - b.num
