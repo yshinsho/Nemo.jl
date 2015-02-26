@@ -141,7 +141,10 @@ end
 
 include("ZZ.jl")
 
-include("Residue.jl")
+# include("Residue.jl")
+
+type Residue{S} <: RingElem # temporarily do this so Residue.jl doesn't have to be loaded
+end
 
 include("Poly.jl")
 
