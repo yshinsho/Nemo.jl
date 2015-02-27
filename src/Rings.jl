@@ -25,13 +25,15 @@ abstract MatElem <: RingElem
 
 function +{S <: RingElem, T <: RingElem}(x::S, y::T) 
    T1 = promote_type(S, T)
+   ret::T1
    if S == T1
-      +(x, parent(x)(y))
+      ret = +(x, parent(x)(y))
    elseif T == T1
-      +(parent(y)(x), y)
+      ret = +(parent(y)(x), y)
    else
       error("Unable to promote ", S, " and ", T, " to common type")
    end
+   return ret
 end
 
 function +{S <: RingElem, T <: Integer}(x::S, y::T) 
