@@ -253,6 +253,140 @@ function -{T <: RingElem}(a::Poly{T}, b::Poly{T})
    return z
 end
 
+function fft{T <: FieldElem}(A::Array{Poly{T}, 1}, m::Int, n::Int, s::Int, i::Int, x::Poly{T})
+   if n == 2
+      t = A[s + 1] + A[s + 2]
+      A[s + 2] = A[s + 1] - A[s + 2]
+      A[s + 1] = t
+      return
+   end
+   y = x^i
+   n2 = div(n, 2)
+   for j = 1:n2
+      t = A[s + j] + A[s + j + n2]
+      A[s + j + n2] = (A[s + j] - A[s + j + n2])*y
+      c = A[s + j + n2]
+      len = length(c)
+      if (len > 2m)
+         for k = 1:len - 2m
+            setcoeff!(c, k - 1, coeff(c, k - 1) - coeff(c, 2m + k - 1))
+         end
+         set_length!(c, normalise(c, 2m))
+      end
+      A[s + j] = t
+   end
+   fft(A, m, n2, s + 0, 2i, x)
+   fft(A, m, n2, s + n2, 2i, x)
+end
+
+function mul_fft{T <: FieldElem}(a::Poly{T}, b::Poly{T})
+   lena = length(a)
+   #lenb = length(b)
+  
+   lenr = 2*lena - 1
+   n = 2*nextpow2(isqrt(lenr))
+   m = nextpow2(div(lenr, n))
+   
+   A1 = Array(Poly{T}, n)
+   #A2 = Array(Poly{T}, n)
+   
+   i = 0
+   k = 1
+   while i < lenr
+      S1 = Array(T, m)
+     # S2 = Array(T, m)
+      for j = 1:m
+         S1[j] = coeff(a, i + j - 1)
+        # S2[j] = coeff(b, i + j - 1)
+      end
+      A1[k] = parent(a)(S1)
+      #A2[k] = parent(a)(S2)
+      i += m
+      k += 1
+   end
+   while k <= n
+      A1[k] = parent(a)()
+      #A2[k] = parent(a)()
+      k += 1
+   end
+
+   x = gen(parent(a))
+   fft(A1, m, n, 0, 1, x)
+   #fft(A2, m, n, 0, 1, x)
+
+   for i = 1:n
+      A1[i] *= A1[i]
+      c = A1[i]
+      len = length(c)
+      if (len > 2m)
+         for k = 1:len - 2m
+            setcoeff!(c, k - 1, coeff(c, k - 1) - coeff(c, 2m + k - 1))
+         end
+         set_length!(c, normalise(c, 2m))
+      end
+   end
+
+   fft(A1, m, n, 0, 1, x)
+end 
+
+function mul_karatsuba{T <: RingElem}(a::Poly{T}, b::Poly{T})
+   # we assume len(a) != 0 != lenb and parent(a) == parent(b)
+
+   lena = length(a)
+   lenb = length(b)
+
+   m = div(max(lena, lenb) + 1, 2)
+
+   if m < lena
+      a1 = shift_right(a, m)
+      a0 = truncate(a, m)
+   else
+      return a*truncate(b, m) + shift_left(a*shift_right(b, m), m)
+   end
+
+   if a !== b
+      if m < lenb
+         b1 = shift_right(b, m)
+         b0 = truncate(b, m)
+      else
+         return b*truncate(a, m) + shift_left(b*shift_right(a, m), m)
+      end
+   else
+      b1 = a1
+      b0 = a0
+   end
+
+   z0 = a0*b0
+   z2 = a1*b1
+   if a !== b
+      z1 = (a1 + a0)*(b1 + b0) - z2 - z0
+   else
+      s = a1 + a0
+      z1 = s*s - z2 - z0
+   end
+
+   A = Array(T, lena + lenb - 1)
+
+   for i = 1:length(z0)
+      A[i] = coeff(z0, i - 1)
+   end
+   for i = length(z0) + 1:2m
+      A[i] = base_ring(a)()
+   end
+
+   for i = 1:length(z2)
+      A[2m + i] = coeff(z2, i - 1)
+   end
+
+   r = parent(a)(A)
+
+   for i = 1:length(z1)
+      addeq!(r.coeffs[i + m], coeff(z1, i - 1))
+   end
+
+   return r
+end
+
 function *{T <: RingElem}(a::Poly{T}, b::Poly{T})
    check_parent(a, b)
    lena = length(a)
