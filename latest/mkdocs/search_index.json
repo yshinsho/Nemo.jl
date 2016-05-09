@@ -1,0 +1,24 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "Nemo\n\n\n\n\nIntroduction\n\n\nNemo is a computer algebra package for the Julia programming language, maintained by William Hart with code by William Hart, Tommy Hofmann, Claus Fieker, Fredrik Johansson, Oleksandr Motsak and other contributors.\n\n\n\n\nhttps://github.com/Nemocas/Nemo.jl\n (Source code)\n\n\nhttp://nemo.readthedocs.org/en/latest/\n (Online documentation)\n\n\n\n\nThe features of Nemo so far include:\n\n\n\n\nMultiprecision integers and rationals\n\n\nIntegers modulo n\n\n\np-adic numbers\n\n\nFinite fields (prime and non-prime order)\n\n\nNumber field arithmetic\n\n\nMaximal orders of number fields\n\n\nArithmetic of ideals in maximal orders\n\n\nArbitrary precision real and complex balls\n\n\nGeneric polynomials, power series, fraction fields, residue rings and matrices\n\n\n\n\n\n\nInstallation\n\n\nTo use Nemo we require Julia 0.4 or higher. Please see \nhttp://julialang.org/downloads\n for instructions on how to obtain julia for your system.\n\n\nAt the Julia prompt simply type\n\n\njulia\n Pkg.add(\nNemo\n)\njulia\n Pkg.build(\nNemo\n)", 
+            "title": "Getting Started"
+        }, 
+        {
+            "location": "/#nemo", 
+            "text": "", 
+            "title": "Nemo"
+        }, 
+        {
+            "location": "/#introduction", 
+            "text": "Nemo is a computer algebra package for the Julia programming language, maintained by William Hart with code by William Hart, Tommy Hofmann, Claus Fieker, Fredrik Johansson, Oleksandr Motsak and other contributors.   https://github.com/Nemocas/Nemo.jl  (Source code)  http://nemo.readthedocs.org/en/latest/  (Online documentation)   The features of Nemo so far include:   Multiprecision integers and rationals  Integers modulo n  p-adic numbers  Finite fields (prime and non-prime order)  Number field arithmetic  Maximal orders of number fields  Arithmetic of ideals in maximal orders  Arbitrary precision real and complex balls  Generic polynomials, power series, fraction fields, residue rings and matrices", 
+            "title": "Introduction"
+        }, 
+        {
+            "location": "/#installation", 
+            "text": "To use Nemo we require Julia 0.4 or higher. Please see  http://julialang.org/downloads  for instructions on how to obtain julia for your system.  At the Julia prompt simply type  julia  Pkg.add( Nemo )\njulia  Pkg.build( Nemo )", 
+            "title": "Installation"
+        }
+    ]
+}
