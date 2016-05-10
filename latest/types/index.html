@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="William Hart">
+  
+  <title>Types in Nemo - Nemo.jl</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link href="../build/assets/Documenter.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Types in Nemo";
+    var mkdocs_page_input_path = "types.md";
+    var mkdocs_page_url = "/types/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+  <script src="../mathjaxhelper.js"></script>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Nemo.jl</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Getting Started</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../about/">About Nemo</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Types in Nemo</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#types-in-nemo">Types in Nemo</a></li>
+                
+                    <li><a class="toctree-l4" href="#introduction">Introduction</a></li>
+                
+                    <li><a class="toctree-l4" href="#the-abstract-type-hierarchy-in-nemo">The abstract type hierarchy in Nemo</a></li>
+                
+                    <li><a class="toctree-l4" href="#parent-objects-in-nemo">Parent objects in Nemo</a></li>
+                
+                    <li><a class="toctree-l4" href="#concrete-types-in-nemo">Concrete types in Nemo</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Nemo.jl</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Types in Nemo</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/Nemocas/Nemo.jl" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="types-in-nemo">Types in Nemo</h1>
+<h2 id="introduction">Introduction</h2>
+<p>Julia provides two levels of types that we make use of</p>
+<ul>
+<li>abstract types</li>
+<li>concrete types</li>
+</ul>
+<p>Concrete types are just like the usual types everyone is familiar with from C or C++.</p>
+<p>Abstract types can be thought of as collections of types. They are used when writing generic functions
+that should work for any type in the given collection.</p>
+<p>To write a generic function that accepts any type in a given collection of types, we first create an
+abstract type. Then we create the individual concrete types that belong to that abstract type. A generic
+function is then constructed with a type parameter, <code>T</code> say, similar to a template class in C++. The main
+difference is that we can specify which abstract type our type parameter <code>T</code> must belong to.</p>
+<p>We use the symbol &lt;: in Julia to determine that a given type belongs to a given abstract type. </p>
+<p>Here is some Julia code illustrating this. We create an abstract type called <code>Shape</code> and two user defined
+concrete types <code>square</code> and <code>circle</code> belonging to <code>Shape</code>. We then show how to write methods for the
+concrete types and also how to write a generic function for any type <code>T</code> belonging to the abstract type
+<code>Shape</code>.</p>
+<pre><code>abstract Shape
+
+type square &lt;: Shape
+   width::Int
+   border_thickness::Int
+end
+
+type circle &lt;: Shape
+   centre::Tuple{Int, Int}
+   radius::Int
+   border_thickness::Int
+end
+
+function area(s::square)
+   return s.width^2
+end
+
+function area(s::circle)
+   return pi*s.radius^2
+end
+
+function border_thickness{T &lt;: Shape}(s::T)
+   return s.border_thickness
+end
+
+s = square(3, 1)
+c = circle((3, 4), 2, 2)
+
+area(s)
+area(c)
+border_thickness(s)
+</code></pre>
+
+<h2 id="the-abstract-type-hierarchy-in-nemo">The abstract type hierarchy in Nemo</h2>
+<p>Abstract types in Julia can also belong to one another in a hierarchy. For example, the <code>Nemo.Field</code>
+abstract type belongs to the <code>Nemo.Ring</code> abstract type. This means that any object representing a field
+in Nemo has a type belonging to both <code>Nemo.Field</code> and <code>Nemo.Ring</code>, the latter automatically because of
+the inclusion <code>Nemo.Field &lt;: Nemo.Ring</code>.</p>
+<p>In Nemo we also distinguish between the elements of a field, say, and the field itself. For example,
+we have an object of type <code>PolynomialRing</code> to model a generic polynomial ring, and elements of that 
+polynomial ring would have type <code>Poly</code>. </p>
+<p>In order to model this distinction between elements and the domains they belong to, Nemo has two main
+branches in its abstract type hierarchy, as shown in the following diagram.</p>
+<p><img alt="alt text" src="../img/types.png" title="Abstract type hierarchy" /></p>
+<p>All objects in Nemo, whether they represent rings, fields, groups, sets on the one hand, or ring
+elements, field elements, etc. on the other hand, have concrete types that belong to one of the abstract
+types shown above.</p>
+<h2 id="parent-objects-in-nemo">Parent objects in Nemo</h2>
+<p>The Julia type system doesn't directly provide us with a way of modeling that an object of type <code>Poly</code>
+belongs to a given polynomial ring (represented by an object of type <code>PolynomialRing</code> in Nemo).</p>
+<p>In order to model this relationship, we provide a function <code>parent</code>, which tells us which domain a given
+element belongs to.</p>
+<p>Here is some Julia/Nemo code which constructs a polynomial ring over the integers, a polynomial in that
+ring and then does some introspection to illustrate the various relations between the objects and types.</p>
+<pre><code>julia&gt; using Nemo
+
+julia&gt; R, x = ZZ[&quot;x&quot;]
+(Univariate Polynomial Ring in x over Integer Ring,x)
+
+julia&gt; f = x^2 + 3x + 1
+x^2+3*x+1
+
+julia&gt; typeof(R)
+Nemo.FmpzPolyRing
+
+julia&gt; typeof(f)
+Nemo.fmpz_poly
+
+julia&gt; parent(f)
+Univariate Polynomial Ring in x over Integer Ring
+
+julia&gt; typeof(R) &lt;: FmpzPolyRing
+true
+
+julia&gt; typeof(f) &lt;: PolyElem
+true
+
+julia&gt; parent(f) == R
+true
+</code></pre>
+
+<h2 id="concrete-types-in-nemo">Concrete types in Nemo</h2>
+<p>Finally we come to all the concrete types in Nemo. Although types are rarely dealt with directly when
+using Nemo, they are of interest to developers. So we list them here.</p>
+<p>These are of two main kinds: those for generic constructions (e.g. generic polynomials over an arbitrary
+ring) and those for specific implementations, usually provided by a C library (e.g. polynomials over the
+integers, provided by Flint).</p>
+<p>We give the type of each kind of element available in Nemo. In parentheses we list the concrete types
+of their corresponding parent objects.</p>
+<p>All the generic types are parameterised by the type <code>T</code> of the elements of the ring they are defined
+over.</p>
+<ul>
+<li>
+<p>Generic</p>
+<ul>
+<li><code>Poly{T}</code> (<code>PolynomialRing{T}</code>)</li>
+<li><code>PowerSeries{T}</code> (<code>PowerSeriesRing{T}</code>)</li>
+<li><code>Residue{T}</code> (<code>ResidueRing{T}</code>)</li>
+<li><code>Fraction{T}</code> (<code>FractionField{T}</code>)</li>
+<li><code>Mat{T}</code> (<code>MatrixSpace{T}</code>)</li>
+</ul>
+</li>
+<li>
+<p>Flint</p>
+<ul>
+<li><code>fmpz</code> (<code>FlintIntegerRing</code>)</li>
+<li><code>fmpq</code> (<code>FlintRationalField</code>)</li>
+<li><code>fq_nmod</code> (<code>FqNmodFiniteField</code>)</li>
+<li><code>fq</code> (<code>FqFiniteField</code>)</li>
+<li><code>padic</code> (<code>FlintPadicField</code>)</li>
+<li><code>fmpz_poly</code> (<code>FmpzPolyRing</code>)</li>
+<li><code>fmpq_poly</code> (<code>FmpqPolyRing</code>)</li>
+<li><code>nmod_poly</code> (<code>NmodPolyRing</code>)</li>
+<li><code>fmpz_mod_poly</code> (<code>FmpzModPolyRing</code>)</li>
+<li><code>fq_poly</code> (<code>FqPolyRing</code>)</li>
+<li><code>fq_nmod_poly</code> (<code>FqNmodPolyRing</code>)</li>
+<li><code>fmpz_series</code> (<code>FmpzSeriesRing</code>)</li>
+<li><code>fmpq_series</code> (<code>FmpqSeriesRing</code>)</li>
+<li><code>fmpz_mod_series</code> (<code>FmpzModSeriesRing</code>)</li>
+<li><code>fq_nmod_series</code> (<code>FqNmodSeriesRing</code>)</li>
+<li><code>fq_series</code> (<code>FqSeriesRing</code>)</li>
+<li><code>fmpz_mat</code> (<code>FmpzMatSpace</code>)</li>
+<li><code>nmod_mat</code> (<code>NmodMatSpace</code>)</li>
+<li><code>perm</code> (<code>FlintPermGroup</code>)</li>
+</ul>
+</li>
+<li>
+<p>Antic</p>
+<ul>
+<li><code>nf_elem</code> (<code>AnticNumberField</code>)</li>
+</ul>
+</li>
+<li>
+<p>Arb</p>
+<ul>
+<li><code>arb</code> (<code>ArbField</code>)</li>
+<li><code>acb</code> (<code>AcbField</code>)</li>
+</ul>
+</li>
+<li>
+<p>Pari</p>
+<ul>
+<li><code>pari_int</code> (<code>PariIntegerRing</code>)</li>
+<li><code>pari_rat</code> (<code>PariRationalField</code>)</li>
+<li><code>pari_vec{T}</code> (<code>PariVector{T}</code>)</li>
+<li><code>pari_poly{T}</code> (<code>PariPolyRing{T}</code>)</li>
+<li><code>pari_polmod{T}</code> (<code>PariPolModRing{T}</code>)</li>
+<li><code>pari_maximal_order_elem</code> (<code>PariMaximalOrder</code>)</li>
+<li><code>PariIdeal</code> (<code>PariIdealSet</code>)</li>
+<li>no element type (<code>PariNumberField</code>)</li>
+<li><code>PariFactor{T}</code> (no parent type)</li>
+</ul>
+</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../about/" class="btn btn-neutral" title="About Nemo"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/Nemocas/Nemo.jl" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../about/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+
+</body>
+</html>
