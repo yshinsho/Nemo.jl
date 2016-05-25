@@ -208,7 +208,7 @@ type of such an object also automatically belongs to <code>Nemo.Ring</code>. Thi
 Nemo which is designed to work with ring objects will certainly also work with field objects.</p>
 <p>In Nemo we also distinguish between the elements of a field, say, and the field itself, and similarly
 for groups and rings and all other kinds of domains in Nemo. For example, we have an object of type
-<code>GenPolynomialRing</code> to model a generic polynomial ring, and elements of that polynomial ring would have
+<code>GenPolyRing</code> to model a generic polynomial ring, and elements of that polynomial ring would have
 type <code>GenPoly</code>. </p>
 <p>In order to model this distinction between elements and the domains they belong to, Nemo has two main
 branches in its abstract type hierarchy, as shown in the following diagram. One branch consists of the
@@ -275,7 +275,7 @@ Nemo.fmpz_poly
 julia&gt; parent(f)
 Univariate Polynomial Ring in x over Integer Ring
 
-julia&gt; typeof(R) &lt;: FmpzPolyRing
+julia&gt; typeof(R) &lt;: PolyRing
 true
 
 julia&gt; typeof(f) &lt;: PolyElem
@@ -295,20 +295,19 @@ their corresponding parent objects. Note that these are the types of the element
 objects respectively, not the abstract types to which these types belong, which the reader can easily
 guess. </p>
 <p>For example, <code>fmpz</code> belongs to the abstract type <code>RingElem</code> and <code>FlintIntegerRing</code> belongs to <code>Ring</code>.
-Similarly <code>Poly{T}</code> belongs to <code>PolyElem</code> whereas <code>PolynomialRing{T}</code> belongs to <code>Ring</code>. We also have
-that <code>fmpz_poly</code> belongs to <code>PolyElem</code> and <code>FmpzPolyRing</code> belongs to <code>Ring</code>, and so on.</p>
+Similarly <code>Poly{T}</code> belongs to <code>PolyElem</code> whereas <code>PolynomialRing{T}</code> belongs to <code>PolyRing</code>. We also
+have that <code>fmpz_poly</code> belongs to <code>PolyElem</code> and <code>FmpzPolyRing</code> belongs to <code>PolyRing</code>, and so on.</p>
 <p>All the generic types are parameterised by a type <code>T</code> which is the type of the <em>elements</em> of the ring
-they are defined over. For example, a polynomial ring over the Flint integers <code>fmpz</code> would have type
-<code>PolynomialRing{fmpz}</code>, thus in that example the type parameter <code>T</code> would be instantiated as <code>fmpz</code>.</p>
+they are defined over. </p>
 <ul>
 <li>
 <p>Generic</p>
 <ul>
-<li><code>GenPoly{T}</code> (<code>GenPolynomialRing{T}</code>)</li>
-<li><code>GenCapRelSeries{T}</code> (<code>GenCapRelPowerSeriesRing{T}</code>)</li>
-<li><code>GenResidue{T}</code> (<code>GenResidueRing{T}</code>)</li>
-<li><code>GenFraction{T}</code> (<code>GenFractionField{T}</code>)</li>
-<li><code>GenMat{T}</code> (<code>GenMatrixSpace{T}</code>)</li>
+<li><code>GenPoly{T}</code> (<code>GenPolyRing{T}</code>)</li>
+<li><code>GenRelSeries{T}</code> (<code>GenRelSeriesRing{T}</code>)</li>
+<li><code>GenRes{T}</code> (<code>GenResRing{T}</code>)</li>
+<li><code>GenFrac{T}</code> (<code>GenFracField{T}</code>)</li>
+<li><code>GenMat{T}</code> (<code>GenMatSpace{T}</code>)</li>
 </ul>
 </li>
 <li>
