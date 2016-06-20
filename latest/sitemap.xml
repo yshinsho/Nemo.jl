@@ -4,7 +4,7 @@
     
     <url>
      <loc>None/</loc>
-     <lastmod>2016-06-17</lastmod>
+     <lastmod>2016-06-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -12,7 +12,7 @@
     
     <url>
      <loc>None/about/</loc>
-     <lastmod>2016-06-17</lastmod>
+     <lastmod>2016-06-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -20,7 +20,7 @@
     
     <url>
      <loc>None/types/</loc>
-     <lastmod>2016-06-17</lastmod>
+     <lastmod>2016-06-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -28,7 +28,7 @@
     
     <url>
      <loc>None/constructors/</loc>
-     <lastmod>2016-06-17</lastmod>
+     <lastmod>2016-06-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -36,7 +36,7 @@
     
     <url>
      <loc>None/build/polynomial/</loc>
-     <lastmod>2016-06-17</lastmod>
+     <lastmod>2016-06-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -44,7 +44,7 @@
     
     <url>
      <loc>None/build/series/</loc>
-     <lastmod>2016-06-17</lastmod>
+     <lastmod>2016-06-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -52,7 +52,7 @@
     
     <url>
      <loc>None/build/residue/</loc>
-     <lastmod>2016-06-17</lastmod>
+     <lastmod>2016-06-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -60,7 +60,15 @@
     
     <url>
      <loc>None/build/fraction/</loc>
-     <lastmod>2016-06-17</lastmod>
+     <lastmod>2016-06-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>None/build/matrix/</loc>
+     <lastmod>2016-06-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     

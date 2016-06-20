@@ -153,6 +153,13 @@
     </li>
 <li>
           
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../matrix/">Matrices</a>
+        
+    </li>
+<li>
+          
         </ul>
       </div>
       &nbsp;
@@ -278,7 +285,7 @@
 <blockquote>
 <p>Return a tuple <script type="math/tex">(S, x)</script> consisting of the parent object <code>S</code> of a power series ring over the given base ring and a generator <code>x</code> for the power series ring. The maximum relative precision of power series in the ring is set to <code>prec</code>. The supplied string <code>s</code> specifies the way the generator of the power series ring will be printed. By default, the parent object <code>S</code> will be cached so that supplying the same base ring, string and precision in future will return the same parent object and generator. If caching of the parent object is not required, <code>cached</code> can be set to <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/RelSeries.jl#L1102' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/RelSeries.jl#L1102' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of creating a power series ring using the constructor and using the resulting parent object to coerce various elements into the power series ring.</p>
 <pre><code>R, t = PolynomialRing(QQ, &quot;t&quot;)
 S, x = PowerSeriesRing(R, 30, &quot;x&quot;)
@@ -302,7 +309,7 @@ f = S()
 <blockquote>
 <p>Returns <script type="math/tex">0 + O(x^\mbox{deg}(a))</script>. Usually this function is called with <script type="math/tex">x^n</script> as parameter. Then the function returns the power series <script type="math/tex">0 + O(x^n)</script>, which can be used to set the precision of a power series when constructing it.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/RelSeries.jl#L16' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/RelSeries.jl#L16' class='documenter-source'>source</a><br></p>
 <p>In addition we provide the following functions for constructing certain useful polynomials.</p>
 <p><a id='Base.zero-Tuple{Nemo.SeriesRing}' href='#Base.zero-Tuple{Nemo.SeriesRing}'>#</a>
 <strong><code>Base.zero</code></strong> &mdash; <em>Method</em>.</p>
@@ -312,7 +319,7 @@ f = S()
 <blockquote>
 <p>Return <script type="math/tex">0 + O(x^n)</script> where <script type="math/tex">n</script> is the maximum precision of the power series ring <script type="math/tex">R</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/RelSeries.jl#L108' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/RelSeries.jl#L108' class='documenter-source'>source</a><br></p>
 <p><a id='Base.one-Tuple{Nemo.SeriesRing}' href='#Base.one-Tuple{Nemo.SeriesRing}'>#</a>
 <strong><code>Base.one</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>zero(R::SeriesRing)
@@ -321,7 +328,7 @@ f = S()
 <blockquote>
 <p>Return <script type="math/tex">1 + O(x^n)</script> where <script type="math/tex">n</script> is the maximum precision of the power series ring <script type="math/tex">R</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/RelSeries.jl#L115' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/RelSeries.jl#L115' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.gen-Tuple{Nemo.SeriesRing}' href='#Nemo.gen-Tuple{Nemo.SeriesRing}'>#</a>
 <strong><code>Nemo.gen</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>zero(R::SeriesRing)
@@ -330,7 +337,7 @@ f = S()
 <blockquote>
 <p>Return the generator of the power series ring, i.e. <script type="math/tex">x + O(x^{n + 1})</script> where <script type="math/tex">n</script> is the maximum precision of the power series ring <script type="math/tex">R</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/RelSeries.jl#L122' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/RelSeries.jl#L122' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of constructing power series.</p>
 <pre><code>R, t = PolynomialRing(QQ, &quot;t&quot;)
 S, x = PowerSeriesRing(R, 30, &quot;x&quot;)
@@ -443,7 +450,7 @@ S(n::fmpz)
 <blockquote>
 <p>Return the base ring of the given power series ring.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/RelSeries.jl#L38' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/RelSeries.jl#L38' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.base_ring-Tuple{Nemo.SeriesElem}' href='#Nemo.base_ring-Tuple{Nemo.SeriesElem}'>#</a>
 <strong><code>Nemo.base_ring</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>base_ring(a::SeriesElem)
@@ -452,7 +459,7 @@ S(n::fmpz)
 <blockquote>
 <p>Return the base ring of the power series ring of the given power series.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/RelSeries.jl#L44' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/RelSeries.jl#L44' class='documenter-source'>source</a><br></p>
 <p><a id='Base.parent-Tuple{Nemo.SeriesElem}' href='#Base.parent-Tuple{Nemo.SeriesElem}'>#</a>
 <strong><code>Base.parent</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>parent(a::SeriesElem)
@@ -461,7 +468,7 @@ S(n::fmpz)
 <blockquote>
 <p>Return the parent of the given power series.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/RelSeries.jl#L30' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/RelSeries.jl#L30' class='documenter-source'>source</a><br></p>
 <p><a id='Base.var-Tuple{Nemo.SeriesRing}' href='#Base.var-Tuple{Nemo.SeriesRing}'>#</a>
 <strong><code>Base.var</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>var(a::SeriesRing)
@@ -470,7 +477,7 @@ S(n::fmpz)
 <blockquote>
 <p>Return the internal name of the generator of the power series ring. Note that this is returned as a <code>Symbol</code> not a <code>String</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/RelSeries.jl#L50' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/RelSeries.jl#L50' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.valuation-Tuple{Nemo.SeriesElem}' href='#Nemo.valuation-Tuple{Nemo.SeriesElem}'>#</a>
 <strong><code>Nemo.valuation</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>valuation(a::SeriesElem)
@@ -479,7 +486,7 @@ S(n::fmpz)
 <blockquote>
 <p>Return the valuation of the given power series, i.e. the degree of the first nonzero term (or the precision if it is arithmetically zero).</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/RelSeries.jl#L165' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/RelSeries.jl#L165' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.max_precision-Tuple{Nemo.SeriesRing}' href='#Nemo.max_precision-Tuple{Nemo.SeriesRing}'>#</a>
 <strong><code>Nemo.max_precision</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>max_precision(R::SeriesRing)
@@ -488,7 +495,7 @@ S(n::fmpz)
 <blockquote>
 <p>Return the maximum relative precision of power series in the given power series ring.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/RelSeries.jl#L81' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/RelSeries.jl#L81' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.modulus-Tuple{Nemo.SeriesElem{T<:Nemo.ResElem}}' href='#Nemo.modulus-Tuple{Nemo.SeriesElem{T<:Nemo.ResElem}}'>#</a>
 <strong><code>Nemo.modulus</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>modulus{T &lt;: ResElem}(a::SeriesElem{T})
@@ -497,7 +504,7 @@ S(n::fmpz)
 <blockquote>
 <p>Return the modulus of the coefficients of the given polynomial.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/RelSeries.jl#L182' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/RelSeries.jl#L182' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.iszero-Tuple{Nemo.SeriesElem}' href='#Nemo.iszero-Tuple{Nemo.SeriesElem}'>#</a>
 <strong><code>Nemo.iszero</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>iszero(a::SeriesElem)
@@ -506,7 +513,7 @@ S(n::fmpz)
 <blockquote>
 <p>Return <code>true</code> if the given power series is arithmetically equal to zero to its current precision, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/RelSeries.jl#L132' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/RelSeries.jl#L132' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.isone-Tuple{Nemo.SeriesElem}' href='#Nemo.isone-Tuple{Nemo.SeriesElem}'>#</a>
 <strong><code>Nemo.isone</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>isone(a::SeriesElem)
@@ -515,7 +522,7 @@ S(n::fmpz)
 <blockquote>
 <p>Return <code>true</code> if the given power series is arithmetically equal to one to its current precision, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/RelSeries.jl#L139' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/RelSeries.jl#L139' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.isgen-Tuple{Nemo.SeriesElem}' href='#Nemo.isgen-Tuple{Nemo.SeriesElem}'>#</a>
 <strong><code>Nemo.isgen</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>isgen(a::SeriesElem)
@@ -524,7 +531,7 @@ S(n::fmpz)
 <blockquote>
 <p>Return <code>true</code> if the given power series is arithmetically equal to the generator of its power series ring to its current precision, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/RelSeries.jl#L148' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/RelSeries.jl#L148' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.isunit-Tuple{Nemo.SeriesElem}' href='#Nemo.isunit-Tuple{Nemo.SeriesElem}'>#</a>
 <strong><code>Nemo.isunit</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>isunit(a::SeriesElem)
@@ -533,7 +540,7 @@ S(n::fmpz)
 <blockquote>
 <p>Return <code>true</code> if the given power series is arithmetically equal to a unit, i.e. is invertible, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/RelSeries.jl#L158' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/RelSeries.jl#L158' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of basic manipulation of power series.</p>
 <pre><code>R, t = PowerSeriesRing(QQ, 10, &quot;t&quot;)
 S, x = PowerSeriesRing(R, 30, &quot;x&quot;)
@@ -566,7 +573,7 @@ W = parent(t + 1)
 </code></pre>
 
 <p>Unary minus operator.</p>
-<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/913b24de9c68b6c79a767bc2f6caacea249b3198/base/docs/helpdb/Base.jl#L628-632' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/7a65d001b952e57a4907c071a5590080c7065ac2/base/docs/helpdb/Base.jl#L628-632' class='documenter-source'>source</a><br></p>
 <p><a id='Base.+-Tuple{Nemo.SeriesElem{T<:Nemo.RingElem},Nemo.SeriesElem{T<:Nemo.RingElem}}' href='#Base.+-Tuple{Nemo.SeriesElem{T<:Nemo.RingElem},Nemo.SeriesElem{T<:Nemo.RingElem}}'>#</a>
 <strong><code>Base.+</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>+{T &lt;: RingElem}(a::SeriesElem{T}, b::SeriesElem{T})
@@ -575,77 +582,77 @@ W = parent(t + 1)
 <blockquote>
 <p>Return <script type="math/tex">a + b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/RelSeries.jl#L291' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/RelSeries.jl#L291' class='documenter-source'>source</a><br></p>
 <pre><code>+{T &lt;: RingElem}(a::T, b::SeriesElem{T})
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a + b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/RelSeries.jl#L467' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/RelSeries.jl#L467' class='documenter-source'>source</a><br></p>
 <pre><code>+{T &lt;: RingElem}(a::SeriesElem{T}, b::T)
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a + b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/RelSeries.jl#L485' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/RelSeries.jl#L485' class='documenter-source'>source</a><br></p>
 <p><a id='Base.--Tuple{Nemo.SeriesElem{T<:Nemo.RingElem},Nemo.SeriesElem{T<:Nemo.RingElem}}' href='#Base.--Tuple{Nemo.SeriesElem{T<:Nemo.RingElem},Nemo.SeriesElem{T<:Nemo.RingElem}}'>#</a>
 <strong><code>Base.-</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>-(x, y)
 </code></pre>
 
 <p>Subtraction operator.</p>
-<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/913b24de9c68b6c79a767bc2f6caacea249b3198/base/docs/helpdb/Base.jl#L635-639' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/7a65d001b952e57a4907c071a5590080c7065ac2/base/docs/helpdb/Base.jl#L635-639' class='documenter-source'>source</a><br></p>
 <pre><code>-{T &lt;: RingElem}(a::SeriesElem{T}, b::SeriesElem{T})
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a - b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/RelSeries.jl#L323' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/RelSeries.jl#L323' class='documenter-source'>source</a><br></p>
 <pre><code>-{T &lt;: RingElem}(a::T, b::SeriesElem{T})
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a - b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/RelSeries.jl#L503' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/RelSeries.jl#L503' class='documenter-source'>source</a><br></p>
 <pre><code>-{T &lt;: RingElem}(a::SeriesElem{T}, b::T)
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a - b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/RelSeries.jl#L521' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/RelSeries.jl#L521' class='documenter-source'>source</a><br></p>
 <p><a id='Base.*-Tuple{Nemo.SeriesElem{T<:Nemo.RingElem},Nemo.SeriesElem{T<:Nemo.RingElem}}' href='#Base.*-Tuple{Nemo.SeriesElem{T<:Nemo.RingElem},Nemo.SeriesElem{T<:Nemo.RingElem}}'>#</a>
 <strong><code>Base.*</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>*(x, y...)
 </code></pre>
 
 <p>Multiplication operator. <code>x*y*z*...</code> calls this function with all arguments, i.e. <code>*(x, y, z, ...)</code>.</p>
-<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/913b24de9c68b6c79a767bc2f6caacea249b3198/base/docs/helpdb/Base.jl#L7404-7410' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/7a65d001b952e57a4907c071a5590080c7065ac2/base/docs/helpdb/Base.jl#L7379-7385' class='documenter-source'>source</a><br></p>
 <pre><code>*{T &lt;: RingElem}(a::SeriesElem{T}, b::SeriesElem{T})
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a\times b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/RelSeries.jl#L355' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/RelSeries.jl#L355' class='documenter-source'>source</a><br></p>
 <pre><code>*{T &lt;: RingElem}(a::T, b::SeriesElem{T})
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a\times b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/RelSeries.jl#L401' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/RelSeries.jl#L401' class='documenter-source'>source</a><br></p>
 <pre><code>*{T &lt;: RingElem}(a::SeriesElem{T}, b::T)
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a\times b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/RelSeries.jl#L449' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/RelSeries.jl#L449' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.divexact-Tuple{Nemo.SeriesElem{T<:Nemo.RingElem},Nemo.SeriesElem{T<:Nemo.RingElem}}' href='#Nemo.divexact-Tuple{Nemo.SeriesElem{T<:Nemo.RingElem},Nemo.SeriesElem{T<:Nemo.RingElem}}'>#</a>
 <strong><code>Nemo.divexact</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>divexact{T &lt;: RingElem}(a::SeriesElem{T}, b::SeriesElem{T})
@@ -654,14 +661,14 @@ W = parent(t + 1)
 <blockquote>
 <p>Return <script type="math/tex">a/b</script>. Requires <script type="math/tex">b</script> to be invertible.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/RelSeries.jl#L785' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/RelSeries.jl#L785' class='documenter-source'>source</a><br></p>
 <pre><code>divexact{T &lt;: RingElem}(a::SeriesElem{T}, b::T)
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a/b</script> where the quotient is expected to be exact.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/RelSeries.jl#L842' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/RelSeries.jl#L842' class='documenter-source'>source</a><br></p>
 <p>The following ad hoc operators are also provided.</p>
 <p><a id='Base.+-Tuple{Integer,Nemo.SeriesElem}' href='#Base.+-Tuple{Integer,Nemo.SeriesElem}'>#</a>
 <strong><code>Base.+</code></strong> &mdash; <em>Method</em>.</p>
@@ -671,7 +678,7 @@ W = parent(t + 1)
 <blockquote>
 <p>Return <script type="math/tex">a + b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/RelSeries.jl#L473' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/RelSeries.jl#L473' class='documenter-source'>source</a><br></p>
 <p><a id='Base.+-Tuple{Nemo.SeriesElem,Integer}' href='#Base.+-Tuple{Nemo.SeriesElem,Integer}'>#</a>
 <strong><code>Base.+</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>+(a::SeriesElem, b::Integer)
@@ -680,7 +687,7 @@ W = parent(t + 1)
 <blockquote>
 <p>Return <script type="math/tex">a + b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/RelSeries.jl#L491' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/RelSeries.jl#L491' class='documenter-source'>source</a><br></p>
 <p><a id='Base.+-Tuple{Nemo.fmpz,Nemo.SeriesElem}' href='#Base.+-Tuple{Nemo.fmpz,Nemo.SeriesElem}'>#</a>
 <strong><code>Base.+</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>+(a::fmpz, b::SeriesElem)
@@ -689,7 +696,7 @@ W = parent(t + 1)
 <blockquote>
 <p>Return <script type="math/tex">a + b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/RelSeries.jl#L479' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/RelSeries.jl#L479' class='documenter-source'>source</a><br></p>
 <p><a id='Base.+-Tuple{Nemo.SeriesElem,Nemo.fmpz}' href='#Base.+-Tuple{Nemo.SeriesElem,Nemo.fmpz}'>#</a>
 <strong><code>Base.+</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>+(a::SeriesElem, b::fmpz)
@@ -698,7 +705,7 @@ W = parent(t + 1)
 <blockquote>
 <p>Return <script type="math/tex">a + b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/RelSeries.jl#L497' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/RelSeries.jl#L497' class='documenter-source'>source</a><br></p>
 <p><a id='Base.+-Tuple{T<:Nemo.RingElem,Nemo.SeriesElem{T<:Nemo.RingElem}}' href='#Base.+-Tuple{T<:Nemo.RingElem,Nemo.SeriesElem{T<:Nemo.RingElem}}'>#</a>
 <strong><code>Base.+</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>+{T &lt;: RingElem}(a::T, b::SeriesElem{T})
@@ -707,7 +714,7 @@ W = parent(t + 1)
 <blockquote>
 <p>Return <script type="math/tex">a + b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/RelSeries.jl#L467' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/RelSeries.jl#L467' class='documenter-source'>source</a><br></p>
 <p><a id='Base.+-Tuple{Nemo.SeriesElem{T<:Nemo.RingElem},T<:Nemo.RingElem}' href='#Base.+-Tuple{Nemo.SeriesElem{T<:Nemo.RingElem},T<:Nemo.RingElem}'>#</a>
 <strong><code>Base.+</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>+{T &lt;: RingElem}(a::SeriesElem{T}, b::T)
@@ -716,168 +723,168 @@ W = parent(t + 1)
 <blockquote>
 <p>Return <script type="math/tex">a + b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/RelSeries.jl#L485' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/RelSeries.jl#L485' class='documenter-source'>source</a><br></p>
 <p><a id='Base.--Tuple{Integer,Nemo.SeriesElem}' href='#Base.--Tuple{Integer,Nemo.SeriesElem}'>#</a>
 <strong><code>Base.-</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>-(x, y)
 </code></pre>
 
 <p>Subtraction operator.</p>
-<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/913b24de9c68b6c79a767bc2f6caacea249b3198/base/docs/helpdb/Base.jl#L635-639' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/7a65d001b952e57a4907c071a5590080c7065ac2/base/docs/helpdb/Base.jl#L635-639' class='documenter-source'>source</a><br></p>
 <pre><code>-(a::Integer, b::SeriesElem)
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a - b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/RelSeries.jl#L509' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/RelSeries.jl#L509' class='documenter-source'>source</a><br></p>
 <p><a id='Base.--Tuple{Nemo.SeriesElem,Integer}' href='#Base.--Tuple{Nemo.SeriesElem,Integer}'>#</a>
 <strong><code>Base.-</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>-(x, y)
 </code></pre>
 
 <p>Subtraction operator.</p>
-<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/913b24de9c68b6c79a767bc2f6caacea249b3198/base/docs/helpdb/Base.jl#L635-639' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/7a65d001b952e57a4907c071a5590080c7065ac2/base/docs/helpdb/Base.jl#L635-639' class='documenter-source'>source</a><br></p>
 <pre><code>-(a::SeriesElem, b::Integer)
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a - b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/RelSeries.jl#L527' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/RelSeries.jl#L527' class='documenter-source'>source</a><br></p>
 <p><a id='Base.--Tuple{Nemo.fmpz,Nemo.SeriesElem}' href='#Base.--Tuple{Nemo.fmpz,Nemo.SeriesElem}'>#</a>
 <strong><code>Base.-</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>-(x, y)
 </code></pre>
 
 <p>Subtraction operator.</p>
-<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/913b24de9c68b6c79a767bc2f6caacea249b3198/base/docs/helpdb/Base.jl#L635-639' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/7a65d001b952e57a4907c071a5590080c7065ac2/base/docs/helpdb/Base.jl#L635-639' class='documenter-source'>source</a><br></p>
 <pre><code>-(a::fmpz, b::SeriesElem)
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a - b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/RelSeries.jl#L515' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/RelSeries.jl#L515' class='documenter-source'>source</a><br></p>
 <p><a id='Base.--Tuple{Nemo.SeriesElem,Nemo.fmpz}' href='#Base.--Tuple{Nemo.SeriesElem,Nemo.fmpz}'>#</a>
 <strong><code>Base.-</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>-(x, y)
 </code></pre>
 
 <p>Subtraction operator.</p>
-<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/913b24de9c68b6c79a767bc2f6caacea249b3198/base/docs/helpdb/Base.jl#L635-639' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/7a65d001b952e57a4907c071a5590080c7065ac2/base/docs/helpdb/Base.jl#L635-639' class='documenter-source'>source</a><br></p>
 <pre><code>-(a::SeriesElem, b::fmpz)
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a - b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/RelSeries.jl#L533' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/RelSeries.jl#L533' class='documenter-source'>source</a><br></p>
 <p><a id='Base.--Tuple{T<:Nemo.RingElem,Nemo.SeriesElem{T<:Nemo.RingElem}}' href='#Base.--Tuple{T<:Nemo.RingElem,Nemo.SeriesElem{T<:Nemo.RingElem}}'>#</a>
 <strong><code>Base.-</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>-(x, y)
 </code></pre>
 
 <p>Subtraction operator.</p>
-<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/913b24de9c68b6c79a767bc2f6caacea249b3198/base/docs/helpdb/Base.jl#L635-639' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/7a65d001b952e57a4907c071a5590080c7065ac2/base/docs/helpdb/Base.jl#L635-639' class='documenter-source'>source</a><br></p>
 <pre><code>-{T &lt;: RingElem}(a::T, b::SeriesElem{T})
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a - b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/RelSeries.jl#L503' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/RelSeries.jl#L503' class='documenter-source'>source</a><br></p>
 <p><a id='Base.--Tuple{Nemo.SeriesElem{T<:Nemo.RingElem},T<:Nemo.RingElem}' href='#Base.--Tuple{Nemo.SeriesElem{T<:Nemo.RingElem},T<:Nemo.RingElem}'>#</a>
 <strong><code>Base.-</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>-(x, y)
 </code></pre>
 
 <p>Subtraction operator.</p>
-<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/913b24de9c68b6c79a767bc2f6caacea249b3198/base/docs/helpdb/Base.jl#L635-639' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/7a65d001b952e57a4907c071a5590080c7065ac2/base/docs/helpdb/Base.jl#L635-639' class='documenter-source'>source</a><br></p>
 <pre><code>-{T &lt;: RingElem}(a::SeriesElem{T}, b::T)
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a - b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/RelSeries.jl#L521' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/RelSeries.jl#L521' class='documenter-source'>source</a><br></p>
 <p><a id='Base.*-Tuple{Integer,Nemo.SeriesElem}' href='#Base.*-Tuple{Integer,Nemo.SeriesElem}'>#</a>
 <strong><code>Base.*</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>*(x, y...)
 </code></pre>
 
 <p>Multiplication operator. <code>x*y*z*...</code> calls this function with all arguments, i.e. <code>*(x, y, z, ...)</code>.</p>
-<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/913b24de9c68b6c79a767bc2f6caacea249b3198/base/docs/helpdb/Base.jl#L7404-7410' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/7a65d001b952e57a4907c071a5590080c7065ac2/base/docs/helpdb/Base.jl#L7379-7385' class='documenter-source'>source</a><br></p>
 <p><a id='Base.*-Tuple{Nemo.SeriesElem,Integer}' href='#Base.*-Tuple{Nemo.SeriesElem,Integer}'>#</a>
 <strong><code>Base.*</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>*(x, y...)
 </code></pre>
 
 <p>Multiplication operator. <code>x*y*z*...</code> calls this function with all arguments, i.e. <code>*(x, y, z, ...)</code>.</p>
-<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/913b24de9c68b6c79a767bc2f6caacea249b3198/base/docs/helpdb/Base.jl#L7404-7410' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/7a65d001b952e57a4907c071a5590080c7065ac2/base/docs/helpdb/Base.jl#L7379-7385' class='documenter-source'>source</a><br></p>
 <pre><code>*{T &lt;: RingElem}(a::SeriesElem{T}, b::Integer)
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a\times b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/RelSeries.jl#L455' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/RelSeries.jl#L455' class='documenter-source'>source</a><br></p>
 <p><a id='Base.*-Tuple{Nemo.fmpz,Nemo.SeriesElem}' href='#Base.*-Tuple{Nemo.fmpz,Nemo.SeriesElem}'>#</a>
 <strong><code>Base.*</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>*(x, y...)
 </code></pre>
 
 <p>Multiplication operator. <code>x*y*z*...</code> calls this function with all arguments, i.e. <code>*(x, y, z, ...)</code>.</p>
-<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/913b24de9c68b6c79a767bc2f6caacea249b3198/base/docs/helpdb/Base.jl#L7404-7410' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/7a65d001b952e57a4907c071a5590080c7065ac2/base/docs/helpdb/Base.jl#L7379-7385' class='documenter-source'>source</a><br></p>
 <p><a id='Base.*-Tuple{Nemo.SeriesElem,Nemo.fmpz}' href='#Base.*-Tuple{Nemo.SeriesElem,Nemo.fmpz}'>#</a>
 <strong><code>Base.*</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>*(x, y...)
 </code></pre>
 
 <p>Multiplication operator. <code>x*y*z*...</code> calls this function with all arguments, i.e. <code>*(x, y, z, ...)</code>.</p>
-<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/913b24de9c68b6c79a767bc2f6caacea249b3198/base/docs/helpdb/Base.jl#L7404-7410' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/7a65d001b952e57a4907c071a5590080c7065ac2/base/docs/helpdb/Base.jl#L7379-7385' class='documenter-source'>source</a><br></p>
 <pre><code>*{T &lt;: RingElem}(a::SeriesElem{T}, b::T)
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a\times b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/RelSeries.jl#L449' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/RelSeries.jl#L449' class='documenter-source'>source</a><br></p>
 <pre><code>*{T &lt;: RingElem}(a::SeriesElem{T}, b::fmpz)
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a\times b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/RelSeries.jl#L461' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/RelSeries.jl#L461' class='documenter-source'>source</a><br></p>
 <p><a id='Base.*-Tuple{T<:Nemo.RingElem,Nemo.SeriesElem{T<:Nemo.RingElem}}' href='#Base.*-Tuple{T<:Nemo.RingElem,Nemo.SeriesElem{T<:Nemo.RingElem}}'>#</a>
 <strong><code>Base.*</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>*(x, y...)
 </code></pre>
 
 <p>Multiplication operator. <code>x*y*z*...</code> calls this function with all arguments, i.e. <code>*(x, y, z, ...)</code>.</p>
-<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/913b24de9c68b6c79a767bc2f6caacea249b3198/base/docs/helpdb/Base.jl#L7404-7410' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/7a65d001b952e57a4907c071a5590080c7065ac2/base/docs/helpdb/Base.jl#L7379-7385' class='documenter-source'>source</a><br></p>
 <pre><code>*{T &lt;: RingElem}(a::T, b::SeriesElem{T})
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a\times b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/RelSeries.jl#L401' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/RelSeries.jl#L401' class='documenter-source'>source</a><br></p>
 <p><a id='Base.*-Tuple{Nemo.SeriesElem{T<:Nemo.RingElem},T<:Nemo.RingElem}' href='#Base.*-Tuple{Nemo.SeriesElem{T<:Nemo.RingElem},T<:Nemo.RingElem}'>#</a>
 <strong><code>Base.*</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>*(x, y...)
 </code></pre>
 
 <p>Multiplication operator. <code>x*y*z*...</code> calls this function with all arguments, i.e. <code>*(x, y, z, ...)</code>.</p>
-<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/913b24de9c68b6c79a767bc2f6caacea249b3198/base/docs/helpdb/Base.jl#L7404-7410' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/7a65d001b952e57a4907c071a5590080c7065ac2/base/docs/helpdb/Base.jl#L7379-7385' class='documenter-source'>source</a><br></p>
 <pre><code>*{T &lt;: RingElem}(a::SeriesElem{T}, b::T)
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a\times b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/RelSeries.jl#L449' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/RelSeries.jl#L449' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.divexact-Tuple{Nemo.SeriesElem,Integer}' href='#Nemo.divexact-Tuple{Nemo.SeriesElem,Integer}'>#</a>
 <strong><code>Nemo.divexact</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>divexact{T &lt;: RingElem}(a::ResElem{T}, b::ResElem{T})
@@ -886,112 +893,133 @@ W = parent(t + 1)
 <blockquote>
 <p>Return <script type="math/tex">a/b</script> where the quotient is expected to be exact.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/Residue.jl#L441' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/Residue.jl#L441' class='documenter-source'>source</a><br></p>
 <pre><code>divexact{T &lt;: RingElem}(a::PolyElem{T}, b::PolyElem{T})
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a/b</script> where the quotient is expected to be exact.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/Poly.jl#L1009' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/Poly.jl#L1009' class='documenter-source'>source</a><br></p>
 <pre><code>divexact{T &lt;: RingElem}(a::PolyElem{T}, b::T)
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a/b</script> where the quotient is expected to be exact.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/Poly.jl#L1042' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/Poly.jl#L1042' class='documenter-source'>source</a><br></p>
 <pre><code>divexact(a::PolyElem, b::Integer)
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a/b</script> where the quotient is expected to be exact.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/Poly.jl#L1057' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/Poly.jl#L1057' class='documenter-source'>source</a><br></p>
 <pre><code>divexact(a::PolyElem, b::fmpz)
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a/b</script> where the quotient is expected to be exact.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/Poly.jl#L1072' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/Poly.jl#L1072' class='documenter-source'>source</a><br></p>
 <pre><code>divexact{T &lt;: RingElem}(a::SeriesElem{T}, b::SeriesElem{T})
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a/b</script>. Requires <script type="math/tex">b</script> to be invertible.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/RelSeries.jl#L785' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/RelSeries.jl#L785' class='documenter-source'>source</a><br></p>
 <pre><code>divexact{T &lt;: RingElem}(a::SeriesElem{T}, b::Integer)
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a/b</script> where the quotient is expected to be exact.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/RelSeries.jl#L810' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/RelSeries.jl#L810' class='documenter-source'>source</a><br></p>
 <pre><code>divexact{T &lt;: RingElem}(a::SeriesElem{T}, b::fmpz)
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a/b</script> where the quotient is expected to be exact.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/RelSeries.jl#L826' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/RelSeries.jl#L826' class='documenter-source'>source</a><br></p>
 <pre><code>divexact{T &lt;: RingElem}(a::SeriesElem{T}, b::T)
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a/b</script> where the quotient is expected to be exact.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/RelSeries.jl#L842' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/RelSeries.jl#L842' class='documenter-source'>source</a><br></p>
+<pre><code>divexact(x::MatElem, y::Integer)
+</code></pre>
+
+<blockquote>
+<p>Return <script type="math/tex">x/y</script>, i.e. the matrix where each of the entries has been divided by <script type="math/tex">y</script>. Each division is expected to be exact.</p>
+</blockquote>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/Matrix.jl#L714' class='documenter-source'>source</a><br></p>
+<pre><code>divexact(x::MatElem, y::fmpz)
+</code></pre>
+
+<blockquote>
+<p>Return <script type="math/tex">x/y</script>, i.e. the matrix where each of the entries has been divided by <script type="math/tex">y</script>. Each division is expected to be exact.</p>
+</blockquote>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/Matrix.jl#L730' class='documenter-source'>source</a><br></p>
+<pre><code>divexact{T &lt;: RingElem}(x::MatElem{T}, y::T)
+</code></pre>
+
+<blockquote>
+<p>Return <script type="math/tex">x/y</script>, i.e. the matrix where each of the entries has been divided by <script type="math/tex">y</script>. Each division is expected to be exact.</p>
+</blockquote>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/Matrix.jl#L746' class='documenter-source'>source</a><br></p>
 <pre><code>divexact{T &lt;: RingElem}(a::FracElem{T}, b::FracElem{T})
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a/b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/Fraction.jl#L528' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/Fraction.jl#L528' class='documenter-source'>source</a><br></p>
 <pre><code>divexact(a::FracElem, b::Integer)
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a/b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/Fraction.jl#L547' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/Fraction.jl#L547' class='documenter-source'>source</a><br></p>
 <pre><code>divexact(a::Integer, b::FracElem)
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a/b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/Fraction.jl#L560' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/Fraction.jl#L560' class='documenter-source'>source</a><br></p>
 <pre><code>divexact(a::FracElem, b::fmpz)
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a/b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/Fraction.jl#L573' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/Fraction.jl#L573' class='documenter-source'>source</a><br></p>
 <pre><code>divexact(a::fmpz, b::FracElem)
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a/b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/Fraction.jl#L586' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/Fraction.jl#L586' class='documenter-source'>source</a><br></p>
 <pre><code>divexact{T &lt;: RingElem}(a::FracElem{T}, b::T)
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a/b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/Fraction.jl#L605' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/Fraction.jl#L605' class='documenter-source'>source</a><br></p>
 <pre><code>divexact{T &lt;: RingElem}(a::T, b::FracElem{T})
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a/b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/Fraction.jl#L617' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/Fraction.jl#L617' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.divexact-Tuple{Nemo.SeriesElem,Nemo.fmpz}' href='#Nemo.divexact-Tuple{Nemo.SeriesElem,Nemo.fmpz}'>#</a>
 <strong><code>Nemo.divexact</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>divexact{T &lt;: RingElem}(a::ResElem{T}, b::ResElem{T})
@@ -1000,112 +1028,133 @@ W = parent(t + 1)
 <blockquote>
 <p>Return <script type="math/tex">a/b</script> where the quotient is expected to be exact.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/Residue.jl#L441' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/Residue.jl#L441' class='documenter-source'>source</a><br></p>
 <pre><code>divexact{T &lt;: RingElem}(a::PolyElem{T}, b::PolyElem{T})
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a/b</script> where the quotient is expected to be exact.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/Poly.jl#L1009' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/Poly.jl#L1009' class='documenter-source'>source</a><br></p>
 <pre><code>divexact{T &lt;: RingElem}(a::PolyElem{T}, b::T)
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a/b</script> where the quotient is expected to be exact.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/Poly.jl#L1042' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/Poly.jl#L1042' class='documenter-source'>source</a><br></p>
 <pre><code>divexact(a::PolyElem, b::Integer)
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a/b</script> where the quotient is expected to be exact.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/Poly.jl#L1057' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/Poly.jl#L1057' class='documenter-source'>source</a><br></p>
 <pre><code>divexact(a::PolyElem, b::fmpz)
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a/b</script> where the quotient is expected to be exact.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/Poly.jl#L1072' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/Poly.jl#L1072' class='documenter-source'>source</a><br></p>
 <pre><code>divexact{T &lt;: RingElem}(a::SeriesElem{T}, b::SeriesElem{T})
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a/b</script>. Requires <script type="math/tex">b</script> to be invertible.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/RelSeries.jl#L785' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/RelSeries.jl#L785' class='documenter-source'>source</a><br></p>
 <pre><code>divexact{T &lt;: RingElem}(a::SeriesElem{T}, b::Integer)
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a/b</script> where the quotient is expected to be exact.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/RelSeries.jl#L810' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/RelSeries.jl#L810' class='documenter-source'>source</a><br></p>
 <pre><code>divexact{T &lt;: RingElem}(a::SeriesElem{T}, b::fmpz)
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a/b</script> where the quotient is expected to be exact.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/RelSeries.jl#L826' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/RelSeries.jl#L826' class='documenter-source'>source</a><br></p>
 <pre><code>divexact{T &lt;: RingElem}(a::SeriesElem{T}, b::T)
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a/b</script> where the quotient is expected to be exact.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/RelSeries.jl#L842' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/RelSeries.jl#L842' class='documenter-source'>source</a><br></p>
+<pre><code>divexact(x::MatElem, y::Integer)
+</code></pre>
+
+<blockquote>
+<p>Return <script type="math/tex">x/y</script>, i.e. the matrix where each of the entries has been divided by <script type="math/tex">y</script>. Each division is expected to be exact.</p>
+</blockquote>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/Matrix.jl#L714' class='documenter-source'>source</a><br></p>
+<pre><code>divexact(x::MatElem, y::fmpz)
+</code></pre>
+
+<blockquote>
+<p>Return <script type="math/tex">x/y</script>, i.e. the matrix where each of the entries has been divided by <script type="math/tex">y</script>. Each division is expected to be exact.</p>
+</blockquote>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/Matrix.jl#L730' class='documenter-source'>source</a><br></p>
+<pre><code>divexact{T &lt;: RingElem}(x::MatElem{T}, y::T)
+</code></pre>
+
+<blockquote>
+<p>Return <script type="math/tex">x/y</script>, i.e. the matrix where each of the entries has been divided by <script type="math/tex">y</script>. Each division is expected to be exact.</p>
+</blockquote>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/Matrix.jl#L746' class='documenter-source'>source</a><br></p>
 <pre><code>divexact{T &lt;: RingElem}(a::FracElem{T}, b::FracElem{T})
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a/b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/Fraction.jl#L528' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/Fraction.jl#L528' class='documenter-source'>source</a><br></p>
 <pre><code>divexact(a::FracElem, b::Integer)
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a/b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/Fraction.jl#L547' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/Fraction.jl#L547' class='documenter-source'>source</a><br></p>
 <pre><code>divexact(a::Integer, b::FracElem)
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a/b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/Fraction.jl#L560' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/Fraction.jl#L560' class='documenter-source'>source</a><br></p>
 <pre><code>divexact(a::FracElem, b::fmpz)
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a/b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/Fraction.jl#L573' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/Fraction.jl#L573' class='documenter-source'>source</a><br></p>
 <pre><code>divexact(a::fmpz, b::FracElem)
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a/b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/Fraction.jl#L586' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/Fraction.jl#L586' class='documenter-source'>source</a><br></p>
 <pre><code>divexact{T &lt;: RingElem}(a::FracElem{T}, b::T)
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a/b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/Fraction.jl#L605' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/Fraction.jl#L605' class='documenter-source'>source</a><br></p>
 <pre><code>divexact{T &lt;: RingElem}(a::T, b::FracElem{T})
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a/b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/Fraction.jl#L617' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/Fraction.jl#L617' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.divexact-Tuple{Nemo.SeriesElem{T<:Nemo.RingElem},T<:Nemo.RingElem}' href='#Nemo.divexact-Tuple{Nemo.SeriesElem{T<:Nemo.RingElem},T<:Nemo.RingElem}'>#</a>
 <strong><code>Nemo.divexact</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>divexact{T &lt;: RingElem}(a::SeriesElem{T}, b::T)
@@ -1114,14 +1163,14 @@ W = parent(t + 1)
 <blockquote>
 <p>Return <script type="math/tex">a/b</script> where the quotient is expected to be exact.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/RelSeries.jl#L842' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/RelSeries.jl#L842' class='documenter-source'>source</a><br></p>
 <p><a id='Base.^-Tuple{Nemo.SeriesElem,Int64}' href='#Base.^-Tuple{Nemo.SeriesElem,Int64}'>#</a>
 <strong><code>Base.^</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>^(x, y)
 </code></pre>
 
 <p>Exponentiation operator.</p>
-<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/913b24de9c68b6c79a767bc2f6caacea249b3198/base/docs/helpdb/Base.jl#L4334-4338' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/7a65d001b952e57a4907c071a5590080c7065ac2/base/docs/helpdb/Base.jl#L4325-4329' class='documenter-source'>source</a><br></p>
 <p>If the appropriate <code>promote_rule</code> and coercion exists, these operators can also be used with elements of other rings. Nemo will try to coerce the operands to the dominating type and then apply the operator.</p>
 <p>Here are some examples of arithmetic operations on power series.</p>
 <pre><code>R, t = PolynomialRing(QQ, &quot;t&quot;)
@@ -1159,21 +1208,21 @@ w = divexact(b, fmpz(11))
 <blockquote>
 <p>Return <code>true</code> if <script type="math/tex">x == y</script> arithmetically, otherwise return <code>false</code>. Recall that power series to different precisions may still be arithmetically equal to the minimum of the two precisions.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/RelSeries.jl#L679' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/RelSeries.jl#L679' class='documenter-source'>source</a><br></p>
 <pre><code>=={T &lt;: RingElem}(x::SeriesElem{T}, y::T)
 </code></pre>
 
 <blockquote>
 <p>Return <code>true</code> if <script type="math/tex">x == y</script> arithmetically, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/RelSeries.jl#L740' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/RelSeries.jl#L740' class='documenter-source'>source</a><br></p>
 <pre><code>=={T &lt;: RingElem}(x::T, y::SeriesElem{T})
 </code></pre>
 
 <blockquote>
 <p>Return <code>true</code> if <script type="math/tex">x == y</script> arithmetically, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/RelSeries.jl#L747' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/RelSeries.jl#L747' class='documenter-source'>source</a><br></p>
 <p><a id='Base.isequal-Tuple{Nemo.SeriesElem{T<:Nemo.RingElem},Nemo.SeriesElem{T<:Nemo.RingElem}}' href='#Base.isequal-Tuple{Nemo.SeriesElem{T<:Nemo.RingElem},Nemo.SeriesElem{T<:Nemo.RingElem}}'>#</a>
 <strong><code>Base.isequal</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>isequal{T &lt;: RingElem}(x::SeriesElem{T}, y::SeriesElem{T})
@@ -1182,7 +1231,7 @@ w = divexact(b, fmpz(11))
 <blockquote>
 <p>Return <code>true</code> if <script type="math/tex">x == y</script> exactly, otherwise return <code>false</code>. Only if the power series are precisely the same, to the same precision, are they declared equal by this function.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/RelSeries.jl#L713' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/RelSeries.jl#L713' class='documenter-source'>source</a><br></p>
 <p>In addition we have the following ad hoc comparison operators.</p>
 <p><a id='Base.==-Tuple{Nemo.SeriesElem{T<:Nemo.RingElem},T<:Nemo.RingElem}' href='#Base.==-Tuple{Nemo.SeriesElem{T<:Nemo.RingElem},T<:Nemo.RingElem}'>#</a>
 <strong><code>Base.==</code></strong> &mdash; <em>Method</em>.</p>
@@ -1192,7 +1241,7 @@ w = divexact(b, fmpz(11))
 <blockquote>
 <p>Return <code>true</code> if <script type="math/tex">x == y</script> arithmetically, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/RelSeries.jl#L740' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/RelSeries.jl#L740' class='documenter-source'>source</a><br></p>
 <p><a id='Base.==-Tuple{T<:Nemo.RingElem,Nemo.SeriesElem{T<:Nemo.RingElem}}' href='#Base.==-Tuple{T<:Nemo.RingElem,Nemo.SeriesElem{T<:Nemo.RingElem}}'>#</a>
 <strong><code>Base.==</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>=={T &lt;: RingElem}(x::T, y::SeriesElem{T})
@@ -1201,7 +1250,7 @@ w = divexact(b, fmpz(11))
 <blockquote>
 <p>Return <code>true</code> if <script type="math/tex">x == y</script> arithmetically, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/RelSeries.jl#L747' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/RelSeries.jl#L747' class='documenter-source'>source</a><br></p>
 <p><a id='Base.==-Tuple{Nemo.SeriesElem,Integer}' href='#Base.==-Tuple{Nemo.SeriesElem,Integer}'>#</a>
 <strong><code>Base.==</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>==(x::SeriesElem, y::Integer)
@@ -1210,7 +1259,7 @@ w = divexact(b, fmpz(11))
 <blockquote>
 <p>Return <code>true</code> if <script type="math/tex">x == y</script> arithmetically, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/RelSeries.jl#L753' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/RelSeries.jl#L753' class='documenter-source'>source</a><br></p>
 <p><a id='Base.==-Tuple{Integer,Nemo.SeriesElem}' href='#Base.==-Tuple{Integer,Nemo.SeriesElem}'>#</a>
 <strong><code>Base.==</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>==(x::Integer, y::SeriesElem)
@@ -1219,7 +1268,7 @@ w = divexact(b, fmpz(11))
 <blockquote>
 <p>Return <code>true</code> if <script type="math/tex">x == y</script> arithmetically, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/RelSeries.jl#L767' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/RelSeries.jl#L767' class='documenter-source'>source</a><br></p>
 <p><a id='Base.==-Tuple{Nemo.SeriesElem,Nemo.fmpz}' href='#Base.==-Tuple{Nemo.SeriesElem,Nemo.fmpz}'>#</a>
 <strong><code>Base.==</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>==(x::SeriesElem, y::fmpz)
@@ -1228,7 +1277,7 @@ w = divexact(b, fmpz(11))
 <blockquote>
 <p>Return <code>true</code> if <script type="math/tex">x == y</script> arithmetically, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/RelSeries.jl#L760' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/RelSeries.jl#L760' class='documenter-source'>source</a><br></p>
 <p><a id='Base.==-Tuple{Nemo.fmpz,Nemo.SeriesElem}' href='#Base.==-Tuple{Nemo.fmpz,Nemo.SeriesElem}'>#</a>
 <strong><code>Base.==</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>==(x::fmpz, y::SeriesElem)
@@ -1237,7 +1286,7 @@ w = divexact(b, fmpz(11))
 <blockquote>
 <p>Return <code>true</code> if <script type="math/tex">x == y</script> arithmetically, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/RelSeries.jl#L773' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/RelSeries.jl#L773' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of comparisons.</p>
 <pre><code>R, t = PolynomialRing(QQ, &quot;t&quot;)
 S, x = PowerSeriesRing(R, 30, &quot;x&quot;)
@@ -1268,14 +1317,14 @@ fmpz(1) == c
 <blockquote>
 <p>Return the polynomial <script type="math/tex">f</script> shifted left by <script type="math/tex">n</script> terms, i.e. multiplied by <script type="math/tex">x^n</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/Poly.jl#L896' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/Poly.jl#L896' class='documenter-source'>source</a><br></p>
 <pre><code>shift_left(x::SeriesElem, n::Int)
 </code></pre>
 
 <blockquote>
 <p>Return the power series <script type="math/tex">f</script> shifted left by <script type="math/tex">n</script> terms, i.e. multiplied by <script type="math/tex">x^n</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/RelSeries.jl#L545' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/RelSeries.jl#L545' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.shift_right-Tuple{Nemo.SeriesElem,Int64}' href='#Nemo.shift_right-Tuple{Nemo.SeriesElem,Int64}'>#</a>
 <strong><code>Nemo.shift_right</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>shift_right(f::PolyElem, n::Int)
@@ -1284,14 +1333,14 @@ fmpz(1) == c
 <blockquote>
 <p>Return the polynomial <script type="math/tex">f</script> shifted right by <script type="math/tex">n</script> terms, i.e. divided by <script type="math/tex">x^n</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/Poly.jl#L918' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/Poly.jl#L918' class='documenter-source'>source</a><br></p>
 <pre><code>shift_right(f::SeriesElem, n::Int)
 </code></pre>
 
 <blockquote>
 <p>Return the power series <script type="math/tex">f</script> shifted right by <script type="math/tex">n</script> terms, i.e. divided by <script type="math/tex">x^n</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/RelSeries.jl#L570' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/RelSeries.jl#L570' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of shifting.</p>
 <pre><code>R, t = PolynomialRing(QQ, &quot;t&quot;)
 S, x = PowerSeriesRing(R, 30, &quot;x&quot;)
@@ -1315,21 +1364,21 @@ k = shift_right(d, 3)
 </code></pre>
 
 <p>Resize the file or buffer given by the first argument to exactly <code>n</code> bytes, filling previously unallocated space with '\0' if the file or buffer is grown.</p>
-<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/913b24de9c68b6c79a767bc2f6caacea249b3198/base/docs/helpdb/Base.jl#L2064-2069' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/7a65d001b952e57a4907c071a5590080c7065ac2/base/docs/helpdb/Base.jl#L2064-2069' class='documenter-source'>source</a><br></p>
 <pre><code>truncate(a::PolyElem, n::Int)
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a</script> truncated to <script type="math/tex">n</script> terms.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/Poly.jl#L797' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/Poly.jl#L797' class='documenter-source'>source</a><br></p>
 <pre><code>truncate(a::SeriesElem, n::Int)
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a</script> truncated to <script type="math/tex">n</script> terms.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/RelSeries.jl#L598' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/RelSeries.jl#L598' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of truncation.</p>
 <pre><code>R, t = PolynomialRing(QQ, &quot;t&quot;)
 S, x = PowerSeriesRing(R, 30, &quot;x&quot;)
@@ -1353,7 +1402,7 @@ k = truncate(d, 5)
 <blockquote>
 <p>Return the inverse of the power series <script type="math/tex">a</script>, i.e. <script type="math/tex">1/a</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/RelSeries.jl#L864' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/RelSeries.jl#L864' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of taking the inverse.</p>
 <pre><code>R, t = PolynomialRing(QQ, &quot;t&quot;)
 S, x = PowerSeriesRing(R, 30, &quot;x&quot;)
@@ -1375,7 +1424,7 @@ d = inv(b)
 <blockquote>
 <p>Return the exponential of the power series <script type="math/tex">a</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/generic/RelSeries.jl#L896' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/generic/RelSeries.jl#L896' class='documenter-source'>source</a><br></p>
 <p>The following special functions are only available for certain rings.</p>
 <p><a id='Base.log-Tuple{Nemo.fmpq_rel_series}' href='#Base.log-Tuple{Nemo.fmpq_rel_series}'>#</a>
 <strong><code>Base.log</code></strong> &mdash; <em>Method</em>.</p>
@@ -1384,89 +1433,89 @@ d = inv(b)
 
 <p>Compute the natural logarithm of <code>x</code>. Throws <code>DomainError</code> for negative <code>Real</code> arguments. Use complex negative arguments to obtain complex results.</p>
 <p>There is an experimental variant in the <code>Base.Math.JuliaLibm</code> module, which is typically faster and more accurate.</p>
-<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/913b24de9c68b6c79a767bc2f6caacea249b3198/base/docs/helpdb/Base.jl#L3439-3447' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/7a65d001b952e57a4907c071a5590080c7065ac2/base/docs/helpdb/Base.jl#L3430-3438' class='documenter-source'>source</a><br></p>
 <p>log(a::fmpq_rel_series)</p>
 <blockquote>
 <p>Return log<script type="math/tex">(a)</script>. Requires the constant term to be one.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/flint/fmpq_rel_series.jl#L464' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/flint/fmpq_rel_series.jl#L464' class='documenter-source'>source</a><br></p>
 <p><a id='Base.sqrt-Tuple{Nemo.fmpq_rel_series}' href='#Base.sqrt-Tuple{Nemo.fmpq_rel_series}'>#</a>
 <strong><code>Base.sqrt</code></strong> &mdash; <em>Method</em>.</p>
 <p>sqrt(a::fmpq_rel_series)</p>
 <blockquote>
 <p>Return the power series square root of <script type="math/tex">a</script>. Requires a constant term equal to one.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/flint/fmpq_rel_series.jl#L651' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/flint/fmpq_rel_series.jl#L651' class='documenter-source'>source</a><br></p>
 <p><a id='Base.tan-Tuple{Nemo.fmpq_rel_series}' href='#Base.tan-Tuple{Nemo.fmpq_rel_series}'>#</a>
 <strong><code>Base.tan</code></strong> &mdash; <em>Method</em>.</p>
 <p>tan(a::fmpq_rel_series)</p>
 <blockquote>
 <p>Return tan<script type="math/tex">(a)</script>. Requires a zero constant term.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/flint/fmpq_rel_series.jl#L481' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/flint/fmpq_rel_series.jl#L481' class='documenter-source'>source</a><br></p>
 <p><a id='Base.tanh-Tuple{Nemo.fmpq_rel_series}' href='#Base.tanh-Tuple{Nemo.fmpq_rel_series}'>#</a>
 <strong><code>Base.tanh</code></strong> &mdash; <em>Method</em>.</p>
 <p>tanh(a::fmpq_rel_series)</p>
 <blockquote>
 <p>Return tanh<script type="math/tex">(a)</script>. Requires a zero constant term.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/flint/fmpq_rel_series.jl#L498' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/flint/fmpq_rel_series.jl#L498' class='documenter-source'>source</a><br></p>
 <p><a id='Base.sin-Tuple{Nemo.fmpq_rel_series}' href='#Base.sin-Tuple{Nemo.fmpq_rel_series}'>#</a>
 <strong><code>Base.sin</code></strong> &mdash; <em>Method</em>.</p>
 <p>sin(a::fmpq_rel_series)</p>
 <blockquote>
 <p>Return sin<script type="math/tex">(a)</script>. Requires a zero constant term.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/flint/fmpq_rel_series.jl#L515' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/flint/fmpq_rel_series.jl#L515' class='documenter-source'>source</a><br></p>
 <p><a id='Base.sinh-Tuple{Nemo.fmpq_rel_series}' href='#Base.sinh-Tuple{Nemo.fmpq_rel_series}'>#</a>
 <strong><code>Base.sinh</code></strong> &mdash; <em>Method</em>.</p>
 <p>sinh(a::fmpq_rel_series)</p>
 <blockquote>
 <p>Return sinh<script type="math/tex">(a)</script>. Requires a zero constant term.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/flint/fmpq_rel_series.jl#L532' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/flint/fmpq_rel_series.jl#L532' class='documenter-source'>source</a><br></p>
 <p><a id='Base.cos-Tuple{Nemo.fmpq_rel_series}' href='#Base.cos-Tuple{Nemo.fmpq_rel_series}'>#</a>
 <strong><code>Base.cos</code></strong> &mdash; <em>Method</em>.</p>
 <p>cos(a::fmpq_rel_series)</p>
 <blockquote>
 <p>Return cos<script type="math/tex">(a)</script>. Requires a zero constant term.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/flint/fmpq_rel_series.jl#L549' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/flint/fmpq_rel_series.jl#L549' class='documenter-source'>source</a><br></p>
 <p><a id='Base.cosh-Tuple{Nemo.fmpq_rel_series}' href='#Base.cosh-Tuple{Nemo.fmpq_rel_series}'>#</a>
 <strong><code>Base.cosh</code></strong> &mdash; <em>Method</em>.</p>
 <p>cosh(a::fmpq_rel_series)</p>
 <blockquote>
 <p>Return cosh<script type="math/tex">(a)</script>. Requires a zero constant term.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/flint/fmpq_rel_series.jl#L566' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/flint/fmpq_rel_series.jl#L566' class='documenter-source'>source</a><br></p>
 <p><a id='Base.asin-Tuple{Nemo.fmpq_rel_series}' href='#Base.asin-Tuple{Nemo.fmpq_rel_series}'>#</a>
 <strong><code>Base.asin</code></strong> &mdash; <em>Method</em>.</p>
 <p>asin(a::fmpq_rel_series)</p>
 <blockquote>
 <p>Return asin<script type="math/tex">(a)</script>. Requires a zero constant term.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/flint/fmpq_rel_series.jl#L583' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/flint/fmpq_rel_series.jl#L583' class='documenter-source'>source</a><br></p>
 <p><a id='Base.asinh-Tuple{Nemo.fmpq_rel_series}' href='#Base.asinh-Tuple{Nemo.fmpq_rel_series}'>#</a>
 <strong><code>Base.asinh</code></strong> &mdash; <em>Method</em>.</p>
 <p>asinh(a::fmpq_rel_series)</p>
 <blockquote>
 <p>Return asinh<script type="math/tex">(a)</script>. Requires a zero constant term.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/flint/fmpq_rel_series.jl#L600' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/flint/fmpq_rel_series.jl#L600' class='documenter-source'>source</a><br></p>
 <p><a id='Base.atan-Tuple{Nemo.fmpq_rel_series}' href='#Base.atan-Tuple{Nemo.fmpq_rel_series}'>#</a>
 <strong><code>Base.atan</code></strong> &mdash; <em>Method</em>.</p>
 <p>atan(a::fmpq_rel_series)</p>
 <blockquote>
 <p>Return atan<script type="math/tex">(a)</script>. Requires a zero constant term.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/flint/fmpq_rel_series.jl#L617' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/flint/fmpq_rel_series.jl#L617' class='documenter-source'>source</a><br></p>
 <p><a id='Base.atanh-Tuple{Nemo.fmpq_rel_series}' href='#Base.atanh-Tuple{Nemo.fmpq_rel_series}'>#</a>
 <strong><code>Base.atanh</code></strong> &mdash; <em>Method</em>.</p>
 <p>atanh(a::fmpq_rel_series)</p>
 <blockquote>
 <p>Return atanh<script type="math/tex">(a)</script>. Requires a zero constant term.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/9c86a4a406167a20a5527194d70b8cf04fcbe520/src/flint/fmpq_rel_series.jl#L634' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/50732ba2af4cb45a9930e4d6e98e5f4535b8873c/src/flint/fmpq_rel_series.jl#L634' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of special functions.</p>
 <pre><code>R, t = PolynomialRing(QQ, &quot;t&quot;)
 S, x = PowerSeriesRing(R, 30, &quot;x&quot;)
