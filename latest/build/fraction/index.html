@@ -169,6 +169,20 @@
     </li>
 <li>
           
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../rational/">Rationals</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../finitefield/">Finite fields</a>
+        
+    </li>
+<li>
+          
         </ul>
       </div>
       &nbsp;
@@ -258,7 +272,7 @@ canonical_unit(a*b) == canonical_unit(a)*canonical_unit(b)
 <blockquote>
 <p>Return the parent object of the fraction field over the given base ring <script type="math/tex">R</script>. If <code>cached == true</code> (the default), the returned parent object is cached so that it will always be returned by a call to the constructor when the same base ring <script type="math/tex">R</script> is supplied.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/generic/Fraction.jl#L781' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/generic/Fraction.jl#L781' class='documenter-source'>source</a><br></p>
 <p>Note: it is also possible to construct fractions directly in Nemo without manually constructing the fraction field. In such cases, Nemo creates the relevant fraction field internally.</p>
 <p>For convenience, the rational fraction field is constructed automatically in Nemo. We have the definition</p>
 <pre><code>QQ = FractionField(ZZ)
@@ -287,7 +301,7 @@ d = QQ(11)
 <blockquote>
 <p>Return <script type="math/tex">0/1</script> in the given fraction field.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/generic/Fraction.jl#L92' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/generic/Fraction.jl#L92' class='documenter-source'>source</a><br></p>
 <p><a id='Base.one-Tuple{Nemo.FracField}' href='#Base.one-Tuple{Nemo.FracField}'>#</a>
 <strong><code>Base.one</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>one(R::FracField)
@@ -296,7 +310,7 @@ d = QQ(11)
 <blockquote>
 <p>Return <script type="math/tex">1/1</script> in the given fraction field.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/generic/Fraction.jl#L98' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/generic/Fraction.jl#L98' class='documenter-source'>source</a><br></p>
 <p>It is also possible to construct fractions directly in Nemo, without first manually constructing the relevant fraction field. For this purpose we overload Julia's fraction operator <code>//</code>.</p>
 <p>Here are some examples of constructing fractions.</p>
 <pre><code>S, x = PolynomialRing(ZZ, &quot;x&quot;)
@@ -387,7 +401,7 @@ S(n::T, d::Integer)
 <blockquote>
 <p>Return the base ring <script type="math/tex">R</script> of the given fraction field.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/generic/Fraction.jl#L19' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/generic/Fraction.jl#L19' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.base_ring-Tuple{Nemo.FracElem}' href='#Nemo.base_ring-Tuple{Nemo.FracElem}'>#</a>
 <strong><code>Nemo.base_ring</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>base_ring{T}(r::FracElem)
@@ -396,7 +410,7 @@ S(n::T, d::Integer)
 <blockquote>
 <p>Return the base ring <script type="math/tex">R</script> of the fraction field that the supplied element <script type="math/tex">a</script> belongs to.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/generic/Fraction.jl#L25' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/generic/Fraction.jl#L25' class='documenter-source'>source</a><br></p>
 <p><a id='Base.parent-Tuple{Nemo.FracElem}' href='#Base.parent-Tuple{Nemo.FracElem}'>#</a>
 <strong><code>Base.parent</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>parent(a::FracElem)
@@ -405,7 +419,7 @@ S(n::T, d::Integer)
 <blockquote>
 <p>Return the parent object of the given fraction element.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/generic/Fraction.jl#L32' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/generic/Fraction.jl#L32' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.iszero-Tuple{Nemo.FracElem}' href='#Nemo.iszero-Tuple{Nemo.FracElem}'>#</a>
 <strong><code>Nemo.iszero</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>iszero(a::FracElem)
@@ -414,7 +428,7 @@ S(n::T, d::Integer)
 <blockquote>
 <p>Return <code>true</code> if the supplied element <script type="math/tex">a</script> is zero in the fraction field it belongs to, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/generic/Fraction.jl#L104' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/generic/Fraction.jl#L104' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.isone-Tuple{Nemo.FracElem}' href='#Nemo.isone-Tuple{Nemo.FracElem}'>#</a>
 <strong><code>Nemo.isone</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>isone(a::FracElem)
@@ -423,7 +437,7 @@ S(n::T, d::Integer)
 <blockquote>
 <p>Return <code>true</code> if the supplied element <script type="math/tex">a</script> is one in the fraction field it belongs to, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/generic/Fraction.jl#L111' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/generic/Fraction.jl#L111' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.isunit-Tuple{Nemo.FracElem}' href='#Nemo.isunit-Tuple{Nemo.FracElem}'>#</a>
 <strong><code>Nemo.isunit</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>isunit(a::FracElem)
@@ -432,7 +446,7 @@ S(n::T, d::Integer)
 <blockquote>
 <p>Return <code>true</code> if the supplied element <script type="math/tex">a</script> is invertible in the fraction field it belongs to, i.e. the numerator is nonzero, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/generic/Fraction.jl#L118' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/generic/Fraction.jl#L118' class='documenter-source'>source</a><br></p>
 <p>Some functions are only available for certain rings.</p>
 <p><a id='Base.abs-Tuple{Nemo.fmpq}' href='#Base.abs-Tuple{Nemo.fmpq}'>#</a>
 <strong><code>Base.abs</code></strong> &mdash; <em>Method</em>.</p>
@@ -442,7 +456,7 @@ S(n::T, d::Integer)
 <blockquote>
 <p>Return the absolute value of <script type="math/tex">a</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/flint/fmpq.jl#L82' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/flint/fmpq.jl#L82' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.height-Tuple{Nemo.fmpq}' href='#Nemo.height-Tuple{Nemo.fmpq}'>#</a>
 <strong><code>Nemo.height</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>height(a::fmpq)
@@ -451,7 +465,7 @@ S(n::T, d::Integer)
 <blockquote>
 <p>Return the height of the fraction <script type="math/tex">a</script>, namely the largest of the absolute values of the numerator and denominator.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/flint/fmpq.jl#L102' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/flint/fmpq.jl#L102' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.height_bits-Tuple{Nemo.fmpq}' href='#Nemo.height_bits-Tuple{Nemo.fmpq}'>#</a>
 <strong><code>Nemo.height_bits</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>height_bits(a::fmpq)
@@ -460,7 +474,7 @@ S(n::T, d::Integer)
 <blockquote>
 <p>Return the number of bits of the height of the fraction <script type="math/tex">a</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/flint/fmpq.jl#L113' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/flint/fmpq.jl#L113' class='documenter-source'>source</a><br></p>
 <p><a id='Base.<<-Tuple{Nemo.fmpq,Int64}' href='#Base.<<-Tuple{Nemo.fmpq,Int64}'>#</a>
 <strong><code>Base.&lt;&lt;</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>&lt;&lt;(a::fmpq, b::Int)
@@ -469,7 +483,7 @@ S(n::T, d::Integer)
 <blockquote>
 <p>Return <script type="math/tex">2^b\times a</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/flint/fmpq.jl#L359' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/flint/fmpq.jl#L359' class='documenter-source'>source</a><br></p>
 <p><a id='Base.>&gt;-Tuple{Nemo.fmpq,Int64}' href='#Base.&gt;&gt;-Tuple{Nemo.fmpq,Int64}'&gt;#</a>
 <strong><code>Base.&gt;&gt;</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>&lt;&lt;(a::fmpq, b::Int)
@@ -478,7 +492,7 @@ S(n::T, d::Integer)
 <blockquote>
 <p>Return <script type="math/tex">2^b/a</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/flint/fmpq.jl#L348' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/flint/fmpq.jl#L348' class='documenter-source'>source</a><br></p>
 <p>Rational fractions can be compared with each other and with integers. Julia provides the full range of operators <script type="math/tex"><, >, \leq, \geq</script> which depend on the following functions.</p>
 <p><a id='Base.isless-Tuple{Nemo.fmpq,Nemo.fmpq}' href='#Base.isless-Tuple{Nemo.fmpq,Nemo.fmpq}'>#</a>
 <strong><code>Base.isless</code></strong> &mdash; <em>Method</em>.</p>
@@ -488,7 +502,7 @@ S(n::T, d::Integer)
 <blockquote>
 <p>Return <code>true</code> if <script type="math/tex">a < b</script>, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/flint/fmpq.jl#L261' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/flint/fmpq.jl#L261' class='documenter-source'>source</a><br></p>
 <p><a id='Base.isless-Tuple{Integer,Nemo.fmpq}' href='#Base.isless-Tuple{Integer,Nemo.fmpq}'>#</a>
 <strong><code>Base.isless</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>isless(a::Integer, b::fmpq)
@@ -497,7 +511,7 @@ S(n::T, d::Integer)
 <blockquote>
 <p>Return <code>true</code> if <script type="math/tex">a < b</script>, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/flint/fmpq.jl#L299' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/flint/fmpq.jl#L299' class='documenter-source'>source</a><br></p>
 <p><a id='Base.isless-Tuple{Nemo.fmpq,Integer}' href='#Base.isless-Tuple{Nemo.fmpq,Integer}'>#</a>
 <strong><code>Base.isless</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>isless(a::fmpq, b::Integer)
@@ -506,7 +520,7 @@ S(n::T, d::Integer)
 <blockquote>
 <p>Return <code>true</code> if <script type="math/tex">a < b</script>, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/flint/fmpq.jl#L289' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/flint/fmpq.jl#L289' class='documenter-source'>source</a><br></p>
 <p><a id='Base.isless-Tuple{Nemo.fmpq,Nemo.fmpz}' href='#Base.isless-Tuple{Nemo.fmpq,Nemo.fmpz}'>#</a>
 <strong><code>Base.isless</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>isless(a::fmpq, b::fmpz)
@@ -515,7 +529,7 @@ S(n::T, d::Integer)
 <blockquote>
 <p>Return <code>true</code> if <script type="math/tex">a < b</script>, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/flint/fmpq.jl#L309' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/flint/fmpq.jl#L309' class='documenter-source'>source</a><br></p>
 <p><a id='Base.isless-Tuple{Nemo.fmpz,Nemo.fmpq}' href='#Base.isless-Tuple{Nemo.fmpz,Nemo.fmpq}'>#</a>
 <strong><code>Base.isless</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>isless(a::fmpz, b::fmpq)
@@ -524,7 +538,7 @@ S(n::T, d::Integer)
 <blockquote>
 <p>Return <code>true</code> if <script type="math/tex">a < b</script>, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/flint/fmpq.jl#L319' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/flint/fmpq.jl#L319' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of basic manipulation of fractions.</p>
 <pre><code>S, x = PolynomialRing(ZZ, &quot;x&quot;)
 
@@ -550,7 +564,7 @@ W = parent(S(x))
 </code></pre>
 
 <p>Unary minus operator.</p>
-<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/5d524ec8a1b87bf09ef65155c9aa3c97c104a87e/base/docs/helpdb/Base.jl#L628-632' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/6e7b519079c9b23216cedca7f383e1bf0e8d74d8/base/docs/helpdb/Base.jl#L628-632' class='documenter-source'>source</a><br></p>
 <p><a id='Base.+-Tuple{Nemo.FracElem{T<:Nemo.RingElem},Nemo.FracElem{T<:Nemo.RingElem}}' href='#Base.+-Tuple{Nemo.FracElem{T<:Nemo.RingElem},Nemo.FracElem{T<:Nemo.RingElem}}'>#</a>
 <strong><code>Base.+</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>+{T &lt;: RingElem}(a::FracElem{T}, b::FracElem{T})
@@ -559,77 +573,77 @@ W = parent(S(x))
 <blockquote>
 <p>Return <script type="math/tex">a + b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/generic/Fraction.jl#L198' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/generic/Fraction.jl#L198' class='documenter-source'>source</a><br></p>
 <pre><code>+{T &lt;: RingElem}(a::FracElem{T}, b::T)
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a + b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/generic/Fraction.jl#L389' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/generic/Fraction.jl#L389' class='documenter-source'>source</a><br></p>
 <pre><code>+{T &lt;: RingElem}(a::T, b::FracElem{T})
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a + b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/generic/Fraction.jl#L411' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/generic/Fraction.jl#L411' class='documenter-source'>source</a><br></p>
 <p><a id='Base.--Tuple{Nemo.FracElem{T<:Nemo.RingElem},Nemo.FracElem{T<:Nemo.RingElem}}' href='#Base.--Tuple{Nemo.FracElem{T<:Nemo.RingElem},Nemo.FracElem{T<:Nemo.RingElem}}'>#</a>
 <strong><code>Base.-</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>-(x, y)
 </code></pre>
 
 <p>Subtraction operator.</p>
-<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/5d524ec8a1b87bf09ef65155c9aa3c97c104a87e/base/docs/helpdb/Base.jl#L635-639' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/6e7b519079c9b23216cedca7f383e1bf0e8d74d8/base/docs/helpdb/Base.jl#L635-639' class='documenter-source'>source</a><br></p>
 <pre><code>-{T &lt;: RingElem}(a::FracElem{T}, b::FracElem{T})
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a - b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/generic/Fraction.jl#L210' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/generic/Fraction.jl#L210' class='documenter-source'>source</a><br></p>
 <pre><code>-{T &lt;: RingElem}(a::FracElem{T}, b::T)
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a - b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/generic/Fraction.jl#L400' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/generic/Fraction.jl#L400' class='documenter-source'>source</a><br></p>
 <pre><code>-{T &lt;: RingElem}(a::T, b::FracElem{T})
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a - b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/generic/Fraction.jl#L417' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/generic/Fraction.jl#L417' class='documenter-source'>source</a><br></p>
 <p><a id='Base.*-Tuple{Nemo.FracElem{T<:Nemo.RingElem},Nemo.FracElem{T<:Nemo.RingElem}}' href='#Base.*-Tuple{Nemo.FracElem{T<:Nemo.RingElem},Nemo.FracElem{T<:Nemo.RingElem}}'>#</a>
 <strong><code>Base.*</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>*(x, y...)
 </code></pre>
 
 <p>Multiplication operator. <code>x*y*z*...</code> calls this function with all arguments, i.e. <code>*(x, y, z, ...)</code>.</p>
-<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/5d524ec8a1b87bf09ef65155c9aa3c97c104a87e/base/docs/helpdb/Base.jl#L7372-7378' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/6e7b519079c9b23216cedca7f383e1bf0e8d74d8/base/docs/helpdb/Base.jl#L7372-7378' class='documenter-source'>source</a><br></p>
 <pre><code>*{T &lt;: RingElem}(a::FracElem{T}, b::FracElem{T})
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a\times b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/generic/Fraction.jl#L222' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/generic/Fraction.jl#L222' class='documenter-source'>source</a><br></p>
 <pre><code>*{T &lt;: RingElem}(a::FracElem{T}, b::T)
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a\times b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/generic/Fraction.jl#L289' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/generic/Fraction.jl#L289' class='documenter-source'>source</a><br></p>
 <pre><code>*{T &lt;: RingElem}(a::T, b::FracElem{T})
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a\times b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/generic/Fraction.jl#L300' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/generic/Fraction.jl#L300' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.divexact-Tuple{Nemo.FracElem{T<:Nemo.RingElem},Nemo.FracElem{T<:Nemo.RingElem}}' href='#Nemo.divexact-Tuple{Nemo.FracElem{T<:Nemo.RingElem},Nemo.FracElem{T<:Nemo.RingElem}}'>#</a>
 <strong><code>Nemo.divexact</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>divexact{T &lt;: RingElem}(a::FracElem{T}, b::FracElem{T})
@@ -638,21 +652,21 @@ W = parent(S(x))
 <blockquote>
 <p>Return <script type="math/tex">a/b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/generic/Fraction.jl#L528' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/generic/Fraction.jl#L528' class='documenter-source'>source</a><br></p>
 <pre><code>divexact{T &lt;: RingElem}(a::FracElem{T}, b::T)
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a/b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/generic/Fraction.jl#L605' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/generic/Fraction.jl#L605' class='documenter-source'>source</a><br></p>
 <pre><code>divexact{T &lt;: RingElem}(a::T, b::FracElem{T})
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a/b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/generic/Fraction.jl#L617' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/generic/Fraction.jl#L617' class='documenter-source'>source</a><br></p>
 <p>The following ad hoc operators are also provided.</p>
 <p><a id='Base.+-Tuple{Integer,Nemo.FracElem}' href='#Base.+-Tuple{Integer,Nemo.FracElem}'>#</a>
 <strong><code>Base.+</code></strong> &mdash; <em>Method</em>.</p>
@@ -662,7 +676,7 @@ W = parent(S(x))
 <blockquote>
 <p>Return <script type="math/tex">a + b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/generic/Fraction.jl#L355' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/generic/Fraction.jl#L355' class='documenter-source'>source</a><br></p>
 <p><a id='Base.+-Tuple{Nemo.FracElem,Integer}' href='#Base.+-Tuple{Nemo.FracElem,Integer}'>#</a>
 <strong><code>Base.+</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>+(a::FracElem, b::Integer)
@@ -671,7 +685,7 @@ W = parent(S(x))
 <blockquote>
 <p>Return <script type="math/tex">a + b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/generic/Fraction.jl#L311' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/generic/Fraction.jl#L311' class='documenter-source'>source</a><br></p>
 <p><a id='Base.+-Tuple{Nemo.fmpz,Nemo.FracElem}' href='#Base.+-Tuple{Nemo.fmpz,Nemo.FracElem}'>#</a>
 <strong><code>Base.+</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>+(a::fmpz, b::FracElem)
@@ -680,7 +694,7 @@ W = parent(S(x))
 <blockquote>
 <p>Return <script type="math/tex">a + b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/generic/Fraction.jl#L361' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/generic/Fraction.jl#L361' class='documenter-source'>source</a><br></p>
 <p><a id='Base.+-Tuple{Nemo.FracElem,Nemo.fmpz}' href='#Base.+-Tuple{Nemo.FracElem,Nemo.fmpz}'>#</a>
 <strong><code>Base.+</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>+(a::FracElem, b::fmpz)
@@ -689,7 +703,7 @@ W = parent(S(x))
 <blockquote>
 <p>Return <script type="math/tex">a + b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/generic/Fraction.jl#L322' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/generic/Fraction.jl#L322' class='documenter-source'>source</a><br></p>
 <p><a id='Base.+-Tuple{T<:Nemo.RingElem,Nemo.FracElem{T<:Nemo.RingElem}}' href='#Base.+-Tuple{T<:Nemo.RingElem,Nemo.FracElem{T<:Nemo.RingElem}}'>#</a>
 <strong><code>Base.+</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>+{T &lt;: RingElem}(a::T, b::FracElem{T})
@@ -698,7 +712,7 @@ W = parent(S(x))
 <blockquote>
 <p>Return <script type="math/tex">a + b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/generic/Fraction.jl#L411' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/generic/Fraction.jl#L411' class='documenter-source'>source</a><br></p>
 <p><a id='Base.+-Tuple{Nemo.FracElem{T<:Nemo.RingElem},T<:Nemo.RingElem}' href='#Base.+-Tuple{Nemo.FracElem{T<:Nemo.RingElem},T<:Nemo.RingElem}'>#</a>
 <strong><code>Base.+</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>+{T &lt;: RingElem}(a::FracElem{T}, b::T)
@@ -707,175 +721,175 @@ W = parent(S(x))
 <blockquote>
 <p>Return <script type="math/tex">a + b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/generic/Fraction.jl#L389' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/generic/Fraction.jl#L389' class='documenter-source'>source</a><br></p>
 <p><a id='Base.--Tuple{Integer,Nemo.FracElem}' href='#Base.--Tuple{Integer,Nemo.FracElem}'>#</a>
 <strong><code>Base.-</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>-(x, y)
 </code></pre>
 
 <p>Subtraction operator.</p>
-<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/5d524ec8a1b87bf09ef65155c9aa3c97c104a87e/base/docs/helpdb/Base.jl#L635-639' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/6e7b519079c9b23216cedca7f383e1bf0e8d74d8/base/docs/helpdb/Base.jl#L635-639' class='documenter-source'>source</a><br></p>
 <pre><code>-(a::Integer, b::FracElem)
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a - b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/generic/Fraction.jl#L367' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/generic/Fraction.jl#L367' class='documenter-source'>source</a><br></p>
 <p><a id='Base.--Tuple{Nemo.FracElem,Integer}' href='#Base.--Tuple{Nemo.FracElem,Integer}'>#</a>
 <strong><code>Base.-</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>-(x, y)
 </code></pre>
 
 <p>Subtraction operator.</p>
-<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/5d524ec8a1b87bf09ef65155c9aa3c97c104a87e/base/docs/helpdb/Base.jl#L635-639' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/6e7b519079c9b23216cedca7f383e1bf0e8d74d8/base/docs/helpdb/Base.jl#L635-639' class='documenter-source'>source</a><br></p>
 <pre><code>-(a::FracElem, b::Integer)
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a - b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/generic/Fraction.jl#L333' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/generic/Fraction.jl#L333' class='documenter-source'>source</a><br></p>
 <p><a id='Base.--Tuple{Nemo.fmpz,Nemo.FracElem}' href='#Base.--Tuple{Nemo.fmpz,Nemo.FracElem}'>#</a>
 <strong><code>Base.-</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>-(x, y)
 </code></pre>
 
 <p>Subtraction operator.</p>
-<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/5d524ec8a1b87bf09ef65155c9aa3c97c104a87e/base/docs/helpdb/Base.jl#L635-639' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/6e7b519079c9b23216cedca7f383e1bf0e8d74d8/base/docs/helpdb/Base.jl#L635-639' class='documenter-source'>source</a><br></p>
 <pre><code>-(a::fmpz, b::FracElem)
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a - b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/generic/Fraction.jl#L378' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/generic/Fraction.jl#L378' class='documenter-source'>source</a><br></p>
 <p><a id='Base.--Tuple{Nemo.FracElem,Nemo.fmpz}' href='#Base.--Tuple{Nemo.FracElem,Nemo.fmpz}'>#</a>
 <strong><code>Base.-</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>-(x, y)
 </code></pre>
 
 <p>Subtraction operator.</p>
-<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/5d524ec8a1b87bf09ef65155c9aa3c97c104a87e/base/docs/helpdb/Base.jl#L635-639' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/6e7b519079c9b23216cedca7f383e1bf0e8d74d8/base/docs/helpdb/Base.jl#L635-639' class='documenter-source'>source</a><br></p>
 <pre><code>-(a::FracElem, b::fmpz)
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a - b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/generic/Fraction.jl#L344' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/generic/Fraction.jl#L344' class='documenter-source'>source</a><br></p>
 <p><a id='Base.--Tuple{T<:Nemo.RingElem,Nemo.FracElem{T<:Nemo.RingElem}}' href='#Base.--Tuple{T<:Nemo.RingElem,Nemo.FracElem{T<:Nemo.RingElem}}'>#</a>
 <strong><code>Base.-</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>-(x, y)
 </code></pre>
 
 <p>Subtraction operator.</p>
-<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/5d524ec8a1b87bf09ef65155c9aa3c97c104a87e/base/docs/helpdb/Base.jl#L635-639' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/6e7b519079c9b23216cedca7f383e1bf0e8d74d8/base/docs/helpdb/Base.jl#L635-639' class='documenter-source'>source</a><br></p>
 <pre><code>-{T &lt;: RingElem}(a::T, b::FracElem{T})
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a - b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/generic/Fraction.jl#L417' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/generic/Fraction.jl#L417' class='documenter-source'>source</a><br></p>
 <p><a id='Base.--Tuple{Nemo.FracElem{T<:Nemo.RingElem},T<:Nemo.RingElem}' href='#Base.--Tuple{Nemo.FracElem{T<:Nemo.RingElem},T<:Nemo.RingElem}'>#</a>
 <strong><code>Base.-</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>-(x, y)
 </code></pre>
 
 <p>Subtraction operator.</p>
-<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/5d524ec8a1b87bf09ef65155c9aa3c97c104a87e/base/docs/helpdb/Base.jl#L635-639' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/6e7b519079c9b23216cedca7f383e1bf0e8d74d8/base/docs/helpdb/Base.jl#L635-639' class='documenter-source'>source</a><br></p>
 <pre><code>-{T &lt;: RingElem}(a::FracElem{T}, b::T)
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a - b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/generic/Fraction.jl#L400' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/generic/Fraction.jl#L400' class='documenter-source'>source</a><br></p>
 <p><a id='Base.*-Tuple{Integer,Nemo.FracElem}' href='#Base.*-Tuple{Integer,Nemo.FracElem}'>#</a>
 <strong><code>Base.*</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>*(x, y...)
 </code></pre>
 
 <p>Multiplication operator. <code>x*y*z*...</code> calls this function with all arguments, i.e. <code>*(x, y, z, ...)</code>.</p>
-<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/5d524ec8a1b87bf09ef65155c9aa3c97c104a87e/base/docs/helpdb/Base.jl#L7372-7378' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/6e7b519079c9b23216cedca7f383e1bf0e8d74d8/base/docs/helpdb/Base.jl#L7372-7378' class='documenter-source'>source</a><br></p>
 <pre><code>*(a::Integer, b::FracElem)
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a\times b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/generic/Fraction.jl#L253' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/generic/Fraction.jl#L253' class='documenter-source'>source</a><br></p>
 <p><a id='Base.*-Tuple{Nemo.FracElem,Integer}' href='#Base.*-Tuple{Nemo.FracElem,Integer}'>#</a>
 <strong><code>Base.*</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>*(x, y...)
 </code></pre>
 
 <p>Multiplication operator. <code>x*y*z*...</code> calls this function with all arguments, i.e. <code>*(x, y, z, ...)</code>.</p>
-<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/5d524ec8a1b87bf09ef65155c9aa3c97c104a87e/base/docs/helpdb/Base.jl#L7372-7378' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/6e7b519079c9b23216cedca7f383e1bf0e8d74d8/base/docs/helpdb/Base.jl#L7372-7378' class='documenter-source'>source</a><br></p>
 <pre><code>*(a::FracElem, b::Integer)
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a\times b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/generic/Fraction.jl#L241' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/generic/Fraction.jl#L241' class='documenter-source'>source</a><br></p>
 <p><a id='Base.*-Tuple{Nemo.fmpz,Nemo.FracElem}' href='#Base.*-Tuple{Nemo.fmpz,Nemo.FracElem}'>#</a>
 <strong><code>Base.*</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>*(x, y...)
 </code></pre>
 
 <p>Multiplication operator. <code>x*y*z*...</code> calls this function with all arguments, i.e. <code>*(x, y, z, ...)</code>.</p>
-<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/5d524ec8a1b87bf09ef65155c9aa3c97c104a87e/base/docs/helpdb/Base.jl#L7372-7378' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/6e7b519079c9b23216cedca7f383e1bf0e8d74d8/base/docs/helpdb/Base.jl#L7372-7378' class='documenter-source'>source</a><br></p>
 <pre><code>*(a::fmpz, b::FracElem)
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a\times b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/generic/Fraction.jl#L277' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/generic/Fraction.jl#L277' class='documenter-source'>source</a><br></p>
 <p><a id='Base.*-Tuple{Nemo.FracElem,Nemo.fmpz}' href='#Base.*-Tuple{Nemo.FracElem,Nemo.fmpz}'>#</a>
 <strong><code>Base.*</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>*(x, y...)
 </code></pre>
 
 <p>Multiplication operator. <code>x*y*z*...</code> calls this function with all arguments, i.e. <code>*(x, y, z, ...)</code>.</p>
-<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/5d524ec8a1b87bf09ef65155c9aa3c97c104a87e/base/docs/helpdb/Base.jl#L7372-7378' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/6e7b519079c9b23216cedca7f383e1bf0e8d74d8/base/docs/helpdb/Base.jl#L7372-7378' class='documenter-source'>source</a><br></p>
 <pre><code>*(a::FracElem, b::fmpz)
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a\times b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/generic/Fraction.jl#L265' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/generic/Fraction.jl#L265' class='documenter-source'>source</a><br></p>
 <p><a id='Base.*-Tuple{T<:Nemo.RingElem,Nemo.FracElem{T<:Nemo.RingElem}}' href='#Base.*-Tuple{T<:Nemo.RingElem,Nemo.FracElem{T<:Nemo.RingElem}}'>#</a>
 <strong><code>Base.*</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>*(x, y...)
 </code></pre>
 
 <p>Multiplication operator. <code>x*y*z*...</code> calls this function with all arguments, i.e. <code>*(x, y, z, ...)</code>.</p>
-<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/5d524ec8a1b87bf09ef65155c9aa3c97c104a87e/base/docs/helpdb/Base.jl#L7372-7378' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/6e7b519079c9b23216cedca7f383e1bf0e8d74d8/base/docs/helpdb/Base.jl#L7372-7378' class='documenter-source'>source</a><br></p>
 <pre><code>*{T &lt;: RingElem}(a::T, b::FracElem{T})
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a\times b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/generic/Fraction.jl#L300' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/generic/Fraction.jl#L300' class='documenter-source'>source</a><br></p>
 <p><a id='Base.*-Tuple{Nemo.FracElem{T<:Nemo.RingElem},T<:Nemo.RingElem}' href='#Base.*-Tuple{Nemo.FracElem{T<:Nemo.RingElem},T<:Nemo.RingElem}'>#</a>
 <strong><code>Base.*</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>*(x, y...)
 </code></pre>
 
 <p>Multiplication operator. <code>x*y*z*...</code> calls this function with all arguments, i.e. <code>*(x, y, z, ...)</code>.</p>
-<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/5d524ec8a1b87bf09ef65155c9aa3c97c104a87e/base/docs/helpdb/Base.jl#L7372-7378' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/6e7b519079c9b23216cedca7f383e1bf0e8d74d8/base/docs/helpdb/Base.jl#L7372-7378' class='documenter-source'>source</a><br></p>
 <pre><code>*{T &lt;: RingElem}(a::FracElem{T}, b::T)
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a\times b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/generic/Fraction.jl#L289' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/generic/Fraction.jl#L289' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.divexact-Tuple{Integer,Nemo.FracElem}' href='#Nemo.divexact-Tuple{Integer,Nemo.FracElem}'>#</a>
 <strong><code>Nemo.divexact</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>divexact(a::Integer, b::FracElem)
@@ -884,7 +898,7 @@ W = parent(S(x))
 <blockquote>
 <p>Return <script type="math/tex">a/b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/generic/Fraction.jl#L560' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/generic/Fraction.jl#L560' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.divexact-Tuple{Nemo.FracElem,Integer}' href='#Nemo.divexact-Tuple{Nemo.FracElem,Integer}'>#</a>
 <strong><code>Nemo.divexact</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>divexact(a::FracElem, b::Integer)
@@ -893,7 +907,7 @@ W = parent(S(x))
 <blockquote>
 <p>Return <script type="math/tex">a/b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/generic/Fraction.jl#L547' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/generic/Fraction.jl#L547' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.divexact-Tuple{Nemo.fmpz,Nemo.FracElem}' href='#Nemo.divexact-Tuple{Nemo.fmpz,Nemo.FracElem}'>#</a>
 <strong><code>Nemo.divexact</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>divexact(a::fmpz, b::FracElem)
@@ -902,7 +916,7 @@ W = parent(S(x))
 <blockquote>
 <p>Return <script type="math/tex">a/b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/generic/Fraction.jl#L586' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/generic/Fraction.jl#L586' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.divexact-Tuple{Nemo.FracElem,Nemo.fmpz}' href='#Nemo.divexact-Tuple{Nemo.FracElem,Nemo.fmpz}'>#</a>
 <strong><code>Nemo.divexact</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>divexact(a::FracElem, b::fmpz)
@@ -911,7 +925,7 @@ W = parent(S(x))
 <blockquote>
 <p>Return <script type="math/tex">a/b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/generic/Fraction.jl#L573' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/generic/Fraction.jl#L573' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.divexact-Tuple{T<:Nemo.RingElem,Nemo.FracElem{T<:Nemo.RingElem}}' href='#Nemo.divexact-Tuple{T<:Nemo.RingElem,Nemo.FracElem{T<:Nemo.RingElem}}'>#</a>
 <strong><code>Nemo.divexact</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>divexact{T &lt;: RingElem}(a::T, b::FracElem{T})
@@ -920,7 +934,7 @@ W = parent(S(x))
 <blockquote>
 <p>Return <script type="math/tex">a/b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/generic/Fraction.jl#L617' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/generic/Fraction.jl#L617' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.divexact-Tuple{Nemo.FracElem{T<:Nemo.RingElem},T<:Nemo.RingElem}' href='#Nemo.divexact-Tuple{Nemo.FracElem{T<:Nemo.RingElem},T<:Nemo.RingElem}'>#</a>
 <strong><code>Nemo.divexact</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>divexact{T &lt;: RingElem}(a::FracElem{T}, b::T)
@@ -929,14 +943,14 @@ W = parent(S(x))
 <blockquote>
 <p>Return <script type="math/tex">a/b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/generic/Fraction.jl#L605' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/generic/Fraction.jl#L605' class='documenter-source'>source</a><br></p>
 <p><a id='Base.^-Tuple{Nemo.FracElem,Int64}' href='#Base.^-Tuple{Nemo.FracElem,Int64}'>#</a>
 <strong><code>Base.^</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>^(x, y)
 </code></pre>
 
 <p>Exponentiation operator.</p>
-<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/5d524ec8a1b87bf09ef65155c9aa3c97c104a87e/base/docs/helpdb/Base.jl#L4325-4329' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/6e7b519079c9b23216cedca7f383e1bf0e8d74d8/base/docs/helpdb/Base.jl#L4325-4329' class='documenter-source'>source</a><br></p>
 <p>If the appropriate <code>promote_rule</code> and coercion exists, these operators can also be used with elements of other rings. Nemo will try to coerce the operands to the dominating type and then apply the operator.</p>
 <p>Here are some examples of arithmetic operations on fractions.</p>
 <pre><code>S, x = PolynomialRing(ZZ, &quot;x&quot;)
@@ -966,21 +980,21 @@ q = a^3
 <blockquote>
 <p>Return <code>true</code> if <script type="math/tex">x == y</script> arithmetically, otherwise return <code>false</code>. Recall that power series to different precisions may still be arithmetically equal to the minimum of the two precisions.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/generic/Fraction.jl#L434' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/generic/Fraction.jl#L434' class='documenter-source'>source</a><br></p>
 <pre><code>=={T &lt;: RingElem}(x::FracElem{T}, y::T)
 </code></pre>
 
 <blockquote>
 <p>Return <code>true</code> if <script type="math/tex">x == y</script> arithmetically, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/generic/Fraction.jl#L493' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/generic/Fraction.jl#L493' class='documenter-source'>source</a><br></p>
 <pre><code>=={T &lt;: RingElem}(x::T, y::FracElem{T})
 </code></pre>
 
 <blockquote>
 <p>Return <code>true</code> if <script type="math/tex">x == y</script> arithmetically, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/generic/Fraction.jl#L501' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/generic/Fraction.jl#L501' class='documenter-source'>source</a><br></p>
 <p><a id='Base.isequal-Tuple{Nemo.FracElem{T<:Nemo.RingElem},Nemo.FracElem{T<:Nemo.RingElem}}' href='#Base.isequal-Tuple{Nemo.FracElem{T<:Nemo.RingElem},Nemo.FracElem{T<:Nemo.RingElem}}'>#</a>
 <strong><code>Base.isequal</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>isequal{T &lt;: RingElem}(x::FracElem{T}, y::FracElem{T})
@@ -989,7 +1003,7 @@ q = a^3
 <blockquote>
 <p>Return <code>true</code> if <script type="math/tex">x == y</script> exactly, otherwise return <code>false</code>. This function is useful in cases where the numerators and denominators of the fractions are inexact, e.g. power series. Only if the power series are precisely the same, to the same precision, are they declared equal by this function.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/generic/Fraction.jl#L445' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/generic/Fraction.jl#L445' class='documenter-source'>source</a><br></p>
 <p>In addition we have the following ad hoc comparison operators.</p>
 <p><a id='Base.==-Tuple{Nemo.FracElem{T<:Nemo.RingElem},T<:Nemo.RingElem}' href='#Base.==-Tuple{Nemo.FracElem{T<:Nemo.RingElem},T<:Nemo.RingElem}'>#</a>
 <strong><code>Base.==</code></strong> &mdash; <em>Method</em>.</p>
@@ -999,7 +1013,7 @@ q = a^3
 <blockquote>
 <p>Return <code>true</code> if <script type="math/tex">x == y</script> arithmetically, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/generic/Fraction.jl#L493' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/generic/Fraction.jl#L493' class='documenter-source'>source</a><br></p>
 <p><a id='Base.==-Tuple{T<:Nemo.RingElem,Nemo.FracElem{T<:Nemo.RingElem}}' href='#Base.==-Tuple{T<:Nemo.RingElem,Nemo.FracElem{T<:Nemo.RingElem}}'>#</a>
 <strong><code>Base.==</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>=={T &lt;: RingElem}(x::T, y::FracElem{T})
@@ -1008,7 +1022,7 @@ q = a^3
 <blockquote>
 <p>Return <code>true</code> if <script type="math/tex">x == y</script> arithmetically, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/generic/Fraction.jl#L501' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/generic/Fraction.jl#L501' class='documenter-source'>source</a><br></p>
 <p><a id='Base.==-Tuple{Nemo.FracElem,Integer}' href='#Base.==-Tuple{Nemo.FracElem,Integer}'>#</a>
 <strong><code>Base.==</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>==(x::FracElem, y::Integer)
@@ -1017,7 +1031,7 @@ q = a^3
 <blockquote>
 <p>Return <code>true</code> if <script type="math/tex">x == y</script> arithmetically, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/generic/Fraction.jl#L465' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/generic/Fraction.jl#L465' class='documenter-source'>source</a><br></p>
 <p><a id='Base.==-Tuple{Integer,Nemo.FracElem}' href='#Base.==-Tuple{Integer,Nemo.FracElem}'>#</a>
 <strong><code>Base.==</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>==(x::Integer, y::FracElem)
@@ -1026,7 +1040,7 @@ q = a^3
 <blockquote>
 <p>Return <code>true</code> if <script type="math/tex">x == y</script> arithmetically, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/generic/Fraction.jl#L473' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/generic/Fraction.jl#L473' class='documenter-source'>source</a><br></p>
 <p><a id='Base.==-Tuple{Nemo.FracElem,Nemo.fmpz}' href='#Base.==-Tuple{Nemo.FracElem,Nemo.fmpz}'>#</a>
 <strong><code>Base.==</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>==(x::FracElem, y::fmpz)
@@ -1035,7 +1049,7 @@ q = a^3
 <blockquote>
 <p>Return <code>true</code> if <script type="math/tex">x == y</script> arithmetically, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/generic/Fraction.jl#L479' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/generic/Fraction.jl#L479' class='documenter-source'>source</a><br></p>
 <p><a id='Base.==-Tuple{Nemo.fmpz,Nemo.FracElem}' href='#Base.==-Tuple{Nemo.fmpz,Nemo.FracElem}'>#</a>
 <strong><code>Base.==</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>==(x::fmpz, y::FracElem)
@@ -1044,7 +1058,7 @@ q = a^3
 <blockquote>
 <p>Return <code>true</code> if <script type="math/tex">x == y</script> arithmetically, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/generic/Fraction.jl#L487' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/generic/Fraction.jl#L487' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of comparisons.</p>
 <pre><code>S, x = PolynomialRing(ZZ, &quot;x&quot;)
 
@@ -1068,7 +1082,7 @@ b == x + 1
 <blockquote>
 <p>Return the inverse of the fraction <script type="math/tex">a</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/generic/Fraction.jl#L513' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/generic/Fraction.jl#L513' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of computing inverses.</p>
 <pre><code>S, x = PolynomialRing(ZZ, &quot;x&quot;)
 
@@ -1087,7 +1101,7 @@ b = inv(a)
 <blockquote>
 <p>Return a greatest common divisor of <script type="math/tex">a</script> and <script type="math/tex">b</script> if one exists. N.B: we define the GCD of <script type="math/tex">a/b</script> and <script type="math/tex">c/d</script> to be gcd<script type="math/tex">(ad, bc)/bd</script>, reduced to lowest terms. This requires the existence of a greatest common divisor function for the base ring.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/generic/Fraction.jl#L653' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/generic/Fraction.jl#L653' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of computing a greatest common divisor.</p>
 <pre><code>S, x = PolynomialRing(ZZ, &quot;x&quot;)
 
@@ -1107,7 +1121,7 @@ f = gcd(a, (x + 1)//(x - 1))
 <blockquote>
 <p>Return <script type="math/tex">a \pmod{b}</script> where <script type="math/tex">b</script> is an integer coprime to the denominator of <script type="math/tex">a</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/flint/fmpq.jl#L420' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/flint/fmpq.jl#L420' class='documenter-source'>source</a><br></p>
 <p><a id='Base.mod-Tuple{Nemo.fmpq,Integer}' href='#Base.mod-Tuple{Nemo.fmpq,Integer}'>#</a>
 <strong><code>Base.mod</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>mod(a::fmpq, b::Integer)
@@ -1116,7 +1130,7 @@ f = gcd(a, (x + 1)//(x - 1))
 <blockquote>
 <p>Return <script type="math/tex">a \pmod{b}</script> where <script type="math/tex">b</script> is an integer coprime to the denominator of <script type="math/tex">a</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/flint/fmpq.jl#L432' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/flint/fmpq.jl#L432' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of modular arithmetic.</p>
 <pre><code>a = -fmpz(2)//3
 b = fmpz(1)//2
@@ -1136,7 +1150,7 @@ d = mod(b, fmpz(5))
 <blockquote>
 <p>Attempt to find a rational number <script type="math/tex">n/d</script> such that  <script type="math/tex">0 \leq |n| \leq \lfloor\sqrt{m/2}\rfloor</script> and  <script type="math/tex">0 < d \leq \lfloor\sqrt{m/2}\rfloor</script> such that gcd<script type="math/tex">(n, d) = 1</script> and <script type="math/tex">a \equiv nd^{-1} \pmod{m}</script>. If no solution exists, an exception is thrown.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/flint/fmpq.jl#L458' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/flint/fmpq.jl#L458' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.reconstruct-Tuple{Nemo.fmpz,Integer}' href='#Nemo.reconstruct-Tuple{Nemo.fmpz,Integer}'>#</a>
 <strong><code>Nemo.reconstruct</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>reconstruct(a::fmpz, b::Integer)
@@ -1145,7 +1159,7 @@ d = mod(b, fmpz(5))
 <blockquote>
 <p>Attempt to find a rational number <script type="math/tex">n/d</script> such that  <script type="math/tex">0 \leq |n| \leq \lfloor\sqrt{m/2}\rfloor</script> and  <script type="math/tex">0 < d \leq \lfloor\sqrt{m/2}\rfloor</script> such that gcd<script type="math/tex">(n, d) = 1</script> and <script type="math/tex">a \equiv nd^{-1} \pmod{m}</script>. If no solution exists, an exception is thrown.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/flint/fmpq.jl#L474' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/flint/fmpq.jl#L474' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.reconstruct-Tuple{Integer,Nemo.fmpz}' href='#Nemo.reconstruct-Tuple{Integer,Nemo.fmpz}'>#</a>
 <strong><code>Nemo.reconstruct</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>reconstruct(a::Integer, b::fmpz)
@@ -1154,7 +1168,7 @@ d = mod(b, fmpz(5))
 <blockquote>
 <p>Attempt to find a rational number <script type="math/tex">n/d</script> such that  <script type="math/tex">0 \leq |n| \leq \lfloor\sqrt{m/2}\rfloor</script> and  <script type="math/tex">0 < d \leq \lfloor\sqrt{m/2}\rfloor</script> such that gcd<script type="math/tex">(n, d) = 1</script> and <script type="math/tex">a \equiv nd^{-1} \pmod{m}</script>. If no solution exists, an exception is thrown.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/flint/fmpq.jl#L483' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/flint/fmpq.jl#L483' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.reconstruct-Tuple{Integer,Integer}' href='#Nemo.reconstruct-Tuple{Integer,Integer}'>#</a>
 <strong><code>Nemo.reconstruct</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>reconstruct(a::Integer, b::Integer)
@@ -1163,7 +1177,7 @@ d = mod(b, fmpz(5))
 <blockquote>
 <p>Attempt to find a rational number <script type="math/tex">n/d</script> such that  <script type="math/tex">0 \leq |n| \leq \lfloor\sqrt{m/2}\rfloor</script> and  <script type="math/tex">0 < d \leq \lfloor\sqrt{m/2}\rfloor</script> such that gcd<script type="math/tex">(n, d) = 1</script> and <script type="math/tex">a \equiv nd^{-1} \pmod{m}</script>. If no solution exists, an exception is thrown.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/flint/fmpq.jl#L492' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/flint/fmpq.jl#L492' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of rational reconstruction.</p>
 <pre><code>a = reconstruct(7, 13)
 b = reconstruct(fmpz(15), 31)
@@ -1181,7 +1195,7 @@ c = reconstruct(fmpz(123), fmpz(237))
 <blockquote>
 <p>Given <script type="math/tex">x</script>, returns the next rational number in the sequence obtained by enumerating all positive denominators <script type="math/tex">q</script>, and for each <script type="math/tex">q</script> enumerating the numerators <script type="math/tex">1 \le p < q</script> in order and generating both <script type="math/tex">p/q</script> and <script type="math/tex">q/p</script>, but skipping all gcd<script type="math/tex">(p,q) \neq 1</script>. Starting with zero, this generates every nonnegative rational number once and only once, with the first few entries being <script type="math/tex">0, 1, 1/2, 2, 1/3, 3, 2/3, 3/2, 1/4, 4, 3/4, 4/3, \ldots</script>. This enumeration produces the rational numbers in order of minimal height.  It has the disadvantage of being somewhat slower to compute than the Calkin-Wilf enumeration. If <script type="math/tex">x < 0</script> we throw a <code>DomainError()</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/flint/fmpq.jl#L507' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/flint/fmpq.jl#L507' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.next_signed_minimal-Tuple{Nemo.fmpq}' href='#Nemo.next_signed_minimal-Tuple{Nemo.fmpq}'>#</a>
 <strong><code>Nemo.next_signed_minimal</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>next_signed_minimal(a::fmpq)
@@ -1190,7 +1204,7 @@ c = reconstruct(fmpz(123), fmpz(237))
 <blockquote>
 <p>Given a signed rational number <script type="math/tex">x</script> assumed to be in canonical form,  returns the next element in the minimal-height sequence generated by  <code>next_minimal</code> but with negative numbers interleaved. The sequence begins <script type="math/tex">0, 1, -1, 1/2, -1/2, 2, -2, 1/3, -1/3, \ldots</script>. Starting with zero, this generates every rational number once and only once, in order of minimal height.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/flint/fmpq.jl#L526' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/flint/fmpq.jl#L526' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.next_calkin_wilf-Tuple{Nemo.fmpq}' href='#Nemo.next_calkin_wilf-Tuple{Nemo.fmpq}'>#</a>
 <strong><code>Nemo.next_calkin_wilf</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>next_calkin_wilf(a::fmpq)
@@ -1199,7 +1213,7 @@ c = reconstruct(fmpz(123), fmpz(237))
 <blockquote>
 <p>Given <script type="math/tex">x</script> return the next number in the breadth-first traversal of the Calkin-Wilf tree. Starting with zero, this generates every nonnegative rational number once and only once, with the first few entries being <script type="math/tex">0, 1, 1/2, 2, 1/3, 3/2, 2/3, 3, 1/4, 4/3, 3/5, 5/2, 2/5, \ldots</script>. Despite the appearance of the initial entries, the Calkin-Wilf enumeration  does not produce the rational numbers in order of height: some small fractions will appear late in the sequence. This order has the advantage of being faster to produce than the minimal-height order.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/flint/fmpq.jl#L542' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/flint/fmpq.jl#L542' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.next_signed_calkin_wilf-Tuple{Nemo.fmpq}' href='#Nemo.next_signed_calkin_wilf-Tuple{Nemo.fmpq}'>#</a>
 <strong><code>Nemo.next_signed_calkin_wilf</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>next_signed_calkin_wilf(a::fmpq)
@@ -1208,7 +1222,7 @@ c = reconstruct(fmpz(123), fmpz(237))
 <blockquote>
 <p>Given a signed rational number <script type="math/tex">x</script> returns the next element in the Calkin-Wilf sequence with negative numbers interleaved. The sequence begins <script type="math/tex">0, 1, -1, 1/2, -1/2, 2, -2, 1/3, -1/3, \ldots</script>. Starting with zero, this generates every rational number once and only once, but not in order of minimal height.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/flint/fmpq.jl#L561' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/flint/fmpq.jl#L561' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of rational enumeration.</p>
 <pre><code>next_minimal(fmpz(2)//3)
 next_signed_minimal(-fmpz(21)//31)
@@ -1227,7 +1241,7 @@ next_signed_calkin_wilf(-fmpz(51)//(17))
 <blockquote>
 <p>Computes the harmonic number <script type="math/tex">H_n = 1 + 1/2 + 1/3 + \cdots + 1/n</script>. Table lookup is used for <script type="math/tex">H_n</script> whose numerator and denominator  fit in a single limb. For larger <script type="math/tex">n</script>, a divide and conquer strategy is used.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/flint/fmpq.jl#L582' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/flint/fmpq.jl#L582' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.bernoulli-Tuple{Int64}' href='#Nemo.bernoulli-Tuple{Int64}'>#</a>
 <strong><code>Nemo.bernoulli</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>bernoulli(n::Int)
@@ -1236,7 +1250,7 @@ next_signed_calkin_wilf(-fmpz(51)//(17))
 <blockquote>
 <p>Computes the Bernoulli number <script type="math/tex">B_n</script> for nonnegative <script type="math/tex">n</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/flint/fmpq.jl#L595' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/flint/fmpq.jl#L595' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.bernoulli_cache-Tuple{Int64}' href='#Nemo.bernoulli_cache-Tuple{Int64}'>#</a>
 <strong><code>Nemo.bernoulli_cache</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>bernoulli_cache(n::Int)
@@ -1245,13 +1259,13 @@ next_signed_calkin_wilf(-fmpz(51)//(17))
 <blockquote>
 <p>Precomputes and caches all the Bernoulli numbers up to <script type="math/tex">B_n</script>. This is much faster than repeatedly calling <code>bernoulli(k)</code>. Once cached, subsequent calls to <code>bernoulli(k)</code> for any <script type="math/tex">k \le n</script> will read from the cache, making them virtually free.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/flint/fmpq.jl#L606' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/flint/fmpq.jl#L606' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.dedekind_sum-Tuple{Nemo.fmpz,Nemo.fmpz}' href='#Nemo.dedekind_sum-Tuple{Nemo.fmpz,Nemo.fmpz}'>#</a>
 <strong><code>Nemo.dedekind_sum</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>dedekind_sum(h::fmpz, k::fmpz)
 </code></pre>
 
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/flint/fmpq.jl#L619' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/flint/fmpq.jl#L619' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.dedekind_sum-Tuple{Nemo.fmpz,Integer}' href='#Nemo.dedekind_sum-Tuple{Nemo.fmpz,Integer}'>#</a>
 <strong><code>Nemo.dedekind_sum</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>dedekind_sum(h::fmpz, k::Integer)
@@ -1260,7 +1274,7 @@ next_signed_calkin_wilf(-fmpz(51)//(17))
 <blockquote>
 <p>Computes the Dedekind sum <script type="math/tex">s(h,k)</script> for arbitrary <script type="math/tex">h</script> and <script type="math/tex">k</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/flint/fmpq.jl#L629' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/flint/fmpq.jl#L629' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.dedekind_sum-Tuple{Integer,Nemo.fmpz}' href='#Nemo.dedekind_sum-Tuple{Integer,Nemo.fmpz}'>#</a>
 <strong><code>Nemo.dedekind_sum</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>dedekind_sum(h::Integer, k::fmpz)
@@ -1269,7 +1283,7 @@ next_signed_calkin_wilf(-fmpz(51)//(17))
 <blockquote>
 <p>Computes the Dedekind sum <script type="math/tex">s(h,k)</script> for arbitrary <script type="math/tex">h</script> and <script type="math/tex">k</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/flint/fmpq.jl#L635' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/flint/fmpq.jl#L635' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.dedekind_sum-Tuple{Integer,Integer}' href='#Nemo.dedekind_sum-Tuple{Integer,Integer}'>#</a>
 <strong><code>Nemo.dedekind_sum</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>dedekind_sum(h::Integer, k::Integer)
@@ -1278,7 +1292,7 @@ next_signed_calkin_wilf(-fmpz(51)//(17))
 <blockquote>
 <p>Computes the Dedekind sum <script type="math/tex">s(h,k)</script> for arbitrary <script type="math/tex">h</script> and <script type="math/tex">k</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/4aec3f4d707c60ddde31a5fcff5058a23a6fc24f/src/flint/fmpq.jl#L641' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e2d813aea300c2ee3e21558ce7669f46e8b261/src/flint/fmpq.jl#L641' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of special functions.</p>
 <pre><code>a = harmonic(12)
 
