@@ -188,6 +188,13 @@
           
             <li>
     <li class="toctree-l1 ">
+        <a class="" href="../arb/">Real balls</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
         <a class="" href="../perm/">Permutation groups</a>
         
     </li>
@@ -266,7 +273,7 @@
 <blockquote>
 <p>Create the residue ring <script type="math/tex">R/(a)</script> where <script type="math/tex">a</script> is an element of the ring <script type="math/tex">R</script>. We require <script type="math/tex">a \neq 0</script>. If <code>cached == true</code> (the default) then the resulting residue ring parent object is cached and returned for any subsequent calls to the constructor with the same base ring <script type="math/tex">R</script> and element <script type="math/tex">a</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/generic/Residue.jl#L549' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/3113c4687981b360f1c6619f617fe6063e63643b/src/generic/Residue.jl#L549' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of creating residue rings and making use of the resulting parent objects to coerce various elements into those rings.</p>
 <pre><code>R = ResidueRing(ZZ, 17)
 S, x = PolynomialRing(QQ, &quot;x&quot;)
@@ -289,7 +296,7 @@ c = T(ZZ(3))
 <blockquote>
 <p>Return the zero element of the given residue ring, i.e. <script type="math/tex">0 \pmod{a}</script> where <script type="math/tex">a</script> is the modulus of the residue ring.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/generic/Residue.jl#L79' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/3113c4687981b360f1c6619f617fe6063e63643b/src/generic/Residue.jl#L79' class='documenter-source'>source</a><br></p>
 <p><a id='Base.one-Tuple{Nemo.ResRing}' href='#Base.one-Tuple{Nemo.ResRing}'>#</a>
 <strong><code>Base.one</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>zero(R::ResRing)
@@ -298,7 +305,7 @@ c = T(ZZ(3))
 <blockquote>
 <p>Return <script type="math/tex">1 \pmod{a}</script> where <script type="math/tex">a</script> is the modulus of the residue ring.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/generic/Residue.jl#L86' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/3113c4687981b360f1c6619f617fe6063e63643b/src/generic/Residue.jl#L86' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of constructing residues.</p>
 <pre><code>R = ResidueRing(ZZ, 16453889)
 S, x = PolynomialRing(R, &quot;x&quot;)
@@ -371,132 +378,6 @@ S(n::fmpz)
 <p>Numerous functions are provided to manipulate residues. Also see the section on basic functionality above.</p>
 <p><a id='Nemo.base_ring-Tuple{Nemo.ResRing}' href='#Nemo.base_ring-Tuple{Nemo.ResRing}'>#</a>
 <strong><code>Nemo.base_ring</code></strong> &mdash; <em>Method</em>.</p>
-<pre><code>base_ring(a::FlintIntegerRing)
-</code></pre>
-
-<blockquote>
-<p>Returns <code>Union{}</code> as this ring is not dependent on another ring.</p>
-</blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/flint/fmpz.jl#L61' class='documenter-source'>source</a><br></p>
-<pre><code>base_ring(a::fmpz)
-</code></pre>
-
-<blockquote>
-<p>Returns <code>Union{}</code> as the parent ring is not dependent on another ring.</p>
-</blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/flint/fmpz.jl#L67' class='documenter-source'>source</a><br></p>
-<pre><code>base_ring{T &lt;: RingElem}(S::ResRing{T})
-</code></pre>
-
-<blockquote>
-<p>Return the base ring <script type="math/tex">R</script> of the given residue ring <script type="math/tex">S = R/(a)</script>.</p>
-</blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/generic/Residue.jl#L19' class='documenter-source'>source</a><br></p>
-<pre><code>base_ring(r::ResElem)
-</code></pre>
-
-<blockquote>
-<p>Return the base ring <script type="math/tex">R</script> of the residue ring <script type="math/tex">R/(a)</script> that the supplied element <script type="math/tex">r</script> belongs to.</p>
-</blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/generic/Residue.jl#L25' class='documenter-source'>source</a><br></p>
-<pre><code>base_ring(R::PolyRing)
-</code></pre>
-
-<blockquote>
-<p>Return the base ring of the given polynomial ring.</p>
-</blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/generic/Poly.jl#L27' class='documenter-source'>source</a><br></p>
-<pre><code>base_ring(a::PolyElem)
-</code></pre>
-
-<blockquote>
-<p>Return the base ring of the polynomial ring of the given polynomial.</p>
-</blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/generic/Poly.jl#L33' class='documenter-source'>source</a><br></p>
-<pre><code>base_ring(R::SeriesRing)
-</code></pre>
-
-<blockquote>
-<p>Return the base ring of the given power series ring.</p>
-</blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/generic/RelSeries.jl#L38' class='documenter-source'>source</a><br></p>
-<pre><code>base_ring(a::SeriesElem)
-</code></pre>
-
-<blockquote>
-<p>Return the base ring of the power series ring of the given power series.</p>
-</blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/generic/RelSeries.jl#L44' class='documenter-source'>source</a><br></p>
-<pre><code>base_ring{T &lt;: RingElem}(S::MatSpace{T})
-</code></pre>
-
-<blockquote>
-<p>Return the base ring <script type="math/tex">R</script> of the given matrix space.</p>
-</blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/generic/Matrix.jl#L22' class='documenter-source'>source</a><br></p>
-<pre><code>base_ring(r::MatElem)
-</code></pre>
-
-<blockquote>
-<p>Return the base ring <script type="math/tex">R</script> of the matrix space that the supplied matrix <script type="math/tex">r</script> belongs to.</p>
-</blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/generic/Matrix.jl#L28' class='documenter-source'>source</a><br></p>
-<pre><code>base_ring{T}(S::FracField{T})
-</code></pre>
-
-<blockquote>
-<p>Return the base ring <script type="math/tex">R</script> of the given fraction field.</p>
-</blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/generic/Fraction.jl#L19' class='documenter-source'>source</a><br></p>
-<pre><code>base_ring{T}(r::FracElem)
-</code></pre>
-
-<blockquote>
-<p>Return the base ring <script type="math/tex">R</script> of the fraction field that the supplied element <script type="math/tex">a</script> belongs to.</p>
-</blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/generic/Fraction.jl#L25' class='documenter-source'>source</a><br></p>
-<pre><code>base_ring(a::FqFiniteField)
-</code></pre>
-
-<blockquote>
-<p>Returns <code>Union{}</code> as this field is not dependent on another field.</p>
-</blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/flint/fq.jl#L20' class='documenter-source'>source</a><br></p>
-<pre><code>base_ring(a::fq)
-</code></pre>
-
-<blockquote>
-<p>Returns <code>Union{}</code> as this field is not dependent on another field.</p>
-</blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/flint/fq.jl#L26' class='documenter-source'>source</a><br></p>
-<pre><code>base_ring(a::AnticNumberField)
-</code></pre>
-
-<blockquote>
-<p>Returns <code>Union{}</code> since a number field doesn't depend on any ring.</p>
-</blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/antic/nf_elem.jl#L26' class='documenter-source'>source</a><br></p>
-<pre><code>base_ring(a::nf_elem)
-</code></pre>
-
-<blockquote>
-<p>Returns <code>Union{}</code> since a number field doesn't depend on any ring.</p>
-</blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/antic/nf_elem.jl#L32' class='documenter-source'>source</a><br></p>
-<pre><code>base_ring(a::FlintPadicField)
-</code></pre>
-
-<blockquote>
-<p>Returns <code>Union{}</code> as this field is not dependent on another field.</p>
-</blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/flint/padic.jl#L69' class='documenter-source'>source</a><br></p>
-<pre><code>base_ring(a::padic)
-</code></pre>
-
-<blockquote>
-<p>Returns <code>Union{}</code> as this field is not dependent on another field.</p>
-</blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/flint/padic.jl#L75' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.base_ring-Tuple{Nemo.ResElem}' href='#Nemo.base_ring-Tuple{Nemo.ResElem}'>#</a>
 <strong><code>Nemo.base_ring</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>base_ring(r::ResElem)
@@ -505,7 +386,7 @@ S(n::fmpz)
 <blockquote>
 <p>Return the base ring <script type="math/tex">R</script> of the residue ring <script type="math/tex">R/(a)</script> that the supplied element <script type="math/tex">r</script> belongs to.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/generic/Residue.jl#L25' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/3113c4687981b360f1c6619f617fe6063e63643b/src/generic/Residue.jl#L25' class='documenter-source'>source</a><br></p>
 <p><a id='Base.parent-Tuple{Nemo.ResElem}' href='#Base.parent-Tuple{Nemo.ResElem}'>#</a>
 <strong><code>Base.parent</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>parent(a::ResElem)
@@ -514,7 +395,7 @@ S(n::fmpz)
 <blockquote>
 <p>Return the parent object of the given residue element.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/generic/Residue.jl#L32' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/3113c4687981b360f1c6619f617fe6063e63643b/src/generic/Residue.jl#L32' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.modulus-Tuple{Nemo.ResRing}' href='#Nemo.modulus-Tuple{Nemo.ResRing}'>#</a>
 <strong><code>Nemo.modulus</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>modulus(R::ResRing)
@@ -523,7 +404,7 @@ S(n::fmpz)
 <blockquote>
 <p>Return the modulus <script type="math/tex">a</script> of the given residue ring <script type="math/tex">S = R/(a)</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/generic/Residue.jl#L60' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/3113c4687981b360f1c6619f617fe6063e63643b/src/generic/Residue.jl#L60' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.modulus-Tuple{Nemo.ResElem}' href='#Nemo.modulus-Tuple{Nemo.ResElem}'>#</a>
 <strong><code>Nemo.modulus</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>modulus(R::ResRing)
@@ -532,7 +413,7 @@ S(n::fmpz)
 <blockquote>
 <p>Return the modulus <script type="math/tex">a</script> of the residue ring <script type="math/tex">S = R/(a)</script> that the supplied residue <script type="math/tex">r</script> belongs to.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/generic/Residue.jl#L68' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/3113c4687981b360f1c6619f617fe6063e63643b/src/generic/Residue.jl#L68' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.iszero-Tuple{Nemo.ResElem}' href='#Nemo.iszero-Tuple{Nemo.ResElem}'>#</a>
 <strong><code>Nemo.iszero</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>iszero(a::ResElem)
@@ -541,7 +422,7 @@ S(n::fmpz)
 <blockquote>
 <p>Return <code>true</code> if the supplied element <script type="math/tex">a</script> is zero in the residue ring it belongs to, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/generic/Residue.jl#L92' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/3113c4687981b360f1c6619f617fe6063e63643b/src/generic/Residue.jl#L92' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.isone-Tuple{Nemo.ResElem}' href='#Nemo.isone-Tuple{Nemo.ResElem}'>#</a>
 <strong><code>Nemo.isone</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>isone(a::ResElem)
@@ -550,7 +431,7 @@ S(n::fmpz)
 <blockquote>
 <p>Return <code>true</code> if the supplied element <script type="math/tex">a</script> is one in the residue ring it belongs to, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/generic/Residue.jl#L99' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/3113c4687981b360f1c6619f617fe6063e63643b/src/generic/Residue.jl#L99' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.isunit-Tuple{Nemo.ResElem}' href='#Nemo.isunit-Tuple{Nemo.ResElem}'>#</a>
 <strong><code>Nemo.isunit</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>iszero(a::ResElem)
@@ -559,7 +440,7 @@ S(n::fmpz)
 <blockquote>
 <p>Return <code>true</code> if the supplied element <script type="math/tex">a</script> is invertible in the residue ring it belongs to, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/generic/Residue.jl#L106' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/3113c4687981b360f1c6619f617fe6063e63643b/src/generic/Residue.jl#L106' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of basic manipulation of residues.</p>
 <pre><code>R = ResidueRing(ZZ, 16453889)
 S, x = PolynomialRing(R, &quot;x&quot;)
@@ -587,7 +468,7 @@ W = base_ring(T(x + 1))
 </code></pre>
 
 <p>Unary minus operator.</p>
-<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/0711e4026c1db5c894bbfa1bc8db6691609e8aff/base/docs/helpdb/Base.jl#L628-632' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/f47d9fe8903147e76b589c0e745d24e3082649d8/base/docs/helpdb/Base.jl#L595-599' class='documenter-source'>source</a><br></p>
 <p><a id='Base.+-Tuple{Nemo.ResElem{T<:Nemo.RingElem},Nemo.ResElem{T<:Nemo.RingElem}}' href='#Base.+-Tuple{Nemo.ResElem{T<:Nemo.RingElem},Nemo.ResElem{T<:Nemo.RingElem}}'>#</a>
 <strong><code>Base.+</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>+{T &lt;: RingElem}(a::ResElem{T}, b::ResElem{T})
@@ -596,77 +477,77 @@ W = base_ring(T(x + 1))
 <blockquote>
 <p>Return <script type="math/tex">a + b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/generic/Residue.jl#L166' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/3113c4687981b360f1c6619f617fe6063e63643b/src/generic/Residue.jl#L166' class='documenter-source'>source</a><br></p>
 <pre><code>+{T &lt;: RingElem}(a::ResElem{T}, b::T)
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a + b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/generic/Residue.jl#L247' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/3113c4687981b360f1c6619f617fe6063e63643b/src/generic/Residue.jl#L247' class='documenter-source'>source</a><br></p>
 <pre><code>+{T &lt;: RingElem}(a::T, b::ResElem{T})
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a + b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/generic/Residue.jl#L265' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/3113c4687981b360f1c6619f617fe6063e63643b/src/generic/Residue.jl#L265' class='documenter-source'>source</a><br></p>
 <p><a id='Base.--Tuple{Nemo.ResElem{T<:Nemo.RingElem},Nemo.ResElem{T<:Nemo.RingElem}}' href='#Base.--Tuple{Nemo.ResElem{T<:Nemo.RingElem},Nemo.ResElem{T<:Nemo.RingElem}}'>#</a>
 <strong><code>Base.-</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>-(x, y)
 </code></pre>
 
 <p>Subtraction operator.</p>
-<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/0711e4026c1db5c894bbfa1bc8db6691609e8aff/base/docs/helpdb/Base.jl#L635-639' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/f47d9fe8903147e76b589c0e745d24e3082649d8/base/docs/helpdb/Base.jl#L602-606' class='documenter-source'>source</a><br></p>
 <pre><code>-{T &lt;: RingElem}(a::ResElem{T}, b::ResElem{T})
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a - b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/generic/Residue.jl#L175' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/3113c4687981b360f1c6619f617fe6063e63643b/src/generic/Residue.jl#L175' class='documenter-source'>source</a><br></p>
 <pre><code>-{T &lt;: RingElem}(a::ResElem{T}, b::T)
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a - b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/generic/Residue.jl#L283' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/3113c4687981b360f1c6619f617fe6063e63643b/src/generic/Residue.jl#L283' class='documenter-source'>source</a><br></p>
 <pre><code>-{T &lt;: RingElem}(a::T, b::ResElem{T})
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a - b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/generic/Residue.jl#L301' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/3113c4687981b360f1c6619f617fe6063e63643b/src/generic/Residue.jl#L301' class='documenter-source'>source</a><br></p>
 <p><a id='Base.*-Tuple{Nemo.ResElem{T<:Nemo.RingElem},Nemo.ResElem{T<:Nemo.RingElem}}' href='#Base.*-Tuple{Nemo.ResElem{T<:Nemo.RingElem},Nemo.ResElem{T<:Nemo.RingElem}}'>#</a>
 <strong><code>Base.*</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>*(x, y...)
 </code></pre>
 
 <p>Multiplication operator. <code>x*y*z*...</code> calls this function with all arguments, i.e. <code>*(x, y, z, ...)</code>.</p>
-<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/0711e4026c1db5c894bbfa1bc8db6691609e8aff/base/docs/helpdb/Base.jl#L7372-7378' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/f47d9fe8903147e76b589c0e745d24e3082649d8/base/docs/helpdb/Base.jl#L7182-7188' class='documenter-source'>source</a><br></p>
 <pre><code>*{T &lt;: RingElem}(a::ResElem{T}, b::ResElem{T})
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a\times b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/generic/Residue.jl#L184' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/3113c4687981b360f1c6619f617fe6063e63643b/src/generic/Residue.jl#L184' class='documenter-source'>source</a><br></p>
 <pre><code>*{T &lt;: RingElem}(a::ResElem{T}, b::T)
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a\times b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/generic/Residue.jl#L211' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/3113c4687981b360f1c6619f617fe6063e63643b/src/generic/Residue.jl#L211' class='documenter-source'>source</a><br></p>
 <pre><code>*{T &lt;: RingElem}(a::T, b::ResElem{T})
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a\times b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/generic/Residue.jl#L229' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/3113c4687981b360f1c6619f617fe6063e63643b/src/generic/Residue.jl#L229' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.divexact-Tuple{Nemo.ResElem{T<:Nemo.RingElem},Nemo.ResElem{T<:Nemo.RingElem}}' href='#Nemo.divexact-Tuple{Nemo.ResElem{T<:Nemo.RingElem},Nemo.ResElem{T<:Nemo.RingElem}}'>#</a>
 <strong><code>Nemo.divexact</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>divexact{T &lt;: RingElem}(a::ResElem{T}, b::ResElem{T})
@@ -675,7 +556,7 @@ W = base_ring(T(x + 1))
 <blockquote>
 <p>Return <script type="math/tex">a/b</script> where the quotient is expected to be exact.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/generic/Residue.jl#L441' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/3113c4687981b360f1c6619f617fe6063e63643b/src/generic/Residue.jl#L441' class='documenter-source'>source</a><br></p>
 <p>The following ad hoc operators are also provided.</p>
 <p><a id='Base.+-Tuple{Integer,Nemo.ResElem}' href='#Base.+-Tuple{Integer,Nemo.ResElem}'>#</a>
 <strong><code>Base.+</code></strong> &mdash; <em>Method</em>.</p>
@@ -685,7 +566,7 @@ W = base_ring(T(x + 1))
 <blockquote>
 <p>Return <script type="math/tex">a + b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/generic/Residue.jl#L253' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/3113c4687981b360f1c6619f617fe6063e63643b/src/generic/Residue.jl#L253' class='documenter-source'>source</a><br></p>
 <p><a id='Base.+-Tuple{Nemo.ResElem,Integer}' href='#Base.+-Tuple{Nemo.ResElem,Integer}'>#</a>
 <strong><code>Base.+</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>+(a::ResElem, b::Integer)
@@ -694,7 +575,7 @@ W = base_ring(T(x + 1))
 <blockquote>
 <p>Return <script type="math/tex">a + b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/generic/Residue.jl#L235' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/3113c4687981b360f1c6619f617fe6063e63643b/src/generic/Residue.jl#L235' class='documenter-source'>source</a><br></p>
 <p><a id='Base.+-Tuple{Nemo.fmpz,Nemo.ResElem}' href='#Base.+-Tuple{Nemo.fmpz,Nemo.ResElem}'>#</a>
 <strong><code>Base.+</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>+(a::fmpz, b::ResElem)
@@ -703,7 +584,7 @@ W = base_ring(T(x + 1))
 <blockquote>
 <p>Return <script type="math/tex">a + b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/generic/Residue.jl#L259' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/3113c4687981b360f1c6619f617fe6063e63643b/src/generic/Residue.jl#L259' class='documenter-source'>source</a><br></p>
 <p><a id='Base.+-Tuple{Nemo.ResElem,Nemo.fmpz}' href='#Base.+-Tuple{Nemo.ResElem,Nemo.fmpz}'>#</a>
 <strong><code>Base.+</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>+(a::ResElem, b::Integer)
@@ -712,7 +593,7 @@ W = base_ring(T(x + 1))
 <blockquote>
 <p>Return <script type="math/tex">a + b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/generic/Residue.jl#L241' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/3113c4687981b360f1c6619f617fe6063e63643b/src/generic/Residue.jl#L241' class='documenter-source'>source</a><br></p>
 <p><a id='Base.+-Tuple{T<:Nemo.RingElem,Nemo.ResElem{T<:Nemo.RingElem}}' href='#Base.+-Tuple{T<:Nemo.RingElem,Nemo.ResElem{T<:Nemo.RingElem}}'>#</a>
 <strong><code>Base.+</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>+{T &lt;: RingElem}(a::T, b::ResElem{T})
@@ -721,7 +602,7 @@ W = base_ring(T(x + 1))
 <blockquote>
 <p>Return <script type="math/tex">a + b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/generic/Residue.jl#L265' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/3113c4687981b360f1c6619f617fe6063e63643b/src/generic/Residue.jl#L265' class='documenter-source'>source</a><br></p>
 <p><a id='Base.+-Tuple{Nemo.ResElem{T<:Nemo.RingElem},T<:Nemo.RingElem}' href='#Base.+-Tuple{Nemo.ResElem{T<:Nemo.RingElem},T<:Nemo.RingElem}'>#</a>
 <strong><code>Base.+</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>+{T &lt;: RingElem}(a::ResElem{T}, b::T)
@@ -730,189 +611,189 @@ W = base_ring(T(x + 1))
 <blockquote>
 <p>Return <script type="math/tex">a + b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/generic/Residue.jl#L247' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/3113c4687981b360f1c6619f617fe6063e63643b/src/generic/Residue.jl#L247' class='documenter-source'>source</a><br></p>
 <p><a id='Base.--Tuple{Integer,Nemo.ResElem}' href='#Base.--Tuple{Integer,Nemo.ResElem}'>#</a>
 <strong><code>Base.-</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>-(x, y)
 </code></pre>
 
 <p>Subtraction operator.</p>
-<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/0711e4026c1db5c894bbfa1bc8db6691609e8aff/base/docs/helpdb/Base.jl#L635-639' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/f47d9fe8903147e76b589c0e745d24e3082649d8/base/docs/helpdb/Base.jl#L602-606' class='documenter-source'>source</a><br></p>
 <pre><code>-(a::Integer, b::ResElem)
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a - b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/generic/Residue.jl#L289' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/3113c4687981b360f1c6619f617fe6063e63643b/src/generic/Residue.jl#L289' class='documenter-source'>source</a><br></p>
 <p><a id='Base.--Tuple{Nemo.ResElem,Integer}' href='#Base.--Tuple{Nemo.ResElem,Integer}'>#</a>
 <strong><code>Base.-</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>-(x, y)
 </code></pre>
 
 <p>Subtraction operator.</p>
-<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/0711e4026c1db5c894bbfa1bc8db6691609e8aff/base/docs/helpdb/Base.jl#L635-639' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/f47d9fe8903147e76b589c0e745d24e3082649d8/base/docs/helpdb/Base.jl#L602-606' class='documenter-source'>source</a><br></p>
 <pre><code>-(a::ResElem, b::Integer)
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a - b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/generic/Residue.jl#L271' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/3113c4687981b360f1c6619f617fe6063e63643b/src/generic/Residue.jl#L271' class='documenter-source'>source</a><br></p>
 <p><a id='Base.--Tuple{Nemo.fmpz,Nemo.ResElem}' href='#Base.--Tuple{Nemo.fmpz,Nemo.ResElem}'>#</a>
 <strong><code>Base.-</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>-(x, y)
 </code></pre>
 
 <p>Subtraction operator.</p>
-<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/0711e4026c1db5c894bbfa1bc8db6691609e8aff/base/docs/helpdb/Base.jl#L635-639' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/f47d9fe8903147e76b589c0e745d24e3082649d8/base/docs/helpdb/Base.jl#L602-606' class='documenter-source'>source</a><br></p>
 <pre><code>-(a::fmpz, b::ResElem)
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a - b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/generic/Residue.jl#L295' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/3113c4687981b360f1c6619f617fe6063e63643b/src/generic/Residue.jl#L295' class='documenter-source'>source</a><br></p>
 <p><a id='Base.--Tuple{Nemo.ResElem,Nemo.fmpz}' href='#Base.--Tuple{Nemo.ResElem,Nemo.fmpz}'>#</a>
 <strong><code>Base.-</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>-(x, y)
 </code></pre>
 
 <p>Subtraction operator.</p>
-<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/0711e4026c1db5c894bbfa1bc8db6691609e8aff/base/docs/helpdb/Base.jl#L635-639' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/f47d9fe8903147e76b589c0e745d24e3082649d8/base/docs/helpdb/Base.jl#L602-606' class='documenter-source'>source</a><br></p>
 <pre><code>-(a::ResElem, b::fmpz)
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a - b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/generic/Residue.jl#L277' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/3113c4687981b360f1c6619f617fe6063e63643b/src/generic/Residue.jl#L277' class='documenter-source'>source</a><br></p>
 <p><a id='Base.--Tuple{T<:Nemo.RingElem,Nemo.ResElem{T<:Nemo.RingElem}}' href='#Base.--Tuple{T<:Nemo.RingElem,Nemo.ResElem{T<:Nemo.RingElem}}'>#</a>
 <strong><code>Base.-</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>-(x, y)
 </code></pre>
 
 <p>Subtraction operator.</p>
-<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/0711e4026c1db5c894bbfa1bc8db6691609e8aff/base/docs/helpdb/Base.jl#L635-639' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/f47d9fe8903147e76b589c0e745d24e3082649d8/base/docs/helpdb/Base.jl#L602-606' class='documenter-source'>source</a><br></p>
 <pre><code>-{T &lt;: RingElem}(a::T, b::ResElem{T})
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a - b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/generic/Residue.jl#L301' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/3113c4687981b360f1c6619f617fe6063e63643b/src/generic/Residue.jl#L301' class='documenter-source'>source</a><br></p>
 <p><a id='Base.--Tuple{Nemo.ResElem{T<:Nemo.RingElem},T<:Nemo.RingElem}' href='#Base.--Tuple{Nemo.ResElem{T<:Nemo.RingElem},T<:Nemo.RingElem}'>#</a>
 <strong><code>Base.-</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>-(x, y)
 </code></pre>
 
 <p>Subtraction operator.</p>
-<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/0711e4026c1db5c894bbfa1bc8db6691609e8aff/base/docs/helpdb/Base.jl#L635-639' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/f47d9fe8903147e76b589c0e745d24e3082649d8/base/docs/helpdb/Base.jl#L602-606' class='documenter-source'>source</a><br></p>
 <pre><code>-{T &lt;: RingElem}(a::ResElem{T}, b::T)
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a - b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/generic/Residue.jl#L283' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/3113c4687981b360f1c6619f617fe6063e63643b/src/generic/Residue.jl#L283' class='documenter-source'>source</a><br></p>
 <p><a id='Base.*-Tuple{Integer,Nemo.ResElem}' href='#Base.*-Tuple{Integer,Nemo.ResElem}'>#</a>
 <strong><code>Base.*</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>*(x, y...)
 </code></pre>
 
 <p>Multiplication operator. <code>x*y*z*...</code> calls this function with all arguments, i.e. <code>*(x, y, z, ...)</code>.</p>
-<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/0711e4026c1db5c894bbfa1bc8db6691609e8aff/base/docs/helpdb/Base.jl#L7372-7378' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/f47d9fe8903147e76b589c0e745d24e3082649d8/base/docs/helpdb/Base.jl#L7182-7188' class='documenter-source'>source</a><br></p>
 <pre><code>*(a::Integer, b::ResElem)
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a\times b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/generic/Residue.jl#L217' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/3113c4687981b360f1c6619f617fe6063e63643b/src/generic/Residue.jl#L217' class='documenter-source'>source</a><br></p>
 <p><a id='Base.*-Tuple{Nemo.ResElem,Integer}' href='#Base.*-Tuple{Nemo.ResElem,Integer}'>#</a>
 <strong><code>Base.*</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>*(x, y...)
 </code></pre>
 
 <p>Multiplication operator. <code>x*y*z*...</code> calls this function with all arguments, i.e. <code>*(x, y, z, ...)</code>.</p>
-<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/0711e4026c1db5c894bbfa1bc8db6691609e8aff/base/docs/helpdb/Base.jl#L7372-7378' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/f47d9fe8903147e76b589c0e745d24e3082649d8/base/docs/helpdb/Base.jl#L7182-7188' class='documenter-source'>source</a><br></p>
 <pre><code>*(a::ResElem, b::Integer)
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a\times b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/generic/Residue.jl#L199' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/3113c4687981b360f1c6619f617fe6063e63643b/src/generic/Residue.jl#L199' class='documenter-source'>source</a><br></p>
 <p><a id='Base.*-Tuple{Nemo.fmpz,Nemo.ResElem}' href='#Base.*-Tuple{Nemo.fmpz,Nemo.ResElem}'>#</a>
 <strong><code>Base.*</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>*(x, y...)
 </code></pre>
 
 <p>Multiplication operator. <code>x*y*z*...</code> calls this function with all arguments, i.e. <code>*(x, y, z, ...)</code>.</p>
-<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/0711e4026c1db5c894bbfa1bc8db6691609e8aff/base/docs/helpdb/Base.jl#L7372-7378' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/f47d9fe8903147e76b589c0e745d24e3082649d8/base/docs/helpdb/Base.jl#L7182-7188' class='documenter-source'>source</a><br></p>
 <pre><code>*(a::fmpz, b::ResElem)
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a\times b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/generic/Residue.jl#L223' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/3113c4687981b360f1c6619f617fe6063e63643b/src/generic/Residue.jl#L223' class='documenter-source'>source</a><br></p>
 <p><a id='Base.*-Tuple{Nemo.ResElem,Nemo.fmpz}' href='#Base.*-Tuple{Nemo.ResElem,Nemo.fmpz}'>#</a>
 <strong><code>Base.*</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>*(x, y...)
 </code></pre>
 
 <p>Multiplication operator. <code>x*y*z*...</code> calls this function with all arguments, i.e. <code>*(x, y, z, ...)</code>.</p>
-<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/0711e4026c1db5c894bbfa1bc8db6691609e8aff/base/docs/helpdb/Base.jl#L7372-7378' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/f47d9fe8903147e76b589c0e745d24e3082649d8/base/docs/helpdb/Base.jl#L7182-7188' class='documenter-source'>source</a><br></p>
 <pre><code>*(a::ResElem, b::fmpz)
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a\times b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/generic/Residue.jl#L205' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/3113c4687981b360f1c6619f617fe6063e63643b/src/generic/Residue.jl#L205' class='documenter-source'>source</a><br></p>
 <p><a id='Base.*-Tuple{T<:Nemo.RingElem,Nemo.ResElem{T<:Nemo.RingElem}}' href='#Base.*-Tuple{T<:Nemo.RingElem,Nemo.ResElem{T<:Nemo.RingElem}}'>#</a>
 <strong><code>Base.*</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>*(x, y...)
 </code></pre>
 
 <p>Multiplication operator. <code>x*y*z*...</code> calls this function with all arguments, i.e. <code>*(x, y, z, ...)</code>.</p>
-<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/0711e4026c1db5c894bbfa1bc8db6691609e8aff/base/docs/helpdb/Base.jl#L7372-7378' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/f47d9fe8903147e76b589c0e745d24e3082649d8/base/docs/helpdb/Base.jl#L7182-7188' class='documenter-source'>source</a><br></p>
 <pre><code>*{T &lt;: RingElem}(a::T, b::ResElem{T})
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a\times b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/generic/Residue.jl#L229' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/3113c4687981b360f1c6619f617fe6063e63643b/src/generic/Residue.jl#L229' class='documenter-source'>source</a><br></p>
 <p><a id='Base.*-Tuple{Nemo.ResElem{T<:Nemo.RingElem},T<:Nemo.RingElem}' href='#Base.*-Tuple{Nemo.ResElem{T<:Nemo.RingElem},T<:Nemo.RingElem}'>#</a>
 <strong><code>Base.*</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>*(x, y...)
 </code></pre>
 
 <p>Multiplication operator. <code>x*y*z*...</code> calls this function with all arguments, i.e. <code>*(x, y, z, ...)</code>.</p>
-<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/0711e4026c1db5c894bbfa1bc8db6691609e8aff/base/docs/helpdb/Base.jl#L7372-7378' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/f47d9fe8903147e76b589c0e745d24e3082649d8/base/docs/helpdb/Base.jl#L7182-7188' class='documenter-source'>source</a><br></p>
 <pre><code>*{T &lt;: RingElem}(a::ResElem{T}, b::T)
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a\times b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/generic/Residue.jl#L211' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/3113c4687981b360f1c6619f617fe6063e63643b/src/generic/Residue.jl#L211' class='documenter-source'>source</a><br></p>
 <p><a id='Base.^-Tuple{Nemo.ResElem,Int64}' href='#Base.^-Tuple{Nemo.ResElem,Int64}'>#</a>
 <strong><code>Base.^</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>^(x, y)
 </code></pre>
 
 <p>Exponentiation operator.</p>
-<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/0711e4026c1db5c894bbfa1bc8db6691609e8aff/base/docs/helpdb/Base.jl#L4325-4329' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/f47d9fe8903147e76b589c0e745d24e3082649d8/base/docs/helpdb/Base.jl#L4200-4204' class='documenter-source'>source</a><br></p>
 <pre><code>^(a::ResElem, b::Int)
 </code></pre>
 
 <blockquote>
 <p>Return <script type="math/tex">a^b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/generic/Residue.jl#L313' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/3113c4687981b360f1c6619f617fe6063e63643b/src/generic/Residue.jl#L313' class='documenter-source'>source</a><br></p>
 <p>If the appropriate <code>promote_rule</code> and coercion exists, these operators can also be used with elements of other rings. Nemo will try to coerce the operands to the dominating type and then apply the operator.</p>
 <p>Here are some examples of arithmetic operations on residues.</p>
 <pre><code>R = ResidueRing(ZZ, 16453889)
@@ -955,21 +836,21 @@ z = p^12
 <blockquote>
 <p>Return <code>true</code> if <script type="math/tex">x == y</script> arithmetically, otherwise return <code>false</code>. Recall that power series to different precisions may still be arithmetically equal to the minimum of the two precisions.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/generic/Residue.jl#L327' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/3113c4687981b360f1c6619f617fe6063e63643b/src/generic/Residue.jl#L327' class='documenter-source'>source</a><br></p>
 <pre><code>=={T &lt;: RingElem}(x::ResElem{T}, y::T)
 </code></pre>
 
 <blockquote>
 <p>Return <code>true</code> if <script type="math/tex">x == y</script> arithmetically, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/generic/Residue.jl#L392' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/3113c4687981b360f1c6619f617fe6063e63643b/src/generic/Residue.jl#L392' class='documenter-source'>source</a><br></p>
 <pre><code>=={T &lt;: RingElem}(x::T, y::ResElem{T})
 </code></pre>
 
 <blockquote>
 <p>Return <code>true</code> if <script type="math/tex">x == y</script> arithmetically, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/generic/Residue.jl#L401' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/3113c4687981b360f1c6619f617fe6063e63643b/src/generic/Residue.jl#L401' class='documenter-source'>source</a><br></p>
 <p><a id='Base.isequal-Tuple{Nemo.ResElem{T<:Nemo.RingElem},Nemo.ResElem{T<:Nemo.RingElem}}' href='#Base.isequal-Tuple{Nemo.ResElem{T<:Nemo.RingElem},Nemo.ResElem{T<:Nemo.RingElem}}'>#</a>
 <strong><code>Base.isequal</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>isequal{T &lt;: RingElem}(x::ResElem{T}, y::ResElem{T})
@@ -978,7 +859,7 @@ z = p^12
 <blockquote>
 <p>Return <code>true</code> if <script type="math/tex">x == y</script> exactly, otherwise return <code>false</code>. This function is useful in cases where the data of the residues are inexact, e.g. power series Only if the power series are precisely the same, to the same precision, are they declared equal by this function.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/generic/Residue.jl#L338' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/3113c4687981b360f1c6619f617fe6063e63643b/src/generic/Residue.jl#L338' class='documenter-source'>source</a><br></p>
 <p>In addition we have the following ad hoc comparison operators.</p>
 <p><a id='Base.==-Tuple{Nemo.ResElem{T<:Nemo.RingElem},T<:Nemo.RingElem}' href='#Base.==-Tuple{Nemo.ResElem{T<:Nemo.RingElem},T<:Nemo.RingElem}'>#</a>
 <strong><code>Base.==</code></strong> &mdash; <em>Method</em>.</p>
@@ -988,7 +869,7 @@ z = p^12
 <blockquote>
 <p>Return <code>true</code> if <script type="math/tex">x == y</script> arithmetically, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/generic/Residue.jl#L392' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/3113c4687981b360f1c6619f617fe6063e63643b/src/generic/Residue.jl#L392' class='documenter-source'>source</a><br></p>
 <p><a id='Base.==-Tuple{T<:Nemo.RingElem,Nemo.ResElem{T<:Nemo.RingElem}}' href='#Base.==-Tuple{T<:Nemo.RingElem,Nemo.ResElem{T<:Nemo.RingElem}}'>#</a>
 <strong><code>Base.==</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>=={T &lt;: RingElem}(x::T, y::ResElem{T})
@@ -997,7 +878,7 @@ z = p^12
 <blockquote>
 <p>Return <code>true</code> if <script type="math/tex">x == y</script> arithmetically, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/generic/Residue.jl#L401' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/3113c4687981b360f1c6619f617fe6063e63643b/src/generic/Residue.jl#L401' class='documenter-source'>source</a><br></p>
 <p><a id='Base.==-Tuple{Nemo.ResElem,Integer}' href='#Base.==-Tuple{Nemo.ResElem,Integer}'>#</a>
 <strong><code>Base.==</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>==(x::ResElem, y::Integer)
@@ -1006,7 +887,7 @@ z = p^12
 <blockquote>
 <p>Return <code>true</code> if <script type="math/tex">x == y</script> arithmetically, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/generic/Residue.jl#L356' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/3113c4687981b360f1c6619f617fe6063e63643b/src/generic/Residue.jl#L356' class='documenter-source'>source</a><br></p>
 <p><a id='Base.==-Tuple{Integer,Nemo.ResElem}' href='#Base.==-Tuple{Integer,Nemo.ResElem}'>#</a>
 <strong><code>Base.==</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>==(x::Integer, y::ResElem)
@@ -1015,7 +896,7 @@ z = p^12
 <blockquote>
 <p>Return <code>true</code> if <script type="math/tex">x == y</script> arithmetically, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/generic/Residue.jl#L365' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/3113c4687981b360f1c6619f617fe6063e63643b/src/generic/Residue.jl#L365' class='documenter-source'>source</a><br></p>
 <p><a id='Base.==-Tuple{Nemo.ResElem,Nemo.fmpz}' href='#Base.==-Tuple{Nemo.ResElem,Nemo.fmpz}'>#</a>
 <strong><code>Base.==</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>==(x::ResElem, y::fmpz)
@@ -1024,7 +905,7 @@ z = p^12
 <blockquote>
 <p>Return <code>true</code> if <script type="math/tex">x == y</script> arithmetically, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/generic/Residue.jl#L374' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/3113c4687981b360f1c6619f617fe6063e63643b/src/generic/Residue.jl#L374' class='documenter-source'>source</a><br></p>
 <p><a id='Base.==-Tuple{Nemo.fmpz,Nemo.ResElem}' href='#Base.==-Tuple{Nemo.fmpz,Nemo.ResElem}'>#</a>
 <strong><code>Base.==</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>==(x::fmpz, y::ResElem)
@@ -1033,7 +914,7 @@ z = p^12
 <blockquote>
 <p>Return <code>true</code> if <script type="math/tex">x == y</script> arithmetically, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/generic/Residue.jl#L383' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/3113c4687981b360f1c6619f617fe6063e63643b/src/generic/Residue.jl#L383' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of comparisons.</p>
 <pre><code>R = ResidueRing(ZZ, 7)
 S, x = PolynomialRing(R, &quot;x&quot;)
@@ -1066,7 +947,7 @@ f != 5
 <blockquote>
 <p>Return the inverse of the element <script type="math/tex">a</script> in the residue ring. If an impossible inverse is encountered, an exception is raised.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/generic/Residue.jl#L422' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/3113c4687981b360f1c6619f617fe6063e63643b/src/generic/Residue.jl#L422' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of computing inverses.</p>
 <pre><code>R = ResidueRing(ZZ, 49)
 S, x = PolynomialRing(R, &quot;x&quot;)
@@ -1089,7 +970,7 @@ g = inv(f)
 <blockquote>
 <p>Return a greatest common divisor of <script type="math/tex">a</script> and <script type="math/tex">b</script> if one exists. This is done by taking the greatest common divisor of the data associated with the supplied residues and taking its greatest common divisor with the modulus.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2e9ec12e9588308082cf6c46f28f79ad70782e69/src/generic/Residue.jl#L460' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/3113c4687981b360f1c6619f617fe6063e63643b/src/generic/Residue.jl#L460' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of computing a greatest common divisor.</p>
 <pre><code>R = ResidueRing(ZZ, 43)
 S, x = PolynomialRing(R, &quot;x&quot;)
