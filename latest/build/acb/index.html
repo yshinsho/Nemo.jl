@@ -268,6 +268,11 @@
 <h2 id="introduction">Introduction</h2>
 <p>Arbitrary precision complex ball arithmetic is supplied by Arb which provides a ball representation which tracks error bounds rigorously. Complex numbers are  represented in in rectangular form <script type="math/tex">a+bi</script> where <script type="math/tex">a,b</script> are <code>arb</code> balls.</p>
 <p>The Arb complex field is constructed using the <code>AcbField</code> constructor. This constructs the parent object for the Arb complex field.</p>
+<p>We define</p>
+<pre><code>ComplexField = AcbField
+</code></pre>
+
+<p>so that one can construct the Arb complex field parent using <code>ComplexField</code> instead of <code>AcbField</code>.</p>
 <p>The types of complex boxes in Nemo are given in the following table, along with the libraries that provide them and the associated types of the parent objects.</p>
 <table>
 <thead>
@@ -296,8 +301,13 @@
 </code></pre>
 
 <p>Return the Arb complex field with precision in bits <code>prec</code> used for operations on interval midpoints. The precision used for interval radii is a fixed implementation-defined constant (30 bits).</p>
+<p>We define</p>
+<pre><code>ComplexField = AcbField
+</code></pre>
+
+<p>so that one can use <code>ComplexField</code> instead of <code>AcbField</code>.</p>
 <p>Here is an example of creating an Arb complex field and using the resulting parent object to coerce values into the resulting field.</p>
-<pre><code>CC = AcbField(64)
+<pre><code>CC = ComplexField(64)
 
 a = CC(&quot;0.25&quot;)
 b = CC(&quot;0.1&quot;)
@@ -320,7 +330,7 @@ d = CC(12)
 <blockquote>
 <p>Return exact zero in the given Arb complex field.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L58' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L58' class='documenter-source'>source</a><br></p>
 <p><a id='Base.one-Tuple{Nemo.AcbField}' href='#Base.one-Tuple{Nemo.AcbField}'>#</a>
 <strong><code>Base.one</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>one(R::AcbField)
@@ -329,7 +339,7 @@ d = CC(12)
 <blockquote>
 <p>Return exact one in the given Arb complex field.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L68' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L68' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.onei-Tuple{Nemo.AcbField}' href='#Nemo.onei-Tuple{Nemo.AcbField}'>#</a>
 <strong><code>Nemo.onei</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>onei(R::AcbField)
@@ -338,9 +348,9 @@ d = CC(12)
 <blockquote>
 <p>Return exact one times <script type="math/tex">i</script> in the given Arb complex field.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L79' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L79' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of constructing complex boxes.</p>
-<pre><code>CC = AcbField(64)
+<pre><code>CC = ComplexField(64)
 
 a = zero(CC)
 b = one(CC)
@@ -400,8 +410,8 @@ R(f::AbstractString, g::AbstractString)
 
 <p>Take an Arb complex field element that is already in an Arb field and simply return it. A copy of the original is not made.</p>
 <p>Here are some examples of coercing elements into the Arb complex field.</p>
-<pre><code>RR = ArbField(64)
-CC = AcbField(64)
+<pre><code>RR = RealField(64)
+CC = ComplexField(64)
 
 a = CC(3)
 b = CC(QQ(2,3))
@@ -423,7 +433,7 @@ g = CC(RR(3))
 <blockquote>
 <p>Returns <code>Union{}</code> since an Arb complex field does not depend on any other ring.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L38' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L38' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.base_ring-Tuple{Nemo.acb}' href='#Nemo.base_ring-Tuple{Nemo.acb}'>#</a>
 <strong><code>Nemo.base_ring</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>base_ring(a::acb)
@@ -432,7 +442,7 @@ g = CC(RR(3))
 <blockquote>
 <p>Returns <code>Union{}</code> since an Arb complex field does not depend on any other ring.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L45' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L45' class='documenter-source'>source</a><br></p>
 <p><a id='Base.parent-Tuple{Nemo.acb}' href='#Base.parent-Tuple{Nemo.acb}'>#</a>
 <strong><code>Base.parent</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>parent(x::acb)
@@ -441,7 +451,7 @@ g = CC(RR(3))
 <blockquote>
 <p>Return the parent of the given Arb complex field element.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L52' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L52' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.iszero-Tuple{Nemo.acb}' href='#Nemo.iszero-Tuple{Nemo.acb}'>#</a>
 <strong><code>Nemo.iszero</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>iszero(x::acb)
@@ -450,7 +460,7 @@ g = CC(RR(3))
 <blockquote>
 <p>Return <code>true</code> if <script type="math/tex">x</script> is certainly zero, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L424' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L442' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.isone-Tuple{Nemo.acb}' href='#Nemo.isone-Tuple{Nemo.acb}'>#</a>
 <strong><code>Nemo.isone</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>isone(x::acb)
@@ -459,7 +469,7 @@ g = CC(RR(3))
 <blockquote>
 <p>Return <code>true</code> if <script type="math/tex">x</script> is certainly zero, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L432' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L450' class='documenter-source'>source</a><br></p>
 <p><a id='Base.isfinite-Tuple{Nemo.acb}' href='#Base.isfinite-Tuple{Nemo.acb}'>#</a>
 <strong><code>Base.isfinite</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>isfinite(x::acb)
@@ -468,7 +478,7 @@ g = CC(RR(3))
 <blockquote>
 <p>Return <code>true</code> if <script type="math/tex">x</script> is finite, i.e. its real and imaginary parts have finite midpoint and radius, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L440' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L458' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.isexact-Tuple{Nemo.acb}' href='#Nemo.isexact-Tuple{Nemo.acb}'>#</a>
 <strong><code>Nemo.isexact</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>isexact(x::acb)
@@ -477,7 +487,7 @@ g = CC(RR(3))
 <blockquote>
 <p>Return <code>true</code> if <script type="math/tex">x</script> is exact, i.e. has its real and imaginary parts have zero radius, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L449' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L467' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.isint-Tuple{Nemo.acb}' href='#Nemo.isint-Tuple{Nemo.acb}'>#</a>
 <strong><code>Nemo.isint</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>isint(x::acb)
@@ -486,16 +496,16 @@ g = CC(RR(3))
 <blockquote>
 <p>Return <code>true</code> if <script type="math/tex">x</script> is an exact integer, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L458' class='documenter-source'>source</a><br></p>
-<p><a id='Nemo.isreal-Tuple{Nemo.acb}' href='#Nemo.isreal-Tuple{Nemo.acb}'>#</a>
-<strong><code>Nemo.isreal</code></strong> &mdash; <em>Method</em>.</p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L476' class='documenter-source'>source</a><br></p>
+<p><a id='Base.isreal-Tuple{Nemo.acb}' href='#Base.isreal-Tuple{Nemo.acb}'>#</a>
+<strong><code>Base.isreal</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>isint(x::acb)
 </code></pre>
 
 <blockquote>
 <p>Return <code>true</code> if <script type="math/tex">x</script> is purely real, i.e. having zero imaginary part, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L466' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L484' class='documenter-source'>source</a><br></p>
 <p><a id='Base.real-Tuple{Nemo.acb}' href='#Base.real-Tuple{Nemo.acb}'>#</a>
 <strong><code>Base.real</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>real(x::acb)
@@ -504,7 +514,7 @@ g = CC(RR(3))
 <blockquote>
 <p>Return the real part of <script type="math/tex">x</script> as an <code>arb</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L114' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L131' class='documenter-source'>source</a><br></p>
 <p><a id='Base.imag-Tuple{Nemo.acb}' href='#Base.imag-Tuple{Nemo.acb}'>#</a>
 <strong><code>Base.imag</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>imag(x::acb)
@@ -513,7 +523,7 @@ g = CC(RR(3))
 <blockquote>
 <p>Return the imaginary part of <script type="math/tex">x</script> as an <code>arb</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L125' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L142' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.accuracy_bits-Tuple{Nemo.acb}' href='#Nemo.accuracy_bits-Tuple{Nemo.acb}'>#</a>
 <strong><code>Nemo.accuracy_bits</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>accuracy_bits(x::acb)
@@ -522,9 +532,9 @@ g = CC(RR(3))
 <blockquote>
 <p>Return the relative accuracy of <script type="math/tex">x</script> measured in bits, capped between <code>typemax(Int)</code> and <code>-typemax(Int)</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L90' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L90' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of basic manipulation of Arb complex boxes.</p>
-<pre><code>CC = AcbField(64)
+<pre><code>CC = ComplexField(64)
 
 a = CC(&quot;1.2 +/- 0.001&quot;)
 b = CC(3)
@@ -734,7 +744,7 @@ T = base_ring(CC)
 </tbody>
 </table>
 <p>Here are some examples of arithmetic operations on Arb complex boxes.</p>
-<pre><code>CC = AcbField(64)
+<pre><code>CC = ComplexField(64)
 
 x = CC(3)
 y = CC(QQ(2,3))
@@ -757,7 +767,7 @@ f = (x^2 + y^2) ^ QQ(1,2)
 <blockquote>
 <p>Returns <code>true</code> if any part of the box <script type="math/tex">x</script> overlaps any part of the box <script type="math/tex">y</script>, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L357' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L375' class='documenter-source'>source</a><br></p>
 <p><a id='Base.contains-Tuple{Nemo.acb,Nemo.acb}' href='#Base.contains-Tuple{Nemo.acb,Nemo.acb}'>#</a>
 <strong><code>Base.contains</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>contains(x::acb, y::acb)
@@ -766,7 +776,7 @@ f = (x^2 + y^2) ^ QQ(1,2)
 <blockquote>
 <p>Returns <code>true</code> if the box <script type="math/tex">x</script> contains the box <script type="math/tex">y</script>, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L367' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L385' class='documenter-source'>source</a><br></p>
 <p><a id='Base.contains-Tuple{Nemo.acb,Integer}' href='#Base.contains-Tuple{Nemo.acb,Integer}'>#</a>
 <strong><code>Base.contains</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>contains(x::acb, y::Integer)
@@ -775,7 +785,7 @@ f = (x^2 + y^2) ^ QQ(1,2)
 <blockquote>
 <p>Returns <code>true</code> if the box <script type="math/tex">x</script> contains the given integer value, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L403' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L421' class='documenter-source'>source</a><br></p>
 <p><a id='Base.contains-Tuple{Nemo.acb,Nemo.fmpz}' href='#Base.contains-Tuple{Nemo.acb,Nemo.fmpz}'>#</a>
 <strong><code>Base.contains</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>contains(x::acb, y::fmpz)
@@ -784,7 +794,7 @@ f = (x^2 + y^2) ^ QQ(1,2)
 <blockquote>
 <p>Returns <code>true</code> if the box <script type="math/tex">x</script> contains the given integer value, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L387' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L405' class='documenter-source'>source</a><br></p>
 <p><a id='Base.contains-Tuple{Nemo.acb,Nemo.fmpq}' href='#Base.contains-Tuple{Nemo.acb,Nemo.fmpq}'>#</a>
 <strong><code>Base.contains</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>contains(x::acb, y::fmpq)
@@ -793,7 +803,7 @@ f = (x^2 + y^2) ^ QQ(1,2)
 <blockquote>
 <p>Returns <code>true</code> if the box <script type="math/tex">x</script> contains the given rational value, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L377' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L395' class='documenter-source'>source</a><br></p>
 <p>The following functions are also provided for determining if a box intersects a certain part of the complex number plane.</p>
 <p><a id='Nemo.contains_zero-Tuple{Nemo.acb}' href='#Nemo.contains_zero-Tuple{Nemo.acb}'>#</a>
 <strong><code>Nemo.contains_zero</code></strong> &mdash; <em>Method</em>.</p>
@@ -803,9 +813,9 @@ f = (x^2 + y^2) ^ QQ(1,2)
 <blockquote>
 <p>Returns <code>true</code> if the box <script type="math/tex">x</script> contains zero, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L410' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L428' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of testing containment.</p>
-<pre><code>CC = AcbField(64)
+<pre><code>CC = ComplexField(64)
 x = CC(&quot;1 +/- 0.001&quot;)
 y = CC(&quot;3&quot;)
 
@@ -828,7 +838,7 @@ contains_zero(x)
 <blockquote>
 <p>Return <code>true</code> if the boxes <script type="math/tex">x</script> and <script type="math/tex">y</script> are precisely equal, i.e. their real and imaginary parts have the same midpoints and radii.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L304' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L322' class='documenter-source'>source</a><br></p>
 <p>A full range of functions is available for comparing boxes, i.e. <code>==</code> and <code>!=</code>. In fact, these are implemented directly in C. In the table below we document these as though only <code>==</code> had been provided to Julia.</p>
 <p><a id='Function-1'></a></p>
 <h2 id="function">Function</h2>
@@ -838,7 +848,7 @@ contains_zero(x)
 <h2 id="function_1">Function</h2>
 <p><code>==(x::acb, y::Integer)</code> <code>==(x::Integer, y::acb)</code> <code>==(x::acb, y::fmpz)</code> <code>==(x::fmpz, y::acb)</code> <code>==(x::arb, y::fmpz)</code> <code>==(x::fmpz, y::arb)</code> <code>==(x::acb, y::Float64)</code> <code>==(x::Float64, y::acb)</code></p>
 <p>Here are some examples of comparison.</p>
-<pre><code>CC = AcbField(64)
+<pre><code>CC = ComplexField(64)
 x = CC(&quot;1 +/- 0.001&quot;)
 y = CC(&quot;3&quot;)
 z = CC(&quot;4&quot;)
@@ -860,9 +870,9 @@ x != 1.23
 <blockquote>
 <p>Return the complex absolute value of <script type="math/tex">x</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L481' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L499' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of taking the absolute value.</p>
-<pre><code>CC = AcbField(64)
+<pre><code>CC = ComplexField(64)
 x = CC(&quot;-1 +/- 0.001&quot;)
 
 a = abs(x)
@@ -878,9 +888,9 @@ a = abs(x)
 <blockquote>
 <p>Return the multiplicative inverse of <script type="math/tex">x</script>, i.e. <script type="math/tex">1/x</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L499' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L517' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of taking the inverse.</p>
-<pre><code>CC = AcbField(64)
+<pre><code>CC = ComplexField(64)
 x = CC(&quot;-3 +/- 0.001&quot;)
 
 a = inv(x)
@@ -896,7 +906,7 @@ a = inv(x)
 <blockquote>
 <p>Return <script type="math/tex">2^yx</script>. Note that <script type="math/tex">y</script> can be positive, zero or negative.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L515' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L533' class='documenter-source'>source</a><br></p>
 <p><a id='Base.Math.ldexp-Tuple{Nemo.acb,Nemo.fmpz}' href='#Base.Math.ldexp-Tuple{Nemo.acb,Nemo.fmpz}'>#</a>
 <strong><code>Base.Math.ldexp</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>ldexp(x::acb, y::fmpz)
@@ -905,9 +915,9 @@ a = inv(x)
 <blockquote>
 <p>Return <script type="math/tex">2^yx</script>. Note that <script type="math/tex">y</script> can be positive, zero or negative.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L526' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L544' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of shifting.</p>
-<pre><code>CC = AcbField(64)
+<pre><code>CC = ComplexField(64)
 x = CC(&quot;-3 +/- 0.001&quot;)
 
 a = ldexp(x, 23)
@@ -924,7 +934,7 @@ b = ldexp(x, -ZZ(15))
 <blockquote>
 <p>Return an <code>acb</code> box containing <script type="math/tex">x</script> but which may be more economical, by rounding off insignificant bits from midpoints.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L543' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L561' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.unique_integer-Tuple{Nemo.acb}' href='#Nemo.unique_integer-Tuple{Nemo.acb}'>#</a>
 <strong><code>Nemo.unique_integer</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>unique_integer(x::acb)
@@ -933,7 +943,7 @@ b = ldexp(x, -ZZ(15))
 <blockquote>
 <p>Return a pair where the first value is a boolean and the second is an <code>fmpz</code> integer. The boolean indicates whether the box <script type="math/tex">x</script> contains a unique integer. If this is the case, the second return value is set to this unique integer.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L554' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L572' class='documenter-source'>source</a><br></p>
 <p><a id='Base.conj-Tuple{Nemo.acb}' href='#Base.conj-Tuple{Nemo.acb}'>#</a>
 <strong><code>Base.conj</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>conj(x::acb)
@@ -942,7 +952,7 @@ b = ldexp(x, -ZZ(15))
 <blockquote>
 <p>Return the complex conjugate of <script type="math/tex">x</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L568' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L586' class='documenter-source'>source</a><br></p>
 <p><a id='Base.angle-Tuple{Nemo.acb}' href='#Base.angle-Tuple{Nemo.acb}'>#</a>
 <strong><code>Base.angle</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>angle(x::acb)
@@ -951,9 +961,9 @@ b = ldexp(x, -ZZ(15))
 <blockquote>
 <p>Return the angle in radians that the complex vector <script type="math/tex">x</script> makes with the positive real axis in a counterclockwise direction.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L578' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L596' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of miscellaneous operations.</p>
-<pre><code>CC = AcbField(64)
+<pre><code>CC = ComplexField(64)
 x = CC(&quot;-3 +/- 0.001&quot;, &quot;0.1&quot;)
 
 a = trim(x)
@@ -967,7 +977,7 @@ f = angle(x)
 <p><a id='Nemo.const_pi-Tuple{Nemo.AcbField}' href='#Nemo.const_pi-Tuple{Nemo.AcbField}'>#</a>
 <strong><code>Nemo.const_pi</code></strong> &mdash; <em>Method</em>.</p>
 <p>Here are some examples of computing complex constants.</p>
-<pre><code>CC = AcbField(200)
+<pre><code>CC = ComplexField(200)
 
 a = const_pi(CC)
 </code></pre>
@@ -982,7 +992,7 @@ a = const_pi(CC)
 <blockquote>
 <p>Return the square root of <script type="math/tex">x</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L611' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L629' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.rsqrt-Tuple{Nemo.acb}' href='#Nemo.rsqrt-Tuple{Nemo.acb}'>#</a>
 <strong><code>Nemo.rsqrt</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>rsqrt(x::acb)
@@ -991,7 +1001,7 @@ a = const_pi(CC)
 <blockquote>
 <p>Return the reciprocal of the square root of <script type="math/tex">x</script>, i.e. <script type="math/tex">1/\sqrt{x}</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L621' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L639' class='documenter-source'>source</a><br></p>
 <p><a id='Base.log-Tuple{Nemo.acb}' href='#Base.log-Tuple{Nemo.acb}'>#</a>
 <strong><code>Base.log</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>log(x)
@@ -999,14 +1009,14 @@ a = const_pi(CC)
 
 <p>Compute the natural logarithm of <code>x</code>. Throws <code>DomainError</code> for negative <code>Real</code> arguments. Use complex negative arguments to obtain complex results.</p>
 <p>There is an experimental variant in the <code>Base.Math.JuliaLibm</code> module, which is typically faster and more accurate.</p>
-<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/ee5e23116e8c4bef9607512179f9f900b99cce65/base/docs/helpdb/Base.jl#L3333-3341' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/10b67fcc25e7e8960813bee236fdc8d830b8d9e4/base/docs/helpdb/Base.jl#L3333-3341' class='documenter-source'>source</a><br></p>
 <pre><code>log(x::acb)
 </code></pre>
 
 <blockquote>
 <p>Return the principal branch of the logarithm of <script type="math/tex">x</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L631' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L649' class='documenter-source'>source</a><br></p>
 <p><a id='Base.log1p-Tuple{Nemo.acb}' href='#Base.log1p-Tuple{Nemo.acb}'>#</a>
 <strong><code>Base.log1p</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>log1p(x::acb)
@@ -1015,7 +1025,7 @@ a = const_pi(CC)
 <blockquote>
 <p>Return <script type="math/tex">\log(1+x)</script>, evaluated accurately for small <script type="math/tex">x</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L641' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L659' class='documenter-source'>source</a><br></p>
 <p><a id='Base.exp-Tuple{Nemo.acb}' href='#Base.exp-Tuple{Nemo.acb}'>#</a>
 <strong><code>Base.exp</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>exp(x::acb)
@@ -1024,7 +1034,7 @@ a = const_pi(CC)
 <blockquote>
 <p>Return the exponential of <script type="math/tex">x</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L651' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L669' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.exppii-Tuple{Nemo.acb}' href='#Nemo.exppii-Tuple{Nemo.acb}'>#</a>
 <strong><code>Nemo.exppii</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>exppii(x::acb)
@@ -1033,7 +1043,7 @@ a = const_pi(CC)
 <blockquote>
 <p>Return the exponential of <script type="math/tex">\pi i x</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L661' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L679' class='documenter-source'>source</a><br></p>
 <p><a id='Base.sin-Tuple{Nemo.acb}' href='#Base.sin-Tuple{Nemo.acb}'>#</a>
 <strong><code>Base.sin</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>sin(x::acb)
@@ -1042,7 +1052,7 @@ a = const_pi(CC)
 <blockquote>
 <p>Return the sine of <script type="math/tex">x</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L671' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L689' class='documenter-source'>source</a><br></p>
 <p><a id='Base.cos-Tuple{Nemo.acb}' href='#Base.cos-Tuple{Nemo.acb}'>#</a>
 <strong><code>Base.cos</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>cos(x::acb)
@@ -1051,7 +1061,7 @@ a = const_pi(CC)
 <blockquote>
 <p>Return the cosine of <script type="math/tex">x</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L681' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L699' class='documenter-source'>source</a><br></p>
 <p><a id='Base.Math.sinpi-Tuple{Nemo.acb}' href='#Base.Math.sinpi-Tuple{Nemo.acb}'>#</a>
 <strong><code>Base.Math.sinpi</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>sinpi(x::acb)
@@ -1060,7 +1070,7 @@ a = const_pi(CC)
 <blockquote>
 <p>Return the sine of <script type="math/tex">\pi x</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L711' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L729' class='documenter-source'>source</a><br></p>
 <p><a id='Base.Math.cospi-Tuple{Nemo.acb}' href='#Base.Math.cospi-Tuple{Nemo.acb}'>#</a>
 <strong><code>Base.Math.cospi</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>cospi(x::acb)
@@ -1069,7 +1079,7 @@ a = const_pi(CC)
 <blockquote>
 <p>Return the cosine of <script type="math/tex">\pi x</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L721' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L739' class='documenter-source'>source</a><br></p>
 <p><a id='Base.tan-Tuple{Nemo.acb}' href='#Base.tan-Tuple{Nemo.acb}'>#</a>
 <strong><code>Base.tan</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>tan(x::acb)
@@ -1078,7 +1088,7 @@ a = const_pi(CC)
 <blockquote>
 <p>Return the tangent of <script type="math/tex">x</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L691' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L709' class='documenter-source'>source</a><br></p>
 <p><a id='Base.Math.cot-Tuple{Nemo.acb}' href='#Base.Math.cot-Tuple{Nemo.acb}'>#</a>
 <strong><code>Base.Math.cot</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>cot(x::acb)
@@ -1087,7 +1097,7 @@ a = const_pi(CC)
 <blockquote>
 <p>Return the cotangent of <script type="math/tex">x</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L701' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L719' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.tanpi-Tuple{Nemo.acb}' href='#Nemo.tanpi-Tuple{Nemo.acb}'>#</a>
 <strong><code>Nemo.tanpi</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>tanpi(x::acb)
@@ -1096,7 +1106,7 @@ a = const_pi(CC)
 <blockquote>
 <p>Return the tangent of <script type="math/tex">\pi x</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L731' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L749' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.cotpi-Tuple{Nemo.acb}' href='#Nemo.cotpi-Tuple{Nemo.acb}'>#</a>
 <strong><code>Nemo.cotpi</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>cotpi(x::acb)
@@ -1105,7 +1115,7 @@ a = const_pi(CC)
 <blockquote>
 <p>Return the cotangent of <script type="math/tex">\pi x</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L741' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L759' class='documenter-source'>source</a><br></p>
 <p><a id='Base.sinh-Tuple{Nemo.acb}' href='#Base.sinh-Tuple{Nemo.acb}'>#</a>
 <strong><code>Base.sinh</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>sinh(x::acb)
@@ -1114,7 +1124,7 @@ a = const_pi(CC)
 <blockquote>
 <p>Return the hyperbolic sine of <script type="math/tex">x</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L751' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L769' class='documenter-source'>source</a><br></p>
 <p><a id='Base.cosh-Tuple{Nemo.acb}' href='#Base.cosh-Tuple{Nemo.acb}'>#</a>
 <strong><code>Base.cosh</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>cosh(x::acb)
@@ -1123,7 +1133,7 @@ a = const_pi(CC)
 <blockquote>
 <p>Return the hyperbolic cosine of <script type="math/tex">x</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L761' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L779' class='documenter-source'>source</a><br></p>
 <p><a id='Base.tanh-Tuple{Nemo.acb}' href='#Base.tanh-Tuple{Nemo.acb}'>#</a>
 <strong><code>Base.tanh</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>tanh(x::acb)
@@ -1132,7 +1142,7 @@ a = const_pi(CC)
 <blockquote>
 <p>Return the hyperbolic tangent of <script type="math/tex">x</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L771' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L789' class='documenter-source'>source</a><br></p>
 <p><a id='Base.Math.coth-Tuple{Nemo.acb}' href='#Base.Math.coth-Tuple{Nemo.acb}'>#</a>
 <strong><code>Base.Math.coth</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>coth(x::acb)
@@ -1141,7 +1151,7 @@ a = const_pi(CC)
 <blockquote>
 <p>Return the hyperbolic cotangent of <script type="math/tex">x</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L781' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L799' class='documenter-source'>source</a><br></p>
 <p><a id='Base.atan-Tuple{Nemo.acb}' href='#Base.atan-Tuple{Nemo.acb}'>#</a>
 <strong><code>Base.atan</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>atan(x::acb)
@@ -1150,7 +1160,7 @@ a = const_pi(CC)
 <blockquote>
 <p>Return the arctangent of <script type="math/tex">x</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L791' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L809' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.logsinpi-Tuple{Nemo.acb}' href='#Nemo.logsinpi-Tuple{Nemo.acb}'>#</a>
 <strong><code>Nemo.logsinpi</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>logsinpi(x::acb)
@@ -1159,7 +1169,7 @@ a = const_pi(CC)
 <blockquote>
 <p>Return <script type="math/tex">\log\sin(\pi x)</script>, constructed without branch cuts off the real line.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L801' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L819' class='documenter-source'>source</a><br></p>
 <p><a id='Base.Math.gamma-Tuple{Nemo.acb}' href='#Base.Math.gamma-Tuple{Nemo.acb}'>#</a>
 <strong><code>Base.Math.gamma</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>gamma(x::acb)
@@ -1168,7 +1178,7 @@ a = const_pi(CC)
 <blockquote>
 <p>Return the Gamma function evaluated at <script type="math/tex">x</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L811' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L829' class='documenter-source'>source</a><br></p>
 <p><a id='Base.Math.lgamma-Tuple{Nemo.acb}' href='#Base.Math.lgamma-Tuple{Nemo.acb}'>#</a>
 <strong><code>Base.Math.lgamma</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>lgamma(x::acb)
@@ -1177,7 +1187,7 @@ a = const_pi(CC)
 <blockquote>
 <p>Return the logarithm of the Gamma function evaluated at <script type="math/tex">x</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L831' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L849' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.rgamma-Tuple{Nemo.acb}' href='#Nemo.rgamma-Tuple{Nemo.acb}'>#</a>
 <strong><code>Nemo.rgamma</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>rgamma(x::acb)
@@ -1186,7 +1196,7 @@ a = const_pi(CC)
 <blockquote>
 <p>Return the reciprocal of the Gamma function evaluated at <script type="math/tex">x</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L821' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L839' class='documenter-source'>source</a><br></p>
 <p><a id='Base.Math.digamma-Tuple{Nemo.acb}' href='#Base.Math.digamma-Tuple{Nemo.acb}'>#</a>
 <strong><code>Base.Math.digamma</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>digamma(x::acb)
@@ -1195,21 +1205,21 @@ a = const_pi(CC)
 <blockquote>
 <p>Return the  logarithmic derivative of the gamma function evaluated at <script type="math/tex">x</script>, i.e. <script type="math/tex">\psi(x)</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L841' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L859' class='documenter-source'>source</a><br></p>
 <p><a id='Base.Math.zeta-Tuple{Nemo.acb}' href='#Base.Math.zeta-Tuple{Nemo.acb}'>#</a>
 <strong><code>Base.Math.zeta</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>zeta(s)
 </code></pre>
 
 <p>Riemann zeta function <script type="math/tex">\zeta(s)</script>.</p>
-<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/ee5e23116e8c4bef9607512179f9f900b99cce65/base/docs/helpdb/Base.jl#L8788-8792' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/10b67fcc25e7e8960813bee236fdc8d830b8d9e4/base/docs/helpdb/Base.jl#L8788-8792' class='documenter-source'>source</a><br></p>
 <pre><code>zeta(x::acb)
 </code></pre>
 
 <blockquote>
 <p>Return the Riemann zeta function evaluated at <script type="math/tex">x</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L852' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L870' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.barnesg-Tuple{Nemo.acb}' href='#Nemo.barnesg-Tuple{Nemo.acb}'>#</a>
 <strong><code>Nemo.barnesg</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>barnesg(x::acb)
@@ -1218,7 +1228,7 @@ a = const_pi(CC)
 <blockquote>
 <p>Return the Barnes <script type="math/tex">G</script>-function, evaluated at <script type="math/tex">x</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L862' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L880' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.logbarnesg-Tuple{Nemo.acb}' href='#Nemo.logbarnesg-Tuple{Nemo.acb}'>#</a>
 <strong><code>Nemo.logbarnesg</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>logbarnesg(x::acb)
@@ -1227,7 +1237,7 @@ a = const_pi(CC)
 <blockquote>
 <p>Return the logarithm of the Barnes <script type="math/tex">G</script>-function, evaluated at <script type="math/tex">x</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L872' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L890' class='documenter-source'>source</a><br></p>
 <p><a id='Base.Math.erf-Tuple{Nemo.acb}' href='#Base.Math.erf-Tuple{Nemo.acb}'>#</a>
 <strong><code>Base.Math.erf</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>erf(x::acb)
@@ -1236,7 +1246,7 @@ a = const_pi(CC)
 <blockquote>
 <p>Return the error function evaluated at <script type="math/tex">x</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L892' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L910' class='documenter-source'>source</a><br></p>
 <p><a id='Base.Math.erfi-Tuple{Nemo.acb}' href='#Base.Math.erfi-Tuple{Nemo.acb}'>#</a>
 <strong><code>Base.Math.erfi</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>erfi(x::acb)
@@ -1245,7 +1255,7 @@ a = const_pi(CC)
 <blockquote>
 <p>Return the imaginary error function evaluated at <script type="math/tex">x</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L902' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L920' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.ei-Tuple{Nemo.acb}' href='#Nemo.ei-Tuple{Nemo.acb}'>#</a>
 <strong><code>Nemo.ei</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>ei(x::acb)
@@ -1254,7 +1264,7 @@ a = const_pi(CC)
 <blockquote>
 <p>Return the exponential integral evaluated at <script type="math/tex">x</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L922' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L940' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.si-Tuple{Nemo.acb}' href='#Nemo.si-Tuple{Nemo.acb}'>#</a>
 <strong><code>Nemo.si</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>si(x::acb)
@@ -1263,7 +1273,7 @@ a = const_pi(CC)
 <blockquote>
 <p>Return the sine integral evaluated at <script type="math/tex">x</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L932' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L950' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.ci-Tuple{Nemo.acb}' href='#Nemo.ci-Tuple{Nemo.acb}'>#</a>
 <strong><code>Nemo.ci</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>ci(x::acb)
@@ -1272,7 +1282,7 @@ a = const_pi(CC)
 <blockquote>
 <p>Return the exponential cosine integral evaluated at <script type="math/tex">x</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L942' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L960' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.shi-Tuple{Nemo.acb}' href='#Nemo.shi-Tuple{Nemo.acb}'>#</a>
 <strong><code>Nemo.shi</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>shi(x::acb)
@@ -1281,7 +1291,7 @@ a = const_pi(CC)
 <blockquote>
 <p>Return the hyperbolic sine integral evaluated at <script type="math/tex">x</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L952' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L970' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.chi-Tuple{Nemo.acb}' href='#Nemo.chi-Tuple{Nemo.acb}'>#</a>
 <strong><code>Nemo.chi</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>chi(x::acb)
@@ -1290,7 +1300,7 @@ a = const_pi(CC)
 <blockquote>
 <p>Return the hyperbolic cosine integral evaluated at <script type="math/tex">x</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L962' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L980' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.modeta-Tuple{Nemo.acb}' href='#Nemo.modeta-Tuple{Nemo.acb}'>#</a>
 <strong><code>Nemo.modeta</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>modeta(x::acb)
@@ -1299,7 +1309,7 @@ a = const_pi(CC)
 <blockquote>
 <p>Return the Dedekind eta function <script type="math/tex">\eta(\tau)</script> at <script type="math/tex">\tau = x</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L972' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L990' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.modj-Tuple{Nemo.acb}' href='#Nemo.modj-Tuple{Nemo.acb}'>#</a>
 <strong><code>Nemo.modj</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>modj(x::acb)
@@ -1308,7 +1318,7 @@ a = const_pi(CC)
 <blockquote>
 <p>Return the <script type="math/tex">j</script>-invariant <script type="math/tex">j(\tau)</script> at <script type="math/tex">\tau = x</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L982' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L1000' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.modlambda-Tuple{Nemo.acb}' href='#Nemo.modlambda-Tuple{Nemo.acb}'>#</a>
 <strong><code>Nemo.modlambda</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>modlambda(x::acb)
@@ -1317,7 +1327,7 @@ a = const_pi(CC)
 <blockquote>
 <p>Return the modular lambda function <script type="math/tex">\lambda(\tau)</script> at <script type="math/tex">\tau = x</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L992' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L1010' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.moddelta-Tuple{Nemo.acb}' href='#Nemo.moddelta-Tuple{Nemo.acb}'>#</a>
 <strong><code>Nemo.moddelta</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>moddelta(x::acb)
@@ -1326,7 +1336,7 @@ a = const_pi(CC)
 <blockquote>
 <p>Return the modular delta function <script type="math/tex">\Delta(\tau)</script> at <script type="math/tex">\tau = x</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L1002' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L1020' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.ellipk-Tuple{Nemo.acb}' href='#Nemo.ellipk-Tuple{Nemo.acb}'>#</a>
 <strong><code>Nemo.ellipk</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>ellipk(x::acb)
@@ -1335,7 +1345,7 @@ a = const_pi(CC)
 <blockquote>
 <p>Return the complete elliptic integral <script type="math/tex">K(x)</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L1012' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L1030' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.ellipe-Tuple{Nemo.acb}' href='#Nemo.ellipe-Tuple{Nemo.acb}'>#</a>
 <strong><code>Nemo.ellipe</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>ellipe(x::acb)
@@ -1344,7 +1354,7 @@ a = const_pi(CC)
 <blockquote>
 <p>Return the complete elliptic integral <script type="math/tex">E(x)</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L1022' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L1040' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.sincos-Tuple{Nemo.acb}' href='#Nemo.sincos-Tuple{Nemo.acb}'>#</a>
 <strong><code>Nemo.sincos</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>sincos(x::acb)
@@ -1353,7 +1363,7 @@ a = const_pi(CC)
 <blockquote>
 <p>Return a tuple <script type="math/tex">s, c</script> consisting of the sine <script type="math/tex">s</script> and cosine <script type="math/tex">c</script> of <script type="math/tex">x</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L1032' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L1050' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.sincospi-Tuple{Nemo.acb}' href='#Nemo.sincospi-Tuple{Nemo.acb}'>#</a>
 <strong><code>Nemo.sincospi</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>sincospi(x::acb)
@@ -1362,7 +1372,7 @@ a = const_pi(CC)
 <blockquote>
 <p>Return a tuple <script type="math/tex">s, c</script> consisting of the sine <script type="math/tex">s</script> and cosine <script type="math/tex">c</script> of <script type="math/tex">\pi x</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L1044' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L1062' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.sinhcosh-Tuple{Nemo.acb}' href='#Nemo.sinhcosh-Tuple{Nemo.acb}'>#</a>
 <strong><code>Nemo.sinhcosh</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>sinhcosh(x::acb)
@@ -1371,7 +1381,7 @@ a = const_pi(CC)
 <blockquote>
 <p>Return a tuple <script type="math/tex">s, c</script> consisting of the hyperbolic sine and cosine of <script type="math/tex">x</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L1056' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L1074' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.agm-Tuple{Nemo.acb}' href='#Nemo.agm-Tuple{Nemo.acb}'>#</a>
 <strong><code>Nemo.agm</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>agm(x::acb)
@@ -1380,7 +1390,7 @@ a = const_pi(CC)
 <blockquote>
 <p>Return the arithmetic-geometric mean of <script type="math/tex">1</script> and <script type="math/tex">x</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L882' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L900' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.agm-Tuple{Nemo.acb,Nemo.acb}' href='#Nemo.agm-Tuple{Nemo.acb,Nemo.acb}'>#</a>
 <strong><code>Nemo.agm</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>agm(x::acb, y::acb)
@@ -1389,7 +1399,7 @@ a = const_pi(CC)
 <blockquote>
 <p>Return the arithmetic-geometric mean of <script type="math/tex">x</script> and <script type="math/tex">y</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L1289' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L1307' class='documenter-source'>source</a><br></p>
 <p><a id='Base.Math.polygamma-Tuple{Nemo.acb,Nemo.acb}' href='#Base.Math.polygamma-Tuple{Nemo.acb,Nemo.acb}'>#</a>
 <strong><code>Base.Math.polygamma</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>polygamma(s::acb, a::acb)
@@ -1398,21 +1408,21 @@ a = const_pi(CC)
 <blockquote>
 <p>Return the generalised polygamma function <script type="math/tex">\psi(s,z)</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L1079' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L1097' class='documenter-source'>source</a><br></p>
 <p><a id='Base.Math.zeta-Tuple{Nemo.acb,Nemo.acb}' href='#Base.Math.zeta-Tuple{Nemo.acb,Nemo.acb}'>#</a>
 <strong><code>Base.Math.zeta</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>zeta(s, z)
 </code></pre>
 
 <p>Generalized zeta function <script type="math/tex">\zeta(s, z)</script>, defined by the sum <script type="math/tex">\sum_{k=0}^\infty ((k+z)^2)^{-s/2}</script>, where any term with <script type="math/tex">k+z=0</script> is excluded.  For <script type="math/tex">\Re z > 0</script>, this definition is equivalent to the Hurwitz zeta function <script type="math/tex">\sum_{k=0}^\infty (k+z)^{-s}</script>.   For <script type="math/tex">z=1</script>, it yields the Riemann zeta function <script type="math/tex">\zeta(s)</script>.</p>
-<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/ee5e23116e8c4bef9607512179f9f900b99cce65/base/special/gamma.jl#L251-260' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/10b67fcc25e7e8960813bee236fdc8d830b8d9e4/base/special/gamma.jl#L251-260' class='documenter-source'>source</a><br></p>
 <pre><code>zeta(s::acb, a::acb)
 </code></pre>
 
 <blockquote>
 <p>Return the Hurwitz zeta function <script type="math/tex">\zeta(s,a)</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L1068' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L1086' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.risingfac-Tuple{Nemo.acb,Int64}' href='#Nemo.risingfac-Tuple{Nemo.acb,Int64}'>#</a>
 <strong><code>Nemo.risingfac</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>risingfac(x::acb, n::Int)
@@ -1421,7 +1431,7 @@ a = const_pi(CC)
 <blockquote>
 <p>Return the rising factorial <script type="math/tex">x(x + 1)\ldots (x + n - 1)</script> as an Acb.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L1097' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L1115' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.risingfac2-Tuple{Nemo.acb,Int64}' href='#Nemo.risingfac2-Tuple{Nemo.acb,Int64}'>#</a>
 <strong><code>Nemo.risingfac2</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>risingfac2(x::acb, n::Int)
@@ -1430,14 +1440,14 @@ a = const_pi(CC)
 <blockquote>
 <p>Return a tuple containing the rising factorial <script type="math/tex">x(x + 1)\ldots (x + n - 1)</script> and its derivative.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L1111' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L1129' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.polylog-Tuple{Nemo.acb,Nemo.acb}' href='#Nemo.polylog-Tuple{Nemo.acb,Nemo.acb}'>#</a>
 <strong><code>Nemo.polylog</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>polylog(s::acb, a::acb)
 </code></pre>
 
 <blockquote></blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L1118' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L1136' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.polylog-Tuple{Int64,Nemo.acb}' href='#Nemo.polylog-Tuple{Int64,Nemo.acb}'>#</a>
 <strong><code>Nemo.polylog</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>polylog(s::Int, a::acb)
@@ -1446,7 +1456,7 @@ a = const_pi(CC)
 <blockquote>
 <p>Return the polylogarithm Li<script type="math/tex">_s(a)</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L1129' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L1147' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.li-Tuple{Nemo.acb}' href='#Nemo.li-Tuple{Nemo.acb}'>#</a>
 <strong><code>Nemo.li</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>li(x::acb)
@@ -1455,7 +1465,7 @@ a = const_pi(CC)
 <blockquote>
 <p>Return the logarithmic integral, evaluated at <script type="math/tex">x</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L1140' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L1158' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.lioffset-Tuple{Nemo.acb}' href='#Nemo.lioffset-Tuple{Nemo.acb}'>#</a>
 <strong><code>Nemo.lioffset</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>lioffset(x::acb)
@@ -1464,7 +1474,7 @@ a = const_pi(CC)
 <blockquote>
 <p>Return the offset logarithmic integral, evaluated at <script type="math/tex">x</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L1151' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L1169' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.expint-Tuple{Nemo.acb}' href='#Nemo.expint-Tuple{Nemo.acb}'>#</a>
 <strong><code>Nemo.expint</code></strong> &mdash; <em>Method</em>.</p>
 <p><a id='Base.Math.gamma-Tuple{Nemo.acb,Nemo.acb}' href='#Base.Math.gamma-Tuple{Nemo.acb,Nemo.acb}'>#</a>
@@ -1475,7 +1485,7 @@ a = const_pi(CC)
 <blockquote>
 <p>Return the upper incomplete gamma function <script type="math/tex">\Gamma(s,x)</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L1173' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L1191' class='documenter-source'>source</a><br></p>
 <p><a id='Base.Math.besselj-Tuple{Nemo.acb,Nemo.acb}' href='#Base.Math.besselj-Tuple{Nemo.acb,Nemo.acb}'>#</a>
 <strong><code>Base.Math.besselj</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>besselj(nu::acb, x::acb)
@@ -1484,7 +1494,7 @@ a = const_pi(CC)
 <blockquote>
 <p>Return the Bessel function <script type="math/tex">J_{\nu}(x)</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L1184' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L1202' class='documenter-source'>source</a><br></p>
 <p><a id='Base.Math.bessely-Tuple{Nemo.acb,Nemo.acb}' href='#Base.Math.bessely-Tuple{Nemo.acb,Nemo.acb}'>#</a>
 <strong><code>Base.Math.bessely</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>bessely(nu::acb, x::acb)
@@ -1493,7 +1503,7 @@ a = const_pi(CC)
 <blockquote>
 <p>Return the Bessel function <script type="math/tex">Y_{\nu}(x)</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L1195' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L1213' class='documenter-source'>source</a><br></p>
 <p><a id='Base.Math.besseli-Tuple{Nemo.acb,Nemo.acb}' href='#Base.Math.besseli-Tuple{Nemo.acb,Nemo.acb}'>#</a>
 <strong><code>Base.Math.besseli</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>besseli(nu::acb, x::acb)
@@ -1502,7 +1512,7 @@ a = const_pi(CC)
 <blockquote>
 <p>Return the Bessel function <script type="math/tex">I_{\nu}(x)</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L1206' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L1224' class='documenter-source'>source</a><br></p>
 <p><a id='Base.Math.besselk-Tuple{Nemo.acb,Nemo.acb}' href='#Base.Math.besselk-Tuple{Nemo.acb,Nemo.acb}'>#</a>
 <strong><code>Base.Math.besselk</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>besselk(nu::acb, x::acb)
@@ -1511,7 +1521,7 @@ a = const_pi(CC)
 <blockquote>
 <p>Return the Bessel function <script type="math/tex">K_{\nu}(x)</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L1217' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L1235' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.hyp1f1-Tuple{Nemo.acb,Nemo.acb,Nemo.acb}' href='#Nemo.hyp1f1-Tuple{Nemo.acb,Nemo.acb,Nemo.acb}'>#</a>
 <strong><code>Nemo.hyp1f1</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>hyp1f1(a::acb, b::acb, x::acb)
@@ -1520,7 +1530,7 @@ a = const_pi(CC)
 <blockquote>
 <p>Return the confluent hypergeometric function <script type="math/tex">{}_1F1(a,b,x)</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L1228' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L1246' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.hyp1f1r-Tuple{Nemo.acb,Nemo.acb,Nemo.acb}' href='#Nemo.hyp1f1r-Tuple{Nemo.acb,Nemo.acb,Nemo.acb}'>#</a>
 <strong><code>Nemo.hyp1f1r</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>hyp1f1r(a::acb, b::acb, x::acb)
@@ -1529,7 +1539,7 @@ a = const_pi(CC)
 <blockquote>
 <p>Return the regularized confluent hypergeometric function <script type="math/tex">{}_1F1(a,b,x) / \Gamma(b)</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L1239' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L1257' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.hyperu-Tuple{Nemo.acb,Nemo.acb,Nemo.acb}' href='#Nemo.hyperu-Tuple{Nemo.acb,Nemo.acb,Nemo.acb}'>#</a>
 <strong><code>Nemo.hyperu</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>hyperu(a::acb, b::acb, x::acb)
@@ -1538,7 +1548,7 @@ a = const_pi(CC)
 <blockquote>
 <p>Return the confluent hypergeometric function <script type="math/tex">U(a,b,x)</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L1251' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L1269' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.jtheta-Tuple{Nemo.acb,Nemo.acb}' href='#Nemo.jtheta-Tuple{Nemo.acb,Nemo.acb}'>#</a>
 <strong><code>Nemo.jtheta</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>jtheta(z::acb, tau::acb)
@@ -1547,7 +1557,7 @@ a = const_pi(CC)
 <blockquote>
 <p>Return a tuple of four elements containing the Jacobi theta function values <script type="math/tex">\theta_1, \theta_2, \theta_3, \theta_4</script> evaluated at <script type="math/tex">z, \tau</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L1262' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L1280' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.ellipwp-Tuple{Nemo.acb,Nemo.acb}' href='#Nemo.ellipwp-Tuple{Nemo.acb,Nemo.acb}'>#</a>
 <strong><code>Nemo.ellipwp</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>ellipwp(z::acb, tau::acb)
@@ -1556,9 +1566,9 @@ a = const_pi(CC)
 <blockquote>
 <p>Return the Weierstrass elliptic function <script type="math/tex">\wp(z,\tau)</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/92714adf1c7531aadfe385cb56c14418ad893686/src/arb/acb.jl#L1278' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/77e81499b94b6e998865a0624d01b192a674b2e1/src/arb/acb.jl#L1296' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of complex valued mathematical functions.</p>
-<pre><code>CC = AcbField(64)
+<pre><code>CC = ComplexField(64)
 
 s = CC(1, 2)
 z = CC(&quot;1.23&quot;, &quot;3.45&quot;)
