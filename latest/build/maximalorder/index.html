@@ -8,7 +8,7 @@
   
   <meta name="author" content="William Hart">
   
-  <title>Rationals - Nemo.jl</title>
+  <title>Maximal orders - Nemo.jl</title>
   
 
   <link rel="shortcut icon" href="../../img/favicon.ico">
@@ -24,9 +24,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Rationals";
-    var mkdocs_page_input_path = "build/rational.md";
-    var mkdocs_page_url = "/build/rational/";
+    var mkdocs_page_name = "Maximal orders";
+    var mkdocs_page_input_path = "build/maximalorder.md";
+    var mkdocs_page_url = "/build/maximalorder/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
@@ -128,15 +128,8 @@
 <li>
           
             <li>
-    <li class="toctree-l1 current">
-        <a class="current" href="./">Rationals</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#introduction">Introduction</a></li>
-                
-            
-            </ul>
+    <li class="toctree-l1 ">
+        <a class="" href="../rational/">Rationals</a>
         
     </li>
 <li>
@@ -177,8 +170,15 @@
 <li>
           
             <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../maximalorder/">Maximal orders</a>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Maximal orders</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#introduction">Introduction</a></li>
+                
+            
+            </ul>
         
     </li>
 <li>
@@ -219,7 +219,7 @@
     
       
     
-    <li>Rationals</li>
+    <li>Maximal orders</li>
     <li class="wy-breadcrumbs-aside">
       
         
@@ -235,7 +235,13 @@
               
                 <p><a id='Introduction-1'></a></p>
 <h2 id="introduction">Introduction</h2>
-<p>Nemo provides much functionality for the rational numbers. See the section on Fraction Fields where all the basic functionality is documented, along with the extra functionality only available for the rational numbers themselves.</p>
+<p>Nemo previously provided maximal orders of absolute number fields via the Pari C library. However, Pari will be made optional in future.</p>
+<p>For maximal orders there is the Hecke.jl project, which is designed to work as a series of Nemo plugin modules. The Hecke types fit into the Nemo abstract type hierarchy and so can be used recursively just as for all other Nemo types.</p>
+<p>Details of Hecke can be found here:</p>
+<ul>
+<li><a href="http://hecke.readthedocs.io/en/latest/">http://hecke.readthedocs.io/en/latest/</a> (Documentation)</li>
+<li><a href="https://github.com/thofma/Hecke.jl">https://github.com/thofma/Hecke.jl</a> (Source code)</li>
+</ul>
               
             </div>
           </div>
@@ -243,10 +249,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../finitefield/" class="btn btn-neutral float-right" title="Finite fields">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../classgroup/" class="btn btn-neutral float-right" title="Class groups">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../integer/" class="btn btn-neutral" title="Integers"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../numberfield/" class="btn btn-neutral" title="Number fields"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -274,10 +280,10 @@
           <a href="https://github.com/Nemocas/Nemo.jl" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../integer/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../numberfield/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../finitefield/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../classgroup/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

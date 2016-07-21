@@ -107,14 +107,6 @@
 
     
     <url>
-     <loc>None/build/numberfield/</loc>
-     <lastmod>2016-07-21</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
      <loc>None/build/arb/</loc>
      <lastmod>2016-07-21</lastmod>
      <changefreq>daily</changefreq>
@@ -124,6 +116,30 @@
     
     <url>
      <loc>None/build/acb/</loc>
+     <lastmod>2016-07-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>None/build/numberfield/</loc>
+     <lastmod>2016-07-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>None/build/maximalorder/</loc>
+     <lastmod>2016-07-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>None/build/classgroup/</loc>
      <lastmod>2016-07-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
