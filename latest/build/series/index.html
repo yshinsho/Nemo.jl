@@ -380,7 +380,7 @@ f = S()
 <blockquote>
 <p>Returns <script type="math/tex">0 + O(x^\mbox{deg}(a))</script>. Usually this function is called with <script type="math/tex">x^n</script> as parameter. Then the function returns the power series <script type="math/tex">0 + O(x^n)</script>, which can be used to set the precision of a power series when constructing it.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/d7f06a30a3fc52539cdb6bc3dad4ceb9b5a616c9/src/generic/RelSeries.jl#L16' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2cdcbdbfefb49a9e738888c52310db9a3141c456/src/generic/RelSeries.jl#L16' class='documenter-source'>source</a><br></p>
 <p>In addition we provide the following functions for constructing certain useful polynomials.</p>
 <p><a id='Base.zero-Tuple{Nemo.SeriesRing}' href='#Base.zero-Tuple{Nemo.SeriesRing}'>#</a>
 <strong><code>Base.zero</code></strong> &mdash; <em>Method</em>.</p>
@@ -390,7 +390,7 @@ f = S()
 <blockquote>
 <p>Return <script type="math/tex">0 + O(x^n)</script> where <script type="math/tex">n</script> is the maximum precision of the power series ring <script type="math/tex">R</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/d7f06a30a3fc52539cdb6bc3dad4ceb9b5a616c9/src/generic/RelSeries.jl#L108' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2cdcbdbfefb49a9e738888c52310db9a3141c456/src/generic/RelSeries.jl#L108' class='documenter-source'>source</a><br></p>
 <p><a id='Base.one-Tuple{Nemo.SeriesRing}' href='#Base.one-Tuple{Nemo.SeriesRing}'>#</a>
 <strong><code>Base.one</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>zero(R::SeriesRing)
@@ -399,7 +399,7 @@ f = S()
 <blockquote>
 <p>Return <script type="math/tex">1 + O(x^n)</script> where <script type="math/tex">n</script> is the maximum precision of the power series ring <script type="math/tex">R</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/d7f06a30a3fc52539cdb6bc3dad4ceb9b5a616c9/src/generic/RelSeries.jl#L115' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2cdcbdbfefb49a9e738888c52310db9a3141c456/src/generic/RelSeries.jl#L115' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.gen-Tuple{Nemo.SeriesRing}' href='#Nemo.gen-Tuple{Nemo.SeriesRing}'>#</a>
 <strong><code>Nemo.gen</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>zero(R::SeriesRing)
@@ -408,7 +408,7 @@ f = S()
 <blockquote>
 <p>Return the generator of the power series ring, i.e. <script type="math/tex">x + O(x^{n + 1})</script> where <script type="math/tex">n</script> is the maximum precision of the power series ring <script type="math/tex">R</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/d7f06a30a3fc52539cdb6bc3dad4ceb9b5a616c9/src/generic/RelSeries.jl#L122' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2cdcbdbfefb49a9e738888c52310db9a3141c456/src/generic/RelSeries.jl#L122' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of constructing power series.</p>
 <pre><code>R, t = PolynomialRing(QQ, &quot;t&quot;)
 S, x = PowerSeriesRing(R, 30, &quot;x&quot;)
@@ -521,7 +521,7 @@ S(n::fmpz)
 <blockquote>
 <p>Return the base ring of the given power series ring.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/d7f06a30a3fc52539cdb6bc3dad4ceb9b5a616c9/src/generic/RelSeries.jl#L38' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2cdcbdbfefb49a9e738888c52310db9a3141c456/src/generic/RelSeries.jl#L38' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.base_ring-Tuple{Nemo.SeriesElem}' href='#Nemo.base_ring-Tuple{Nemo.SeriesElem}'>#</a>
 <strong><code>Nemo.base_ring</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>base_ring(a::SeriesElem)
@@ -530,7 +530,7 @@ S(n::fmpz)
 <blockquote>
 <p>Return the base ring of the power series ring of the given power series.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/d7f06a30a3fc52539cdb6bc3dad4ceb9b5a616c9/src/generic/RelSeries.jl#L44' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2cdcbdbfefb49a9e738888c52310db9a3141c456/src/generic/RelSeries.jl#L44' class='documenter-source'>source</a><br></p>
 <p><a id='Base.parent-Tuple{Nemo.SeriesElem}' href='#Base.parent-Tuple{Nemo.SeriesElem}'>#</a>
 <strong><code>Base.parent</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>parent(a::SeriesElem)
@@ -539,7 +539,7 @@ S(n::fmpz)
 <blockquote>
 <p>Return the parent of the given power series.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/d7f06a30a3fc52539cdb6bc3dad4ceb9b5a616c9/src/generic/RelSeries.jl#L30' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2cdcbdbfefb49a9e738888c52310db9a3141c456/src/generic/RelSeries.jl#L30' class='documenter-source'>source</a><br></p>
 <p><a id='Base.var-Tuple{Nemo.SeriesRing}' href='#Base.var-Tuple{Nemo.SeriesRing}'>#</a>
 <strong><code>Base.var</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>var(a::SeriesRing)
@@ -548,7 +548,7 @@ S(n::fmpz)
 <blockquote>
 <p>Return the internal name of the generator of the power series ring. Note that this is returned as a <code>Symbol</code> not a <code>String</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/d7f06a30a3fc52539cdb6bc3dad4ceb9b5a616c9/src/generic/RelSeries.jl#L50' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2cdcbdbfefb49a9e738888c52310db9a3141c456/src/generic/RelSeries.jl#L50' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.valuation-Tuple{Nemo.SeriesElem}' href='#Nemo.valuation-Tuple{Nemo.SeriesElem}'>#</a>
 <strong><code>Nemo.valuation</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>valuation(a::SeriesElem)
@@ -557,7 +557,7 @@ S(n::fmpz)
 <blockquote>
 <p>Return the valuation of the given power series, i.e. the degree of the first nonzero term (or the precision if it is arithmetically zero).</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/d7f06a30a3fc52539cdb6bc3dad4ceb9b5a616c9/src/generic/RelSeries.jl#L165' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2cdcbdbfefb49a9e738888c52310db9a3141c456/src/generic/RelSeries.jl#L165' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.max_precision-Tuple{Nemo.SeriesRing}' href='#Nemo.max_precision-Tuple{Nemo.SeriesRing}'>#</a>
 <strong><code>Nemo.max_precision</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>max_precision(R::SeriesRing)
@@ -566,7 +566,7 @@ S(n::fmpz)
 <blockquote>
 <p>Return the maximum relative precision of power series in the given power series ring.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/d7f06a30a3fc52539cdb6bc3dad4ceb9b5a616c9/src/generic/RelSeries.jl#L81' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2cdcbdbfefb49a9e738888c52310db9a3141c456/src/generic/RelSeries.jl#L81' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.modulus-Tuple{Nemo.SeriesElem{T<:Nemo.ResElem}}' href='#Nemo.modulus-Tuple{Nemo.SeriesElem{T<:Nemo.ResElem}}'>#</a>
 <strong><code>Nemo.modulus</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>modulus{T &lt;: ResElem}(a::SeriesElem{T})
@@ -575,7 +575,7 @@ S(n::fmpz)
 <blockquote>
 <p>Return the modulus of the coefficients of the given polynomial.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/d7f06a30a3fc52539cdb6bc3dad4ceb9b5a616c9/src/generic/RelSeries.jl#L182' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2cdcbdbfefb49a9e738888c52310db9a3141c456/src/generic/RelSeries.jl#L182' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.iszero-Tuple{Nemo.SeriesElem}' href='#Nemo.iszero-Tuple{Nemo.SeriesElem}'>#</a>
 <strong><code>Nemo.iszero</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>iszero(a::SeriesElem)
@@ -584,7 +584,7 @@ S(n::fmpz)
 <blockquote>
 <p>Return <code>true</code> if the given power series is arithmetically equal to zero to its current precision, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/d7f06a30a3fc52539cdb6bc3dad4ceb9b5a616c9/src/generic/RelSeries.jl#L132' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2cdcbdbfefb49a9e738888c52310db9a3141c456/src/generic/RelSeries.jl#L132' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.isone-Tuple{Nemo.SeriesElem}' href='#Nemo.isone-Tuple{Nemo.SeriesElem}'>#</a>
 <strong><code>Nemo.isone</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>isone(a::SeriesElem)
@@ -593,7 +593,7 @@ S(n::fmpz)
 <blockquote>
 <p>Return <code>true</code> if the given power series is arithmetically equal to one to its current precision, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/d7f06a30a3fc52539cdb6bc3dad4ceb9b5a616c9/src/generic/RelSeries.jl#L139' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2cdcbdbfefb49a9e738888c52310db9a3141c456/src/generic/RelSeries.jl#L139' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.isgen-Tuple{Nemo.SeriesElem}' href='#Nemo.isgen-Tuple{Nemo.SeriesElem}'>#</a>
 <strong><code>Nemo.isgen</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>isgen(a::SeriesElem)
@@ -602,7 +602,7 @@ S(n::fmpz)
 <blockquote>
 <p>Return <code>true</code> if the given power series is arithmetically equal to the generator of its power series ring to its current precision, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/d7f06a30a3fc52539cdb6bc3dad4ceb9b5a616c9/src/generic/RelSeries.jl#L148' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2cdcbdbfefb49a9e738888c52310db9a3141c456/src/generic/RelSeries.jl#L148' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.isunit-Tuple{Nemo.SeriesElem}' href='#Nemo.isunit-Tuple{Nemo.SeriesElem}'>#</a>
 <strong><code>Nemo.isunit</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>isunit(a::SeriesElem)
@@ -611,7 +611,7 @@ S(n::fmpz)
 <blockquote>
 <p>Return <code>true</code> if the given power series is arithmetically equal to a unit, i.e. is invertible, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/d7f06a30a3fc52539cdb6bc3dad4ceb9b5a616c9/src/generic/RelSeries.jl#L158' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2cdcbdbfefb49a9e738888c52310db9a3141c456/src/generic/RelSeries.jl#L158' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of basic manipulation of power series.</p>
 <pre><code>R, t = PowerSeriesRing(QQ, 10, &quot;t&quot;)
 S, x = PowerSeriesRing(R, 30, &quot;x&quot;)
@@ -873,7 +873,7 @@ k = truncate(d, 5)
 <blockquote>
 <p>Return the inverse of the power series <script type="math/tex">a</script>, i.e. <script type="math/tex">1/a</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/d7f06a30a3fc52539cdb6bc3dad4ceb9b5a616c9/src/generic/RelSeries.jl#L864' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2cdcbdbfefb49a9e738888c52310db9a3141c456/src/generic/RelSeries.jl#L864' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of taking the inverse.</p>
 <pre><code>R, t = PolynomialRing(QQ, &quot;t&quot;)
 S, x = PowerSeriesRing(R, 30, &quot;x&quot;)
@@ -895,7 +895,7 @@ d = inv(b)
 <blockquote>
 <p>Return the exponential of the power series <script type="math/tex">a</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/d7f06a30a3fc52539cdb6bc3dad4ceb9b5a616c9/src/generic/RelSeries.jl#L896' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2cdcbdbfefb49a9e738888c52310db9a3141c456/src/generic/RelSeries.jl#L896' class='documenter-source'>source</a><br></p>
 <p>The following special functions are only available for certain rings.</p>
 <p><a id='Base.log-Tuple{Nemo.fmpq_rel_series}' href='#Base.log-Tuple{Nemo.fmpq_rel_series}'>#</a>
 <strong><code>Base.log</code></strong> &mdash; <em>Method</em>.</p>
@@ -904,89 +904,89 @@ d = inv(b)
 
 <p>Compute the natural logarithm of <code>x</code>. Throws <code>DomainError</code> for negative <code>Real</code> arguments. Use complex negative arguments to obtain complex results.</p>
 <p>There is an experimental variant in the <code>Base.Math.JuliaLibm</code> module, which is typically faster and more accurate.</p>
-<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/e18ed618081d6c3c70657839ec5bc74c06409b06/base/docs/helpdb/Base.jl#L3333-3341' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaLang/julia/tree/2966b3aa4e3fe0e9820083bec738a49b2347b105/base/docs/helpdb/Base.jl#L3333-3341' class='documenter-source'>source</a><br></p>
 <p>log(a::fmpq_rel_series)</p>
 <blockquote>
 <p>Return log<script type="math/tex">(a)</script>. Requires the constant term to be one.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/d7f06a30a3fc52539cdb6bc3dad4ceb9b5a616c9/src/flint/fmpq_rel_series.jl#L464' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2cdcbdbfefb49a9e738888c52310db9a3141c456/src/flint/fmpq_rel_series.jl#L464' class='documenter-source'>source</a><br></p>
 <p><a id='Base.sqrt-Tuple{Nemo.fmpq_rel_series}' href='#Base.sqrt-Tuple{Nemo.fmpq_rel_series}'>#</a>
 <strong><code>Base.sqrt</code></strong> &mdash; <em>Method</em>.</p>
 <p>sqrt(a::fmpq_rel_series)</p>
 <blockquote>
 <p>Return the power series square root of <script type="math/tex">a</script>. Requires a constant term equal to one.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/d7f06a30a3fc52539cdb6bc3dad4ceb9b5a616c9/src/flint/fmpq_rel_series.jl#L651' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2cdcbdbfefb49a9e738888c52310db9a3141c456/src/flint/fmpq_rel_series.jl#L651' class='documenter-source'>source</a><br></p>
 <p><a id='Base.tan-Tuple{Nemo.fmpq_rel_series}' href='#Base.tan-Tuple{Nemo.fmpq_rel_series}'>#</a>
 <strong><code>Base.tan</code></strong> &mdash; <em>Method</em>.</p>
 <p>tan(a::fmpq_rel_series)</p>
 <blockquote>
 <p>Return tan<script type="math/tex">(a)</script>. Requires a zero constant term.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/d7f06a30a3fc52539cdb6bc3dad4ceb9b5a616c9/src/flint/fmpq_rel_series.jl#L481' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2cdcbdbfefb49a9e738888c52310db9a3141c456/src/flint/fmpq_rel_series.jl#L481' class='documenter-source'>source</a><br></p>
 <p><a id='Base.tanh-Tuple{Nemo.fmpq_rel_series}' href='#Base.tanh-Tuple{Nemo.fmpq_rel_series}'>#</a>
 <strong><code>Base.tanh</code></strong> &mdash; <em>Method</em>.</p>
 <p>tanh(a::fmpq_rel_series)</p>
 <blockquote>
 <p>Return tanh<script type="math/tex">(a)</script>. Requires a zero constant term.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/d7f06a30a3fc52539cdb6bc3dad4ceb9b5a616c9/src/flint/fmpq_rel_series.jl#L498' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2cdcbdbfefb49a9e738888c52310db9a3141c456/src/flint/fmpq_rel_series.jl#L498' class='documenter-source'>source</a><br></p>
 <p><a id='Base.sin-Tuple{Nemo.fmpq_rel_series}' href='#Base.sin-Tuple{Nemo.fmpq_rel_series}'>#</a>
 <strong><code>Base.sin</code></strong> &mdash; <em>Method</em>.</p>
 <p>sin(a::fmpq_rel_series)</p>
 <blockquote>
 <p>Return sin<script type="math/tex">(a)</script>. Requires a zero constant term.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/d7f06a30a3fc52539cdb6bc3dad4ceb9b5a616c9/src/flint/fmpq_rel_series.jl#L515' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2cdcbdbfefb49a9e738888c52310db9a3141c456/src/flint/fmpq_rel_series.jl#L515' class='documenter-source'>source</a><br></p>
 <p><a id='Base.sinh-Tuple{Nemo.fmpq_rel_series}' href='#Base.sinh-Tuple{Nemo.fmpq_rel_series}'>#</a>
 <strong><code>Base.sinh</code></strong> &mdash; <em>Method</em>.</p>
 <p>sinh(a::fmpq_rel_series)</p>
 <blockquote>
 <p>Return sinh<script type="math/tex">(a)</script>. Requires a zero constant term.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/d7f06a30a3fc52539cdb6bc3dad4ceb9b5a616c9/src/flint/fmpq_rel_series.jl#L532' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2cdcbdbfefb49a9e738888c52310db9a3141c456/src/flint/fmpq_rel_series.jl#L532' class='documenter-source'>source</a><br></p>
 <p><a id='Base.cos-Tuple{Nemo.fmpq_rel_series}' href='#Base.cos-Tuple{Nemo.fmpq_rel_series}'>#</a>
 <strong><code>Base.cos</code></strong> &mdash; <em>Method</em>.</p>
 <p>cos(a::fmpq_rel_series)</p>
 <blockquote>
 <p>Return cos<script type="math/tex">(a)</script>. Requires a zero constant term.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/d7f06a30a3fc52539cdb6bc3dad4ceb9b5a616c9/src/flint/fmpq_rel_series.jl#L549' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2cdcbdbfefb49a9e738888c52310db9a3141c456/src/flint/fmpq_rel_series.jl#L549' class='documenter-source'>source</a><br></p>
 <p><a id='Base.cosh-Tuple{Nemo.fmpq_rel_series}' href='#Base.cosh-Tuple{Nemo.fmpq_rel_series}'>#</a>
 <strong><code>Base.cosh</code></strong> &mdash; <em>Method</em>.</p>
 <p>cosh(a::fmpq_rel_series)</p>
 <blockquote>
 <p>Return cosh<script type="math/tex">(a)</script>. Requires a zero constant term.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/d7f06a30a3fc52539cdb6bc3dad4ceb9b5a616c9/src/flint/fmpq_rel_series.jl#L566' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2cdcbdbfefb49a9e738888c52310db9a3141c456/src/flint/fmpq_rel_series.jl#L566' class='documenter-source'>source</a><br></p>
 <p><a id='Base.asin-Tuple{Nemo.fmpq_rel_series}' href='#Base.asin-Tuple{Nemo.fmpq_rel_series}'>#</a>
 <strong><code>Base.asin</code></strong> &mdash; <em>Method</em>.</p>
 <p>asin(a::fmpq_rel_series)</p>
 <blockquote>
 <p>Return asin<script type="math/tex">(a)</script>. Requires a zero constant term.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/d7f06a30a3fc52539cdb6bc3dad4ceb9b5a616c9/src/flint/fmpq_rel_series.jl#L583' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2cdcbdbfefb49a9e738888c52310db9a3141c456/src/flint/fmpq_rel_series.jl#L583' class='documenter-source'>source</a><br></p>
 <p><a id='Base.asinh-Tuple{Nemo.fmpq_rel_series}' href='#Base.asinh-Tuple{Nemo.fmpq_rel_series}'>#</a>
 <strong><code>Base.asinh</code></strong> &mdash; <em>Method</em>.</p>
 <p>asinh(a::fmpq_rel_series)</p>
 <blockquote>
 <p>Return asinh<script type="math/tex">(a)</script>. Requires a zero constant term.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/d7f06a30a3fc52539cdb6bc3dad4ceb9b5a616c9/src/flint/fmpq_rel_series.jl#L600' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2cdcbdbfefb49a9e738888c52310db9a3141c456/src/flint/fmpq_rel_series.jl#L600' class='documenter-source'>source</a><br></p>
 <p><a id='Base.atan-Tuple{Nemo.fmpq_rel_series}' href='#Base.atan-Tuple{Nemo.fmpq_rel_series}'>#</a>
 <strong><code>Base.atan</code></strong> &mdash; <em>Method</em>.</p>
 <p>atan(a::fmpq_rel_series)</p>
 <blockquote>
 <p>Return atan<script type="math/tex">(a)</script>. Requires a zero constant term.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/d7f06a30a3fc52539cdb6bc3dad4ceb9b5a616c9/src/flint/fmpq_rel_series.jl#L617' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2cdcbdbfefb49a9e738888c52310db9a3141c456/src/flint/fmpq_rel_series.jl#L617' class='documenter-source'>source</a><br></p>
 <p><a id='Base.atanh-Tuple{Nemo.fmpq_rel_series}' href='#Base.atanh-Tuple{Nemo.fmpq_rel_series}'>#</a>
 <strong><code>Base.atanh</code></strong> &mdash; <em>Method</em>.</p>
 <p>atanh(a::fmpq_rel_series)</p>
 <blockquote>
 <p>Return atanh<script type="math/tex">(a)</script>. Requires a zero constant term.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/d7f06a30a3fc52539cdb6bc3dad4ceb9b5a616c9/src/flint/fmpq_rel_series.jl#L634' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/2cdcbdbfefb49a9e738888c52310db9a3141c456/src/flint/fmpq_rel_series.jl#L634' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of special functions.</p>
 <pre><code>R, t = PolynomialRing(QQ, &quot;t&quot;)
 S, x = PowerSeriesRing(R, 30, &quot;x&quot;)
