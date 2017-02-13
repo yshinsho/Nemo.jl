@@ -8,7 +8,7 @@
   
   <meta name="author" content="William Hart">
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>About Nemo - Nemo.jl</title>
+  <title>Factorization - Nemo.jl</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -18,9 +18,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "About Nemo";
-    var mkdocs_page_input_path = "about.md";
-    var mkdocs_page_url = "/about/";
+    var mkdocs_page_name = "Factorization";
+    var mkdocs_page_input_path = "factor.md";
+    var mkdocs_page_url = "/factor/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js"></script>
@@ -55,19 +55,8 @@
 <li>
           
             <li>
-    <li class="toctree-l1 current">
-        <a class="current" href="./">About Nemo</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#nemo">Nemo</a></li>
-                
-                    <li><a class="toctree-l4" href="#what-is-nemo">What is Nemo?</a></li>
-                
-                    <li><a class="toctree-l4" href="#why-julia">Why Julia?</a></li>
-                
-            
-            </ul>
+    <li class="toctree-l1 ">
+        <a class="" href="../about/">About Nemo</a>
         
     </li>
 <li>
@@ -192,8 +181,18 @@
 <li>
           
             <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../factor/">Factorization</a>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Factorization</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#introduction">Introduction</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#basic-functionality">Basic functionality</a></li>
+                
+            
+            </ul>
         
     </li>
 <li>
@@ -220,10 +219,10 @@
     
       
     
-    <li>About Nemo</li>
+    <li>Factorization</li>
     <li class="wy-breadcrumbs-aside">
       
-        <a href="https://github.com/Nemocas/Nemo.jl/edit/master/docs/about.md"
+        <a href="https://github.com/Nemocas/Nemo.jl/edit/master/docs/factor.md"
           class="icon icon-github"> Edit on GitHub</a>
       
     </li>
@@ -233,54 +232,39 @@
           <div role="main">
             <div class="section">
               
-                <p><a id='Nemo-1'></a></p>
-<h1 id="nemo">Nemo</h1>
-<p><a id='What-is-Nemo?-1'></a></p>
-<h2 id="what-is-nemo">What is Nemo?</h2>
-<p>Nemo is a computer algebra package for the Julia programming language. Our aim is to provide a highly performant computer algebra package covering</p>
-<ul>
-<li>Commutative Algebra</li>
-<li>Number Theory</li>
-<li>Group Theory</li>
-</ul>
-<p>Nemo consists of wrappers of specialised C/C++ libraries:</p>
-<ul>
-<li>Flint    [http://flintlib.org/]</li>
-<li>Arb      [http://fredrikj.net/arb/]</li>
-<li>Antic    [https://github.com/wbhart/antic/]</li>
-<li>Singular [https://www.singular.uni-kl.de/]</li>
-<li>Pari     [http://pari.math.u-bordeaux.fr/]</li>
-</ul>
-<p>It will also eventually provide interfaces to interpreted library code from other computer algebra systems such as Gap and Singular.</p>
-<p>Nemo also provides implementations of generic algorithms and mathematical data structures. So far the fully recursive constructions include</p>
-<ul>
-<li>Univariate polynomial rings</li>
-<li>Power series rings</li>
-<li>Residue rings (modulo principal ideals)</li>
-<li>Fraction fields</li>
-<li>Matrices</li>
-</ul>
-<p><a id='Why-Julia?-1'></a></p>
-<h2 id="why-julia">Why Julia?</h2>
-<p>Julia is a sophisticated, modern programming language which is designed to be both performant and flexible. It was written by mathematicians, for mathematicians.</p>
-<p>The benefits of Julia include</p>
-<ul>
-<li>Familiar imperative syntax</li>
-<li>JIT compilation (provides near native performance, even for highly generic code)</li>
-<li>REPL console (cuts down on development time)</li>
-<li>Parametric types (allows for fast generic constructions over other data types)</li>
-<li>Powerful metaprogramming facilities</li>
-<li>Operator overloading</li>
-<li>Multiple dispatch (dispatch on every argument of a function)</li>
-<li>Efficient native C interface (no wrapper overhead)</li>
-<li>Experimental C++ interface</li>
-<li>Dynamic type inference</li>
-<li>Built-in bignums</li>
-<li>Able to be embedded in C programs</li>
-<li>High performance collection types (dictionaries, iterators, arrays, etc.)</li>
-<li>Jupyter support (for web based notebooks)</li>
-</ul>
-<p>The main benefits for Nemo are the parametric type system and JIT compilation. The former allows us to model many mathematical types, e.g. generic polynomial rings over an arbitrary base ring. The latter speeds up the runtime performance, even of highly generic mathematical procedures.</p>
+                <p><a id='Introduction-1'></a></p>
+<h2 id="introduction">Introduction</h2>
+<p>Nemo provides a unified interface to handle factorizations using the <code>Fact</code> objects. These can only be constructed using the factor function for the respective ring elements. This is best illustrated by an example.</p>
+<pre><code class="jlcon">julia&gt; fac = factor(ZZ(-6000361807272228723606))
+-1 * 2 * 229^3 * 43669^3 * 3
+
+julia&gt; unit(fac)
+-1
+
+julia&gt; -6000361807272228723606 == unit(fac) * prod([ p^e for (p, e) in fac])
+true
+
+julia&gt; for (p, e) in fac; println(&quot;$p $e&quot;); end
+2 1
+229 3
+43669 3
+3 1
+
+julia&gt; 229 in fac
+true
+
+julia&gt; fac[229]
+3
+</code></pre>
+
+<p><a id='Basic-functionality-1'></a></p>
+<h2 id="basic-functionality">Basic functionality</h2>
+<p>Objects of type <code>Fac</code> are iterable, that is, if <code>a</code> is an object of type <code>Fac</code>, then <code>for (p, e) in a</code> will iterate through all pairs <code>(p, e)</code>, where <code>p</code> is a factor and <code>e</code> the corresponding exponent.</p>
+<pre><code>in{T}(a::T, ::Fac{T})
+getindex{T}(::Fac{T}, T)
+length(::Fac)
+unit(::Fac)
+</code></pre>
               
             </div>
           </div>
@@ -288,10 +272,8 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../types/" class="btn btn-neutral float-right" title="Types in Nemo">Next <span class="icon icon-circle-arrow-right"></span></a>
       
-      
-        <a href=".." class="btn btn-neutral" title="Getting Started"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../perm/" class="btn btn-neutral" title="Permutation groups"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -319,10 +301,8 @@
           <a href="https://github.com/Nemocas/Nemo.jl" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../perm/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
-      
-        <span style="margin-left: 15px"><a href="../types/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
