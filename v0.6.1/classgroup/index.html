@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="William Hart">
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Class groups - Nemo.jl</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link href="../assets/Documenter.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Class groups";
+    var mkdocs_page_input_path = "classgroup.md";
+    var mkdocs_page_url = "/classgroup/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Nemo.jl</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Getting Started</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../about/">About Nemo</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../types/">Types in Nemo</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../constructors/">Parent object constructors</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../polynomial/">Univariate polynomials</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../series/">Capped relative power series</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../residue/">Residue rings</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../fraction/">Fraction fields</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../matrix/">Matrices</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../integer/">Integers</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../rational/">Rationals</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../finitefield/">Finite fields</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../padic/">P-adic fields</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../arb/">Real balls</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../acb/">Complex boxes</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../numberfield/">Number fields</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../maximalorder/">Maximal orders</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Class groups</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#introduction">Introduction</a></li>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../perm/">Permutation groups</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../factor/">Factorization</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Nemo.jl</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Class groups</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/Nemocas/Nemo.jl/edit/master/docs/classgroup.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p><a id='Introduction-1'></a></p>
+<h2 id="introduction">Introduction</h2>
+<p>Nemo previously provided class groups of absolute number fields via the Pari C library. However, Pari will be made optional in future.</p>
+<p>For class groups there is the Hecke.jl project, which is designed to work as a series of Nemo plugin modules. The Hecke types fit into the Nemo abstract type hierarchy and so can be used recursively just as for all other Nemo types.</p>
+<p>Details of Hecke can be found here:</p>
+<ul>
+<li><a href="http://hecke.readthedocs.io/en/latest/">http://hecke.readthedocs.io/en/latest/</a> (Documentation)</li>
+<li><a href="https://github.com/thofma/Hecke.jl">https://github.com/thofma/Hecke.jl</a> (Source code)</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../perm/" class="btn btn-neutral float-right" title="Permutation groups">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../maximalorder/" class="btn btn-neutral" title="Maximal orders"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/Nemocas/Nemo.jl" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../maximalorder/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../perm/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../js/theme.js"></script>
+      <script src="../mathjaxhelper.js"></script>
+      <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+</body>
+</html>
