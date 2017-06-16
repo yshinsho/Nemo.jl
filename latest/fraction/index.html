@@ -313,7 +313,7 @@ d = QQ(11)
 <blockquote>
 <p>Return <script type="math/tex">0/1</script> in the given fraction field.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/aa9e2fe574baeebf9bda8c2ab7d6ce99d413158e/src/generic/Fraction.jl#L92' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/ff29bedfb680a9824e5b7047fc91cec15496316d/src/generic/Fraction.jl#L92' class='documenter-source'>source</a><br></p>
 <p><a id='Base.one-Tuple{Nemo.FracField}' href='#Base.one-Tuple{Nemo.FracField}'>#</a>
 <strong><code>Base.one</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>one(R::FracField)
@@ -322,7 +322,7 @@ d = QQ(11)
 <blockquote>
 <p>Return <script type="math/tex">1/1</script> in the given fraction field.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/aa9e2fe574baeebf9bda8c2ab7d6ce99d413158e/src/generic/Fraction.jl#L98' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/ff29bedfb680a9824e5b7047fc91cec15496316d/src/generic/Fraction.jl#L98' class='documenter-source'>source</a><br></p>
 <p>It is also possible to construct fractions directly in Nemo, without first manually constructing the relevant fraction field. For this purpose we overload Julia's fraction operator <code>//</code>.</p>
 <p>Here are some examples of constructing fractions.</p>
 <pre><code>S, x = PolynomialRing(ZZ, &quot;x&quot;)
@@ -413,7 +413,7 @@ S(n::T, d::Integer)
 <blockquote>
 <p>Return the base ring <script type="math/tex">R</script> of the given fraction field.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/aa9e2fe574baeebf9bda8c2ab7d6ce99d413158e/src/generic/Fraction.jl#L19' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/ff29bedfb680a9824e5b7047fc91cec15496316d/src/generic/Fraction.jl#L19' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.base_ring-Tuple{Nemo.FracElem}' href='#Nemo.base_ring-Tuple{Nemo.FracElem}'>#</a>
 <strong><code>Nemo.base_ring</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>base_ring{T}(r::FracElem)
@@ -422,7 +422,7 @@ S(n::T, d::Integer)
 <blockquote>
 <p>Return the base ring <script type="math/tex">R</script> of the fraction field that the supplied element <script type="math/tex">a</script> belongs to.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/aa9e2fe574baeebf9bda8c2ab7d6ce99d413158e/src/generic/Fraction.jl#L25' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/ff29bedfb680a9824e5b7047fc91cec15496316d/src/generic/Fraction.jl#L25' class='documenter-source'>source</a><br></p>
 <p><a id='Base.parent-Tuple{Nemo.FracElem}' href='#Base.parent-Tuple{Nemo.FracElem}'>#</a>
 <strong><code>Base.parent</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>parent(a::FracElem)
@@ -431,7 +431,7 @@ S(n::T, d::Integer)
 <blockquote>
 <p>Return the parent object of the given fraction element.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/aa9e2fe574baeebf9bda8c2ab7d6ce99d413158e/src/generic/Fraction.jl#L32' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/ff29bedfb680a9824e5b7047fc91cec15496316d/src/generic/Fraction.jl#L32' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.iszero-Tuple{Nemo.FracElem}' href='#Nemo.iszero-Tuple{Nemo.FracElem}'>#</a>
 <strong><code>Nemo.iszero</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>iszero(a::FracElem)
@@ -440,7 +440,7 @@ S(n::T, d::Integer)
 <blockquote>
 <p>Return <code>true</code> if the supplied element <script type="math/tex">a</script> is zero in the fraction field it belongs to, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/aa9e2fe574baeebf9bda8c2ab7d6ce99d413158e/src/generic/Fraction.jl#L104' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/ff29bedfb680a9824e5b7047fc91cec15496316d/src/generic/Fraction.jl#L104' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.isone-Tuple{Nemo.FracElem}' href='#Nemo.isone-Tuple{Nemo.FracElem}'>#</a>
 <strong><code>Nemo.isone</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>isone(a::FracElem)
@@ -449,7 +449,7 @@ S(n::T, d::Integer)
 <blockquote>
 <p>Return <code>true</code> if the supplied element <script type="math/tex">a</script> is one in the fraction field it belongs to, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/aa9e2fe574baeebf9bda8c2ab7d6ce99d413158e/src/generic/Fraction.jl#L111' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/ff29bedfb680a9824e5b7047fc91cec15496316d/src/generic/Fraction.jl#L111' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.isunit-Tuple{Nemo.FracElem}' href='#Nemo.isunit-Tuple{Nemo.FracElem}'>#</a>
 <strong><code>Nemo.isunit</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>isunit(a::FracElem)
@@ -458,7 +458,7 @@ S(n::T, d::Integer)
 <blockquote>
 <p>Return <code>true</code> if the supplied element <script type="math/tex">a</script> is invertible in the fraction field it belongs to, i.e. the numerator is nonzero, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/aa9e2fe574baeebf9bda8c2ab7d6ce99d413158e/src/generic/Fraction.jl#L118' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/ff29bedfb680a9824e5b7047fc91cec15496316d/src/generic/Fraction.jl#L118' class='documenter-source'>source</a><br></p>
 <p>Some functions are only available for certain rings.</p>
 <p><a id='Base.abs-Tuple{Nemo.fmpq}' href='#Base.abs-Tuple{Nemo.fmpq}'>#</a>
 <strong><code>Base.abs</code></strong> &mdash; <em>Method</em>.</p>
@@ -468,7 +468,7 @@ S(n::T, d::Integer)
 <blockquote>
 <p>Return the absolute value of <script type="math/tex">a</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/aa9e2fe574baeebf9bda8c2ab7d6ce99d413158e/src/flint/fmpq.jl#L90' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/ff29bedfb680a9824e5b7047fc91cec15496316d/src/flint/fmpq.jl#L90' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.height-Tuple{Nemo.fmpq}' href='#Nemo.height-Tuple{Nemo.fmpq}'>#</a>
 <strong><code>Nemo.height</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>height(a::fmpq)
@@ -477,7 +477,7 @@ S(n::T, d::Integer)
 <blockquote>
 <p>Return the height of the fraction <script type="math/tex">a</script>, namely the largest of the absolute values of the numerator and denominator.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/aa9e2fe574baeebf9bda8c2ab7d6ce99d413158e/src/flint/fmpq.jl#L110' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/ff29bedfb680a9824e5b7047fc91cec15496316d/src/flint/fmpq.jl#L110' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.height_bits-Tuple{Nemo.fmpq}' href='#Nemo.height_bits-Tuple{Nemo.fmpq}'>#</a>
 <strong><code>Nemo.height_bits</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>height_bits(a::fmpq)
@@ -486,7 +486,7 @@ S(n::T, d::Integer)
 <blockquote>
 <p>Return the number of bits of the height of the fraction <script type="math/tex">a</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/aa9e2fe574baeebf9bda8c2ab7d6ce99d413158e/src/flint/fmpq.jl#L121' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/ff29bedfb680a9824e5b7047fc91cec15496316d/src/flint/fmpq.jl#L121' class='documenter-source'>source</a><br></p>
 <p><a id='Base.:<<-Tuple{Nemo.fmpq,Int64}' href='#Base.:<<-Tuple{Nemo.fmpq,Int64}'>#</a>
 <strong><code>Base.:&lt;&lt;</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>&lt;&lt;(a::fmpq, b::Int)
@@ -495,7 +495,7 @@ S(n::T, d::Integer)
 <blockquote>
 <p>Return <script type="math/tex">2^b\times a</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/aa9e2fe574baeebf9bda8c2ab7d6ce99d413158e/src/flint/fmpq.jl#L390' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/ff29bedfb680a9824e5b7047fc91cec15496316d/src/flint/fmpq.jl#L390' class='documenter-source'>source</a><br></p>
 <p><a id='Base.:>&gt;-Tuple{Nemo.fmpq,Int64}' href='#Base.:&gt;&gt;-Tuple{Nemo.fmpq,Int64}'&gt;#</a>
 <strong><code>Base.:&gt;&gt;</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>&lt;&lt;(a::fmpq, b::Int)
@@ -504,7 +504,7 @@ S(n::T, d::Integer)
 <blockquote>
 <p>Return <script type="math/tex">2^b/a</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/aa9e2fe574baeebf9bda8c2ab7d6ce99d413158e/src/flint/fmpq.jl#L379' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/ff29bedfb680a9824e5b7047fc91cec15496316d/src/flint/fmpq.jl#L379' class='documenter-source'>source</a><br></p>
 <p>Rational fractions can be compared with each other and with integers. Julia provides the full range of operators <script type="math/tex"><, >, \leq, \geq</script> which depend on the following functions.</p>
 <p><a id='Base.isless-Tuple{Nemo.fmpq,Nemo.fmpq}' href='#Base.isless-Tuple{Nemo.fmpq,Nemo.fmpq}'>#</a>
 <strong><code>Base.isless</code></strong> &mdash; <em>Method</em>.</p>
@@ -514,7 +514,7 @@ S(n::T, d::Integer)
 <blockquote>
 <p>Return <code>true</code> if <script type="math/tex">a < b</script>, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/aa9e2fe574baeebf9bda8c2ab7d6ce99d413158e/src/flint/fmpq.jl#L284' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/ff29bedfb680a9824e5b7047fc91cec15496316d/src/flint/fmpq.jl#L284' class='documenter-source'>source</a><br></p>
 <p><a id='Base.isless-Tuple{Integer,Nemo.fmpq}' href='#Base.isless-Tuple{Integer,Nemo.fmpq}'>#</a>
 <strong><code>Base.isless</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>isless(a::Integer, b::fmpq)
@@ -523,7 +523,7 @@ S(n::T, d::Integer)
 <blockquote>
 <p>Return <code>true</code> if <script type="math/tex">a < b</script>, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/aa9e2fe574baeebf9bda8c2ab7d6ce99d413158e/src/flint/fmpq.jl#L326' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/ff29bedfb680a9824e5b7047fc91cec15496316d/src/flint/fmpq.jl#L326' class='documenter-source'>source</a><br></p>
 <p><a id='Base.isless-Tuple{Nemo.fmpq,Integer}' href='#Base.isless-Tuple{Nemo.fmpq,Integer}'>#</a>
 <strong><code>Base.isless</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>isless(a::fmpq, b::Integer)
@@ -532,7 +532,7 @@ S(n::T, d::Integer)
 <blockquote>
 <p>Return <code>true</code> if <script type="math/tex">a < b</script>, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/aa9e2fe574baeebf9bda8c2ab7d6ce99d413158e/src/flint/fmpq.jl#L316' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/ff29bedfb680a9824e5b7047fc91cec15496316d/src/flint/fmpq.jl#L316' class='documenter-source'>source</a><br></p>
 <p><a id='Base.isless-Tuple{Nemo.fmpq,Nemo.fmpz}' href='#Base.isless-Tuple{Nemo.fmpq,Nemo.fmpz}'>#</a>
 <strong><code>Base.isless</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>isless(a::fmpq, b::fmpz)
@@ -541,7 +541,7 @@ S(n::T, d::Integer)
 <blockquote>
 <p>Return <code>true</code> if <script type="math/tex">a < b</script>, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/aa9e2fe574baeebf9bda8c2ab7d6ce99d413158e/src/flint/fmpq.jl#L336' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/ff29bedfb680a9824e5b7047fc91cec15496316d/src/flint/fmpq.jl#L336' class='documenter-source'>source</a><br></p>
 <p><a id='Base.isless-Tuple{Nemo.fmpz,Nemo.fmpq}' href='#Base.isless-Tuple{Nemo.fmpz,Nemo.fmpq}'>#</a>
 <strong><code>Base.isless</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>isless(a::fmpz, b::fmpq)
@@ -550,7 +550,7 @@ S(n::T, d::Integer)
 <blockquote>
 <p>Return <code>true</code> if <script type="math/tex">a < b</script>, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/aa9e2fe574baeebf9bda8c2ab7d6ce99d413158e/src/flint/fmpq.jl#L346' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/ff29bedfb680a9824e5b7047fc91cec15496316d/src/flint/fmpq.jl#L346' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of basic manipulation of fractions.</p>
 <pre><code>S, x = PolynomialRing(ZZ, &quot;x&quot;)
 
@@ -778,7 +778,7 @@ b == x + 1
 <blockquote>
 <p>Return the inverse of the fraction <script type="math/tex">a</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/aa9e2fe574baeebf9bda8c2ab7d6ce99d413158e/src/generic/Fraction.jl#L513' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/ff29bedfb680a9824e5b7047fc91cec15496316d/src/generic/Fraction.jl#L513' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of computing inverses.</p>
 <pre><code>S, x = PolynomialRing(ZZ, &quot;x&quot;)
 
@@ -797,7 +797,7 @@ b = inv(a)
 <blockquote>
 <p>Return a greatest common divisor of <script type="math/tex">a</script> and <script type="math/tex">b</script> if one exists. N.B: we define the GCD of <script type="math/tex">a/b</script> and <script type="math/tex">c/d</script> to be gcd<script type="math/tex">(ad, bc)/bd</script>, reduced to lowest terms. This requires the existence of a greatest common divisor function for the base ring.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/aa9e2fe574baeebf9bda8c2ab7d6ce99d413158e/src/generic/Fraction.jl#L658' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/ff29bedfb680a9824e5b7047fc91cec15496316d/src/generic/Fraction.jl#L658' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of computing a greatest common divisor.</p>
 <pre><code>S, x = PolynomialRing(ZZ, &quot;x&quot;)
 
@@ -817,7 +817,7 @@ f = gcd(a, (x + 1)//(x - 1))
 <blockquote>
 <p>Return <script type="math/tex">a \pmod{b}</script> where <script type="math/tex">b</script> is an integer coprime to the denominator of <script type="math/tex">a</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/aa9e2fe574baeebf9bda8c2ab7d6ce99d413158e/src/flint/fmpq.jl#L462' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/ff29bedfb680a9824e5b7047fc91cec15496316d/src/flint/fmpq.jl#L462' class='documenter-source'>source</a><br></p>
 <p><a id='Base.mod-Tuple{Nemo.fmpq,Integer}' href='#Base.mod-Tuple{Nemo.fmpq,Integer}'>#</a>
 <strong><code>Base.mod</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>mod(a::fmpq, b::Integer)
@@ -826,7 +826,7 @@ f = gcd(a, (x + 1)//(x - 1))
 <blockquote>
 <p>Return <script type="math/tex">a \pmod{b}</script> where <script type="math/tex">b</script> is an integer coprime to the denominator of <script type="math/tex">a</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/aa9e2fe574baeebf9bda8c2ab7d6ce99d413158e/src/flint/fmpq.jl#L474' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/ff29bedfb680a9824e5b7047fc91cec15496316d/src/flint/fmpq.jl#L474' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of modular arithmetic.</p>
 <pre><code>a = -fmpz(2)//3
 b = fmpz(1)//2
@@ -846,7 +846,7 @@ d = mod(b, fmpz(5))
 <blockquote>
 <p>Attempt to find a rational number <script type="math/tex">n/d</script> such that  <script type="math/tex">0 \leq |n| \leq \lfloor\sqrt{m/2}\rfloor</script> and  <script type="math/tex">0 < d \leq \lfloor\sqrt{m/2}\rfloor</script> such that gcd<script type="math/tex">(n, d) = 1</script> and <script type="math/tex">a \equiv nd^{-1} \pmod{m}</script>. If no solution exists, an exception is thrown.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/aa9e2fe574baeebf9bda8c2ab7d6ce99d413158e/src/flint/fmpq.jl#L510' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/ff29bedfb680a9824e5b7047fc91cec15496316d/src/flint/fmpq.jl#L510' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.reconstruct-Tuple{Nemo.fmpz,Integer}' href='#Nemo.reconstruct-Tuple{Nemo.fmpz,Integer}'>#</a>
 <strong><code>Nemo.reconstruct</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>reconstruct(a::fmpz, b::Integer)
@@ -855,7 +855,7 @@ d = mod(b, fmpz(5))
 <blockquote>
 <p>Attempt to find a rational number <script type="math/tex">n/d</script> such that  <script type="math/tex">0 \leq |n| \leq \lfloor\sqrt{m/2}\rfloor</script> and  <script type="math/tex">0 < d \leq \lfloor\sqrt{m/2}\rfloor</script> such that gcd<script type="math/tex">(n, d) = 1</script> and <script type="math/tex">a \equiv nd^{-1} \pmod{m}</script>. If no solution exists, an exception is thrown.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/aa9e2fe574baeebf9bda8c2ab7d6ce99d413158e/src/flint/fmpq.jl#L526' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/ff29bedfb680a9824e5b7047fc91cec15496316d/src/flint/fmpq.jl#L526' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.reconstruct-Tuple{Integer,Nemo.fmpz}' href='#Nemo.reconstruct-Tuple{Integer,Nemo.fmpz}'>#</a>
 <strong><code>Nemo.reconstruct</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>reconstruct(a::Integer, b::fmpz)
@@ -864,7 +864,7 @@ d = mod(b, fmpz(5))
 <blockquote>
 <p>Attempt to find a rational number <script type="math/tex">n/d</script> such that  <script type="math/tex">0 \leq |n| \leq \lfloor\sqrt{m/2}\rfloor</script> and  <script type="math/tex">0 < d \leq \lfloor\sqrt{m/2}\rfloor</script> such that gcd<script type="math/tex">(n, d) = 1</script> and <script type="math/tex">a \equiv nd^{-1} \pmod{m}</script>. If no solution exists, an exception is thrown.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/aa9e2fe574baeebf9bda8c2ab7d6ce99d413158e/src/flint/fmpq.jl#L535' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/ff29bedfb680a9824e5b7047fc91cec15496316d/src/flint/fmpq.jl#L535' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.reconstruct-Tuple{Integer,Integer}' href='#Nemo.reconstruct-Tuple{Integer,Integer}'>#</a>
 <strong><code>Nemo.reconstruct</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>reconstruct(a::Integer, b::Integer)
@@ -873,7 +873,7 @@ d = mod(b, fmpz(5))
 <blockquote>
 <p>Attempt to find a rational number <script type="math/tex">n/d</script> such that  <script type="math/tex">0 \leq |n| \leq \lfloor\sqrt{m/2}\rfloor</script> and  <script type="math/tex">0 < d \leq \lfloor\sqrt{m/2}\rfloor</script> such that gcd<script type="math/tex">(n, d) = 1</script> and <script type="math/tex">a \equiv nd^{-1} \pmod{m}</script>. If no solution exists, an exception is thrown.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/aa9e2fe574baeebf9bda8c2ab7d6ce99d413158e/src/flint/fmpq.jl#L544' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/ff29bedfb680a9824e5b7047fc91cec15496316d/src/flint/fmpq.jl#L544' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of rational reconstruction.</p>
 <pre><code>a = reconstruct(7, 13)
 b = reconstruct(fmpz(15), 31)
@@ -891,7 +891,7 @@ c = reconstruct(fmpz(123), fmpz(237))
 <blockquote>
 <p>Given <script type="math/tex">x</script>, returns the next rational number in the sequence obtained by enumerating all positive denominators <script type="math/tex">q</script>, and for each <script type="math/tex">q</script> enumerating the numerators <script type="math/tex">1 \le p < q</script> in order and generating both <script type="math/tex">p/q</script> and <script type="math/tex">q/p</script>, but skipping all gcd<script type="math/tex">(p,q) \neq 1</script>. Starting with zero, this generates every nonnegative rational number once and only once, with the first few entries being <script type="math/tex">0, 1, 1/2, 2, 1/3, 3, 2/3, 3/2, 1/4, 4, 3/4, 4/3, \ldots</script>. This enumeration produces the rational numbers in order of minimal height.  It has the disadvantage of being somewhat slower to compute than the Calkin-Wilf enumeration. If <script type="math/tex">x < 0</script> we throw a <code>DomainError()</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/aa9e2fe574baeebf9bda8c2ab7d6ce99d413158e/src/flint/fmpq.jl#L559' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/ff29bedfb680a9824e5b7047fc91cec15496316d/src/flint/fmpq.jl#L559' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.next_signed_minimal-Tuple{Nemo.fmpq}' href='#Nemo.next_signed_minimal-Tuple{Nemo.fmpq}'>#</a>
 <strong><code>Nemo.next_signed_minimal</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>next_signed_minimal(a::fmpq)
@@ -900,7 +900,7 @@ c = reconstruct(fmpz(123), fmpz(237))
 <blockquote>
 <p>Given a signed rational number <script type="math/tex">x</script> assumed to be in canonical form,  returns the next element in the minimal-height sequence generated by  <code>next_minimal</code> but with negative numbers interleaved. The sequence begins <script type="math/tex">0, 1, -1, 1/2, -1/2, 2, -2, 1/3, -1/3, \ldots</script>. Starting with zero, this generates every rational number once and only once, in order of minimal height.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/aa9e2fe574baeebf9bda8c2ab7d6ce99d413158e/src/flint/fmpq.jl#L578' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/ff29bedfb680a9824e5b7047fc91cec15496316d/src/flint/fmpq.jl#L578' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.next_calkin_wilf-Tuple{Nemo.fmpq}' href='#Nemo.next_calkin_wilf-Tuple{Nemo.fmpq}'>#</a>
 <strong><code>Nemo.next_calkin_wilf</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>next_calkin_wilf(a::fmpq)
@@ -909,7 +909,7 @@ c = reconstruct(fmpz(123), fmpz(237))
 <blockquote>
 <p>Given <script type="math/tex">x</script> return the next number in the breadth-first traversal of the Calkin-Wilf tree. Starting with zero, this generates every nonnegative rational number once and only once, with the first few entries being <script type="math/tex">0, 1, 1/2, 2, 1/3, 3/2, 2/3, 3, 1/4, 4/3, 3/5, 5/2, 2/5, \ldots</script>. Despite the appearance of the initial entries, the Calkin-Wilf enumeration  does not produce the rational numbers in order of height: some small fractions will appear late in the sequence. This order has the advantage of being faster to produce than the minimal-height order.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/aa9e2fe574baeebf9bda8c2ab7d6ce99d413158e/src/flint/fmpq.jl#L594' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/ff29bedfb680a9824e5b7047fc91cec15496316d/src/flint/fmpq.jl#L594' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.next_signed_calkin_wilf-Tuple{Nemo.fmpq}' href='#Nemo.next_signed_calkin_wilf-Tuple{Nemo.fmpq}'>#</a>
 <strong><code>Nemo.next_signed_calkin_wilf</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>next_signed_calkin_wilf(a::fmpq)
@@ -918,7 +918,7 @@ c = reconstruct(fmpz(123), fmpz(237))
 <blockquote>
 <p>Given a signed rational number <script type="math/tex">x</script> returns the next element in the Calkin-Wilf sequence with negative numbers interleaved. The sequence begins <script type="math/tex">0, 1, -1, 1/2, -1/2, 2, -2, 1/3, -1/3, \ldots</script>. Starting with zero, this generates every rational number once and only once, but not in order of minimal height.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/aa9e2fe574baeebf9bda8c2ab7d6ce99d413158e/src/flint/fmpq.jl#L613' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/ff29bedfb680a9824e5b7047fc91cec15496316d/src/flint/fmpq.jl#L613' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of rational enumeration.</p>
 <pre><code>next_minimal(fmpz(2)//3)
 next_signed_minimal(-fmpz(21)//31)
@@ -937,7 +937,7 @@ next_signed_calkin_wilf(-fmpz(51)//(17))
 <blockquote>
 <p>Computes the harmonic number <script type="math/tex">H_n = 1 + 1/2 + 1/3 + \cdots + 1/n</script>. Table lookup is used for <script type="math/tex">H_n</script> whose numerator and denominator  fit in a single limb. For larger <script type="math/tex">n</script>, a divide and conquer strategy is used.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/aa9e2fe574baeebf9bda8c2ab7d6ce99d413158e/src/flint/fmpq.jl#L634' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/ff29bedfb680a9824e5b7047fc91cec15496316d/src/flint/fmpq.jl#L634' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.bernoulli-Tuple{Int64}' href='#Nemo.bernoulli-Tuple{Int64}'>#</a>
 <strong><code>Nemo.bernoulli</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>bernoulli(n::Int)
@@ -946,7 +946,7 @@ next_signed_calkin_wilf(-fmpz(51)//(17))
 <blockquote>
 <p>Computes the Bernoulli number <script type="math/tex">B_n</script> for nonnegative <script type="math/tex">n</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/aa9e2fe574baeebf9bda8c2ab7d6ce99d413158e/src/flint/fmpq.jl#L647' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/ff29bedfb680a9824e5b7047fc91cec15496316d/src/flint/fmpq.jl#L647' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.bernoulli_cache-Tuple{Int64}' href='#Nemo.bernoulli_cache-Tuple{Int64}'>#</a>
 <strong><code>Nemo.bernoulli_cache</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>bernoulli_cache(n::Int)
@@ -955,13 +955,13 @@ next_signed_calkin_wilf(-fmpz(51)//(17))
 <blockquote>
 <p>Precomputes and caches all the Bernoulli numbers up to <script type="math/tex">B_n</script>. This is much faster than repeatedly calling <code>bernoulli(k)</code>. Once cached, subsequent calls to <code>bernoulli(k)</code> for any <script type="math/tex">k \le n</script> will read from the cache, making them virtually free.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/aa9e2fe574baeebf9bda8c2ab7d6ce99d413158e/src/flint/fmpq.jl#L658' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/ff29bedfb680a9824e5b7047fc91cec15496316d/src/flint/fmpq.jl#L658' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.dedekind_sum-Tuple{Nemo.fmpz,Nemo.fmpz}' href='#Nemo.dedekind_sum-Tuple{Nemo.fmpz,Nemo.fmpz}'>#</a>
 <strong><code>Nemo.dedekind_sum</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>dedekind_sum(h::fmpz, k::fmpz)
 </code></pre>
 
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/aa9e2fe574baeebf9bda8c2ab7d6ce99d413158e/src/flint/fmpq.jl#L671' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/ff29bedfb680a9824e5b7047fc91cec15496316d/src/flint/fmpq.jl#L671' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.dedekind_sum-Tuple{Nemo.fmpz,Integer}' href='#Nemo.dedekind_sum-Tuple{Nemo.fmpz,Integer}'>#</a>
 <strong><code>Nemo.dedekind_sum</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>dedekind_sum(h::fmpz, k::Integer)
@@ -970,7 +970,7 @@ next_signed_calkin_wilf(-fmpz(51)//(17))
 <blockquote>
 <p>Computes the Dedekind sum <script type="math/tex">s(h,k)</script> for arbitrary <script type="math/tex">h</script> and <script type="math/tex">k</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/aa9e2fe574baeebf9bda8c2ab7d6ce99d413158e/src/flint/fmpq.jl#L681' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/ff29bedfb680a9824e5b7047fc91cec15496316d/src/flint/fmpq.jl#L681' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.dedekind_sum-Tuple{Integer,Nemo.fmpz}' href='#Nemo.dedekind_sum-Tuple{Integer,Nemo.fmpz}'>#</a>
 <strong><code>Nemo.dedekind_sum</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>dedekind_sum(h::Integer, k::fmpz)
@@ -979,7 +979,7 @@ next_signed_calkin_wilf(-fmpz(51)//(17))
 <blockquote>
 <p>Computes the Dedekind sum <script type="math/tex">s(h,k)</script> for arbitrary <script type="math/tex">h</script> and <script type="math/tex">k</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/aa9e2fe574baeebf9bda8c2ab7d6ce99d413158e/src/flint/fmpq.jl#L687' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/ff29bedfb680a9824e5b7047fc91cec15496316d/src/flint/fmpq.jl#L687' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.dedekind_sum-Tuple{Integer,Integer}' href='#Nemo.dedekind_sum-Tuple{Integer,Integer}'>#</a>
 <strong><code>Nemo.dedekind_sum</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>dedekind_sum(h::Integer, k::Integer)
@@ -988,7 +988,7 @@ next_signed_calkin_wilf(-fmpz(51)//(17))
 <blockquote>
 <p>Computes the Dedekind sum <script type="math/tex">s(h,k)</script> for arbitrary <script type="math/tex">h</script> and <script type="math/tex">k</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/aa9e2fe574baeebf9bda8c2ab7d6ce99d413158e/src/flint/fmpq.jl#L693' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/ff29bedfb680a9824e5b7047fc91cec15496316d/src/flint/fmpq.jl#L693' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of special functions.</p>
 <pre><code>a = harmonic(12)
 
