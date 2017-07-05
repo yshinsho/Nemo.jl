@@ -256,7 +256,7 @@
 <blockquote>
 <p>Create the residue ring <script type="math/tex">R/(a)</script> where <script type="math/tex">a</script> is an element of the ring <script type="math/tex">R</script>. We require <script type="math/tex">a \neq 0</script>. If <code>cached == true</code> (the default) then the resulting residue ring parent object is cached and returned for any subsequent calls to the constructor with the same base ring <script type="math/tex">R</script> and element <script type="math/tex">a</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/cccf715fd74fecd2217bfe414c065ddd51e2a259/src/generic/Residue.jl#L575' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/8d47cce90aeb8fa1c0aeabeb4fdddb9e43f76075/src/generic/Residue.jl#L575' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of creating residue rings and making use of the resulting parent objects to coerce various elements into those rings.</p>
 <pre><code>R = ResidueRing(ZZ, 17)
 S, x = PolynomialRing(QQ, &quot;x&quot;)
@@ -279,7 +279,7 @@ c = T(ZZ(3))
 <blockquote>
 <p>Return the zero element of the given residue ring, i.e. <script type="math/tex">0 \pmod{a}</script> where <script type="math/tex">a</script> is the modulus of the residue ring.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/cccf715fd74fecd2217bfe414c065ddd51e2a259/src/generic/Residue.jl#L79' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/8d47cce90aeb8fa1c0aeabeb4fdddb9e43f76075/src/generic/Residue.jl#L79' class='documenter-source'>source</a><br></p>
 <p><a id='Base.one-Tuple{Nemo.ResRing}' href='#Base.one-Tuple{Nemo.ResRing}'>#</a>
 <strong><code>Base.one</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>zero(R::ResRing)
@@ -288,7 +288,7 @@ c = T(ZZ(3))
 <blockquote>
 <p>Return <script type="math/tex">1 \pmod{a}</script> where <script type="math/tex">a</script> is the modulus of the residue ring.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/cccf715fd74fecd2217bfe414c065ddd51e2a259/src/generic/Residue.jl#L86' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/8d47cce90aeb8fa1c0aeabeb4fdddb9e43f76075/src/generic/Residue.jl#L86' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of constructing residues.</p>
 <pre><code>R = ResidueRing(ZZ, 16453889)
 S, x = PolynomialRing(R, &quot;x&quot;)
@@ -370,7 +370,7 @@ S(n::fmpz)
 <blockquote>
 <p>Return the base ring <script type="math/tex">R</script> of the residue ring <script type="math/tex">R/(a)</script> that the supplied element <script type="math/tex">r</script> belongs to.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/cccf715fd74fecd2217bfe414c065ddd51e2a259/src/generic/Residue.jl#L25' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/8d47cce90aeb8fa1c0aeabeb4fdddb9e43f76075/src/generic/Residue.jl#L25' class='documenter-source'>source</a><br></p>
 <p><a id='Base.parent-Tuple{Nemo.ResElem}' href='#Base.parent-Tuple{Nemo.ResElem}'>#</a>
 <strong><code>Base.parent</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>parent(a::ResElem)
@@ -379,7 +379,7 @@ S(n::fmpz)
 <blockquote>
 <p>Return the parent object of the given residue element.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/cccf715fd74fecd2217bfe414c065ddd51e2a259/src/generic/Residue.jl#L32' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/8d47cce90aeb8fa1c0aeabeb4fdddb9e43f76075/src/generic/Residue.jl#L32' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.modulus-Tuple{Nemo.ResRing}' href='#Nemo.modulus-Tuple{Nemo.ResRing}'>#</a>
 <strong><code>Nemo.modulus</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>modulus(R::ResRing)
@@ -388,7 +388,7 @@ S(n::fmpz)
 <blockquote>
 <p>Return the modulus <script type="math/tex">a</script> of the given residue ring <script type="math/tex">S = R/(a)</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/cccf715fd74fecd2217bfe414c065ddd51e2a259/src/generic/Residue.jl#L60' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/8d47cce90aeb8fa1c0aeabeb4fdddb9e43f76075/src/generic/Residue.jl#L60' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.modulus-Tuple{Nemo.ResElem}' href='#Nemo.modulus-Tuple{Nemo.ResElem}'>#</a>
 <strong><code>Nemo.modulus</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>modulus(R::ResRing)
@@ -397,7 +397,7 @@ S(n::fmpz)
 <blockquote>
 <p>Return the modulus <script type="math/tex">a</script> of the residue ring <script type="math/tex">S = R/(a)</script> that the supplied residue <script type="math/tex">r</script> belongs to.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/cccf715fd74fecd2217bfe414c065ddd51e2a259/src/generic/Residue.jl#L68' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/8d47cce90aeb8fa1c0aeabeb4fdddb9e43f76075/src/generic/Residue.jl#L68' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.iszero-Tuple{Nemo.ResElem}' href='#Nemo.iszero-Tuple{Nemo.ResElem}'>#</a>
 <strong><code>Nemo.iszero</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>iszero(a::ResElem)
@@ -406,7 +406,7 @@ S(n::fmpz)
 <blockquote>
 <p>Return <code>true</code> if the supplied element <script type="math/tex">a</script> is zero in the residue ring it belongs to, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/cccf715fd74fecd2217bfe414c065ddd51e2a259/src/generic/Residue.jl#L92' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/8d47cce90aeb8fa1c0aeabeb4fdddb9e43f76075/src/generic/Residue.jl#L92' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.isone-Tuple{Nemo.ResElem}' href='#Nemo.isone-Tuple{Nemo.ResElem}'>#</a>
 <strong><code>Nemo.isone</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>isone(a::ResElem)
@@ -415,7 +415,7 @@ S(n::fmpz)
 <blockquote>
 <p>Return <code>true</code> if the supplied element <script type="math/tex">a</script> is one in the residue ring it belongs to, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/cccf715fd74fecd2217bfe414c065ddd51e2a259/src/generic/Residue.jl#L99' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/8d47cce90aeb8fa1c0aeabeb4fdddb9e43f76075/src/generic/Residue.jl#L99' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.isunit-Tuple{Nemo.ResElem}' href='#Nemo.isunit-Tuple{Nemo.ResElem}'>#</a>
 <strong><code>Nemo.isunit</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>iszero(a::ResElem)
@@ -424,7 +424,7 @@ S(n::fmpz)
 <blockquote>
 <p>Return <code>true</code> if the supplied element <script type="math/tex">a</script> is invertible in the residue ring it belongs to, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/cccf715fd74fecd2217bfe414c065ddd51e2a259/src/generic/Residue.jl#L106' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/8d47cce90aeb8fa1c0aeabeb4fdddb9e43f76075/src/generic/Residue.jl#L106' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of basic manipulation of residues.</p>
 <pre><code>R = ResidueRing(ZZ, 16453889)
 S, x = PolynomialRing(R, &quot;x&quot;)
@@ -638,7 +638,7 @@ f != 5
 <blockquote>
 <p>Return the inverse of the element <script type="math/tex">a</script> in the residue ring. If an impossible inverse is encountered, an exception is raised.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/cccf715fd74fecd2217bfe414c065ddd51e2a259/src/generic/Residue.jl#L423' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/8d47cce90aeb8fa1c0aeabeb4fdddb9e43f76075/src/generic/Residue.jl#L423' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of computing inverses.</p>
 <pre><code>R = ResidueRing(ZZ, 49)
 S, x = PolynomialRing(R, &quot;x&quot;)
@@ -661,7 +661,7 @@ g = inv(f)
 <blockquote>
 <p>Return a greatest common divisor of <script type="math/tex">a</script> and <script type="math/tex">b</script> if one exists. This is done by taking the greatest common divisor of the data associated with the supplied residues and taking its greatest common divisor with the modulus.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/cccf715fd74fecd2217bfe414c065ddd51e2a259/src/generic/Residue.jl#L466' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/8d47cce90aeb8fa1c0aeabeb4fdddb9e43f76075/src/generic/Residue.jl#L466' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of computing a greatest common divisor.</p>
 <pre><code>R = ResidueRing(ZZ, 43)
 S, x = PolynomialRing(R, &quot;x&quot;)
