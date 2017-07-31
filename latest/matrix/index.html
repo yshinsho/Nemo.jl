@@ -391,7 +391,7 @@
 <blockquote>
 <p>Return parent object corresponding to the space of <script type="math/tex">r\times c</script> matrices over the ring <script type="math/tex">R</script>. If <code>cached == true</code> (the default), the returned parent object is cached so that it can returned by future calls to the constructor with the same dimensions and base ring.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/generic/Matrix.jl#L3978' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/generic/Matrix.jl#L3978' class='documenter-source'>source</a><br></p>
 <p>We also allow matrices over a given base ring to be constructed directly. In such cases, Nemo automatically constructs the matrix space internally. See the matrix element constructors below for examples. However, note that there may be a small peformance disadvantage to doing it that way, since the matrix space needs to be looked up internally every time a matrix is constructed.</p>
 <p>Here are some examples of creating matrix spaces and making use of the resulting parent objects to coerce various elements into the matrix space.</p>
 <pre><code>R, t = PolynomialRing(QQ, &quot;t&quot;)
@@ -414,7 +414,7 @@ C = S(R(11))
 <blockquote>
 <p>Construct the zero matrix in the given matrix space.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/generic/Matrix.jl#L153' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/generic/Matrix.jl#L153' class='documenter-source'>source</a><br></p>
 <p><a id='Base.one-Tuple{Nemo.MatSpace}' href='#Base.one-Tuple{Nemo.MatSpace}'>#</a>
 <strong><code>Base.one</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>one(a::MatSpace)
@@ -423,7 +423,7 @@ C = S(R(11))
 <blockquote>
 <p>Construct the matrix in the given matrix space with ones down the diagonal and zeroes elsewhere.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/generic/Matrix.jl#L159' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/generic/Matrix.jl#L159' class='documenter-source'>source</a><br></p>
 <p>In addition, there are various shorthand notations for constructing matrices over a given base ring without first constructing the matrix space parent object.</p>
 <pre><code>R[a b c...;...]
 </code></pre>
@@ -519,7 +519,7 @@ S(n::fmpz)
 <blockquote>
 <p>Return the base ring <script type="math/tex">R</script> of the matrix space that the supplied matrix <script type="math/tex">r</script> belongs to.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/generic/Matrix.jl#L83' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/generic/Matrix.jl#L83' class='documenter-source'>source</a><br></p>
 <p><a id='Base.parent-Tuple{Nemo.MatElem}' href='#Base.parent-Tuple{Nemo.MatElem}'>#</a>
 <strong><code>Base.parent</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>parent(a::MatElem)
@@ -528,7 +528,7 @@ S(n::fmpz)
 <blockquote>
 <p>Return the parent object of the given matrix.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/generic/Matrix.jl#L90' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/generic/Matrix.jl#L90' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.rows-Tuple{Nemo.MatElem}' href='#Nemo.rows-Tuple{Nemo.MatElem}'>#</a>
 <strong><code>Nemo.rows</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>rows(a::MatElem)
@@ -537,7 +537,7 @@ S(n::fmpz)
 <blockquote>
 <p>Return the number of rows of the given matrix.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/generic/Matrix.jl#L119' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/generic/Matrix.jl#L119' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.cols-Tuple{Nemo.MatElem}' href='#Nemo.cols-Tuple{Nemo.MatElem}'>#</a>
 <strong><code>Nemo.cols</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>cols(a::MatElem)
@@ -546,7 +546,7 @@ S(n::fmpz)
 <blockquote>
 <p>Return the number of columns of the given matrix.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/generic/Matrix.jl#L125' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/generic/Matrix.jl#L125' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.iszero-Tuple{Nemo.MatElem}' href='#Nemo.iszero-Tuple{Nemo.MatElem}'>#</a>
 <strong><code>Nemo.iszero</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>iszero(a::MatElem)
@@ -555,7 +555,7 @@ S(n::fmpz)
 <blockquote>
 <p>Return <code>true</code> if the supplied matrix <script type="math/tex">a</script> is the zero matrix, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/generic/Matrix.jl#L166' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/generic/Matrix.jl#L166' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.isone-Tuple{Nemo.MatElem}' href='#Nemo.isone-Tuple{Nemo.MatElem}'>#</a>
 <strong><code>Nemo.isone</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>isone(a::MatElem)
@@ -564,7 +564,7 @@ S(n::fmpz)
 <blockquote>
 <p>Return <code>true</code> if the supplied matrix <script type="math/tex">a</script> is diagonal with ones along the diagonal, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/generic/Matrix.jl#L182' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/generic/Matrix.jl#L182' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of basic manipulation of matrices.</p>
 <pre><code>R, t = PolynomialRing(QQ, &quot;t&quot;)
 S = MatrixSpace(R, 3, 3)
@@ -727,7 +727,7 @@ W = parent(D)
 <p>Return an array of matrices <script type="math/tex">M</script> wher <script type="math/tex">M[i + 1] = a^i</script> for <script type="math/tex">i = 0..d</script>
 </p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/generic/Matrix.jl#L620' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/generic/Matrix.jl#L620' class='documenter-source'>source</a><br></p>
 <p>If the appropriate <code>promote_rule</code> and coercion exists, these operators can also be used with elements of other rings. Nemo will try to coerce the operands to the dominating type and then apply the operator.</p>
 <p>Here are some examples of arithmetic operations on matrices.</p>
 <pre><code>R, t = PolynomialRing(QQ, &quot;t&quot;)
@@ -764,7 +764,7 @@ R = divexact(A*3, 3)
 <blockquote>
 <p>Returns <code>true</code> if all entries of <script type="math/tex">x</script> overlap with the corresponding entry of <script type="math/tex">y</script>, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/arb/arb_mat.jl#L338' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/arb/arb_mat.jl#L338' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.overlaps-Tuple{Nemo.acb_mat,Nemo.acb_mat}' href='#Nemo.overlaps-Tuple{Nemo.acb_mat,Nemo.acb_mat}'>#</a>
 <strong><code>Nemo.overlaps</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>overlaps(x::acb_mat, y::acb_mat)
@@ -773,7 +773,7 @@ R = divexact(A*3, 3)
 <blockquote>
 <p>Returns <code>true</code> if all entries of <script type="math/tex">x</script> overlap with the corresponding entry of <script type="math/tex">y</script>, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/arb/acb_mat.jl#L381' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/arb/acb_mat.jl#L381' class='documenter-source'>source</a><br></p>
 <p><a id='Base.contains-Tuple{Nemo.arb_mat,Nemo.arb_mat}' href='#Base.contains-Tuple{Nemo.arb_mat,Nemo.arb_mat}'>#</a>
 <strong><code>Base.contains</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>contains(x::arb_mat, y::arb_mat)
@@ -782,7 +782,7 @@ R = divexact(A*3, 3)
 <blockquote>
 <p>Returns <code>true</code> if all entries of <script type="math/tex">x</script> contain the corresponding entry of <script type="math/tex">y</script>, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/arb/arb_mat.jl#L349' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/arb/arb_mat.jl#L349' class='documenter-source'>source</a><br></p>
 <p><a id='Base.contains-Tuple{Nemo.acb_mat,Nemo.acb_mat}' href='#Base.contains-Tuple{Nemo.acb_mat,Nemo.acb_mat}'>#</a>
 <strong><code>Base.contains</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>contains(x::acb_mat, y::acb_mat)
@@ -791,7 +791,7 @@ R = divexact(A*3, 3)
 <blockquote>
 <p>Returns <code>true</code> if all entries of <script type="math/tex">x</script> contain the corresponding entry of <script type="math/tex">y</script>, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/arb/acb_mat.jl#L392' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/arb/acb_mat.jl#L392' class='documenter-source'>source</a><br></p>
 <p>In addition we have the following ad hoc comparison operators.</p>
 <p><a id='Function-2'></a></p>
 <h2 id="function_1">Function</h2>
@@ -826,7 +826,7 @@ contains(D, C)
 <blockquote>
 <p>Return <script type="math/tex">2^yx</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/flint/fmpz_mat.jl#L322' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/flint/fmpz_mat.jl#L322' class='documenter-source'>source</a><br></p>
 <p><a id='Base.:>&gt;-Tuple{Nemo.fmpz_mat,Int64}' href='#Base.:&gt;&gt;-Tuple{Nemo.fmpz_mat,Int64}'&gt;#</a>
 <strong><code>Base.:&gt;&gt;</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>&gt;&gt;(x::fmpz_mat, y::Int)
@@ -835,7 +835,7 @@ contains(D, C)
 <blockquote>
 <p>Return <script type="math/tex">x/2^y</script> where rounding is towards zero.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/flint/fmpz_mat.jl#L335' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/flint/fmpz_mat.jl#L335' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of scaling matrices.</p>
 <pre><code>S = MatrixSpace(ZZ, 3, 3)
 
@@ -855,7 +855,7 @@ C = B&gt;&gt;2
 <blockquote>
 <p>Return the transpose of the given matrix.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/generic/Matrix.jl#L830' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/generic/Matrix.jl#L830' class='documenter-source'>source</a><br></p>
 <p>Here is an example of transposing a matrix.</p>
 <pre><code>R, t = PolynomialRing(QQ, &quot;t&quot;)
 S = MatrixSpace(R, 3, 3)
@@ -875,7 +875,7 @@ B = transpose(A)
 <blockquote>
 <p>Return the Gram matrix of <script type="math/tex">x</script>, i.e. if <script type="math/tex">x</script> is an <script type="math/tex">r\times c</script> matrix return the <script type="math/tex">r\times r</script> matrix whose entries <script type="math/tex">i, j</script> are the dot products of the <script type="math/tex">i</script>-th and <script type="math/tex">j</script>-th rows, respectively.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/generic/Matrix.jl#L849' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/generic/Matrix.jl#L849' class='documenter-source'>source</a><br></p>
 <p>Here is an example of computing the Gram matrix.</p>
 <pre><code>R, t = PolynomialRing(QQ, &quot;t&quot;)
 S = MatrixSpace(R, 3, 3)
@@ -895,7 +895,7 @@ B = gram(A)
 <blockquote>
 <p>Return the trace of the matrix <script type="math/tex">a</script>, i.e. the sum of the diagonal elements. We require the matrix to be square.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/generic/Matrix.jl#L874' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/generic/Matrix.jl#L874' class='documenter-source'>source</a><br></p>
 <p>Here is an example of computing the trace.</p>
 <pre><code>R, t = PolynomialRing(QQ, &quot;t&quot;)
 S = MatrixSpace(R, 3, 3)
@@ -915,7 +915,7 @@ b = trace(A)
 <blockquote>
 <p>Return the content of the matrix <script type="math/tex">a</script>, i.e. the greatest common divisor of all its entries, assuming it exists.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/generic/Matrix.jl#L894' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/generic/Matrix.jl#L894' class='documenter-source'>source</a><br></p>
 <p>Here is an example of computing the content of a matrix.</p>
 <pre><code>R, t = PolynomialRing(QQ, &quot;t&quot;)
 S = MatrixSpace(R, 3, 3)
@@ -935,7 +935,7 @@ b = content(A)
 <blockquote>
 <p>Return the horizontal concatenation of <script type="math/tex">a</script> and <script type="math/tex">b</script>. Assumes that the number of rows is the same in <script type="math/tex">a</script> and <script type="math/tex">b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/generic/Matrix.jl#L3764' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/generic/Matrix.jl#L3764' class='documenter-source'>source</a><br></p>
 <p><a id='Base.vcat-Tuple{Nemo.MatElem,Nemo.MatElem}' href='#Base.vcat-Tuple{Nemo.MatElem,Nemo.MatElem}'>#</a>
 <strong><code>Base.vcat</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>vcat(a::MatElem, b::MatElem)
@@ -944,7 +944,7 @@ b = content(A)
 <blockquote>
 <p>Return the vertical concatenation of <script type="math/tex">a</script> and <script type="math/tex">b</script>. Assumes that the number of columns is the same in <script type="math/tex">a</script> and <script type="math/tex">b</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/generic/Matrix.jl#L3784' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/generic/Matrix.jl#L3784' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of concatenation.</p>
 <pre><code>R, t = PolynomialRing(QQ, &quot;t&quot;)
 S = MatrixSpace(R, 3, 3)
@@ -966,7 +966,7 @@ vcat(A, B)
 <blockquote>
 <p>Apply the pemutation <script type="math/tex">P</script> to the rows of the matrix <script type="math/tex">x</script> and return the result.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/generic/Matrix.jl#L918' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/generic/Matrix.jl#L918' class='documenter-source'>source</a><br></p>
 <p>Here is an example of applying a permutation to a matrix.</p>
 <pre><code>R, t = PolynomialRing(QQ, &quot;t&quot;)
 S = MatrixSpace(R, 3, 3)
@@ -988,7 +988,7 @@ B = P*A
 <blockquote>
 <p>Return a tuple <script type="math/tex">r, p, L, U</script> consisting of the rank of <script type="math/tex">A</script>, a permutation <script type="math/tex">p</script> of <script type="math/tex">A</script> belonging to <script type="math/tex">P</script>, a lower triangular matrix <script type="math/tex">L</script> and an upper triangular matrix <script type="math/tex">U</script> such that <script type="math/tex">p(A) = LU</script>, where <script type="math/tex">p(A)</script> stands for the matrix whose rows are the given permutation <script type="math/tex">p</script> of the rows of <script type="math/tex">A</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/generic/Matrix.jl#L983' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/generic/Matrix.jl#L983' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.fflu-Tuple{Nemo.MatElem{T<:Nemo.RingElem},Nemo.PermGroup}' href='#Nemo.fflu-Tuple{Nemo.MatElem{T<:Nemo.RingElem},Nemo.PermGroup}'>#</a>
 <strong><code>Nemo.fflu</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>fflu{T &lt;: RingElem}(A::MatElem{T}, P = PermGroup(rows(A)))
@@ -997,7 +997,7 @@ B = P*A
 <blockquote>
 <p>Return a tuple <script type="math/tex">r, d, p, L, U</script> consisting of the rank of <script type="math/tex">A</script>, a denominator <script type="math/tex">d</script>, a permutation <script type="math/tex">p</script> of <script type="math/tex">A</script> belonging to <script type="math/tex">P</script>, a lower triangular matrix <script type="math/tex">L</script> and an upper triangular matrix <script type="math/tex">U</script> such that <script type="math/tex">p(A) = LD^1U</script>, where <script type="math/tex">p(A)</script> stands for the matrix whose rows are the given permutation <script type="math/tex">p</script> of the rows of <script type="math/tex">A</script> and such that <script type="math/tex">D</script> is the diagonal matrix diag<script type="math/tex">(p_1, p_1p_2, \ldots, p_{n-2}p_{n-1}, p_{n-1}</script> where the <script type="math/tex">p_i</script> are the inverses of the diagonal entries of <script type="math/tex">U</script>. The denominator <script type="math/tex">d</script> is set to <script type="math/tex">\pm \mbox{det}(S)</script> where <script type="math/tex">S</script> is an appropriate submatrix of <script type="math/tex">A</script> (<script type="math/tex">S = A</script> if <script type="math/tex">A</script> is square) and the sign is decided by the parity of the permutation.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/generic/Matrix.jl#L1120' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/generic/Matrix.jl#L1120' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of LU factorisation.</p>
 <pre><code>R, x = PolynomialRing(QQ, &quot;x&quot;)
 K, a = NumberField(x^3 + 3x + 1, &quot;a&quot;)
@@ -1019,7 +1019,7 @@ r, d, P, L, U = fflu(A)
 <blockquote>
 <p>Returns a tuple <script type="math/tex">(r, d, A)</script> consisting of the rank <script type="math/tex">r</script> of <script type="math/tex">M</script> and a denominator <script type="math/tex">d</script> in the base ring of <script type="math/tex">M</script> and a matrix <script type="math/tex">A</script> such that <script type="math/tex">A/d</script> is the reduced row echelon form of <script type="math/tex">M</script>. Note that the denominator is not usually minimal.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/generic/Matrix.jl#L1221' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/generic/Matrix.jl#L1221' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.rref-Tuple{Nemo.MatElem{T<:Nemo.FieldElem}}' href='#Nemo.rref-Tuple{Nemo.MatElem{T<:Nemo.FieldElem}}'>#</a>
 <strong><code>Nemo.rref</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>rref{T &lt;: FieldElem}(M::MatElem{T})
@@ -1028,7 +1028,7 @@ r, d, P, L, U = fflu(A)
 <blockquote>
 <p>Returns a tuple <script type="math/tex">(r, A)</script> consisting of the rank <script type="math/tex">r</script> of <script type="math/tex">M</script> and a reduced row echelon form <script type="math/tex">A</script> of <script type="math/tex">M</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/generic/Matrix.jl#L1294' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/generic/Matrix.jl#L1294' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.isrref-Tuple{Nemo.MatElem{T<:Nemo.RingElem}}' href='#Nemo.isrref-Tuple{Nemo.MatElem{T<:Nemo.RingElem}}'>#</a>
 <strong><code>Nemo.isrref</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>isrref{T &lt;: RingElem}(M::MatElem{T})
@@ -1037,7 +1037,7 @@ r, d, P, L, U = fflu(A)
 <blockquote>
 <p>Return <code>true</code> if <script type="math/tex">M</script> is in reduced row echelon form, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/generic/Matrix.jl#L1305' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/generic/Matrix.jl#L1305' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.isrref-Tuple{Nemo.MatElem{T<:Nemo.FieldElem}}' href='#Nemo.isrref-Tuple{Nemo.MatElem{T<:Nemo.FieldElem}}'>#</a>
 <strong><code>Nemo.isrref</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>isrref{T &lt;: FieldElem}(M::MatElem{T})
@@ -1046,7 +1046,7 @@ r, d, P, L, U = fflu(A)
 <blockquote>
 <p>Return <code>true</code> if <script type="math/tex">M</script> is in reduced row echelon form, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/generic/Matrix.jl#L1334' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/generic/Matrix.jl#L1334' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of computing reduced row echelon form.</p>
 <pre><code>R, x = PolynomialRing(QQ, &quot;x&quot;)
 K, a = NumberField(x^3 + 3x + 1, &quot;a&quot;)
@@ -1077,7 +1077,7 @@ isrref(A)
 <blockquote>
 <p>Return the upper right row Hermite normal form of <script type="math/tex">A</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/generic/Matrix.jl#L3018' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/generic/Matrix.jl#L3018' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.hnf_with_trafo-Tuple{Nemo.GenMat{T<:Nemo.RingElem}}' href='#Nemo.hnf_with_trafo-Tuple{Nemo.GenMat{T<:Nemo.RingElem}}'>#</a>
 <strong><code>Nemo.hnf_with_trafo</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>hnf{T &lt;: RingElem}(A::GenMat{T}) -&gt; GenMaT{T}, GenMat{T}
@@ -1086,7 +1086,7 @@ isrref(A)
 <blockquote>
 <p>Return the upper right row Hermite normal form <script type="math/tex">H</script> of <script type="math/tex">A</script> together with invertible matrix <script type="math/tex">U</script> such that <script type="math/tex">UA = H</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/generic/Matrix.jl#L3026' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/generic/Matrix.jl#L3026' class='documenter-source'>source</a><br></p>
 <p><a id='Determinant-1'></a></p>
 <h2 id="determinant">Determinant</h2>
 <p><a id='Base.LinAlg.det-Tuple{Nemo.MatElem{T<:Nemo.RingElem}}' href='#Base.LinAlg.det-Tuple{Nemo.MatElem{T<:Nemo.RingElem}}'>#</a>
@@ -1097,7 +1097,7 @@ isrref(A)
 <blockquote>
 <p>Return the determinant of the matrix <script type="math/tex">M</script>. We assume <script type="math/tex">M</script> is square.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/generic/Matrix.jl#L1533' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/generic/Matrix.jl#L1533' class='documenter-source'>source</a><br></p>
 <p><a id='Base.LinAlg.det-Tuple{Nemo.MatElem{T<:Nemo.FieldElem}}' href='#Base.LinAlg.det-Tuple{Nemo.MatElem{T<:Nemo.FieldElem}}'>#</a>
 <strong><code>Base.LinAlg.det</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>det{T &lt;: FieldElem}(M::MatElem{T})
@@ -1106,7 +1106,7 @@ isrref(A)
 <blockquote>
 <p>Return the determinant of the matrix <script type="math/tex">M</script>. We assume <script type="math/tex">M</script> is square.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/generic/Matrix.jl#L1524' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/generic/Matrix.jl#L1524' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.det_divisor-Tuple{Nemo.fmpz_mat}' href='#Nemo.det_divisor-Tuple{Nemo.fmpz_mat}'>#</a>
 <strong><code>Nemo.det_divisor</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>det_divisor(x::fmpz_mat)
@@ -1115,7 +1115,7 @@ isrref(A)
 <blockquote>
 <p>Return some positive divisor of the determinant of <script type="math/tex">x</script>, if the determinant is nonzero, otherwise return zero.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/flint/fmpz_mat.jl#L544' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/flint/fmpz_mat.jl#L544' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.det_given_divisor-Tuple{Nemo.fmpz_mat,Integer,Bool}' href='#Nemo.det_given_divisor-Tuple{Nemo.fmpz_mat,Integer,Bool}'>#</a>
 <strong><code>Nemo.det_given_divisor</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>det_given_divisor(x::fmpz_mat, d::Integer, proved=true)
@@ -1124,7 +1124,7 @@ isrref(A)
 <blockquote>
 <p>Return the determinant of <script type="math/tex">x</script> given a positive divisor of its determinant. If <code>proved == true</code> (the default), the output is guaranteed to be correct, otherwise a heuristic algorithm is used.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/flint/fmpz_mat.jl#L571' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/flint/fmpz_mat.jl#L571' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.det_given_divisor-Tuple{Nemo.fmpz_mat,Nemo.fmpz,Bool}' href='#Nemo.det_given_divisor-Tuple{Nemo.fmpz_mat,Nemo.fmpz,Bool}'>#</a>
 <strong><code>Nemo.det_given_divisor</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>det_given_divisor(x::fmpz_mat, d::fmpz, proved=true)
@@ -1133,7 +1133,7 @@ isrref(A)
 <blockquote>
 <p>Return the determinant of <script type="math/tex">x</script> given a positive divisor of its determinant. If <code>proved == true</code> (the default), the output is guaranteed to be correct, otherwise a heuristic algorithm is used.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/flint/fmpz_mat.jl#L557' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/flint/fmpz_mat.jl#L557' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of computing the determinant.</p>
 <pre><code>R, x = PolynomialRing(QQ, &quot;x&quot;)
 K, a = NumberField(x^3 + 3x + 1, &quot;a&quot;)
@@ -1161,7 +1161,7 @@ d = det_given_divisor(A, c)
 <blockquote>
 <p>Return the rank of the matrix <script type="math/tex">M</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/generic/Matrix.jl#L1603' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/generic/Matrix.jl#L1603' class='documenter-source'>source</a><br></p>
 <p><a id='Base.LinAlg.rank-Tuple{Nemo.MatElem{T<:Nemo.FieldElem}}' href='#Base.LinAlg.rank-Tuple{Nemo.MatElem{T<:Nemo.FieldElem}}'>#</a>
 <strong><code>Base.LinAlg.rank</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>rank{T &lt;: FieldElem}(M::MatElem{T})
@@ -1170,7 +1170,7 @@ d = det_given_divisor(A, c)
 <blockquote>
 <p>Return the rank of the matrix <script type="math/tex">M</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/generic/Matrix.jl#L1618' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/generic/Matrix.jl#L1618' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of computing the rank of a matrix.</p>
 <pre><code>R, x = PolynomialRing(QQ, &quot;x&quot;)
 K, a = NumberField(x^3 + 3x + 1, &quot;a&quot;)
@@ -1194,7 +1194,7 @@ d = rank(A)
 <blockquote>
 <p>Return true and a matrix <script type="math/tex">x</script> such that <script type="math/tex">ax = b</script>, or false and some matrix in case <script type="math/tex">x</script> does not exist.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/flint/fmpz_mat.jl#L926' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/flint/fmpz_mat.jl#L926' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.solve_rational-Tuple{Nemo.MatElem{T<:Nemo.RingElem},Nemo.MatElem{T<:Nemo.RingElem}}' href='#Nemo.solve_rational-Tuple{Nemo.MatElem{T<:Nemo.RingElem},Nemo.MatElem{T<:Nemo.RingElem}}'>#</a>
 <strong><code>Nemo.solve_rational</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>solve_rational{T &lt;: RingElem}(M::MatElem{T}, b::MatElem{T})
@@ -1203,7 +1203,7 @@ d = rank(A)
 <blockquote>
 <p>Given a non-singular <script type="math/tex">n\times n</script> matrix over a ring and an <script type="math/tex">n\times m</script> matrix over the same ring, return a tuple <script type="math/tex">x, d</script> consisting of an <script type="math/tex">n\times m</script> matrix <script type="math/tex">x</script> and a denominator <script type="math/tex">d</script> such that <script type="math/tex">Ax = db</script>. The denominator will be the determinant of <script type="math/tex">A</script> up to sign. If <script type="math/tex">A</script> is singular an exception is raised.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/generic/Matrix.jl#L1911' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/generic/Matrix.jl#L1911' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.solve_triu-Tuple{Nemo.MatElem{T<:Nemo.FieldElem},Nemo.MatElem{T<:Nemo.FieldElem},Bool}' href='#Nemo.solve_triu-Tuple{Nemo.MatElem{T<:Nemo.FieldElem},Nemo.MatElem{T<:Nemo.FieldElem},Bool}'>#</a>
 <strong><code>Nemo.solve_triu</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>solve_triu{T &lt;: FieldElem}(U::MatElem{T}, b::MatElem{T}, unit=false)
@@ -1212,7 +1212,7 @@ d = rank(A)
 <blockquote>
 <p>Given a non-singular <script type="math/tex">n\times n</script> matrix over a field which is upper triangular, and an <script type="math/tex">n\times m</script> matrix over the same field, return an <script type="math/tex">n\times m</script> matrix <script type="math/tex">x</script> such that <script type="math/tex">Ax = b</script>. If <script type="math/tex">A</script> is singular an exception is raised. If unit is true then <script type="math/tex">U</script> is assumed to have ones on its diagonal, and the diagonal will not be read.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/generic/Matrix.jl#L1950' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/generic/Matrix.jl#L1950' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.solve_dixon-Tuple{Nemo.fmpz_mat,Nemo.fmpz_mat}' href='#Nemo.solve_dixon-Tuple{Nemo.fmpz_mat,Nemo.fmpz_mat}'>#</a>
 <strong><code>Nemo.solve_dixon</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>solve_dixon(a::fmpz_mat, b::fmpz_mat)
@@ -1221,7 +1221,7 @@ d = rank(A)
 <blockquote>
 <p>Return a tuple <script type="math/tex">(x, m)</script> consisting of a column vector <script type="math/tex">x</script> such that <script type="math/tex">ax = b \pmod{m}</script>. The element  <script type="math/tex">b</script> must be a column vector with the same number &gt; of rows as <script type="math/tex">a</script> and <script type="math/tex">a</script> must be a square matrix. If these conditions are not met or <script type="math/tex">(x, d)</script> does not exist, an exception is raised.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/flint/fmpz_mat.jl#L1032' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/flint/fmpz_mat.jl#L1032' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.solve_dixon-Tuple{Nemo.fmpq_mat,Nemo.fmpq_mat}' href='#Nemo.solve_dixon-Tuple{Nemo.fmpq_mat,Nemo.fmpq_mat}'>#</a>
 <strong><code>Nemo.solve_dixon</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>solve_dixon(a::fmpq_mat, b::fmpq_mat)
@@ -1230,7 +1230,7 @@ d = rank(A)
 <blockquote>
 <p>Solve <script type="math/tex">ax = b</script> by clearing denominators and using Dixon's algorithm. This is usually faster for large systems.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/flint/fmpq_mat.jl#L524' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/flint/fmpq_mat.jl#L524' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of linear solving.</p>
 <pre><code>R, x = PolynomialRing(QQ, &quot;x&quot;)
 K, a = NumberField(x^3 + 3x + 1, &quot;a&quot;)
@@ -1276,7 +1276,7 @@ X, m = solve_dixon(A, B)
 <blockquote>
 <p>Given a non-singular <script type="math/tex">n\times n</script> matrix over a ring the tuple <script type="math/tex">X, d</script> consisting of an <script type="math/tex">n\times n</script> matrix <script type="math/tex">X</script> and a denominator <script type="math/tex">d</script> such that <script type="math/tex">AX = dI_n</script>, where <script type="math/tex">I_n</script> is the <script type="math/tex">n\times n</script> identity matrix. The denominator will be the determinant of <script type="math/tex">A</script> up to sign. If <script type="math/tex">A</script> is singular an exception  is raised.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/generic/Matrix.jl#L2000' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/generic/Matrix.jl#L2000' class='documenter-source'>source</a><br></p>
 <p><a id='Base.inv-Tuple{Nemo.MatElem{T<:Nemo.FieldElem}}' href='#Base.inv-Tuple{Nemo.MatElem{T<:Nemo.FieldElem}}'>#</a>
 <strong><code>Base.inv</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>inv{T &lt;: FieldElem}(M::MatElem{T})
@@ -1285,7 +1285,7 @@ X, m = solve_dixon(A, B)
 <blockquote>
 <p>Given a non-singular <script type="math/tex">n\times n</script> matrix over a field, return an <script type="math/tex">n\times n</script> matrix <script type="math/tex">X</script> such that <script type="math/tex">AX = I_n</script> where <script type="math/tex">I_n</script> is the <script type="math/tex">n\times n</script> identity matrix. If <script type="math/tex">A</script> is singular an exception is raised.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/generic/Matrix.jl#L2017' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/generic/Matrix.jl#L2017' class='documenter-source'>source</a><br></p>
 <p><a id='Base.inv-Tuple{Nemo.arb_mat}' href='#Base.inv-Tuple{Nemo.arb_mat}'>#</a>
 <strong><code>Base.inv</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>inv(M::arb_mat)
@@ -1294,7 +1294,7 @@ X, m = solve_dixon(A, B)
 <blockquote>
 <p>Given a  <script type="math/tex">n\times n</script> matrix of type <code>arb_mat</code>, return an <script type="math/tex">n\times n</script> matrix <script type="math/tex">X</script> such that <script type="math/tex">AX</script> contains the  identity matrix. If <script type="math/tex">A</script> cannot be inverted numerically an exception is raised.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/arb/arb_mat.jl#L407' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/arb/arb_mat.jl#L407' class='documenter-source'>source</a><br></p>
 <p><a id='Base.inv-Tuple{Nemo.acb_mat}' href='#Base.inv-Tuple{Nemo.acb_mat}'>#</a>
 <strong><code>Base.inv</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>inv(M::acb_mat)
@@ -1303,7 +1303,7 @@ X, m = solve_dixon(A, B)
 <blockquote>
 <p>Given a <script type="math/tex">n\times n</script> matrix of type <code>acb_mat</code>, return an <script type="math/tex">n\times n</script> matrix <script type="math/tex">X</script> such that <script type="math/tex">AX</script> contains the  identity matrix. If <script type="math/tex">A</script> cannot be inverted numerically an exception is raised.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/arb/acb_mat.jl#L458' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/arb/acb_mat.jl#L458' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.pseudo_inv-Tuple{Nemo.fmpz_mat}' href='#Nemo.pseudo_inv-Tuple{Nemo.fmpz_mat}'>#</a>
 <strong><code>Nemo.pseudo_inv</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>pseudo_inv(x::fmpz_mat)
@@ -1312,7 +1312,7 @@ X, m = solve_dixon(A, B)
 <blockquote>
 <p>Return a tuple <script type="math/tex">(z, d)</script> consisting of a matrix <script type="math/tex">z</script> and denominator <script type="math/tex">d</script> such that <script type="math/tex">z/d</script> is the inverse of <script type="math/tex">x</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/flint/fmpz_mat.jl#L430' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/flint/fmpz_mat.jl#L430' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of taking the inverse of a matrix.</p>
 <pre><code>R, x = PolynomialRing(QQ, &quot;x&quot;)
 K, a = NumberField(x^3 + 3x + 1, &quot;a&quot;)
@@ -1350,7 +1350,7 @@ X = inv(A)
 <blockquote>
 <p>Returns a tuple <script type="math/tex">(\nu, N)</script> consisting of the nullity <script type="math/tex">\nu</script> of <script type="math/tex">M</script> and a basis <script type="math/tex">N</script> (consisting of column vectors) for the right nullspace of <script type="math/tex">M</script>, i.e. such that <script type="math/tex">MN</script> is the zero matrix. If <script type="math/tex">M</script> is an <script type="math/tex">m\times n</script> matrix <script type="math/tex">N</script> will be an <script type="math/tex">n\times \nu</script> matrix. Note that the nullspace is taken to be the vector space kernel over the fraction field of the base ring if the latter is not a field. In Nemo we use the name ``kernel'' for a function to compute an integral kernel.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/generic/Matrix.jl#L2038' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/generic/Matrix.jl#L2038' class='documenter-source'>source</a><br></p>
 <p><a id='Base.LinAlg.nullspace-Tuple{Nemo.MatElem{T<:Nemo.FieldElem}}' href='#Base.LinAlg.nullspace-Tuple{Nemo.MatElem{T<:Nemo.FieldElem}}'>#</a>
 <strong><code>Base.LinAlg.nullspace</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>nullspace{T &lt;: FieldElem}(M::MatElem{T})
@@ -1359,7 +1359,7 @@ X = inv(A)
 <blockquote>
 <p>Returns a tuple <script type="math/tex">(\nu, N)</script> consisting of the nullity <script type="math/tex">\nu</script> of <script type="math/tex">M</script> and a basis <script type="math/tex">N</script> (consisting of column vectors) for the right nullspace of <script type="math/tex">M</script>, i.e. such that <script type="math/tex">MN</script> is the zero matrix. If <script type="math/tex">M</script> is an <script type="math/tex">m\times n</script> matrix <script type="math/tex">N</script> will be an <script type="math/tex">n\times \nu</script> matrix. Note that the nullspace is taken to be the vector space kernel over the fraction field of the base ring if the latter is not a field. In Nemo we use the name ``kernel'' for a function to compute an integral kernel.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/generic/Matrix.jl#L2087' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/generic/Matrix.jl#L2087' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.nullspace_right_rational-Tuple{Nemo.fmpz_mat}' href='#Nemo.nullspace_right_rational-Tuple{Nemo.fmpz_mat}'>#</a>
 <strong><code>Nemo.nullspace_right_rational</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>nullspace_right_rational(x::fmpz_mat)
@@ -1368,7 +1368,7 @@ X = inv(A)
 <blockquote>
 <p>Return the right rational nullspace of <script type="math/tex">x</script>, i.e. a set of vectors over <script type="math/tex">\mathbb{Z}</script> giving a <script type="math/tex">\mathbb{Q}</script>-basis for the nullspace of <script type="math/tex">x</script> considered as a matrix over <script type="math/tex">\mathbb{Q}</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/flint/fmpz_mat.jl#L830' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/flint/fmpz_mat.jl#L830' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of computing the nullspace of a matrix.</p>
 <pre><code>R, x = PolynomialRing(ZZ, &quot;x&quot;)
 S = MatrixSpace(R, 4, 4)
@@ -1391,7 +1391,7 @@ n, N = nullspace(M)
 <blockquote>
 <p>Returns the Hessenberg form of <script type="math/tex">M</script>, i.e. an upper Hessenberg matrix which is similar to <script type="math/tex">M</script>. The upper Hessenberg form has nonzero entries above and on the diagonal and in the diagonal line immediately below the diagonal.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/generic/Matrix.jl#L2185' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/generic/Matrix.jl#L2185' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.ishessenberg-Tuple{Nemo.MatElem{T<:Nemo.RingElem}}' href='#Nemo.ishessenberg-Tuple{Nemo.MatElem{T<:Nemo.RingElem}}'>#</a>
 <strong><code>Nemo.ishessenberg</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>ishessenberg{T &lt;: RingElem}(A::MatElem{T})
@@ -1400,7 +1400,7 @@ n, N = nullspace(M)
 <blockquote>
 <p>Returns <code>true</code> if <script type="math/tex">M</script> is in Hessenberg form, otherwise returns <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/generic/Matrix.jl#L2199' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/generic/Matrix.jl#L2199' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of computing the Hessenberg form.</p>
 <pre><code>R = ResidueRing(ZZ, 7)
 S = MatrixSpace(R, 4, 4)
@@ -1422,7 +1422,7 @@ ishessenberg(A) == true
 <blockquote>
 <p>Returns the characteristic polynomial <script type="math/tex">p</script> of the matrix <script type="math/tex">M</script>. The polynomial ring <script type="math/tex">R</script> of the resulting polynomial must be supplied and the matrix is assumed to be square.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/generic/Matrix.jl#L2460' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/generic/Matrix.jl#L2460' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of computing the characteristic polynomial.</p>
 <pre><code>R = ResidueRing(ZZ, 7)
 S = MatrixSpace(R, 4, 4)
@@ -1444,7 +1444,7 @@ A = charpoly(T, M)
 <blockquote>
 <p>Returns the minimal polynomial <script type="math/tex">p</script> of the matrix <script type="math/tex">M</script>. The polynomial ring <script type="math/tex">R</script> of the resulting polynomial must be supplied and the matrix must be square.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/generic/Matrix.jl#L2636' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/generic/Matrix.jl#L2636' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.minpoly-Tuple{Nemo.Ring,Nemo.MatElem{T<:Nemo.FieldElem},Bool}' href='#Nemo.minpoly-Tuple{Nemo.Ring,Nemo.MatElem{T<:Nemo.FieldElem},Bool}'>#</a>
 <strong><code>Nemo.minpoly</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>minpoly{T &lt;: FieldElem}(S::Ring, M::MatElem{T}, charpoly_only = false)
@@ -1453,14 +1453,14 @@ A = charpoly(T, M)
 <blockquote>
 <p>Returns the minimal polynomial <script type="math/tex">p</script> of the matrix <script type="math/tex">M</script>. The polynomial ring <script type="math/tex">R</script> of the resulting polynomial must be supplied and the matrix must be square.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/generic/Matrix.jl#L2541' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/generic/Matrix.jl#L2541' class='documenter-source'>source</a><br></p>
 <pre><code>minpoly{T &lt;: RingElem}(S::Ring, M::MatElem{T}, charpoly_only = false)
 </code></pre>
 
 <blockquote>
 <p>Returns the minimal polynomial <script type="math/tex">p</script> of the matrix <script type="math/tex">M</script>. The polynomial ring <script type="math/tex">R</script> of the resulting polynomial must be supplied and the matrix must be square.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/generic/Matrix.jl#L2636' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/generic/Matrix.jl#L2636' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of computing the minimal polynomial of a matrix.</p>
 <pre><code>R, x = FiniteField(13, 1, &quot;x&quot;)
 T, y = PolynomialRing(R, &quot;y&quot;)
@@ -1482,7 +1482,7 @@ A = minpoly(T, M)
 <blockquote>
 <p>Applies a similarity transform to the <script type="math/tex">n\times n</script> matrix <script type="math/tex">M</script> in-place. Let <script type="math/tex">P</script> be the <script type="math/tex">n\times n</script> identity matrix that has had all zero entries of row <script type="math/tex">r</script> replaced with <script type="math/tex">d</script>, then the transform applied is equivalent to <script type="math/tex">M = P^{-1}MP</script>. We require <script type="math/tex">M</script> to be a square matrix. A similarity transform preserves the minimal and characteristic polynomials of a matrix.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/generic/Matrix.jl#L3693' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/generic/Matrix.jl#L3693' class='documenter-source'>source</a><br></p>
 <p>Here is an example of applying a similarity transform to a matrix.</p>
 <pre><code>R = ResidueRing(ZZ, 7)
 S = MatrixSpace(R, 4, 4)
@@ -1503,7 +1503,7 @@ similarity!(M, 1, R(3))
 <blockquote>
 <p>Reduce the entries of <script type="math/tex">x</script> modulo <script type="math/tex">y</script> and return the result.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/flint/fmpz_mat.jl#L496' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/flint/fmpz_mat.jl#L496' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.reduce_mod-Tuple{Nemo.fmpz_mat,Nemo.fmpz}' href='#Nemo.reduce_mod-Tuple{Nemo.fmpz_mat,Nemo.fmpz}'>#</a>
 <strong><code>Nemo.reduce_mod</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>reduce_mod(x::fmpz_mat, y::fmpz)
@@ -1512,7 +1512,7 @@ similarity!(M, 1, R(3))
 <blockquote>
 <p>Reduce the entries of <script type="math/tex">x</script> modulo <script type="math/tex">y</script> and return the result.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/flint/fmpz_mat.jl#L485' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/flint/fmpz_mat.jl#L485' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of modular reduction.</p>
 <pre><code>S = MatrixSpace(ZZ, 3, 3)
 
@@ -1532,7 +1532,7 @@ reduce_mod(A, 2)
 <blockquote>
 <p>Return a lift of the matrix <script type="math/tex">a</script> to a matrix over <script type="math/tex">\mathbb{Z}</script>, i.e. where the entries of the returned matrix are those of <script type="math/tex">a</script> lifted to <script type="math/tex">\mathbb{Z}</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/flint/nmod_mat.jl#L595' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/flint/nmod_mat.jl#L595' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of lifting.</p>
 <pre><code>R = ResidueRing(ZZ, 7)
 S = MatrixSpace(R, 3, 3)
@@ -1552,7 +1552,7 @@ a = S([4 5 6; 7 3 2; 1 4 5])
 <blockquote>
 <p>Return the Hadamard matrix for the given matrix space. The number of rows and columns must be equal.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/flint/fmpz_mat.jl#L600' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/flint/fmpz_mat.jl#L600' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.ishadamard-Tuple{Nemo.fmpz_mat}' href='#Nemo.ishadamard-Tuple{Nemo.fmpz_mat}'>#</a>
 <strong><code>Nemo.ishadamard</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>ishadamard(x::fmpz_mat)
@@ -1561,7 +1561,7 @@ a = S([4 5 6; 7 3 2; 1 4 5])
 <blockquote>
 <p>Return <code>true</code> if the given matrix is Hadamard, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/flint/fmpz_mat.jl#L614' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/flint/fmpz_mat.jl#L614' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.hilbert-Tuple{Nemo.FmpqMatSpace}' href='#Nemo.hilbert-Tuple{Nemo.FmpqMatSpace}'>#</a>
 <strong><code>Nemo.hilbert</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>hilbert(R::FmpqMatSpace)
@@ -1570,7 +1570,7 @@ a = S([4 5 6; 7 3 2; 1 4 5])
 <blockquote>
 <p>Return the Hilbert matrix in the given matrix space. This is the matrix with entries <script type="math/tex">H_{i,j} = 1/(i + j - 1)</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/flint/fmpq_mat.jl#L470' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/flint/fmpq_mat.jl#L470' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of computing special matrices.</p>
 <pre><code>R = MatrixSpace(ZZ, 3, 3)
 S = MatrixSpace(QQ, 3, 3)
@@ -1590,7 +1590,7 @@ B = hilbert(R)
 <blockquote>
 <p>Return the Hermite Normal Form of <script type="math/tex">x</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/flint/fmpz_mat.jl#L629' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/flint/fmpz_mat.jl#L629' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.hnf_with_transform-Tuple{Nemo.fmpz_mat}' href='#Nemo.hnf_with_transform-Tuple{Nemo.fmpz_mat}'>#</a>
 <strong><code>Nemo.hnf_with_transform</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>hnf_with_transform(x::fmpz_mat)
@@ -1599,7 +1599,7 @@ B = hilbert(R)
 <blockquote>
 <p>Compute a tuple <script type="math/tex">(H, T)</script> where <script type="math/tex">H</script> is the Hermite normal form of <script type="math/tex">x</script> and <script type="math/tex">T</script> is a transformation matrix so that <script type="math/tex">H = Tx</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/flint/fmpz_mat.jl#L640' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/flint/fmpz_mat.jl#L640' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.hnf_modular-Tuple{Nemo.fmpz_mat,Nemo.fmpz}' href='#Nemo.hnf_modular-Tuple{Nemo.fmpz_mat,Nemo.fmpz}'>#</a>
 <strong><code>Nemo.hnf_modular</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>hnf_modular(x::fmpz_mat, d::fmpz)
@@ -1608,7 +1608,7 @@ B = hilbert(R)
 <blockquote>
 <p>Compute the Hermite normal form of <script type="math/tex">x</script> given that <script type="math/tex">d</script> is a multiple of the determinant of the nonzero rows of <script type="math/tex">x</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/flint/fmpz_mat.jl#L653' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/flint/fmpz_mat.jl#L653' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.hnf_modular_eldiv-Tuple{Nemo.fmpz_mat,Nemo.fmpz}' href='#Nemo.hnf_modular_eldiv-Tuple{Nemo.fmpz_mat,Nemo.fmpz}'>#</a>
 <strong><code>Nemo.hnf_modular_eldiv</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>hnf_modular_eldiv(x::fmpz_mat, d::fmpz)
@@ -1617,7 +1617,7 @@ B = hilbert(R)
 <blockquote>
 <p>Compute the Hermite normal form of <script type="math/tex">x</script> given that <script type="math/tex">d</script> is a multiple of the largest elementary divisor of <script type="math/tex">x</script>. The matrix <script type="math/tex">x</script> must have full rank.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/flint/fmpz_mat.jl#L665' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/flint/fmpz_mat.jl#L665' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.ishnf-Tuple{Nemo.fmpz_mat}' href='#Nemo.ishnf-Tuple{Nemo.fmpz_mat}'>#</a>
 <strong><code>Nemo.ishnf</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>ishnf(x::fmpz_mat)
@@ -1626,7 +1626,7 @@ B = hilbert(R)
 <blockquote>
 <p>Return <code>true</code> if the given matrix is in Hermite Normal Form, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/flint/fmpz_mat.jl#L679' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/flint/fmpz_mat.jl#L679' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of computing the Hermite Normal Form.</p>
 <pre><code>S = MatrixSpace(ZZ, 3, 3)
 
@@ -1664,13 +1664,13 @@ det_popov{T &lt;: PolyElem}(::GenMat{T})
 <blockquote>
 <p>Return the LLL reduction of the matrix <script type="math/tex">x</script>. By default the matrix <script type="math/tex">x</script> is a <script type="math/tex">\mathbb{Z}</script>-basis and the Gram matrix is maintained throughout in approximate form. The LLL is performed with reduction parameters <script type="math/tex">\delta = 0.99</script> and <script type="math/tex">\eta = 0.51</script>. All of these defaults can be overridden by specifying an optional context object.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/flint/fmpz_mat.jl#L726' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/flint/fmpz_mat.jl#L726' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.lll_with_transform-Tuple{Nemo.fmpz_mat,Nemo.lll_ctx}' href='#Nemo.lll_with_transform-Tuple{Nemo.fmpz_mat,Nemo.lll_ctx}'>#</a>
 <strong><code>Nemo.lll_with_transform</code></strong> &mdash; <em>Method</em>.</p>
 <blockquote>
 <p>Compute a tuple <script type="math/tex">(L, T)</script> where <script type="math/tex">L</script> is the LLL reduction of <script type="math/tex">a</script> and <script type="math/tex">T</script> is a transformation matrix so that <script type="math/tex">L = Ta</script>. All the default parameters can be overridden by supplying an optional context object.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/flint/fmpz_mat.jl#L710' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/flint/fmpz_mat.jl#L710' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.lll_gram-Tuple{Nemo.fmpz_mat,Nemo.lll_ctx}' href='#Nemo.lll_gram-Tuple{Nemo.fmpz_mat,Nemo.lll_ctx}'>#</a>
 <strong><code>Nemo.lll_gram</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>lll_gram(x::fmpz_mat, ctx=lll_ctx(0.99, 0.51, :gram))
@@ -1679,7 +1679,7 @@ det_popov{T &lt;: PolyElem}(::GenMat{T})
 <blockquote>
 <p>Given the Gram matrix <script type="math/tex">x</script> of a matrix, compute the Gram matrix of its LLL reduction.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/flint/fmpz_mat.jl#L762' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/flint/fmpz_mat.jl#L762' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.lll_gram_with_transform-Tuple{Nemo.fmpz_mat,Nemo.lll_ctx}' href='#Nemo.lll_gram_with_transform-Tuple{Nemo.fmpz_mat,Nemo.lll_ctx}'>#</a>
 <strong><code>Nemo.lll_gram_with_transform</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>lll_gram_with_transform(x::fmpz_mat, ctx=lll_ctx(0.99, 0.51, :gram))
@@ -1688,7 +1688,7 @@ det_popov{T &lt;: PolyElem}(::GenMat{T})
 <blockquote>
 <p>Given the Gram matrix <script type="math/tex">x</script> of a matrix <script type="math/tex">M</script>, compute a tuple <script type="math/tex">(L, T)</script> where <script type="math/tex">L</script> is the gram matrix of the LLL reduction of the matrix and <script type="math/tex">T</script> is a transformation matrix so that <script type="math/tex">L = TM</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/flint/fmpz_mat.jl#L745' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/flint/fmpz_mat.jl#L745' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.lll_with_removal-Tuple{Nemo.fmpz_mat,Nemo.fmpz,Nemo.lll_ctx}' href='#Nemo.lll_with_removal-Tuple{Nemo.fmpz_mat,Nemo.fmpz,Nemo.lll_ctx}'>#</a>
 <strong><code>Nemo.lll_with_removal</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>lll_with_removal(x::fmpz_mat, b::fmpz, ctx=lll_ctx(0.99, 0.51))
@@ -1697,7 +1697,7 @@ det_popov{T &lt;: PolyElem}(::GenMat{T})
 <blockquote>
 <p>Compute the LLL reduction of <script type="math/tex">x</script> and throw away rows whose norm exceeds the given bound <script type="math/tex">b</script>. Return a tuple <script type="math/tex">(r, L)</script> where the first <script type="math/tex">r</script> rows of <script type="math/tex">L</script> are the rows remaining after removal.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/flint/fmpz_mat.jl#L792' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/flint/fmpz_mat.jl#L792' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.lll_with_removal_transform-Tuple{Nemo.fmpz_mat,Nemo.fmpz,Nemo.lll_ctx}' href='#Nemo.lll_with_removal_transform-Tuple{Nemo.fmpz_mat,Nemo.fmpz,Nemo.lll_ctx}'>#</a>
 <strong><code>Nemo.lll_with_removal_transform</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>lll_with_removal_transform(x::fmpz_mat, b::fmpz, ctx=lll_ctx(0.99, 0.51))
@@ -1706,7 +1706,7 @@ det_popov{T &lt;: PolyElem}(::GenMat{T})
 <blockquote>
 <p>Compute a tuple <script type="math/tex">(r, L, T)</script> where the first <script type="math/tex">r</script> rows of <script type="math/tex">L</script> are those remaining from the LLL reduction after removal of vectors with norm exceeding the bound <script type="math/tex">b</script> and <script type="math/tex">T</script> is a transformation matrix so that <script type="math/tex">L = Tx</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/flint/fmpz_mat.jl#L775' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/flint/fmpz_mat.jl#L775' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of lattice basis reduction.</p>
 <pre><code>S = MatrixSpace(ZZ, 3, 3)
 
@@ -1732,7 +1732,7 @@ r, L, T = lll_with_removal_transform(A, fmpz(100))
 <blockquote>
 <p>Compute the Smith normal form of <script type="math/tex">x</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/flint/fmpz_mat.jl#L875' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/flint/fmpz_mat.jl#L875' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.snf_diagonal-Tuple{Nemo.fmpz_mat}' href='#Nemo.snf_diagonal-Tuple{Nemo.fmpz_mat}'>#</a>
 <strong><code>Nemo.snf_diagonal</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>snf_diagonal(x::fmpz_mat)
@@ -1741,7 +1741,7 @@ r, L, T = lll_with_removal_transform(A, fmpz(100))
 <blockquote>
 <p>Given a diagonal matrix <script type="math/tex">x</script> compute the Smith normal form of <script type="math/tex">x</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/flint/fmpz_mat.jl#L886' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/flint/fmpz_mat.jl#L886' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.issnf-Tuple{Nemo.fmpz_mat}' href='#Nemo.issnf-Tuple{Nemo.fmpz_mat}'>#</a>
 <strong><code>Nemo.issnf</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>issnf(x::fmpz_mat)
@@ -1750,7 +1750,7 @@ r, L, T = lll_with_removal_transform(A, fmpz(100))
 <blockquote>
 <p>Return <code>true</code> if <script type="math/tex">x</script> is in Smith normal form, otherwise return <code>false</code>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/flint/fmpz_mat.jl#L897' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/flint/fmpz_mat.jl#L897' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of computing the Smith Normal Form.</p>
 <pre><code>S = MatrixSpace(ZZ, 3, 3)
 
@@ -1774,7 +1774,7 @@ C = snf_diagonal(B)
 <blockquote>
 <p>Return the strong echeleon form of <script type="math/tex">a</script>. The matrix <script type="math/tex">a</script> must have at least as many rows as columns.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/flint/nmod_mat.jl#L371' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/flint/nmod_mat.jl#L371' class='documenter-source'>source</a><br></p>
 <p>Here is an example of computing the strong echelon form.</p>
 <pre><code>R = ResidueRing(ZZ, 12)
 S = MatrixSpace(R, 3, 3)
@@ -1794,7 +1794,7 @@ B = strong_echelon_form(A)
 <blockquote>
 <p>Return the Howell normal form of <script type="math/tex">a</script>. The matrix <script type="math/tex">a</script> must have at least as many rows as columns.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/flint/nmod_mat.jl#L388' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/flint/nmod_mat.jl#L388' class='documenter-source'>source</a><br></p>
 <p>Here is an example of computing the Howell form.</p>
 <pre><code>R = ResidueRing(ZZ, 12)
 S = MatrixSpace(R, 3, 3)
@@ -1814,7 +1814,7 @@ B = howell_form(A)
 <blockquote>
 <p>Return the Gram-Schmidt Orthogonalisation of the matrix <script type="math/tex">x</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/flint/fmpq_mat.jl#L453' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/flint/fmpq_mat.jl#L453' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of computing the Gram-Schmidt Orthogonalisation.</p>
 <pre><code>S = MatrixSpace(QQ, 3, 3)
 
@@ -1833,7 +1833,7 @@ B = gso(A)
 <blockquote>
 <p>Returns the exponential of the matrix <script type="math/tex">x</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/arb/arb_mat.jl#L497' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/arb/arb_mat.jl#L497' class='documenter-source'>source</a><br></p>
 <p><a id='Base.exp-Tuple{Nemo.acb_mat}' href='#Base.exp-Tuple{Nemo.acb_mat}'>#</a>
 <strong><code>Base.exp</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>exp(x::acb_mat)
@@ -1842,7 +1842,7 @@ B = gso(A)
 <blockquote>
 <p>Returns the exponential of the matrix <script type="math/tex">x</script>.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/arb/acb_mat.jl#L564' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/arb/acb_mat.jl#L564' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of computing the exponential function of matrix.</p>
 <pre><code>A = RR[2 0 0; 0 3 0; 0 0 1]
 
@@ -1860,7 +1860,7 @@ B = exp(A)
 <p>Returns a nonnegative element <script type="math/tex">z</script> of type <code>arb</code>, such that <script type="math/tex">z</script> is an upper bound for the infinity norm for every matrix in <script type="math/tex">x</script>
 </p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/arb/arb_mat.jl#L607' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/arb/arb_mat.jl#L607' class='documenter-source'>source</a><br></p>
 <p><a id='Nemo.bound_inf_norm-Tuple{Nemo.acb_mat}' href='#Nemo.bound_inf_norm-Tuple{Nemo.acb_mat}'>#</a>
 <strong><code>Nemo.bound_inf_norm</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>bound_inf_norm(x::acb_mat)
@@ -1870,7 +1870,7 @@ B = exp(A)
 <p>Returns a nonnegative element <script type="math/tex">z</script> of type <code>acb</code>, such that <script type="math/tex">z</script> is an upper bound for the infinity norm for every matrix in <script type="math/tex">x</script>
 </p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/arb/acb_mat.jl#L673' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/arb/acb_mat.jl#L673' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of computing bounds on the infinity norm of a matrix.</p>
 <pre><code>A = RR[1 2 3; 4 5 6; 7 8 9]
 
@@ -1887,7 +1887,7 @@ d = bound_inf_norm(A)
 <blockquote>
 <p>Return <script type="math/tex">2^yx</script>. Note that <script type="math/tex">y</script> can be positive, zero or negative.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/arb/arb_mat.jl#L299' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/arb/arb_mat.jl#L299' class='documenter-source'>source</a><br></p>
 <p><a id='Base.Math.ldexp-Tuple{Nemo.acb_mat,Int64}' href='#Base.Math.ldexp-Tuple{Nemo.acb_mat,Int64}'>#</a>
 <strong><code>Base.Math.ldexp</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>ldexp(x::acb_mat, y::Int)
@@ -1896,7 +1896,7 @@ d = bound_inf_norm(A)
 <blockquote>
 <p>Return <script type="math/tex">2^yx</script>. Note that <script type="math/tex">y</script> can be positive, zero or negative.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/arb/acb_mat.jl#L342' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/arb/acb_mat.jl#L342' class='documenter-source'>source</a><br></p>
 <p>Here are some examples of shifting.</p>
 <pre><code>A = RR[1 2 3; 4 5 6; 7 8 9]
 
@@ -1915,7 +1915,7 @@ overlaps(16*A, B)
 <blockquote>
 <p>Returns whether every entry of <script type="math/tex">M</script> has vanishing imaginary part.</p>
 </blockquote>
-<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/20498f058bff9c1b31ee7674b08eb1a1c06291e2/src/arb/acb_mat.jl#L445' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/Nemocas/Nemo.jl/tree/b2f3445387dfecd78837c94e594af9ca0ceea3ee/src/arb/acb_mat.jl#L445' class='documenter-source'>source</a><br></p>
 <p>Here are some examples for predicates.</p>
 <pre><code>A = CC[1 2 3; 4 5 6; 7 8 9]
 
