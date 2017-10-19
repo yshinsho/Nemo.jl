@@ -138,7 +138,7 @@ show_minus_one(::Type{nmod_poly}) = true
 #
 ################################################################################
 
-canonical_unit(a::nmod_poly) = canonical_unit(lead(a))
+canonical_unit(a::nmod_poly) = parent(a)(canonical_unit(lead(a)))
 
 ################################################################################
 #

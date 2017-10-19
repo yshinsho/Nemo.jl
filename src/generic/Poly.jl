@@ -241,7 +241,7 @@ end
 #
 ###############################################################################
 
-canonical_unit(x::Nemo.PolyElem) = canonical_unit(lead(x))
+canonical_unit(x::Nemo.PolyElem) = parent(x)(canonical_unit(lead(x)))
 
 ###############################################################################
 #
@@ -331,6 +331,18 @@ function -(a::Nemo.PolyElem)
    end
    set_length!(z, len)
    return z
+end
+
+###############################################################################
+#
+#  Inversion
+#
+###############################################################################
+
+function inv(f::Poly{T}) where {T <: RingElement}
+  length(f) != 1 && error("Polynomial not invertible")
+  a = coeff(f, 1)
+  return parent(f)(inv(a))
 end
 
 ###############################################################################

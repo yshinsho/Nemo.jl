@@ -81,7 +81,7 @@ end
 #
 ################################################################################
 
-canonical_unit(a::fq_nmod_poly) = canonical_unit(lead(a))
+canonical_unit(a::fq_nmod_poly) = parent(a)(canonical_unit(lead(a)))
   
 ################################################################################
 #

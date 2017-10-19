@@ -145,7 +145,7 @@ show_minus_one(::Type{fmpz_mod_poly}) = true
 #
 ################################################################################
 
-canonical_unit(a::fmpz_mod_poly) = canonical_unit(lead(a))
+canonical_unit(a::fmpz_mod_poly) = parent(a)(canonical_unit(lead(a)))
 
 ################################################################################
 #

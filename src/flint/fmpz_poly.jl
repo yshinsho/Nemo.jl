@@ -61,7 +61,7 @@ end
 #
 ###############################################################################
 
-canonical_unit(a::fmpz_poly) = canonical_unit(lead(a))
+canonical_unit(a::fmpz_poly) = parent(a)(canonical_unit(lead(a)))
 
 ###############################################################################
 #
