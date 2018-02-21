@@ -2,23 +2,15 @@ var documenterSearchIndex = {"docs": [
 
 {
     "location": "index.html#",
-    "page": "Nemo",
-    "title": "Nemo",
+    "page": "Getting Started",
+    "title": "Getting Started",
     "category": "page",
     "text": ""
 },
 
 {
-    "location": "index.html#Nemo-1",
-    "page": "Nemo",
-    "title": "Nemo",
-    "category": "section",
-    "text": ""
-},
-
-{
     "location": "index.html#Getting-Started-1",
-    "page": "Nemo",
+    "page": "Getting Started",
     "title": "Getting Started",
     "category": "section",
     "text": "Nemo is a computer algebra package for the Julia programming language, maintained by William Hart,  Tommy Hofmann, Claus Fieker, Fredrik Johansson with additional code by Oleksandr Motsak, Marek Kaluba and other contributors.http://nemocas.org (Website)\nhttps://github.com/Nemocas/Nemo.jl (Source code)\nhttp://nemocas.github.io/Nemo.jl/latest/ (Online documentation)The features of Nemo so far include:Multiprecision integers and rationals\nIntegers modulo n\np-adic numbers\nFinite fields (prime and non-prime order)\nNumber field arithmetic\nArbitrary precision real and complex balls\nUnivariate polynomials and matrices over the aboveNemo depends on AbstractAlgebra.jl which provides Nemo with generic routines for:Univariate and multivariate polynomials\nAbsolute and relative power series\nLaurent series\nFraction fields\nResidue rings\nMatrices and linear algebra\nYoung Tableaux\nPermutation groups\nCharacters"
@@ -26,7 +18,7 @@ var documenterSearchIndex = {"docs": [
 
 {
     "location": "index.html#Installation-1",
-    "page": "Nemo",
+    "page": "Getting Started",
     "title": "Installation",
     "category": "section",
     "text": "To use Nemo we require Julia 0.6 or higher. Please see http://julialang.org/downloads for instructions on how to obtain julia for your system.At the Julia prompt simply typejulia> Pkg.add(\"Nemo\")\njulia> Pkg.build(\"Nemo\")"
@@ -34,7 +26,7 @@ var documenterSearchIndex = {"docs": [
 
 {
     "location": "index.html#Quick-start-1",
-    "page": "Nemo",
+    "page": "Getting Started",
     "title": "Quick start",
     "category": "section",
     "text": "Here are some examples of using Nemo.This example computes recursive univariate polynomials.julia> using Nemo\n\njulia> R, x = PolynomialRing(ZZ, \"x\")\n(Univariate Polynomial Ring in x over Integer Ring,x)\n\njulia> S, y = PolynomialRing(R, \"y\")\n(Univariate Polynomial Ring in y over Univariate Polynomial Ring in x over Integer Ring,y)\n\njulia> T, z = PolynomialRing(S, \"z\")\n(Univariate Polynomial Ring in z over Univariate Polynomial Ring in y over Univariate Polynomial Ring in x over Integer Ring,z)\n\njulia> f = x + y + z + 1\nz+(y+(x+1))\n\njulia> p = f^30; # semicolon supresses output\n\njulia> @time q = p*(p+1);\n  0.325521 seconds (140.64 k allocations: 3.313 MB)Here is an example using generic recursive ring constructions.julia> using Nemo\n\njulia> R, x = FiniteField(7, 11, \"x\")\n(Finite field of degree 11 over F_7,x)\n\njulia> S, y = PolynomialRing(R, \"y\")\n(Univariate Polynomial Ring in y over Finite field of degree 11 over F_7,y)\n\njulia> T = ResidueRing(S, y^3 + 3x*y + 1)\nResidue ring of Univariate Polynomial Ring in y over Finite field of degree 11 over F_7 modulo y^3+(3*x)*y+(1)\n\njulia> U, z = PolynomialRing(T, \"z\")\n(Univariate Polynomial Ring in z over Residue ring of Univariate Polynomial Ring in y over Finite field of degree 11 over F_7 modulo y^3+(3*x)*y+(1),z)\n\njulia> f = (3y^2 + y + x)*z^2 + ((x + 2)*y^2 + x + 1)*z + 4x*y + 3;\n\njulia> g = (7y^2 - y + 2x + 7)*z^2 + (3y^2 + 4x + 1)*z + (2x + 1)*y + 1;\n\njulia> s = f^12;\n\njulia> t = (s + g)^12;\n\njulia> @time resultant(s, t)\n  0.426612 seconds (705.88 k allocations: 52.346 MB, 2.79% gc time)\n(x^10+4*x^8+6*x^7+3*x^6+4*x^5+x^4+6*x^3+5*x^2+x)*y^2+(5*x^10+x^8+4*x^7+3*x^5+5*x^4+3*x^3+x^2+x+6)*y+(2*x^10+6*x^9+5*x^8+5*x^7+x^6+6*x^5+5*x^4+4*x^3+x+3)Here is an example using matrices.julia> using Nemo\n\njulia> R, x = PolynomialRing(ZZ, \"x\")\n(Univariate Polynomial Ring in x over Integer Ring,x)\n\njulia> S = MatrixSpace(R, 40, 40)\nMatrix Space of 40 rows and 40 columns over Univariate Polynomial Ring in x over Integer Ring\n\njulia> M = rand(S, 2:2, -20:20)\n\njulia> @time det(M);\n  1.108739 seconds (28.36 M allocations: 440.651 MiB, 17.18% gc time)And here is an example with power series.julia> using Nemo\n\njulia> R, x = QQ[\"x\"]\n(Univariate Polynomial Ring in x over Rational Field,x)\n\njulia> S, t = PowerSeriesRing(R, 100, \"t\")\n(Univariate power series ring in t over Univariate Polynomial Ring in x over Rational Field,t+O(t^101))\n\njulia> u = t + O(t^100)\nt+O(t^100)\n\njulia> @time divexact((u*exp(x*u)), (exp(u)-1));\n  0.042663 seconds (64.01 k allocations: 1.999 MB, 15.40% gc time)"
@@ -237,23 +229,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Comparison",
     "category": "section",
-    "text": "Instead of isless we implement a function cmp(a, b) which returns a positive value if a  b, zero if a == b and a negative value if a  b. We then implement all the other operators, including == in terms of cmp.For convenience we also implement a cmpabs(a, b) function which returns a positive value if a  b, zero if a == b and a negative value if a  b. This can be slightly faster than a call to cmp or one of the comparison operators when comparing nonnegative values for example.Here is a list of the comparison functions implemented, with the understanding that cmp provides all of the comparison operators listed above."
-},
-
-{
-    "location": "integer.html#Function-1",
-    "page": "Integers",
-    "title": "Function",
-    "category": "section",
-    "text": "cmp(a::fmpz, b::fmpz) cmpabs(a::fmpz, b::fmpz)We also provide the following ad hoc comparisons which again provide all of the comparison operators mentioned above."
-},
-
-{
-    "location": "integer.html#Function-2",
-    "page": "Integers",
-    "title": "Function",
-    "category": "section",
-    "text": "cmp(a::fmpz, b::Int) cmp(a::Int, b::fmpz) cmp(a::fmpz, b::UInt) cmp(a::UInt, b::fmpz)Examplesa = ZZ(12)\nb = ZZ(3)\n\na < b\na != b\na > 4\n5 <= b\ncmpabs(a, b)"
+    "text": "Instead of isless we implement a function cmp(a, b) which returns a positive value if a  b, zero if a == b and a negative value if a  b. We then implement all the other operators, including == in terms of cmp.For convenience we also implement a cmpabs(a, b) function which returns a positive value if a  b, zero if a == b and a negative value if a  b. This can be slightly faster than a call to cmp or one of the comparison operators when comparing nonnegative values for example.Here is a list of the comparison functions implemented, with the understanding that cmp provides all of the comparison operators listed above.Function\ncmp(a::fmpz, b::fmpz)\ncmpabs(a::fmpz, b::fmpz)We also provide the following ad hoc comparisons which again provide all of the comparison operators mentioned above.Function\ncmp(a::fmpz, b::Int)\ncmp(a::Int, b::fmpz)\ncmp(a::fmpz, b::UInt)\ncmp(a::UInt, b::fmpz)Examplesa = ZZ(12)\nb = ZZ(3)\n\na < b\na != b\na > 4\n5 <= b\ncmpabs(a, b)"
 },
 
 {
@@ -1397,7 +1373,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Residue rings",
     "title": "Residue rings",
     "category": "section",
-    "text": "Nemo allows the creation of residue rings of the form R(a) for an element a of a ring R.We don't require (a) to be a prime or maximal ideal. Instead, we allow the creation of the residue ring R(a) for any nonzero a and simply raise an exception if an impossible inverse is encountered during computations  involving elements of R(a). Of course, a GCD function must be available for the base ring R.There is a generic implementation of residue rings of this form in AbstractAlgebra.jl, which accepts any ring R as base ring.The associated types of parent object and elements for each kind of residue rings in Nemo are given in the following table.Base ring Library Element type Parent type\nGeneric ring R AbstractAlgebra.jl Generic.Res{T} Generic.ResRing{T}\n$\\mathbb{Z} Flint nmod NmodRingThe modulus a of a residue ring is stored in its parent object.All residue element types belong to the abstract type ResElem and all the residue ring parent object types belong to the abstract type ResRing. This enables one to write generic functions that accept any Nemo residue type."
+    "text": "Nemo allows the creation of residue rings of the form R(a) for an element a of a ring R.We don't require (a) to be a prime or maximal ideal. Instead, we allow the creation of the residue ring R(a) for any nonzero a and simply raise an exception if an impossible inverse is encountered during computations  involving elements of R(a). Of course, a GCD function must be available for the base ring R.There is a generic implementation of residue rings of this form in AbstractAlgebra.jl, which accepts any ring R as base ring.The associated types of parent object and elements for each kind of residue rings in Nemo are given in the following table.Base ring Library Element type Parent type\nGeneric ring R AbstractAlgebra.jl Generic.Res{T} Generic.ResRing{T}\nmathbbZ Flint nmod NmodRingThe modulus a of a residue ring is stored in its parent object.All residue element types belong to the abstract type ResElem and all the residue ring parent object types belong to the abstract type ResRing. This enables one to write generic functions that accept any Nemo residue type."
 },
 
 {
@@ -1981,15 +1957,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Real balls",
     "title": "Comparison",
     "category": "section",
-    "text": "Nemo provides a full range of comparison operations for Arb balls. Note that a ball is considered less than another ball if every value in the first ball is less than every value in the second ball, etc.In addition to the standard comparison operators, we introduce an exact equality. This is distinct from arithmetic equality implemented by ==, which merely compares up to the minimum of the precisions of its operands.isequal(::arb, ::arb)We also provide a full range of ad hoc comparison operators. These are implemented directly in Julia, but we document them as though isless and == were provided."
-},
-
-{
-    "location": "arb.html#Function-1",
-    "page": "Real balls",
-    "title": "Function",
-    "category": "section",
-    "text": "==(x::arb, y::Integer) ==(x::Integer, y::arb) ==(x::arb, y::fmpz) ==(x::fmpz, y::arb) ==(x::arb, y::Float64) ==(x::Float64, y::arb) isless(x::arb, y::Integer) isless(x::Integer, y::arb) isless(x::arb, y::fmpz) isless(x::fmpz, y::arb) isless(x::arb, y::Float64) isless(x::Float64, y::arb) isless(x::arb, y::BigFloat) isless(x::BigFloat, y::arb) isless(x::arb, y::fmpq) isless(x::fmpq, y::arb)ExamplesRR = RealField(64)\nx = RR(\"1 +/- 0.001\")\ny = RR(\"3\")\nz = RR(\"4\")\n\nisequal(x, deepcopy(x))\nx == 3\nZZ(3) < z\nx != 1.23"
+    "text": "Nemo provides a full range of comparison operations for Arb balls. Note that a ball is considered less than another ball if every value in the first ball is less than every value in the second ball, etc.In addition to the standard comparison operators, we introduce an exact equality. This is distinct from arithmetic equality implemented by ==, which merely compares up to the minimum of the precisions of its operands.isequal(::arb, ::arb)We also provide a full range of ad hoc comparison operators. These are implemented directly in Julia, but we document them as though isless and == were provided.Function\n==(x::arb, y::Integer)\n==(x::Integer, y::arb)\n==(x::arb, y::fmpz)\n==(x::fmpz, y::arb)\n==(x::arb, y::Float64)\n==(x::Float64, y::arb)\nisless(x::arb, y::Integer)\nisless(x::Integer, y::arb)\nisless(x::arb, y::fmpz)\nisless(x::fmpz, y::arb)\nisless(x::arb, y::Float64)\nisless(x::Float64, y::arb)\nisless(x::arb, y::BigFloat)\nisless(x::BigFloat, y::arb)\nisless(x::arb, y::fmpq)\nisless(x::fmpq, y::arb)ExamplesRR = RealField(64)\nx = RR(\"1 +/- 0.001\")\ny = RR(\"3\")\nz = RR(\"4\")\n\nisequal(x, deepcopy(x))\nx == 3\nZZ(3) < z\nx != 1.23"
 },
 
 {
@@ -2861,15 +2829,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Complex balls",
     "title": "Comparison",
     "category": "section",
-    "text": "Nemo provides a full range of comparison operations for Arb complex boxes. In addition to the standard comparisons, we introduce an exact equality. This is distinct from arithmetic equality implemented by ==, which merely compares up to the minimum of the precisions of its operands.isequal(::acb, ::acb)A full range of ad hoc comparison operators is provided. These are implemented directly in Julia, but we document them as though only == were provided."
-},
-
-{
-    "location": "acb.html#Function-1",
-    "page": "Complex balls",
-    "title": "Function",
-    "category": "section",
-    "text": "==(x::acb, y::Integer) ==(x::Integer, y::acb) ==(x::acb, y::fmpz) ==(x::fmpz, y::acb) ==(x::arb, y::fmpz) ==(x::fmpz, y::arb) ==(x::acb, y::Float64) ==(x::Float64, y::acb)ExamplesCC = ComplexField(64)\nx = CC(\"1 +/- 0.001\")\ny = CC(\"3\")\nz = CC(\"4\")\n\nisequal(x, deepcopy(x))\nx == 3\nZZ(3) == z\nx != 1.23"
+    "text": "Nemo provides a full range of comparison operations for Arb complex boxes. In addition to the standard comparisons, we introduce an exact equality. This is distinct from arithmetic equality implemented by ==, which merely compares up to the minimum of the precisions of its operands.isequal(::acb, ::acb)A full range of ad hoc comparison operators is provided. These are implemented directly in Julia, but we document them as though only == were provided.Function\n==(x::acb, y::Integer)\n==(x::Integer, y::acb)\n==(x::acb, y::fmpz)\n==(x::fmpz, y::acb)\n==(x::arb, y::fmpz)\n==(x::fmpz, y::arb)\n==(x::acb, y::Float64)\n==(x::Float64, y::acb)ExamplesCC = ComplexField(64)\nx = CC(\"1 +/- 0.001\")\ny = CC(\"3\")\nz = CC(\"4\")\n\nisequal(x, deepcopy(x))\nx == 3\nZZ(3) == z\nx != 1.23"
 },
 
 {
