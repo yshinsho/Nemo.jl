@@ -265,17 +265,17 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "integer.html#Nemo.crt-Tuple{Nemo.fmpz,Nemo.fmpz,Nemo.fmpz,Nemo.fmpz,Bool}",
+    "location": "integer.html#AbstractAlgebra.crt-Tuple{Nemo.fmpz,Nemo.fmpz,Nemo.fmpz,Nemo.fmpz,Bool}",
     "page": "Integers",
-    "title": "Nemo.crt",
+    "title": "AbstractAlgebra.crt",
     "category": "Method",
     "text": "crt(r1::fmpz, m1::fmpz, r2::fmpz, m2::fmpz, signed=false)\n\nFind r such that r equiv r_1 (mod m_1) and r equiv r_2 (mod m_2). If signed = true, r will be in the range -m_1m_22  r leq m_1m_22. If signed = false the value will be in the range 0 leq r  m_1m_2.\n\n\n\n"
 },
 
 {
-    "location": "integer.html#Nemo.crt-Tuple{Nemo.fmpz,Nemo.fmpz,Int64,Int64,Bool}",
+    "location": "integer.html#AbstractAlgebra.crt-Tuple{Nemo.fmpz,Nemo.fmpz,Int64,Int64,Bool}",
     "page": "Integers",
-    "title": "Nemo.crt",
+    "title": "AbstractAlgebra.crt",
     "category": "Method",
     "text": "crt(r1::fmpz, m1::fmpz, r2::Int, m2::Int, signed=false)\n\nFind r such that r equiv r_1 (mod m_1) and r equiv r_2 (mod m_2). If signed = true, r will be in the range -m_1m_22  r leq m_1m_22. If signed = false the value will be in the range 0 leq r  m_1m_2.\n\n\n\n"
 },
@@ -1366,6 +1366,70 @@ var documenterSearchIndex = {"docs": [
     "title": "Special functions",
     "category": "section",
     "text": "log(a::fmpq_rel_series)Base.sqrt(a::fmpq_rel_series)tan(a::fmpq_rel_series)\ntanh(a::fmpq_rel_series)\nsin(a::fmpq_rel_series)\nsinh(a::fmpq_rel_series)\ncos(a::fmpq_rel_series)\ncosh(a::fmpq_rel_series)asin(a::fmpq_rel_series)\nasinh(a::fmpq_rel_series)\natan(a::fmpq_rel_series)\natanh(a::fmpq_rel_series)ExamplesS, x = PowerSeriesRing(R, 30, \"x\")\nT, z = PowerSeriesRing(QQ, 30, \"z\")\n\na = 1 + z + 3z^2 + O(z^5)\nb = z + 2z^2 + 5z^3 + O(z^5)\n\nd = divexact(x, exp(x + O(x^40)) - 1)\nf = exp(b)\ng = log(a)\nh = sqrt(a)\nk = sin(b)\nm = atanh(b)"
+},
+
+{
+    "location": "puiseux.html#",
+    "page": "Puiseux series",
+    "title": "Puiseux series",
+    "category": "page",
+    "text": "CurrentModule = Nemo"
+},
+
+{
+    "location": "puiseux.html#Puiseux-series-1",
+    "page": "Puiseux series",
+    "title": "Puiseux series",
+    "category": "section",
+    "text": "Nemo allows the creation of Puiseux series over any computable ring R. Puiseux series are series of the form a_jx^jm + a_j+1x^(j+1)m + cdots + a_k-1x^(k-1)m + O(x^km) where m is a positive integer, a_i in R and the relative precision k - j is at most equal to some specified precision n.There are two different kinds of implementation: a generic one for the case where no specific implementation exists (provided by AbstractAlgebra.jl), and efficient implementations of Puiseux series over numerous specific rings, usually provided by C/C++ libraries.The following table shows each of the Puiseux series types available in Nemo, the base ring R, and the Julia/Nemo types for that kind of series (the type information is mainly of concern to developers).Base ring Library Element type Parent type\nGeneric ring R AbstractAlgebra.jl `Generic.PuiseuxSeriesRingElem{T} Generic.PuiseuxSeriesRing{T}\nGeneric field K AbstractAlgebra.jl `Generic.PuiseuxSeriesFieldElem{T} Generic.PuiseuxSeriesField{T}\nmathbbZ Flint FlintPuiseuxSeriesRingElem{fmpz_laurent_series} FlintPuiseuxSeriesRing{fmpz_laurent_series}For convenience, FlintPuiseuxSeriesRingElem and FlintPuiseuxSeriesFieldElem both belong to a union type called FlintPuiseuxSeriesElem.The maximum relative precision, the string representation of the variable and the base ring R of a generic power series are stored in the parent object. Note that unlike most other Nemo types, Puiseux series are parameterised by the type of the underlying Laurent series type (which must exist before Nemo can make use of it), instead of the type of the coefficients."
+},
+
+{
+    "location": "puiseux.html#Puiseux-power-series-1",
+    "page": "Puiseux series",
+    "title": "Puiseux power series",
+    "category": "section",
+    "text": "Puiseux series have their maximum relative precision capped at some value prec_max. This refers to the maximum precision of the underlying Laurent series. See the description of the generic Puiseux series in AbstractAlgebra.jl for details.There are numerous important things to be aware of when working with Puiseux series, or series in general. Please refer to the documentation of generic Puiseux series and  series in general in AbstractAlgebra.jl for details."
+},
+
+{
+    "location": "puiseux.html#Puiseux-series-functionality-1",
+    "page": "Puiseux series",
+    "title": "Puiseux series functionality",
+    "category": "section",
+    "text": "Puiseux series rings in Nemo implement the AbstractAlgebra.jl series interface, with the exception of the pol_length and polcoeff functions:https://nemocas.github.io/AbstractAlgebra.jl/series_rings.htmlIn addition, generic Puiseux series are provided by AbstractAlgebra.jl:https://nemocas.github.io/AbstractAlgebra.jl/puiseux.htmlPuiseux series rings in Nemo also implement this generic functionality. We list below only the functionality that differs from this generic functionality, for specific rings provided by Nemo."
+},
+
+{
+    "location": "puiseux.html#Base.sqrt-Tuple{Union{Nemo.FlintPuiseuxSeriesFieldElem{Nemo.fmpz_laurent_series}, Nemo.FlintPuiseuxSeriesRingElem{Nemo.fmpz_laurent_series}}}",
+    "page": "Puiseux series",
+    "title": "Base.sqrt",
+    "category": "Method",
+    "text": "sqrt{T <: RingElem}(a::FlintPuiseuxSeriesElem{T})\n\nReturn the square root of the given Puiseux series.\n\n\n\n"
+},
+
+{
+    "location": "puiseux.html#Base.exp-Tuple{Union{Nemo.FlintPuiseuxSeriesFieldElem{Nemo.fmpz_laurent_series}, Nemo.FlintPuiseuxSeriesRingElem{Nemo.fmpz_laurent_series}}}",
+    "page": "Puiseux series",
+    "title": "Base.exp",
+    "category": "Method",
+    "text": "exp{T <: RingElem}(a::FlintPuiseuxSeriesElem{T})\n\nReturn the exponential of the given Puiseux series.\n\n\n\n"
+},
+
+{
+    "location": "puiseux.html#Nemo.eta_qexp-Tuple{Union{Nemo.FlintPuiseuxSeriesFieldElem{Nemo.fmpz_laurent_series}, Nemo.FlintPuiseuxSeriesRingElem{Nemo.fmpz_laurent_series}}}",
+    "page": "Puiseux series",
+    "title": "Nemo.eta_qexp",
+    "category": "Method",
+    "text": "eta_qexp(x::FlintPuiseuxSeriesElem{fmpz_laurent_series})\n\nReturn the q-series for eta evaluated at x, which must currently be a rational power of the generator of the Puiseux series ring.\n\n\n\n"
+},
+
+{
+    "location": "puiseux.html#Special-functions-1",
+    "page": "Puiseux series",
+    "title": "Special functions",
+    "category": "section",
+    "text": "Base.sqrt(a::FlintPuiseuxSeriesElem{fmpz_laurent_series})Base.exp(a::FlintPuiseuxSeriesElem{fmpz_laurent_series})eta_qexp(x::FlintPuiseuxSeriesElem{fmpz_laurent_series})ExamplesS, x = PuiseuxSeriesRing(ZZ, 30, \"x\")\n\na = 1 + z + 3z^2 + O(z^5)\n\nh = sqrt(a^2)\nk = eta_qexp(S)"
 },
 
 {
@@ -2649,6 +2713,22 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
+    "location": "arb.html#Nemo.lindep-Tuple{Array{Nemo.arb,1},Int64}",
+    "page": "Real balls",
+    "title": "Nemo.lindep",
+    "category": "Method",
+    "text": "lindep(A::Array{arb, 1}, bits::Int)\n\nFind a small linear combination of the entries of the array A that is small *using LLL). The entries are first scaled by the given number of bits before truncating to integers for use in LLL. This function can be used to find linear dependence between a list of real numbers. The algorithm is heuristic only and returns an array of Nemo integers representing the linear combination.  \n\n\n\n"
+},
+
+{
+    "location": "arb.html#Linear-dependence-1",
+    "page": "Real balls",
+    "title": "Linear dependence",
+    "category": "section",
+    "text": "lindep(::Array{arb, 1}, n::Int)ExamplesRR = RealField(128)\n\na = RR(-0.33198902958450931620250069492231652319)\n\nV = [RR(1), a, a^2, a^3, a^4, a^5]\nW = lindep(V, 20)"
+},
+
+{
     "location": "acb.html#",
     "page": "Complex balls",
     "title": "Complex balls",
@@ -3217,6 +3297,30 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
+    "location": "acb.html#Nemo.modweber_f-Tuple{Nemo.acb}",
+    "page": "Complex balls",
+    "title": "Nemo.modweber_f",
+    "category": "Method",
+    "text": "modweber_f(x::acb)\n\nReturn the modular Weber function mathfrakf(tau) = fraceta^2(tau)eta(tau2)eta(2tau) at x in the complex upper half plane.\n\n\n\n"
+},
+
+{
+    "location": "acb.html#Nemo.modweber_f1-Tuple{Nemo.acb}",
+    "page": "Complex balls",
+    "title": "Nemo.modweber_f1",
+    "category": "Method",
+    "text": "modweber_f1(x::acb)\n\nReturn the modular Weber function mathfrakf_1(tau) = fraceta(tau2)eta(tau) at x in the complex upper half plane.\n\n\n\n"
+},
+
+{
+    "location": "acb.html#Nemo.modweber_f2-Tuple{Nemo.acb}",
+    "page": "Complex balls",
+    "title": "Nemo.modweber_f2",
+    "category": "Method",
+    "text": "modweber_f2(x::acb)\n\nReturn the modular Weber function $\\mathfrak{f}_2(\\tau) = \\frac{\\sqrt{2}\\eta(2\\tau)}{\\eta(\\tau)}$ at x in the complex upper half plane.\n\n\n\n"
+},
+
+{
     "location": "acb.html#Nemo.modj-Tuple{Nemo.acb}",
     "page": "Complex balls",
     "title": "Nemo.modj",
@@ -3461,7 +3565,23 @@ var documenterSearchIndex = {"docs": [
     "page": "Complex balls",
     "title": "Mathematical and special functions",
     "category": "section",
-    "text": "Base.sqrt(::acb)rsqrt(::acb)log(::acb)log1p(::acb)Base.exp(::acb)exppii(::acb)sin(::acb)cos(::acb)sinpi(::acb)cospi(::acb)tan(::acb)cot(::acb)tanpi(::acb)cotpi(::acb)sinh(::acb)cosh(::acb)tanh(::acb)coth(::acb)atan(::acb)logsinpi(::acb)gamma(::acb)lgamma(::acb)rgamma(::acb)digamma(::acb)zeta(::acb)barnesg(::acb)logbarnesg(::acb)erf(::acb)erfi(::acb)ei(::acb)si(::acb)ci(::acb)shi(::acb)chi(::acb)modeta(::acb)modj(::acb)modlambda(::acb)moddelta(::acb)ellipk(::acb)ellipe(::acb)sincos(::acb)sincospi(::acb)sinhcosh(::acb)agm(::acb)\nagm(::acb, ::acb)polygamma(::acb, ::acb)zeta(::acb, ::acb)risingfac(::acb, ::Int)risingfac2(::acb, ::Int)polylog(::acb, ::acb)polylog(::Int, ::acb)li(::acb)lioffset(::acb)expint(::acb, ::acb)gamma(::acb, ::acb)besselj(::acb, ::acb)bessely(::acb, ::acb)besseli(::acb, ::acb)besselk(::acb, ::acb)hyp1f1(::acb, ::acb, ::acb)hyp1f1r(::acb, ::acb, ::acb)hyperu(::acb, ::acb, ::acb)hyp2f1(::acb, ::acb, ::acb, ::acb)jtheta(::acb, ::acb)ellipwp(::acb, ::acb)ExamplesCC = ComplexField(64)\n\ns = CC(1, 2)\nz = CC(\"1.23\", \"3.45\")\n\na = sin(z)^2 + cos(z)^2\nb = zeta(z)\nc = besselj(s, z)\nd = hyp1f1(s, s+1, z)"
+    "text": "Base.sqrt(::acb)rsqrt(::acb)log(::acb)log1p(::acb)Base.exp(::acb)exppii(::acb)sin(::acb)cos(::acb)sinpi(::acb)cospi(::acb)tan(::acb)cot(::acb)tanpi(::acb)cotpi(::acb)sinh(::acb)cosh(::acb)tanh(::acb)coth(::acb)atan(::acb)logsinpi(::acb)gamma(::acb)lgamma(::acb)rgamma(::acb)digamma(::acb)zeta(::acb)barnesg(::acb)logbarnesg(::acb)erf(::acb)erfi(::acb)ei(::acb)si(::acb)ci(::acb)shi(::acb)chi(::acb)modeta(::acb)modweber_f(::acb)modweber_f1(::acb)modweber_f2(::acb)modj(::acb)modlambda(::acb)moddelta(::acb)ellipk(::acb)ellipe(::acb)sincos(::acb)sincospi(::acb)sinhcosh(::acb)agm(::acb)\nagm(::acb, ::acb)polygamma(::acb, ::acb)zeta(::acb, ::acb)risingfac(::acb, ::Int)risingfac2(::acb, ::Int)polylog(::acb, ::acb)polylog(::Int, ::acb)li(::acb)lioffset(::acb)expint(::acb, ::acb)gamma(::acb, ::acb)besselj(::acb, ::acb)bessely(::acb, ::acb)besseli(::acb, ::acb)besselk(::acb, ::acb)hyp1f1(::acb, ::acb, ::acb)hyp1f1r(::acb, ::acb, ::acb)hyperu(::acb, ::acb, ::acb)hyp2f1(::acb, ::acb, ::acb, ::acb)jtheta(::acb, ::acb)ellipwp(::acb, ::acb)ExamplesCC = ComplexField(64)\n\ns = CC(1, 2)\nz = CC(\"1.23\", \"3.45\")\n\na = sin(z)^2 + cos(z)^2\nb = zeta(z)\nc = besselj(s, z)\nd = hyp1f1(s, s+1, z)"
+},
+
+{
+    "location": "acb.html#Nemo.lindep-Tuple{Array{Nemo.acb,1},Int64}",
+    "page": "Complex balls",
+    "title": "Nemo.lindep",
+    "category": "Method",
+    "text": "lindep(A::Array{acb, 1}, bits::Int)\n\nFind a small linear combination of the entries of the array A that is small using LLL). The entries are first scaled by the given number of bits before truncating the real and imaginary parts to integers for use in LLL. This function can be used to find linear dependence between a list of complex numbers. The algorithm is heuristic only and returns an array of Nemo integers representing the linear combination.\n\n\n\n"
+},
+
+{
+    "location": "acb.html#Linear-dependence-1",
+    "page": "Complex balls",
+    "title": "Linear dependence",
+    "category": "section",
+    "text": "lindep(::Array{acb, 1}, n::Int)ExamplesCC = ComplexField(128)\n\na = CC(1.0050669478588622428791051888364775253, - 0.93725915669289182697903585868761513585)\n\nV = [CC(1), a, a^2, a^3, a^4, a^5];\nW = lindep(V, 20)"
 },
 
 {
@@ -4473,7 +4593,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "factor.html#Base.in-Union{Tuple{T,Nemo.Fac{T}}, Tuple{T}} where T",
+    "location": "factor.html#Base.in-Union{Tuple{T,AbstractAlgebra.Fac{T}}, Tuple{T}} where T",
     "page": "Factorisation",
     "title": "Base.in",
     "category": "Method",
@@ -4481,7 +4601,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "factor.html#Base.getindex-Union{Tuple{Nemo.Fac{T},Any}, Tuple{T}} where T",
+    "location": "factor.html#Base.getindex-Union{Tuple{AbstractAlgebra.Fac{T},Any}, Tuple{T}} where T",
     "page": "Factorisation",
     "title": "Base.getindex",
     "category": "Method",
@@ -4489,7 +4609,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "factor.html#Base.length-Tuple{Nemo.Fac}",
+    "location": "factor.html#Base.length-Tuple{AbstractAlgebra.Fac}",
     "page": "Factorisation",
     "title": "Base.length",
     "category": "Method",
@@ -4497,9 +4617,9 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "factor.html#Nemo.unit-Tuple{Nemo.Fac}",
+    "location": "factor.html#AbstractAlgebra.unit-Tuple{AbstractAlgebra.Fac}",
     "page": "Factorisation",
-    "title": "Nemo.unit",
+    "title": "AbstractAlgebra.unit",
     "category": "Method",
     "text": "unit(a::Fac{T}) -> T\n\nReturns the unit of the factorization.\n\n\n\n"
 },
