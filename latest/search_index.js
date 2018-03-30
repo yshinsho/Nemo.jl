@@ -153,58 +153,58 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "integer.html#AbstractAlgebra.Generic.isunit-Tuple{Nemo.fmpz}",
+    "location": "integer.html#AbstractAlgebra.Generic.isunit-Tuple{fmpz}",
     "page": "Integers",
     "title": "AbstractAlgebra.Generic.isunit",
-    "category": "Method",
+    "category": "method",
     "text": "isunit(a::fmpz)\n\nReturn true if the given integer is a unit, i.e. pm 1, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "integer.html#Base.sign-Tuple{Nemo.fmpz}",
+    "location": "integer.html#Base.sign-Tuple{fmpz}",
     "page": "Integers",
     "title": "Base.sign",
-    "category": "Method",
+    "category": "method",
     "text": "sign(a::fmpz)\n\nReturns the sign of a, i.e. +1, 0 or -1.\n\n\n\n"
 },
 
 {
-    "location": "integer.html#Base.size-Tuple{Nemo.fmpz}",
+    "location": "integer.html#Base.size-Tuple{fmpz}",
     "page": "Integers",
     "title": "Base.size",
-    "category": "Method",
+    "category": "method",
     "text": "size(a::fmpz)\n\nReturns the number of limbs required to store the absolute value of a.\n\n\n\n"
 },
 
 {
-    "location": "integer.html#Nemo.fits-Tuple{Type{UInt64},Nemo.fmpz}",
+    "location": "integer.html#Nemo.fits-Tuple{Type{UInt64},fmpz}",
     "page": "Integers",
     "title": "Nemo.fits",
-    "category": "Method",
+    "category": "method",
     "text": "fits(::Type{UInt}, a::fmpz)\n\nReturns true if the given integer fits into a UInt, otherwise returns false.\n\n\n\n"
 },
 
 {
-    "location": "integer.html#Nemo.fits-Tuple{Type{Int64},Nemo.fmpz}",
+    "location": "integer.html#Nemo.fits-Tuple{Type{Int64},fmpz}",
     "page": "Integers",
     "title": "Nemo.fits",
-    "category": "Method",
+    "category": "method",
     "text": "fits(::Type{Int}, a::fmpz)\n\nReturns true if the given integer fits into an Int, otherwise returns false.\n\n\n\n"
 },
 
 {
-    "location": "integer.html#Base.denominator-Tuple{Nemo.fmpz}",
+    "location": "integer.html#Base.denominator-Tuple{fmpz}",
     "page": "Integers",
     "title": "Base.denominator",
-    "category": "Method",
+    "category": "method",
     "text": "denominator(a::fmpz)\n\nReturns the denominator of a thought of as a rational. Always returns 1.\n\n\n\n"
 },
 
 {
-    "location": "integer.html#Base.numerator-Tuple{Nemo.fmpz}",
+    "location": "integer.html#Base.numerator-Tuple{fmpz}",
     "page": "Integers",
     "title": "Base.numerator",
-    "category": "Method",
+    "category": "method",
     "text": "numerator(a::fmpz)\n\nReturns the numerator of a thought of as a rational. Always returns a.\n\n\n\n"
 },
 
@@ -233,18 +233,18 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "integer.html#Base.:<<-Tuple{Nemo.fmpz,Int64}",
+    "location": "integer.html#Base.:<<-Tuple{fmpz,Int64}",
     "page": "Integers",
     "title": "Base.:<<",
-    "category": "Method",
+    "category": "method",
     "text": "<<(x::fmpz, c::Int)\n\nReturn 2^cx where c geq 0.\n\n\n\n"
 },
 
 {
-    "location": "integer.html#Base.:>>-Tuple{Nemo.fmpz,Int64}",
+    "location": "integer.html#Base.:>>-Tuple{fmpz,Int64}",
     "page": "Integers",
     "title": "Base.:>>",
-    "category": "Method",
+    "category": "method",
     "text": ">>(x::fmpz, c::Int)\n\nReturn x2^c, discarding any remainder, where c geq 0.\n\n\n\n"
 },
 
@@ -257,26 +257,26 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "integer.html#Nemo.sqrtmod-Tuple{Nemo.fmpz,Nemo.fmpz}",
+    "location": "integer.html#Nemo.sqrtmod-Tuple{fmpz,fmpz}",
     "page": "Integers",
     "title": "Nemo.sqrtmod",
-    "category": "Method",
+    "category": "method",
     "text": "sqrtmod(x::fmpz, m::fmpz)\n\nReturn a square root of x (mod m) if one exists. The remainder will be in the range 0 m). We require that m is prime, otherwise the algorithm may not terminate.\n\n\n\n"
 },
 
 {
-    "location": "integer.html#AbstractAlgebra.crt-Tuple{Nemo.fmpz,Nemo.fmpz,Nemo.fmpz,Nemo.fmpz,Bool}",
+    "location": "integer.html#AbstractAlgebra.crt-Tuple{fmpz,fmpz,fmpz,fmpz,Bool}",
     "page": "Integers",
     "title": "AbstractAlgebra.crt",
-    "category": "Method",
+    "category": "method",
     "text": "crt(r1::fmpz, m1::fmpz, r2::fmpz, m2::fmpz, signed=false)\n\nFind r such that r equiv r_1 (mod m_1) and r equiv r_2 (mod m_2). If signed = true, r will be in the range -m_1m_22  r leq m_1m_22. If signed = false the value will be in the range 0 leq r  m_1m_2.\n\n\n\n"
 },
 
 {
-    "location": "integer.html#AbstractAlgebra.crt-Tuple{Nemo.fmpz,Nemo.fmpz,Int64,Int64,Bool}",
+    "location": "integer.html#AbstractAlgebra.crt-Tuple{fmpz,fmpz,Int64,Int64,Bool}",
     "page": "Integers",
     "title": "AbstractAlgebra.crt",
-    "category": "Method",
+    "category": "method",
     "text": "crt(r1::fmpz, m1::fmpz, r2::Int, m2::Int, signed=false)\n\nFind r such that r equiv r_1 (mod m_1) and r equiv r_2 (mod m_2). If signed = true, r will be in the range -m_1m_22  r leq m_1m_22. If signed = false the value will be in the range 0 leq r  m_1m_2.\n\n\n\n"
 },
 
@@ -289,34 +289,34 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "integer.html#Nemo.flog-Tuple{Nemo.fmpz,Nemo.fmpz}",
+    "location": "integer.html#Nemo.flog-Tuple{fmpz,fmpz}",
     "page": "Integers",
     "title": "Nemo.flog",
-    "category": "Method",
+    "category": "method",
     "text": "flog(x::fmpz, c::fmpz)\n\nReturn the floor of the logarithm of x to base c.\n\n\n\n"
 },
 
 {
-    "location": "integer.html#Nemo.flog-Tuple{Nemo.fmpz,Int64}",
+    "location": "integer.html#Nemo.flog-Tuple{fmpz,Int64}",
     "page": "Integers",
     "title": "Nemo.flog",
-    "category": "Method",
+    "category": "method",
     "text": "flog(x::fmpz, c::Int)\n\nReturn the floor of the logarithm of x to base c.\n\n\n\n"
 },
 
 {
-    "location": "integer.html#Nemo.clog-Tuple{Nemo.fmpz,Nemo.fmpz}",
+    "location": "integer.html#Nemo.clog-Tuple{fmpz,fmpz}",
     "page": "Integers",
     "title": "Nemo.clog",
-    "category": "Method",
+    "category": "method",
     "text": "clog(x::fmpz, c::fmpz)\n\nReturn the ceiling of the logarithm of x to base c.\n\n\n\n"
 },
 
 {
-    "location": "integer.html#Nemo.clog-Tuple{Nemo.fmpz,Int64}",
+    "location": "integer.html#Nemo.clog-Tuple{fmpz,Int64}",
     "page": "Integers",
     "title": "Nemo.clog",
-    "category": "Method",
+    "category": "method",
     "text": "clog(x::fmpz, c::Int)\n\nReturn the ceiling of the logarithm of x to base c.\n\n\n\n"
 },
 
@@ -329,26 +329,26 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "integer.html#Base.isqrt-Tuple{Nemo.fmpz}",
+    "location": "integer.html#Base.isqrt-Tuple{fmpz}",
     "page": "Integers",
     "title": "Base.isqrt",
-    "category": "Method",
+    "category": "method",
     "text": "isqrt(x::fmpz)\n\nReturn the floor of the square root of x.\n\n\n\n"
 },
 
 {
-    "location": "integer.html#Nemo.isqrtrem-Tuple{Nemo.fmpz}",
+    "location": "integer.html#Nemo.isqrtrem-Tuple{fmpz}",
     "page": "Integers",
     "title": "Nemo.isqrtrem",
-    "category": "Method",
+    "category": "method",
     "text": "isqrtrem(x::fmpz)\n\nReturn a tuple s r consisting of the floor s of the square root of x and the remainder r, i.e. such that x = s^2 + r. We require x geq 0.\n\n\n\n"
 },
 
 {
-    "location": "integer.html#Nemo.root-Tuple{Nemo.fmpz,Int64}",
+    "location": "integer.html#Nemo.root-Tuple{fmpz,Int64}",
     "page": "Integers",
     "title": "Nemo.root",
-    "category": "Method",
+    "category": "method",
     "text": "root(x::fmpz, n::Int)\n\nReturn the floor of the n-the root of x. We require n  0 and that x geq 0 if n is even.\n\n\n\n"
 },
 
@@ -361,58 +361,58 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "integer.html#Nemo.divisible-Tuple{Nemo.fmpz,Int64}",
+    "location": "integer.html#Nemo.divisible-Tuple{fmpz,Int64}",
     "page": "Integers",
     "title": "Nemo.divisible",
-    "category": "Method",
+    "category": "method",
     "text": "divisible(x::fmpz, y::Int)\n\nReturn true if x is divisible by y, otherwise return false. We require x neq 0.\n\n\n\n"
 },
 
 {
-    "location": "integer.html#Nemo.divisible-Tuple{Nemo.fmpz,Nemo.fmpz}",
+    "location": "integer.html#Nemo.divisible-Tuple{fmpz,fmpz}",
     "page": "Integers",
     "title": "Nemo.divisible",
-    "category": "Method",
+    "category": "method",
     "text": "divisible(x::fmpz, y::fmpz)\n\nReturn true if x is divisible by y, otherwise return false. We require x neq 0.\n\n\n\n"
 },
 
 {
-    "location": "integer.html#AbstractAlgebra.Generic.issquare-Tuple{Nemo.fmpz}",
+    "location": "integer.html#AbstractAlgebra.Generic.issquare-Tuple{fmpz}",
     "page": "Integers",
     "title": "AbstractAlgebra.Generic.issquare",
-    "category": "Method",
+    "category": "method",
     "text": "issquare(x::fmpz)\n\nReturn true if x is a square, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "integer.html#Nemo.isprime-Tuple{Nemo.fmpz}",
+    "location": "integer.html#Nemo.isprime-Tuple{fmpz}",
     "page": "Integers",
     "title": "Nemo.isprime",
-    "category": "Method",
+    "category": "method",
     "text": "isprime(x::fmpz)\n\nReturn true if x is a prime number, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "integer.html#Nemo.isprobabprime-Tuple{Nemo.fmpz}",
+    "location": "integer.html#Nemo.isprobabprime-Tuple{fmpz}",
     "page": "Integers",
     "title": "Nemo.isprobabprime",
-    "category": "Method",
+    "category": "method",
     "text": "isprobabprime(x::fmpz)\n\nReturn true if x is a very probably a prime number, otherwise return false. No counterexamples are known to this test, but it is conjectured that infinitely many exist.\n\n\n\n"
 },
 
 {
-    "location": "integer.html#Nemo.factor-Tuple{Nemo.fmpz}",
+    "location": "integer.html#Nemo.factor-Tuple{fmpz}",
     "page": "Integers",
     "title": "Nemo.factor",
-    "category": "Method",
+    "category": "method",
     "text": "factor(a::fmpz)\n\nReturn a factorisation of a using a Fac struct (see the documentation on factorisation in Nemo.\n\n\n\n"
 },
 
 {
-    "location": "integer.html#Nemo.divisor_lenstra-Tuple{Nemo.fmpz,Nemo.fmpz,Nemo.fmpz}",
+    "location": "integer.html#Nemo.divisor_lenstra-Tuple{fmpz,fmpz,fmpz}",
     "page": "Integers",
     "title": "Nemo.divisor_lenstra",
-    "category": "Method",
+    "category": "method",
     "text": "divisor_lenstra(n::fmpz, r::fmpz, m::fmpz)\n\nIf n has a factor which lies in the residue class r (mod m) for 0  r  m  n, this function returns such a factor. Otherwise it returns 0. This is only efficient if m is at least the cube root of n. We require gcd(r m) = 1 and this condition is not checked.\n\n\n\n"
 },
 
@@ -420,15 +420,15 @@ var documenterSearchIndex = {"docs": [
     "location": "integer.html#Nemo.fac-Tuple{Int64}",
     "page": "Integers",
     "title": "Nemo.fac",
-    "category": "Method",
+    "category": "method",
     "text": "fac(x::Int)\n\nReturn the factorial of x, i.e. x = 123ldots x. We require x geq 0.\n\n\n\n"
 },
 
 {
-    "location": "integer.html#Nemo.risingfac-Tuple{Nemo.fmpz,Int64}",
+    "location": "integer.html#Nemo.risingfac-Tuple{fmpz,Int64}",
     "page": "Integers",
     "title": "Nemo.risingfac",
-    "category": "Method",
+    "category": "method",
     "text": "risingfac(x::fmpz, y::Int)\n\nReturn the rising factorial of x, i.e. x(x + 1)(x + 2)ldots (x + n - 1). If n  0 we throw a DomainError().\n\n\n\n"
 },
 
@@ -436,7 +436,7 @@ var documenterSearchIndex = {"docs": [
     "location": "integer.html#Nemo.risingfac-Tuple{Int64,Int64}",
     "page": "Integers",
     "title": "Nemo.risingfac",
-    "category": "Method",
+    "category": "method",
     "text": "risingfac(x::Int, y::Int)\n\nReturn the rising factorial of x, i.e. x(x + 1)(x + 2)ldots (x + n - 1). If n  0 we throw a DomainError().\n\n\n\n"
 },
 
@@ -444,7 +444,7 @@ var documenterSearchIndex = {"docs": [
     "location": "integer.html#Nemo.primorial-Tuple{Int64}",
     "page": "Integers",
     "title": "Nemo.primorial",
-    "category": "Method",
+    "category": "method",
     "text": "primorial(x::Int)\n\nReturn the primorial of n, i.e. the product of all primes less than or equal to n. If n  0 we throw a DomainError().\n\n\n\n"
 },
 
@@ -452,7 +452,7 @@ var documenterSearchIndex = {"docs": [
     "location": "integer.html#Nemo.fib-Tuple{Int64}",
     "page": "Integers",
     "title": "Nemo.fib",
-    "category": "Method",
+    "category": "method",
     "text": "fib(x::Int)\n\nReturn the n-th Fibonacci number F_n. We define F_1 = 1, F_2 = 1 and F_i + 1 = F_i + F_i - 1 for all i  2. We require n geq 0. For convenience, we define F_0 = 0.\n\n\n\n"
 },
 
@@ -460,7 +460,7 @@ var documenterSearchIndex = {"docs": [
     "location": "integer.html#Nemo.bell-Tuple{Int64}",
     "page": "Integers",
     "title": "Nemo.bell",
-    "category": "Method",
+    "category": "method",
     "text": "bell(x::Int)\n\nReturn the Bell number B_n.\n\n\n\n"
 },
 
@@ -468,39 +468,39 @@ var documenterSearchIndex = {"docs": [
     "location": "integer.html#Nemo.binom-Tuple{Int64,Int64}",
     "page": "Integers",
     "title": "Nemo.binom",
-    "category": "Method",
+    "category": "method",
     "text": "binom(n::Int, k::Int)\n\nReturn the binomial coefficient fracn(n - k)k. If n k  0 or k  n we return 0.\n\n\n\n"
 },
 
 {
-    "location": "integer.html#Nemo.moebiusmu-Tuple{Nemo.fmpz}",
+    "location": "integer.html#Nemo.moebiusmu-Tuple{fmpz}",
     "page": "Integers",
     "title": "Nemo.moebiusmu",
-    "category": "Method",
+    "category": "method",
     "text": "moebiusmu(x::fmpz)\n\nReturns the Moebius mu function of x as an \\code{Int}. The value returned is either -1, 0 or 1. If x  0 we throw a DomainError().\n\n\n\n"
 },
 
 {
-    "location": "integer.html#Nemo.jacobi-Tuple{Nemo.fmpz,Nemo.fmpz}",
+    "location": "integer.html#Nemo.jacobi-Tuple{fmpz,fmpz}",
     "page": "Integers",
     "title": "Nemo.jacobi",
-    "category": "Method",
+    "category": "method",
     "text": "jacobi(x::fmpz, y::fmpz)\n\nReturn the value of the Jacobi symbol left(fracxyright). If y leq x or x  0, we throw a DomainError().\n\n\n\n"
 },
 
 {
-    "location": "integer.html#Nemo.sigma-Tuple{Nemo.fmpz,Int64}",
+    "location": "integer.html#Nemo.sigma-Tuple{fmpz,Int64}",
     "page": "Integers",
     "title": "Nemo.sigma",
-    "category": "Method",
+    "category": "method",
     "text": "sigma(x::fmpz, y::Int)\n\nReturn the value of the sigma function, i.e. sum_0  d  x d^y. If y  0 we throw a DomainError().\n\n\n\n"
 },
 
 {
-    "location": "integer.html#Nemo.eulerphi-Tuple{Nemo.fmpz}",
+    "location": "integer.html#Nemo.eulerphi-Tuple{fmpz}",
     "page": "Integers",
     "title": "Nemo.eulerphi",
-    "category": "Method",
+    "category": "method",
     "text": "eulerphi(x::fmpz)\n\nReturn the value of the Euler phi function at x, i.e. the number of positive integers less than x that are coprime with x.\n\n\n\n"
 },
 
@@ -508,15 +508,15 @@ var documenterSearchIndex = {"docs": [
     "location": "integer.html#Nemo.numpart-Tuple{Int64}",
     "page": "Integers",
     "title": "Nemo.numpart",
-    "category": "Method",
+    "category": "method",
     "text": "numpart(x::Int)\n\nReturn the number of partitions of x. This function is not available on Windows 64.\n\n\n\n"
 },
 
 {
-    "location": "integer.html#Nemo.numpart-Tuple{Nemo.fmpz}",
+    "location": "integer.html#Nemo.numpart-Tuple{fmpz}",
     "page": "Integers",
     "title": "Nemo.numpart",
-    "category": "Method",
+    "category": "method",
     "text": "numpart(x::fmpz)\n\nReturn the number of partitions of x. This function is not available on Windows 64.\n\n\n\n"
 },
 
@@ -529,58 +529,58 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "integer.html#Base.bin-Tuple{Nemo.fmpz}",
+    "location": "integer.html#Base.bin-Tuple{fmpz}",
     "page": "Integers",
     "title": "Base.bin",
-    "category": "Method",
+    "category": "method",
     "text": "bin(n::fmpz)\n\nReturn n as a binary string.\n\n\n\n"
 },
 
 {
-    "location": "integer.html#Base.oct-Tuple{Nemo.fmpz}",
+    "location": "integer.html#Base.oct-Tuple{fmpz}",
     "page": "Integers",
     "title": "Base.oct",
-    "category": "Method",
+    "category": "method",
     "text": "oct(n::fmpz)\n\nReturn n as a octal string.\n\n\n\n"
 },
 
 {
-    "location": "integer.html#Base.dec-Tuple{Nemo.fmpz}",
+    "location": "integer.html#Base.dec-Tuple{fmpz}",
     "page": "Integers",
     "title": "Base.dec",
-    "category": "Method",
+    "category": "method",
     "text": "dec(n::fmpz)\n\nReturn n as a decimal string.\n\n\n\n"
 },
 
 {
-    "location": "integer.html#Base.hex-Tuple{Nemo.fmpz}",
+    "location": "integer.html#Base.hex-Tuple{fmpz}",
     "page": "Integers",
     "title": "Base.hex",
-    "category": "Method",
+    "category": "method",
     "text": "hex(n::fmpz) = base(n, 16)\n\nReturn n as a hexadecimal string.\n\n\n\n"
 },
 
 {
-    "location": "integer.html#Base.base-Tuple{Nemo.fmpz,Integer}",
+    "location": "integer.html#Base.base-Tuple{fmpz,Integer}",
     "page": "Integers",
     "title": "Base.base",
-    "category": "Method",
+    "category": "method",
     "text": "base(n::fmpz, b::Integer)\n\nReturn n as a string in base b. We require 2 leq b leq 62.\n\n\n\n"
 },
 
 {
-    "location": "integer.html#Base.ndigits-Tuple{Nemo.fmpz,Integer}",
+    "location": "integer.html#Base.ndigits-Tuple{fmpz,Integer}",
     "page": "Integers",
     "title": "Base.ndigits",
-    "category": "Method",
+    "category": "method",
     "text": "ndigits(x::fmpz, b::Integer = 10)\n\nReturn the number of digits of x in the base b (default is b = 10).\n\n\n\n"
 },
 
 {
-    "location": "integer.html#Nemo.nbits-Tuple{Nemo.fmpz}",
+    "location": "integer.html#Nemo.nbits-Tuple{fmpz}",
     "page": "Integers",
     "title": "Nemo.nbits",
-    "category": "Method",
+    "category": "method",
     "text": "nbits(x::fmpz)\n\nReturn the number of binary bits of x. We return zero if x = 0.\n\n\n\n"
 },
 
@@ -593,58 +593,58 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "integer.html#Nemo.popcount-Tuple{Nemo.fmpz}",
+    "location": "integer.html#Nemo.popcount-Tuple{fmpz}",
     "page": "Integers",
     "title": "Nemo.popcount",
-    "category": "Method",
+    "category": "method",
     "text": "popcount(x::fmpz)\n\nReturn the number of ones in the binary representation of x.\n\n\n\n"
 },
 
 {
-    "location": "integer.html#Base.prevpow2-Tuple{Nemo.fmpz}",
+    "location": "integer.html#Base.prevpow2-Tuple{fmpz}",
     "page": "Integers",
     "title": "Base.prevpow2",
-    "category": "Method",
+    "category": "method",
     "text": "prevpow2(x::fmpz)\n\nReturn the previous power of 2 up to including x.\n\n\n\n"
 },
 
 {
-    "location": "integer.html#Base.nextpow2-Tuple{Nemo.fmpz}",
+    "location": "integer.html#Base.nextpow2-Tuple{fmpz}",
     "page": "Integers",
     "title": "Base.nextpow2",
-    "category": "Method",
+    "category": "method",
     "text": "nextpow2(x::fmpz)\n\nReturn the next power of 2 that is at least x.\n\n\n\n"
 },
 
 {
-    "location": "integer.html#Base.trailing_zeros-Tuple{Nemo.fmpz}",
+    "location": "integer.html#Base.trailing_zeros-Tuple{fmpz}",
     "page": "Integers",
     "title": "Base.trailing_zeros",
-    "category": "Method",
+    "category": "method",
     "text": "trailing_zeros(x::fmpz)\n\nCount the trailing zeros in the binary representation of x.\n\n\n\n"
 },
 
 {
-    "location": "integer.html#Nemo.clrbit!-Tuple{Nemo.fmpz,Int64}",
+    "location": "integer.html#Nemo.clrbit!-Tuple{fmpz,Int64}",
     "page": "Integers",
     "title": "Nemo.clrbit!",
-    "category": "Method",
+    "category": "method",
     "text": "clrbit!(x::fmpz, c::Int)\n\nClear bit c of x, where the least significant bit is the 0-th bit. Note that this function modifies its input in-place.\n\n\n\n"
 },
 
 {
-    "location": "integer.html#Nemo.setbit!-Tuple{Nemo.fmpz,Int64}",
+    "location": "integer.html#Nemo.setbit!-Tuple{fmpz,Int64}",
     "page": "Integers",
     "title": "Nemo.setbit!",
-    "category": "Method",
+    "category": "method",
     "text": "setbit!(x::fmpz, c::Int)\n\nSet bit c of x, where the least significant bit is the 0-th bit. Note that this function modifies its input in-place.\n\n\n\n"
 },
 
 {
-    "location": "integer.html#Nemo.combit!-Tuple{Nemo.fmpz,Int64}",
+    "location": "integer.html#Nemo.combit!-Tuple{fmpz,Int64}",
     "page": "Integers",
     "title": "Nemo.combit!",
-    "category": "Method",
+    "category": "method",
     "text": "combit!(x::fmpz, c::Int)\n\nComplement bit c of x, where the least significant bit is the 0-th bit. Note that this function modifies its input in-place.\n\n\n\n"
 },
 
@@ -689,98 +689,98 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "polynomial.html#Nemo.evaluate2-Tuple{Nemo.arb_poly,Integer}",
+    "location": "polynomial.html#Nemo.evaluate2-Tuple{arb_poly,Integer}",
     "page": "Univariate polynomials",
     "title": "Nemo.evaluate2",
-    "category": "Method",
+    "category": "method",
     "text": "evaluate2(x::arb_poly, y::Integer)\n\nReturn a tuple p q consisting of the polynomial x evaluated at y and its derivative evaluated at y.\n\n\n\n"
 },
 
 {
-    "location": "polynomial.html#Nemo.evaluate2-Tuple{Nemo.arb_poly,Float64}",
+    "location": "polynomial.html#Nemo.evaluate2-Tuple{arb_poly,Float64}",
     "page": "Univariate polynomials",
     "title": "Nemo.evaluate2",
-    "category": "Method",
+    "category": "method",
     "text": "evaluate2(x::arb_poly, y::Float64)\n\nReturn a tuple p q consisting of the polynomial x evaluated at y and its derivative evaluated at y.\n\n\n\n"
 },
 
 {
-    "location": "polynomial.html#Nemo.evaluate2-Tuple{Nemo.arb_poly,Nemo.fmpz}",
+    "location": "polynomial.html#Nemo.evaluate2-Tuple{arb_poly,fmpz}",
     "page": "Univariate polynomials",
     "title": "Nemo.evaluate2",
-    "category": "Method",
+    "category": "method",
     "text": "evaluate2(x::arb_poly, y::fmpz)\n\nReturn a tuple p q consisting of the polynomial x evaluated at y and its derivative evaluated at y.\n\n\n\n"
 },
 
 {
-    "location": "polynomial.html#Nemo.evaluate2-Tuple{Nemo.arb_poly,Nemo.fmpq}",
+    "location": "polynomial.html#Nemo.evaluate2-Tuple{arb_poly,fmpq}",
     "page": "Univariate polynomials",
     "title": "Nemo.evaluate2",
-    "category": "Method",
+    "category": "method",
     "text": "evaluate2(x::arb_poly, y::fmpq)\n\nReturn a tuple p q consisting of the polynomial x evaluated at y and its derivative evaluated at y.\n\n\n\n"
 },
 
 {
-    "location": "polynomial.html#Nemo.evaluate2-Tuple{Nemo.arb_poly,Nemo.arb}",
+    "location": "polynomial.html#Nemo.evaluate2-Tuple{arb_poly,arb}",
     "page": "Univariate polynomials",
     "title": "Nemo.evaluate2",
-    "category": "Method",
+    "category": "method",
     "text": "evaluate2(x::arb_poly, y::arb)\n\nReturn a tuple p q consisting of the polynomial x evaluated at y and its derivative evaluated at y.\n\n\n\n"
 },
 
 {
-    "location": "polynomial.html#Nemo.evaluate2-Tuple{Nemo.arb_poly,Nemo.acb}",
+    "location": "polynomial.html#Nemo.evaluate2-Tuple{arb_poly,acb}",
     "page": "Univariate polynomials",
     "title": "Nemo.evaluate2",
-    "category": "Method",
+    "category": "method",
     "text": "evaluate2(x::arb_poly, y::acb)\n\nReturn a tuple p q consisting of the polynomial x evaluated at y and its derivative evaluated at y.\n\n\n\n"
 },
 
 {
-    "location": "polynomial.html#Nemo.evaluate2-Tuple{Nemo.acb_poly,Integer}",
+    "location": "polynomial.html#Nemo.evaluate2-Tuple{acb_poly,Integer}",
     "page": "Univariate polynomials",
     "title": "Nemo.evaluate2",
-    "category": "Method",
+    "category": "method",
     "text": "evaluate2(x::acb_poly, y::Integer)\n\nReturn a tuple p q consisting of the polynomial x evaluated at y and its derivative evaluated at y.\n\n\n\n"
 },
 
 {
-    "location": "polynomial.html#Nemo.evaluate2-Tuple{Nemo.acb_poly,Float64}",
+    "location": "polynomial.html#Nemo.evaluate2-Tuple{acb_poly,Float64}",
     "page": "Univariate polynomials",
     "title": "Nemo.evaluate2",
-    "category": "Method",
+    "category": "method",
     "text": "evaluate2(x::acb_poly, y::Float64)\n\nReturn a tuple p q consisting of the polynomial x evaluated at y and its derivative evaluated at y.\n\n\n\n"
 },
 
 {
-    "location": "polynomial.html#Nemo.evaluate2-Tuple{Nemo.acb_poly,Nemo.fmpz}",
+    "location": "polynomial.html#Nemo.evaluate2-Tuple{acb_poly,fmpz}",
     "page": "Univariate polynomials",
     "title": "Nemo.evaluate2",
-    "category": "Method",
+    "category": "method",
     "text": "evaluate2(x::acb_poly, y::fmpq)\n\nReturn a tuple p q consisting of the polynomial x evaluated at y and its derivative evaluated at y.\n\n\n\n"
 },
 
 {
-    "location": "polynomial.html#Nemo.evaluate2-Tuple{Nemo.acb_poly,Nemo.fmpq}",
+    "location": "polynomial.html#Nemo.evaluate2-Tuple{acb_poly,fmpq}",
     "page": "Univariate polynomials",
     "title": "Nemo.evaluate2",
-    "category": "Method",
+    "category": "method",
     "text": "evaluate2(x::acb_poly, y::fmpq)\n\nReturn a tuple p q consisting of the polynomial x evaluated at y and its derivative evaluated at y.\n\n\n\n"
 },
 
 {
-    "location": "polynomial.html#Nemo.evaluate2-Tuple{Nemo.acb_poly,Nemo.arb}",
+    "location": "polynomial.html#Nemo.evaluate2-Tuple{acb_poly,arb}",
     "page": "Univariate polynomials",
     "title": "Nemo.evaluate2",
-    "category": "Method",
+    "category": "method",
     "text": "evaluate2(x::acb_poly, y::arb)\n\nReturn a tuple p q consisting of the polynomial x evaluated at y and its derivative evaluated at y.\n\n\n\n"
 },
 
 {
-    "location": "polynomial.html#Nemo.evaluate2-Tuple{Nemo.acb_poly,Nemo.acb}",
+    "location": "polynomial.html#Nemo.evaluate2-Tuple{acb_poly,acb}",
     "page": "Univariate polynomials",
     "title": "Nemo.evaluate2",
-    "category": "Method",
+    "category": "method",
     "text": "evaluate2(x::acb_poly, y::acb)\n\nReturn a tuple p q consisting of the polynomial x evaluated at y and its derivative evaluated at y.\n\n\n\n"
 },
 
@@ -793,18 +793,18 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "polynomial.html#Nemo.signature-Tuple{Nemo.fmpz_poly}",
+    "location": "polynomial.html#Nemo.signature-Tuple{fmpz_poly}",
     "page": "Univariate polynomials",
     "title": "Nemo.signature",
-    "category": "Method",
+    "category": "method",
     "text": "signature(f::fmpz_poly)\n\nReturn the signature of the polynomial f, i.e. a tuple (r s) such that r is the number of real roots of f and s is half the number of complex roots.\n\n\n\n"
 },
 
 {
-    "location": "polynomial.html#Nemo.signature-Tuple{Nemo.fmpq_poly}",
+    "location": "polynomial.html#Nemo.signature-Tuple{fmpq_poly}",
     "page": "Univariate polynomials",
     "title": "Nemo.signature",
-    "category": "Method",
+    "category": "method",
     "text": "signature(f::fmpq_poly)\n\nReturn the signature of f, i.e. a tuple (r s) where r is the number of real roots of f and s is half the number of complex roots.\n\n\n\n"
 },
 
@@ -817,10 +817,10 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "polynomial.html#Nemo.roots-Tuple{Nemo.acb_poly}",
+    "location": "polynomial.html#Nemo.roots-Tuple{acb_poly}",
     "page": "Univariate polynomials",
     "title": "Nemo.roots",
-    "category": "Method",
+    "category": "method",
     "text": "roots(x::acb_poly; target=0, isolate_real=false, initial_prec=0, max_prec=0, max_iter=0)\n\nAttempts to isolate the complex roots of the complex polynomial x by iteratively refining balls in which they lie.This is done by increasing the working precision, starting at initial_prec. The maximal number of iterations can be set using max_iter and the maximal precision can be set using max_prec.If isolate_real is set and x is strictly real, then the real roots will be isolated from the non-real roots. Every root will have either zero, positive or negative real part.It is assumed that x is squarefree.\n\n\n\n"
 },
 
@@ -833,18 +833,18 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "polynomial.html#Nemo.from_roots-Tuple{Nemo.ArbPolyRing,Array{Nemo.arb,1}}",
+    "location": "polynomial.html#Nemo.from_roots-Tuple{ArbPolyRing,Array{arb,1}}",
     "page": "Univariate polynomials",
     "title": "Nemo.from_roots",
-    "category": "Method",
+    "category": "method",
     "text": "from_roots(R::ArbPolyRing, b::Array{arb, 1})\n\nConstruct a polynomial in the given polynomial ring from a list of its roots.\n\n\n\n"
 },
 
 {
-    "location": "polynomial.html#Nemo.from_roots-Tuple{Nemo.AcbPolyRing,Array{Nemo.acb,1}}",
+    "location": "polynomial.html#Nemo.from_roots-Tuple{AcbPolyRing,Array{acb,1}}",
     "page": "Univariate polynomials",
     "title": "Nemo.from_roots",
-    "category": "Method",
+    "category": "method",
     "text": "from_roots(R::AcbPolyRing, b::Array{acb, 1})\n\nConstruct a polynomial in the given polynomial ring from a list of its roots.\n\n\n\n"
 },
 
@@ -857,18 +857,18 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "polynomial.html#Nemo.roots_upper_bound-Tuple{Nemo.arb_poly}",
+    "location": "polynomial.html#Nemo.roots_upper_bound-Tuple{arb_poly}",
     "page": "Univariate polynomials",
     "title": "Nemo.roots_upper_bound",
-    "category": "Method",
+    "category": "method",
     "text": "roots_upper_bound(f::arb_poly) -> arb\n\nReturns an upper bound for the absolute value of all complex roots of f.\n\n\n\n"
 },
 
 {
-    "location": "polynomial.html#Nemo.roots_upper_bound-Tuple{Nemo.acb_poly}",
+    "location": "polynomial.html#Nemo.roots_upper_bound-Tuple{acb_poly}",
     "page": "Univariate polynomials",
     "title": "Nemo.roots_upper_bound",
-    "category": "Method",
+    "category": "method",
     "text": "roots_upper_bound(f::acb_poly) -> arb\n\nReturns an upper bound for the absolute value of all complex roots of f.\n\n\n\n"
 },
 
@@ -881,18 +881,18 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "polynomial.html#Nemo.lift-Tuple{Nemo.FmpzPolyRing,Nemo.nmod_poly}",
+    "location": "polynomial.html#Nemo.lift-Tuple{FmpzPolyRing,nmod_poly}",
     "page": "Univariate polynomials",
     "title": "Nemo.lift",
-    "category": "Method",
+    "category": "method",
     "text": "function lift(R::FmpzPolyRing, y::nmod_poly)\n\nLift from a polynomial over mathbbZnmathbbZ to a polynomial over mathbbZ with minimal reduced nonnegative coefficients. The ring R specifies the ring to lift into.\n\n\n\n"
 },
 
 {
-    "location": "polynomial.html#Nemo.lift-Tuple{Nemo.FmpzPolyRing,Nemo.fmpz_mod_poly}",
+    "location": "polynomial.html#Nemo.lift-Tuple{FmpzPolyRing,fmpz_mod_poly}",
     "page": "Univariate polynomials",
     "title": "Nemo.lift",
-    "category": "Method",
+    "category": "method",
     "text": "function lift(R::FmpzPolyRing, y::fmpz_mod_poly)\n\nLift from a polynomial over mathbbZnmathbbZ to a polynomial over mathbbZ with minimal reduced nonnegative coefficients. The ring R specifies the ring to lift into.\n\n\n\n"
 },
 
@@ -905,90 +905,90 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "polynomial.html#Nemo.overlaps-Tuple{Nemo.arb_poly,Nemo.arb_poly}",
+    "location": "polynomial.html#Nemo.overlaps-Tuple{arb_poly,arb_poly}",
     "page": "Univariate polynomials",
     "title": "Nemo.overlaps",
-    "category": "Method",
+    "category": "method",
     "text": "overlaps(x::arb_poly, y::arb_poly)\n\nReturn true if the coefficient balls of x overlap the coefficient balls of y, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "polynomial.html#Nemo.overlaps-Tuple{Nemo.acb_poly,Nemo.acb_poly}",
+    "location": "polynomial.html#Nemo.overlaps-Tuple{acb_poly,acb_poly}",
     "page": "Univariate polynomials",
     "title": "Nemo.overlaps",
-    "category": "Method",
+    "category": "method",
     "text": "overlaps(x::acb_poly, y::acb_poly)\n\nReturn true if the coefficient boxes of x overlap the coefficient boxes of y, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "polynomial.html#Base.contains-Tuple{Nemo.arb_poly,Nemo.arb_poly}",
+    "location": "polynomial.html#Base.contains-Tuple{arb_poly,arb_poly}",
     "page": "Univariate polynomials",
     "title": "Base.contains",
-    "category": "Method",
+    "category": "method",
     "text": "contains(x::arb_poly, y::arb_poly)\n\nReturn true if the coefficient balls of x contain the corresponding coefficient balls of y, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "polynomial.html#Base.contains-Tuple{Nemo.acb_poly,Nemo.acb_poly}",
+    "location": "polynomial.html#Base.contains-Tuple{acb_poly,acb_poly}",
     "page": "Univariate polynomials",
     "title": "Base.contains",
-    "category": "Method",
+    "category": "method",
     "text": "contains(x::acb_poly, y::acb_poly)\n\nReturn true if the coefficient boxes of x contain the corresponding coefficient boxes of y, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "polynomial.html#Base.contains-Tuple{Nemo.arb_poly,Nemo.fmpz_poly}",
+    "location": "polynomial.html#Base.contains-Tuple{arb_poly,fmpz_poly}",
     "page": "Univariate polynomials",
     "title": "Base.contains",
-    "category": "Method",
+    "category": "method",
     "text": "contains(x::arb_poly, y::fmpz_poly)\n\nReturn true if the coefficient balls of x contain the corresponding exact coefficients of y, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "polynomial.html#Base.contains-Tuple{Nemo.arb_poly,Nemo.fmpq_poly}",
+    "location": "polynomial.html#Base.contains-Tuple{arb_poly,fmpq_poly}",
     "page": "Univariate polynomials",
     "title": "Base.contains",
-    "category": "Method",
+    "category": "method",
     "text": "contains(x::arb_poly, y::fmpq_poly)\n\nReturn true if the coefficient balls of x contain the corresponding exact coefficients of y, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "polynomial.html#Base.contains-Tuple{Nemo.acb_poly,Nemo.fmpz_poly}",
+    "location": "polynomial.html#Base.contains-Tuple{acb_poly,fmpz_poly}",
     "page": "Univariate polynomials",
     "title": "Base.contains",
-    "category": "Method",
+    "category": "method",
     "text": "contains(x::acb_poly, y::fmpz_poly)\n\nReturn true if the coefficient boxes of x contain the corresponding exact coefficients of y, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "polynomial.html#Base.contains-Tuple{Nemo.acb_poly,Nemo.fmpq_poly}",
+    "location": "polynomial.html#Base.contains-Tuple{acb_poly,fmpq_poly}",
     "page": "Univariate polynomials",
     "title": "Base.contains",
-    "category": "Method",
+    "category": "method",
     "text": "contains(x::acb_poly, y::fmpq_poly)\n\nReturn true if the coefficient boxes of x contain the corresponding exact coefficients of y, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "polynomial.html#Nemo.unique_integer-Tuple{Nemo.arb_poly}",
+    "location": "polynomial.html#Nemo.unique_integer-Tuple{arb_poly}",
     "page": "Univariate polynomials",
     "title": "Nemo.unique_integer",
-    "category": "Method",
+    "category": "method",
     "text": "unique_integer(x::arb_poly)\n\nReturn a tuple (t, z) where t is true if there is a unique integer contained in each of the coefficients of x, otherwise sets t to false. In the former case, z is set to the integer polynomial.\n\n\n\n"
 },
 
 {
-    "location": "polynomial.html#Nemo.unique_integer-Tuple{Nemo.acb_poly}",
+    "location": "polynomial.html#Nemo.unique_integer-Tuple{acb_poly}",
     "page": "Univariate polynomials",
     "title": "Nemo.unique_integer",
-    "category": "Method",
+    "category": "method",
     "text": "unique_integer(x::acb_poly)\n\nReturn a tuple (t, z) where t is true if there is a unique integer contained in the (constant) polynomial x, along with that integer z in case it is, otherwise sets t to false.\n\n\n\n"
 },
 
 {
-    "location": "polynomial.html#Base.isreal-Tuple{Nemo.acb_poly}",
+    "location": "polynomial.html#Base.isreal-Tuple{acb_poly}",
     "page": "Univariate polynomials",
     "title": "Base.isreal",
-    "category": "Method",
+    "category": "method",
     "text": "isreal(x::acb_poly)\n\nReturn true if all the coefficients of x are real, i.e. have exact zero imaginary parts.\n\n\n\n"
 },
 
@@ -1001,170 +1001,170 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "polynomial.html#Nemo.isirreducible-Tuple{Nemo.nmod_poly}",
+    "location": "polynomial.html#Nemo.isirreducible-Tuple{nmod_poly}",
     "page": "Univariate polynomials",
     "title": "Nemo.isirreducible",
-    "category": "Method",
+    "category": "method",
     "text": "isirreducible(x::nmod_poly)\n\nReturn true if x is irreducible, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "polynomial.html#Nemo.isirreducible-Tuple{Nemo.fmpz_mod_poly}",
+    "location": "polynomial.html#Nemo.isirreducible-Tuple{fmpz_mod_poly}",
     "page": "Univariate polynomials",
     "title": "Nemo.isirreducible",
-    "category": "Method",
+    "category": "method",
     "text": "isirreducible(x::fmpz_mod_poly)\n\nReturn true if x is irreducible, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "polynomial.html#Nemo.isirreducible-Tuple{Nemo.fq_poly}",
+    "location": "polynomial.html#Nemo.isirreducible-Tuple{fq_poly}",
     "page": "Univariate polynomials",
     "title": "Nemo.isirreducible",
-    "category": "Method",
+    "category": "method",
     "text": "isirreducible(x::fq_poly)\n\nReturn true if x is irreducible, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "polynomial.html#Nemo.isirreducible-Tuple{Nemo.fq_nmod_poly}",
+    "location": "polynomial.html#Nemo.isirreducible-Tuple{fq_nmod_poly}",
     "page": "Univariate polynomials",
     "title": "Nemo.isirreducible",
-    "category": "Method",
+    "category": "method",
     "text": "isirreducible(x::fq_nmod_poly)\n\nReturn true if x is irreducible, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "polynomial.html#Nemo.issquarefree-Tuple{Nemo.nmod_poly}",
+    "location": "polynomial.html#Nemo.issquarefree-Tuple{nmod_poly}",
     "page": "Univariate polynomials",
     "title": "Nemo.issquarefree",
-    "category": "Method",
+    "category": "method",
     "text": "issquarefree(x::nmod_poly)\n\nReturn true if x is squarefree, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "polynomial.html#Nemo.issquarefree-Tuple{Nemo.fmpz_mod_poly}",
+    "location": "polynomial.html#Nemo.issquarefree-Tuple{fmpz_mod_poly}",
     "page": "Univariate polynomials",
     "title": "Nemo.issquarefree",
-    "category": "Method",
+    "category": "method",
     "text": "issquarefree(x::fmpz_mod_poly)\n\nReturn true if x is squarefree, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "polynomial.html#Nemo.issquarefree-Tuple{Nemo.fq_poly}",
+    "location": "polynomial.html#Nemo.issquarefree-Tuple{fq_poly}",
     "page": "Univariate polynomials",
     "title": "Nemo.issquarefree",
-    "category": "Method",
+    "category": "method",
     "text": "issquarefree(x::fq_poly)\n\nReturn true if x is squarefree, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "polynomial.html#Nemo.issquarefree-Tuple{Nemo.fq_nmod_poly}",
+    "location": "polynomial.html#Nemo.issquarefree-Tuple{fq_nmod_poly}",
     "page": "Univariate polynomials",
     "title": "Nemo.issquarefree",
-    "category": "Method",
+    "category": "method",
     "text": "issquarefree(x::fq_nmod_poly)\n\nReturn true if x is squarefree, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "polynomial.html#Nemo.factor-Tuple{Nemo.fmpz_poly}",
+    "location": "polynomial.html#Nemo.factor-Tuple{fmpz_poly}",
     "page": "Univariate polynomials",
     "title": "Nemo.factor",
-    "category": "Method",
+    "category": "method",
     "text": "factor(x::fmpz_poly)\n\nReturns the factorization of x.\n\n\n\n"
 },
 
 {
-    "location": "polynomial.html#Nemo.factor-Tuple{Nemo.nmod_poly}",
+    "location": "polynomial.html#Nemo.factor-Tuple{nmod_poly}",
     "page": "Univariate polynomials",
     "title": "Nemo.factor",
-    "category": "Method",
+    "category": "method",
     "text": "factor(x::nmod_poly)\n\nReturn the factorisation of x.\n\n\n\n"
 },
 
 {
-    "location": "polynomial.html#Nemo.factor-Tuple{Nemo.fmpz_mod_poly}",
+    "location": "polynomial.html#Nemo.factor-Tuple{fmpz_mod_poly}",
     "page": "Univariate polynomials",
     "title": "Nemo.factor",
-    "category": "Method",
+    "category": "method",
     "text": "factor(x::fmpz_mod_poly)\n\nReturn the factorisation of x.\n\n\n\n"
 },
 
 {
-    "location": "polynomial.html#Nemo.factor-Tuple{Nemo.fq_poly}",
+    "location": "polynomial.html#Nemo.factor-Tuple{fq_poly}",
     "page": "Univariate polynomials",
     "title": "Nemo.factor",
-    "category": "Method",
+    "category": "method",
     "text": "factor(x::fq_poly)\n\nReturn the factorisation of x.\n\n\n\n"
 },
 
 {
-    "location": "polynomial.html#Nemo.factor-Tuple{Nemo.fq_nmod_poly}",
+    "location": "polynomial.html#Nemo.factor-Tuple{fq_nmod_poly}",
     "page": "Univariate polynomials",
     "title": "Nemo.factor",
-    "category": "Method",
+    "category": "method",
     "text": "factor(x::fq_nmod_poly)\n\nReturn the factorisation of x.\n\n\n\n"
 },
 
 {
-    "location": "polynomial.html#Nemo.factor_squarefree-Tuple{Nemo.nmod_poly}",
+    "location": "polynomial.html#Nemo.factor_squarefree-Tuple{nmod_poly}",
     "page": "Univariate polynomials",
     "title": "Nemo.factor_squarefree",
-    "category": "Method",
+    "category": "method",
     "text": "factor_squarefree(x::nmod_poly)\n\nReturn the squarefree factorisation of x.\n\n\n\n"
 },
 
 {
-    "location": "polynomial.html#Nemo.factor_squarefree-Tuple{Nemo.fmpz_mod_poly}",
+    "location": "polynomial.html#Nemo.factor_squarefree-Tuple{fmpz_mod_poly}",
     "page": "Univariate polynomials",
     "title": "Nemo.factor_squarefree",
-    "category": "Method",
+    "category": "method",
     "text": "factor_squarefree(x::fmpz_mod_poly)\n\nReturn the squarefree factorisation of x.\n\n\n\n"
 },
 
 {
-    "location": "polynomial.html#Nemo.factor_squarefree-Tuple{Nemo.fq_poly}",
+    "location": "polynomial.html#Nemo.factor_squarefree-Tuple{fq_poly}",
     "page": "Univariate polynomials",
     "title": "Nemo.factor_squarefree",
-    "category": "Method",
+    "category": "method",
     "text": "factor_squarefree(x::fq_poly)\n\nReturn the squarefree factorisation of x.\n\n\n\n"
 },
 
 {
-    "location": "polynomial.html#Nemo.factor_squarefree-Tuple{Nemo.fq_nmod_poly}",
+    "location": "polynomial.html#Nemo.factor_squarefree-Tuple{fq_nmod_poly}",
     "page": "Univariate polynomials",
     "title": "Nemo.factor_squarefree",
-    "category": "Method",
+    "category": "method",
     "text": "factor_squarefree(x::fq_nmod_poly)\n\nReturn the squarefree factorisation of x.\n\n\n\n"
 },
 
 {
-    "location": "polynomial.html#Nemo.factor_distinct_deg-Tuple{Nemo.nmod_poly}",
+    "location": "polynomial.html#Nemo.factor_distinct_deg-Tuple{nmod_poly}",
     "page": "Univariate polynomials",
     "title": "Nemo.factor_distinct_deg",
-    "category": "Method",
+    "category": "method",
     "text": "factor_distinct_deg(x::nmod_poly)\n\nReturn the distinct degree factorisation of a squarefree polynomial x.\n\n\n\n"
 },
 
 {
-    "location": "polynomial.html#Nemo.factor_distinct_deg-Tuple{Nemo.fmpz_mod_poly}",
+    "location": "polynomial.html#Nemo.factor_distinct_deg-Tuple{fmpz_mod_poly}",
     "page": "Univariate polynomials",
     "title": "Nemo.factor_distinct_deg",
-    "category": "Method",
+    "category": "method",
     "text": "factor_distinct_deg(x::fmpz_mod_poly)\n\nReturn the distinct degree factorisation of a squarefree polynomial x.\n\n\n\n"
 },
 
 {
-    "location": "polynomial.html#Nemo.factor_distinct_deg-Tuple{Nemo.fq_poly}",
+    "location": "polynomial.html#Nemo.factor_distinct_deg-Tuple{fq_poly}",
     "page": "Univariate polynomials",
     "title": "Nemo.factor_distinct_deg",
-    "category": "Method",
+    "category": "method",
     "text": "factor_distinct_deg(x::fq_poly)\n\nReturn the distinct degree factorisation of a squarefree polynomial x.\n\n\n\n"
 },
 
 {
-    "location": "polynomial.html#Nemo.factor_distinct_deg-Tuple{Nemo.fq_nmod_poly}",
+    "location": "polynomial.html#Nemo.factor_distinct_deg-Tuple{fq_nmod_poly}",
     "page": "Univariate polynomials",
     "title": "Nemo.factor_distinct_deg",
-    "category": "Method",
+    "category": "method",
     "text": "factor_distinct_deg(x::fq_nmod_poly)\n\nReturn the distinct degree factorisation of a squarefree polynomial x.\n\n\n\n"
 },
 
@@ -1177,42 +1177,42 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "polynomial.html#Nemo.cyclotomic-Tuple{Int64,Nemo.fmpz_poly}",
+    "location": "polynomial.html#Nemo.cyclotomic-Tuple{Int64,fmpz_poly}",
     "page": "Univariate polynomials",
     "title": "Nemo.cyclotomic",
-    "category": "Method",
+    "category": "method",
     "text": "cyclotomic(n::Int, x::fmpz_poly)\n\nReturn the nth cyclotomic polynomial, defined as Phi_n(x) = prod_omega (x-omega) where omega runs over all the  nth primitive roots of unity.\n\n\n\n"
 },
 
 {
-    "location": "polynomial.html#Nemo.swinnerton_dyer-Tuple{Int64,Nemo.fmpz_poly}",
+    "location": "polynomial.html#Nemo.swinnerton_dyer-Tuple{Int64,fmpz_poly}",
     "page": "Univariate polynomials",
     "title": "Nemo.swinnerton_dyer",
-    "category": "Method",
+    "category": "method",
     "text": "swinnerton_dyer(n::Int, x::fmpz_poly)\n\nReturn the Swinnerton-Dyer polynomial S_n, defined as the integer  polynomial S_n = prod (x pm sqrt2 pm sqrt3 pm sqrt5 pm ldots pm sqrtp_n)  where p_n denotes the n-th prime number and all combinations of signs are taken. This polynomial has degree 2^n and is irreducible over the integers (it is the minimal polynomial of sqrt2 + ldots + sqrtp_n).\n\n\n\n"
 },
 
 {
-    "location": "polynomial.html#Nemo.cos_minpoly-Tuple{Int64,Nemo.fmpz_poly}",
+    "location": "polynomial.html#Nemo.cos_minpoly-Tuple{Int64,fmpz_poly}",
     "page": "Univariate polynomials",
     "title": "Nemo.cos_minpoly",
-    "category": "Method",
+    "category": "method",
     "text": "cos_minpoly(n::Int, x::fmpz_poly)\n\nReturn the minimal polynomial of 2 cos(2 pi  n). For suitable choice of  n, this gives the minimal polynomial of 2 cos(a pi) or 2 sin(a pi) for any rational a.\n\n\n\n"
 },
 
 {
-    "location": "polynomial.html#Nemo.theta_qexp-Tuple{Int64,Int64,Nemo.fmpz_poly}",
+    "location": "polynomial.html#Nemo.theta_qexp-Tuple{Int64,Int64,fmpz_poly}",
     "page": "Univariate polynomials",
     "title": "Nemo.theta_qexp",
-    "category": "Method",
+    "category": "method",
     "text": "theta_qexp(e::Int, n::Int, x::fmpz_poly)\n\nReturn the q-expansion to length n of the Jacobi theta function raised to the power r, i.e. vartheta(q)^r where  vartheta(q) = 1 + sum_k=1^infty q^k^2.\n\n\n\n"
 },
 
 {
-    "location": "polynomial.html#Nemo.eta_qexp-Tuple{Int64,Int64,Nemo.fmpz_poly}",
+    "location": "polynomial.html#Nemo.eta_qexp-Tuple{Int64,Int64,fmpz_poly}",
     "page": "Univariate polynomials",
     "title": "Nemo.eta_qexp",
-    "category": "Method",
+    "category": "method",
     "text": "eta_qexp(e::Int, n::Int, x::fmpz_poly)\n\nReturn the q-expansion to length n of the Dedekind eta function (without  the leading factor q^124) raised to the power r, i.e. (q^-124 eta(q))^r = prod_k=1^infty (1 - q^k)^r. In particular, r = -1 gives the generating function of the partition function p(k), and r = 24 gives, after multiplication by q, the modular discriminant Delta(q) which generates the Ramanujan tau function tau(k).\n\n\n\n"
 },
 
@@ -1237,7 +1237,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Power series and Laurent series",
     "title": "Power series and Laurent series",
     "category": "section",
-    "text": "Nemo allows the creation of capped relative and absolute power series over any computable ring R. Capped relative power series are power series of the form a_jx^j + a_j+1x^j+1 + cdots + a_k-1x^k-1 + O(x^k) where i geq 0, a_i in R and the relative precision k - j is at most equal to some specified precision n. On the other hand capped absolute power series are power series of the form a_jx^j + a_j+1x^j+1 + cdots + a_n-1x^n-1 + O(x^n) where j geq 0, a_j in R and the precision n is fixed.There are two different kinds of implementation: a generic one for the case where no specific implementation exists (provided by AbstractAlgebra.jl), and efficient implementations of power series over numerous specific rings, usually provided by C/C++ libraries.The following table shows each of the relative power series types available in Nemo, the base ring R, and the Julia/Nemo types for that kind of series (the type information is mainly of concern to developers).Base ring Library Element type Parent type\nGeneric ring R AbstractAlgebra.jl `Generic.RelSeries{T} Generic.RelSeriesRing{T}\nmathbbZ Flint fmpz_rel_series FmpzRelSeriesRing\nmathbbZnmathbbZ (small n) Flint nmod_rel_series NmodRelSeriesRing\nmathbbZnmathbbZ Flint fmpz_mod_rel_series FmpzModRelSeriesRing\nmathbbQ Flint fmpq_rel_series FmpqRelSerieRing\nmathbbF_p^n (small p) Flint fq_nmod_rel_series FqNmodRelSeriesRing\nmathbbF_p^n (large p) Flint fq_rel_series FqRelSeriesRingAll relative power series elements belong to the abstract type RelSeriesElem and all of the relative power series ring types belong to the abstract type RelSeriesRing.The maximum relative precision, the string representation of the variable and the base ring R of a generic power series are stored in its parent object. Here is the corresponding table for the absolute power series types.Base ring Library Element type Parent type\nGeneric ring R AbstractAlgebra.jl Generic.AbsSeries{T} Generic.AbsSeriesRing{T}\nmathbbZ Flint fmpz_abs_series FmpzAbsSeriesRing\nmathbbZnmathbbZ Flint fmpz_mod_abs_series FmpzModAbsSeriesRing\nmathbbQ Flint fmpq_abs_series FmpqAbsSerieRing\nmathbbF_p^n (small n) Flint fq_nmod_abs_series FqNmodAbsSeriesRing\nmathbbF_p^n (large n) Flint fq_abs_series FqAbsSeriesRingAll absolute power series elements belong to the abstract type AbsSeriesElem and all of the absolute power series ring types belong to the abstract type AbsSeriesRing.The absolute precision, the string representation of the variable and the base ring R of a generic power series are stored in its parent object. All power series element types belong to the abstract type SeriesElem and all of the power series ring types belong to the abstract type SeriesRing. This enables one to write generic functions that can accept any Nemo power series type.AbstractAlgebra.jl also provides Nemo with a generic implementation of Laurent series over a given ring R. For completeness, we list it here.Base ring Library Element type Parent type\nGeneric ring R AbstractAlgebra.jl Generic.LaurentSeriesRingElem{T} Generic.LaurenSeriesRing{T}\nGeneric field K AbstractAlgebra.jl Generic.LaurentSeriesFieldElem{T} Generic.LaurenSeriesField{T}"
+    "text": "Nemo allows the creation of capped relative and absolute power series over any computable ring R. Capped relative power series are power series of the form a_jx^j + a_j+1x^j+1 + cdots + a_k-1x^k-1 + O(x^k) where i geq 0, a_i in R and the relative precision k - j is at most equal to some specified precision n. On the other hand capped absolute power series are power series of the form a_jx^j + a_j+1x^j+1 + cdots + a_n-1x^n-1 + O(x^n) where j geq 0, a_j in R and the precision n is fixed.There are two different kinds of implementation: a generic one for the case where no specific implementation exists (provided by AbstractAlgebra.jl), and efficient implementations of power series over numerous specific rings, usually provided by C/C++ libraries.The following table shows each of the relative power series types available in Nemo, the base ring R, and the Julia/Nemo types for that kind of series (the type information is mainly of concern to developers).Base ring Library Element type Parent type\nGeneric ring R AbstractAlgebra.jl `Generic.RelSeries{T} Generic.RelSeriesRing{T}\nmathbbZ Flint fmpz_rel_series FmpzRelSeriesRing\nmathbbZnmathbbZ (small n) Flint nmodrelseries NmodRelSeriesRing\nmathbbZnmathbbZ Flint fmpz_mod_rel_series FmpzModRelSeriesRing\nmathbbQ Flint fmpq_rel_series FmpqRelSerieRing\nmathbbF_p^n (small p) Flint fq_nmod_rel_series FqNmodRelSeriesRing\nmathbbF_p^n (large p) Flint fq_rel_series FqRelSeriesRingAll relative power series elements belong to the abstract type RelSeriesElem and all of the relative power series ring types belong to the abstract type RelSeriesRing.The maximum relative precision, the string representation of the variable and the base ring R of a generic power series are stored in its parent object. Here is the corresponding table for the absolute power series types.Base ring Library Element type Parent type\nGeneric ring R AbstractAlgebra.jl Generic.AbsSeries{T} Generic.AbsSeriesRing{T}\nmathbbZ Flint fmpz_abs_series FmpzAbsSeriesRing\nmathbbZnmathbbZ Flint fmpz_mod_abs_series FmpzModAbsSeriesRing\nmathbbQ Flint fmpq_abs_series FmpqAbsSerieRing\nmathbbF_p^n (small n) Flint fq_nmod_abs_series FqNmodAbsSeriesRing\nmathbbF_p^n (large n) Flint fq_abs_series FqAbsSeriesRingAll absolute power series elements belong to the abstract type AbsSeriesElem and all of the absolute power series ring types belong to the abstract type AbsSeriesRing.The absolute precision, the string representation of the variable and the base ring R of a generic power series are stored in its parent object. All power series element types belong to the abstract type SeriesElem and all of the power series ring types belong to the abstract type SeriesRing. This enables one to write generic functions that can accept any Nemo power series type.AbstractAlgebra.jl also provides Nemo with a generic implementation of Laurent series over a given ring R. For completeness, we list it here.Base ring Library Element type Parent type\nGeneric ring R AbstractAlgebra.jl Generic.LaurentSeriesRingElem{T} Generic.LaurenSeriesRing{T}\nGeneric field K AbstractAlgebra.jl Generic.LaurentSeriesFieldElem{T} Generic.LaurenSeriesField{T}"
 },
 
 {
@@ -1265,99 +1265,99 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "series.html#Base.log-Tuple{Nemo.fmpq_rel_series}",
+    "location": "series.html#Base.log-Tuple{fmpq_rel_series}",
     "page": "Power series and Laurent series",
     "title": "Base.log",
-    "category": "Method",
-    "text": "log(a::fmpq_rel_series)\n\nReturn log(a). Requires the constant term to be one.\n\n\n\n"
+    "category": "method",
+    "text": "log(a::fmpqrelseries)\n\nReturn log(a). Requires the constant term to be one.\n\n\n\n"
 },
 
 {
-    "location": "series.html#Base.sqrt-Tuple{Nemo.fmpq_rel_series}",
+    "location": "series.html#Base.sqrt-Tuple{fmpq_rel_series}",
     "page": "Power series and Laurent series",
     "title": "Base.sqrt",
-    "category": "Method",
-    "text": "sqrt(a::fmpq_rel_series)\n\nReturn the power series square root of a. Requires a constant term equal to one.\n\n\n\n"
+    "category": "method",
+    "text": "sqrt(a::fmpqrelseries)\n\nReturn the power series square root of a. Requires a constant term equal to one.\n\n\n\n"
 },
 
 {
-    "location": "series.html#Base.tan-Tuple{Nemo.fmpq_rel_series}",
+    "location": "series.html#Base.tan-Tuple{fmpq_rel_series}",
     "page": "Power series and Laurent series",
     "title": "Base.tan",
-    "category": "Method",
-    "text": "tan(a::fmpq_rel_series)\n\nReturn tan(a). Requires a zero constant term.\n\n\n\n"
+    "category": "method",
+    "text": "tan(a::fmpqrelseries)\n\nReturn tan(a). Requires a zero constant term.\n\n\n\n"
 },
 
 {
-    "location": "series.html#Base.tanh-Tuple{Nemo.fmpq_rel_series}",
+    "location": "series.html#Base.tanh-Tuple{fmpq_rel_series}",
     "page": "Power series and Laurent series",
     "title": "Base.tanh",
-    "category": "Method",
-    "text": "tanh(a::fmpq_rel_series)\n\nReturn tanh(a). Requires a zero constant term.\n\n\n\n"
+    "category": "method",
+    "text": "tanh(a::fmpqrelseries)\n\nReturn tanh(a). Requires a zero constant term.\n\n\n\n"
 },
 
 {
-    "location": "series.html#Base.sin-Tuple{Nemo.fmpq_rel_series}",
+    "location": "series.html#Base.sin-Tuple{fmpq_rel_series}",
     "page": "Power series and Laurent series",
     "title": "Base.sin",
-    "category": "Method",
-    "text": "sin(a::fmpq_rel_series)\n\nReturn sin(a). Requires a zero constant term.\n\n\n\n"
+    "category": "method",
+    "text": "sin(a::fmpqrelseries)\n\nReturn sin(a). Requires a zero constant term.\n\n\n\n"
 },
 
 {
-    "location": "series.html#Base.sinh-Tuple{Nemo.fmpq_rel_series}",
+    "location": "series.html#Base.sinh-Tuple{fmpq_rel_series}",
     "page": "Power series and Laurent series",
     "title": "Base.sinh",
-    "category": "Method",
-    "text": "sinh(a::fmpq_rel_series)\n\nReturn sinh(a). Requires a zero constant term.\n\n\n\n"
+    "category": "method",
+    "text": "sinh(a::fmpqrelseries)\n\nReturn sinh(a). Requires a zero constant term.\n\n\n\n"
 },
 
 {
-    "location": "series.html#Base.cos-Tuple{Nemo.fmpq_rel_series}",
+    "location": "series.html#Base.cos-Tuple{fmpq_rel_series}",
     "page": "Power series and Laurent series",
     "title": "Base.cos",
-    "category": "Method",
-    "text": "cos(a::fmpq_rel_series)\n\nReturn cos(a). Requires a zero constant term.\n\n\n\n"
+    "category": "method",
+    "text": "cos(a::fmpqrelseries)\n\nReturn cos(a). Requires a zero constant term.\n\n\n\n"
 },
 
 {
-    "location": "series.html#Base.cosh-Tuple{Nemo.fmpq_rel_series}",
+    "location": "series.html#Base.cosh-Tuple{fmpq_rel_series}",
     "page": "Power series and Laurent series",
     "title": "Base.cosh",
-    "category": "Method",
-    "text": "cosh(a::fmpq_rel_series)\n\nReturn cosh(a). Requires a zero constant term.\n\n\n\n"
+    "category": "method",
+    "text": "cosh(a::fmpqrelseries)\n\nReturn cosh(a). Requires a zero constant term.\n\n\n\n"
 },
 
 {
-    "location": "series.html#Base.asin-Tuple{Nemo.fmpq_rel_series}",
+    "location": "series.html#Base.asin-Tuple{fmpq_rel_series}",
     "page": "Power series and Laurent series",
     "title": "Base.asin",
-    "category": "Method",
-    "text": "asin(a::fmpq_rel_series)\n\nReturn asin(a). Requires a zero constant term.\n\n\n\n"
+    "category": "method",
+    "text": "asin(a::fmpqrelseries)\n\nReturn asin(a). Requires a zero constant term.\n\n\n\n"
 },
 
 {
-    "location": "series.html#Base.asinh-Tuple{Nemo.fmpq_rel_series}",
+    "location": "series.html#Base.asinh-Tuple{fmpq_rel_series}",
     "page": "Power series and Laurent series",
     "title": "Base.asinh",
-    "category": "Method",
-    "text": "asinh(a::fmpq_rel_series)\n\nReturn asinh(a). Requires a zero constant term.\n\n\n\n"
+    "category": "method",
+    "text": "asinh(a::fmpqrelseries)\n\nReturn asinh(a). Requires a zero constant term.\n\n\n\n"
 },
 
 {
-    "location": "series.html#Base.atan-Tuple{Nemo.fmpq_rel_series}",
+    "location": "series.html#Base.atan-Tuple{fmpq_rel_series}",
     "page": "Power series and Laurent series",
     "title": "Base.atan",
-    "category": "Method",
-    "text": "atan(a::fmpq_rel_series)\n\nReturn atan(a). Requires a zero constant term.\n\n\n\n"
+    "category": "method",
+    "text": "atan(a::fmpqrelseries)\n\nReturn atan(a). Requires a zero constant term.\n\n\n\n"
 },
 
 {
-    "location": "series.html#Base.atanh-Tuple{Nemo.fmpq_rel_series}",
+    "location": "series.html#Base.atanh-Tuple{fmpq_rel_series}",
     "page": "Power series and Laurent series",
     "title": "Base.atanh",
-    "category": "Method",
-    "text": "atanh(a::fmpq_rel_series)\n\nReturn atanh(a). Requires a zero constant term.\n\n\n\n"
+    "category": "method",
+    "text": "atanh(a::fmpqrelseries)\n\nReturn atanh(a). Requires a zero constant term.\n\n\n\n"
 },
 
 {
@@ -1401,26 +1401,26 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "puiseux.html#Base.sqrt-Tuple{Union{Nemo.FlintPuiseuxSeriesFieldElem{Nemo.fmpz_laurent_series}, Nemo.FlintPuiseuxSeriesRingElem{Nemo.fmpz_laurent_series}}}",
+    "location": "puiseux.html#Base.sqrt-Tuple{Union{FlintPuiseuxSeriesFieldElem{fmpz_laurent_series}, FlintPuiseuxSeriesRingElem{fmpz_laurent_series}}}",
     "page": "Puiseux series",
     "title": "Base.sqrt",
-    "category": "Method",
+    "category": "method",
     "text": "sqrt{T <: RingElem}(a::FlintPuiseuxSeriesElem{T})\n\nReturn the square root of the given Puiseux series.\n\n\n\n"
 },
 
 {
-    "location": "puiseux.html#Base.exp-Tuple{Union{Nemo.FlintPuiseuxSeriesFieldElem{Nemo.fmpz_laurent_series}, Nemo.FlintPuiseuxSeriesRingElem{Nemo.fmpz_laurent_series}}}",
+    "location": "puiseux.html#Base.exp-Tuple{Union{FlintPuiseuxSeriesFieldElem{fmpz_laurent_series}, FlintPuiseuxSeriesRingElem{fmpz_laurent_series}}}",
     "page": "Puiseux series",
     "title": "Base.exp",
-    "category": "Method",
+    "category": "method",
     "text": "exp{T <: RingElem}(a::FlintPuiseuxSeriesElem{T})\n\nReturn the exponential of the given Puiseux series.\n\n\n\n"
 },
 
 {
-    "location": "puiseux.html#Nemo.eta_qexp-Tuple{Union{Nemo.FlintPuiseuxSeriesFieldElem{Nemo.fmpz_laurent_series}, Nemo.FlintPuiseuxSeriesRingElem{Nemo.fmpz_laurent_series}}}",
+    "location": "puiseux.html#Nemo.eta_qexp-Tuple{Union{FlintPuiseuxSeriesFieldElem{fmpz_laurent_series}, FlintPuiseuxSeriesRingElem{fmpz_laurent_series}}}",
     "page": "Puiseux series",
     "title": "Nemo.eta_qexp",
-    "category": "Method",
+    "category": "method",
     "text": "eta_qexp(x::FlintPuiseuxSeriesElem{fmpz_laurent_series})\n\nReturn the q-series for eta evaluated at x, which must currently be a rational power of the generator of the Puiseux series ring.\n\n\n\n"
 },
 
@@ -1481,82 +1481,82 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "fraction.html#Base.abs-Tuple{Nemo.fmpq}",
+    "location": "fraction.html#Base.abs-Tuple{fmpq}",
     "page": "Fraction fields",
     "title": "Base.abs",
-    "category": "Method",
+    "category": "method",
     "text": "abs(a::fmpq)\n\nReturn the absolute value of a.\n\n\n\n"
 },
 
 {
-    "location": "fraction.html#Nemo.height-Tuple{Nemo.fmpq}",
+    "location": "fraction.html#Nemo.height-Tuple{fmpq}",
     "page": "Fraction fields",
     "title": "Nemo.height",
-    "category": "Method",
+    "category": "method",
     "text": "height(a::fmpq)\n\nReturn the height of the fraction a, namely the largest of the absolute values of the numerator and denominator.\n\n\n\n"
 },
 
 {
-    "location": "fraction.html#Nemo.height_bits-Tuple{Nemo.fmpq}",
+    "location": "fraction.html#Nemo.height_bits-Tuple{fmpq}",
     "page": "Fraction fields",
     "title": "Nemo.height_bits",
-    "category": "Method",
+    "category": "method",
     "text": "height_bits(a::fmpq)\n\nReturn the number of bits of the height of the fraction a.\n\n\n\n"
 },
 
 {
-    "location": "fraction.html#Base.:<<-Tuple{Nemo.fmpq,Int64}",
+    "location": "fraction.html#Base.:<<-Tuple{fmpq,Int64}",
     "page": "Fraction fields",
     "title": "Base.:<<",
-    "category": "Method",
+    "category": "method",
     "text": "<<(a::fmpq, b::Int)\n\nReturn 2^btimes a.\n\n\n\n"
 },
 
 {
-    "location": "fraction.html#Base.:>>-Tuple{Nemo.fmpq,Int64}",
+    "location": "fraction.html#Base.:>>-Tuple{fmpq,Int64}",
     "page": "Fraction fields",
     "title": "Base.:>>",
-    "category": "Method",
+    "category": "method",
     "text": "<<(a::fmpq, b::Int)\n\nReturn 2^ba.\n\n\n\n"
 },
 
 {
-    "location": "fraction.html#Base.isless-Tuple{Nemo.fmpq,Nemo.fmpq}",
+    "location": "fraction.html#Base.isless-Tuple{fmpq,fmpq}",
     "page": "Fraction fields",
     "title": "Base.isless",
-    "category": "Method",
+    "category": "method",
     "text": "isless(a::fmpq, b::fmpq)\n\nReturn true if a  b, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "fraction.html#Base.isless-Tuple{Integer,Nemo.fmpq}",
+    "location": "fraction.html#Base.isless-Tuple{Integer,fmpq}",
     "page": "Fraction fields",
     "title": "Base.isless",
-    "category": "Method",
+    "category": "method",
     "text": "isless(a::Integer, b::fmpq)\n\nReturn true if a  b, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "fraction.html#Base.isless-Tuple{Nemo.fmpq,Integer}",
+    "location": "fraction.html#Base.isless-Tuple{fmpq,Integer}",
     "page": "Fraction fields",
     "title": "Base.isless",
-    "category": "Method",
+    "category": "method",
     "text": "isless(a::fmpq, b::Integer)\n\nReturn true if a  b, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "fraction.html#Base.isless-Tuple{Nemo.fmpq,Nemo.fmpz}",
+    "location": "fraction.html#Base.isless-Tuple{fmpq,fmpz}",
     "page": "Fraction fields",
     "title": "Base.isless",
-    "category": "Method",
+    "category": "method",
     "text": "isless(a::fmpq, b::fmpz)\n\nReturn true if a  b, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "fraction.html#Base.isless-Tuple{Nemo.fmpz,Nemo.fmpq}",
+    "location": "fraction.html#Base.isless-Tuple{fmpz,fmpq}",
     "page": "Fraction fields",
     "title": "Base.isless",
-    "category": "Method",
+    "category": "method",
     "text": "isless(a::fmpz, b::fmpq)\n\nReturn true if a  b, otherwise return false.\n\n\n\n"
 },
 
@@ -1569,18 +1569,18 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "fraction.html#Base.mod-Tuple{Nemo.fmpq,Nemo.fmpz}",
+    "location": "fraction.html#Base.mod-Tuple{fmpq,fmpz}",
     "page": "Fraction fields",
     "title": "Base.mod",
-    "category": "Method",
+    "category": "method",
     "text": "mod(a::fmpq, b::fmpz)\n\nReturn a pmodb where b is an integer coprime to the denominator of a.\n\n\n\n"
 },
 
 {
-    "location": "fraction.html#Base.mod-Tuple{Nemo.fmpq,Integer}",
+    "location": "fraction.html#Base.mod-Tuple{fmpq,Integer}",
     "page": "Fraction fields",
     "title": "Base.mod",
-    "category": "Method",
+    "category": "method",
     "text": "mod(a::fmpq, b::Integer)\n\nReturn a pmodb where b is an integer coprime to the denominator of a.\n\n\n\n"
 },
 
@@ -1593,26 +1593,26 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "fraction.html#Nemo.reconstruct-Tuple{Nemo.fmpz,Nemo.fmpz}",
+    "location": "fraction.html#Nemo.reconstruct-Tuple{fmpz,fmpz}",
     "page": "Fraction fields",
     "title": "Nemo.reconstruct",
-    "category": "Method",
+    "category": "method",
     "text": "reconstruct(a::fmpz, b::fmpz)\n\nAttempt to find a rational number nd such that 0 leq n leq lfloorsqrtm2rfloor and 0  d leq lfloorsqrtm2rfloor such that gcd(n d) = 1 and a equiv nd^-1 pmodm. If no solution exists, an exception is thrown.\n\n\n\n"
 },
 
 {
-    "location": "fraction.html#Nemo.reconstruct-Tuple{Nemo.fmpz,Integer}",
+    "location": "fraction.html#Nemo.reconstruct-Tuple{fmpz,Integer}",
     "page": "Fraction fields",
     "title": "Nemo.reconstruct",
-    "category": "Method",
+    "category": "method",
     "text": "reconstruct(a::fmpz, b::Integer)\n\nAttempt to find a rational number nd such that 0 leq n leq lfloorsqrtm2rfloor and 0  d leq lfloorsqrtm2rfloor such that gcd(n d) = 1 and a equiv nd^-1 pmodm. If no solution exists, an exception is thrown.\n\n\n\n"
 },
 
 {
-    "location": "fraction.html#Nemo.reconstruct-Tuple{Integer,Nemo.fmpz}",
+    "location": "fraction.html#Nemo.reconstruct-Tuple{Integer,fmpz}",
     "page": "Fraction fields",
     "title": "Nemo.reconstruct",
-    "category": "Method",
+    "category": "method",
     "text": "reconstruct(a::Integer, b::fmpz)\n\nAttempt to find a rational number nd such that 0 leq n leq lfloorsqrtm2rfloor and 0  d leq lfloorsqrtm2rfloor such that gcd(n d) = 1 and a equiv nd^-1 pmodm. If no solution exists, an exception is thrown.\n\n\n\n"
 },
 
@@ -1620,7 +1620,7 @@ var documenterSearchIndex = {"docs": [
     "location": "fraction.html#Nemo.reconstruct-Tuple{Integer,Integer}",
     "page": "Fraction fields",
     "title": "Nemo.reconstruct",
-    "category": "Method",
+    "category": "method",
     "text": "reconstruct(a::Integer, b::Integer)\n\nAttempt to find a rational number nd such that 0 leq n leq lfloorsqrtm2rfloor and 0  d leq lfloorsqrtm2rfloor such that gcd(n d) = 1 and a equiv nd^-1 pmodm. If no solution exists, an exception is thrown.\n\n\n\n"
 },
 
@@ -1633,34 +1633,34 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "fraction.html#Nemo.next_minimal-Tuple{Nemo.fmpq}",
+    "location": "fraction.html#Nemo.next_minimal-Tuple{fmpq}",
     "page": "Fraction fields",
     "title": "Nemo.next_minimal",
-    "category": "Method",
+    "category": "method",
     "text": "next_minimal(a::fmpq)\n\nGiven x, returns the next rational number in the sequence obtained by enumerating all positive denominators q, and for each q enumerating the numerators 1 le p  q in order and generating both pq and qp, but skipping all gcd(pq) neq 1. Starting with zero, this generates every nonnegative rational number once and only once, with the first few entries being 0 1 12 2 13 3 23 32 14 4 34 43 ldots. This enumeration produces the rational numbers in order of minimal height. It has the disadvantage of being somewhat slower to compute than the Calkin-Wilf enumeration. If x  0 we throw a DomainError().\n\n\n\n"
 },
 
 {
-    "location": "fraction.html#Nemo.next_signed_minimal-Tuple{Nemo.fmpq}",
+    "location": "fraction.html#Nemo.next_signed_minimal-Tuple{fmpq}",
     "page": "Fraction fields",
     "title": "Nemo.next_signed_minimal",
-    "category": "Method",
+    "category": "method",
     "text": "next_signed_minimal(a::fmpq)\n\nGiven a signed rational number x assumed to be in canonical form, returns the next element in the minimal-height sequence generated by next_minimal but with negative numbers interleaved. The sequence begins 0 1 -1 12 -12 2 -2 13 -13 ldots. Starting with zero, this generates every rational number once and only once, in order of minimal height.\n\n\n\n"
 },
 
 {
-    "location": "fraction.html#Nemo.next_calkin_wilf-Tuple{Nemo.fmpq}",
+    "location": "fraction.html#Nemo.next_calkin_wilf-Tuple{fmpq}",
     "page": "Fraction fields",
     "title": "Nemo.next_calkin_wilf",
-    "category": "Method",
+    "category": "method",
     "text": "next_calkin_wilf(a::fmpq)\n\nGiven x return the next number in the breadth-first traversal of the Calkin-Wilf tree. Starting with zero, this generates every nonnegative rational number once and only once, with the first few entries being 0 1 12 2 13 32 23 3 14 43 35 52 25 ldots. Despite the appearance of the initial entries, the Calkin-Wilf enumeration does not produce the rational numbers in order of height: some small fractions will appear late in the sequence. This order has the advantage of being faster to produce than the minimal-height order.\n\n\n\n"
 },
 
 {
-    "location": "fraction.html#Nemo.next_signed_calkin_wilf-Tuple{Nemo.fmpq}",
+    "location": "fraction.html#Nemo.next_signed_calkin_wilf-Tuple{fmpq}",
     "page": "Fraction fields",
     "title": "Nemo.next_signed_calkin_wilf",
-    "category": "Method",
+    "category": "method",
     "text": "next_signed_calkin_wilf(a::fmpq)\n\nGiven a signed rational number x returns the next element in the Calkin-Wilf sequence with negative numbers interleaved. The sequence begins 0 1 -1 12 -12 2 -2 13 -13 ldots. Starting with zero, this generates every rational number once and only once, but not in order of minimal height.\n\n\n\n"
 },
 
@@ -1676,7 +1676,7 @@ var documenterSearchIndex = {"docs": [
     "location": "fraction.html#Nemo.harmonic-Tuple{Int64}",
     "page": "Fraction fields",
     "title": "Nemo.harmonic",
-    "category": "Method",
+    "category": "method",
     "text": "harmonic(n::Int)\n\nComputes the harmonic number H_n = 1 + 12 + 13 + cdots + 1n. Table lookup is used for H_n whose numerator and denominator fit in a single limb. For larger n, a divide and conquer strategy is used.\n\n\n\n"
 },
 
@@ -1684,7 +1684,7 @@ var documenterSearchIndex = {"docs": [
     "location": "fraction.html#Nemo.bernoulli-Tuple{Int64}",
     "page": "Fraction fields",
     "title": "Nemo.bernoulli",
-    "category": "Method",
+    "category": "method",
     "text": "bernoulli(n::Int)\n\nComputes the Bernoulli number B_n for nonnegative n.\n\n\n\n"
 },
 
@@ -1692,31 +1692,31 @@ var documenterSearchIndex = {"docs": [
     "location": "fraction.html#Nemo.bernoulli_cache-Tuple{Int64}",
     "page": "Fraction fields",
     "title": "Nemo.bernoulli_cache",
-    "category": "Method",
+    "category": "method",
     "text": "bernoulli_cache(n::Int)\n\nPrecomputes and caches all the Bernoulli numbers up to B_n. This is much faster than repeatedly calling bernoulli(k). Once cached, subsequent calls to bernoulli(k) for any k le n will read from the cache, making them virtually free.\n\n\n\n"
 },
 
 {
-    "location": "fraction.html#Nemo.dedekind_sum-Tuple{Nemo.fmpz,Nemo.fmpz}",
+    "location": "fraction.html#Nemo.dedekind_sum-Tuple{fmpz,fmpz}",
     "page": "Fraction fields",
     "title": "Nemo.dedekind_sum",
-    "category": "Method",
+    "category": "method",
     "text": "dedekind_sum(h::fmpz, k::fmpz)\n\n\n\n"
 },
 
 {
-    "location": "fraction.html#Nemo.dedekind_sum-Tuple{Nemo.fmpz,Integer}",
+    "location": "fraction.html#Nemo.dedekind_sum-Tuple{fmpz,Integer}",
     "page": "Fraction fields",
     "title": "Nemo.dedekind_sum",
-    "category": "Method",
+    "category": "method",
     "text": "dedekind_sum(h::fmpz, k::Integer)\n\nComputes the Dedekind sum s(hk) for arbitrary h and k.\n\n\n\n"
 },
 
 {
-    "location": "fraction.html#Nemo.dedekind_sum-Tuple{Integer,Nemo.fmpz}",
+    "location": "fraction.html#Nemo.dedekind_sum-Tuple{Integer,fmpz}",
     "page": "Fraction fields",
     "title": "Nemo.dedekind_sum",
-    "category": "Method",
+    "category": "method",
     "text": "dedekind_sum(h::Integer, k::fmpz)\n\nComputes the Dedekind sum s(hk) for arbitrary h and k.\n\n\n\n"
 },
 
@@ -1724,7 +1724,7 @@ var documenterSearchIndex = {"docs": [
     "location": "fraction.html#Nemo.dedekind_sum-Tuple{Integer,Integer}",
     "page": "Fraction fields",
     "title": "Nemo.dedekind_sum",
-    "category": "Method",
+    "category": "method",
     "text": "dedekind_sum(h::Integer, k::Integer)\n\nComputes the Dedekind sum s(hk) for arbitrary h and k.\n\n\n\n"
 },
 
@@ -1785,10 +1785,10 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "arb.html#Nemo.ball-Tuple{Nemo.arb,Nemo.arb}",
+    "location": "arb.html#Nemo.ball-Tuple{arb,arb}",
     "page": "Real balls",
     "title": "Nemo.ball",
-    "category": "Method",
+    "category": "method",
     "text": "ball(mid::arb, rad::arb)\n\nConstructs an arb enclosing the range m-r m+r, given the pair (m r).\n\n\n\n"
 },
 
@@ -1801,10 +1801,10 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "arb.html#Base.convert-Tuple{Type{Float64},Nemo.arb}",
+    "location": "arb.html#Base.convert-Tuple{Type{Float64},arb}",
     "page": "Real balls",
     "title": "Base.convert",
-    "category": "Method",
+    "category": "method",
     "text": "convert(::Type{Float64}, x::arb)\n\nReturn the midpoint of x rounded down to a machine double.\n\n\n\n"
 },
 
@@ -1817,90 +1817,90 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "arb.html#Nemo.isnonzero-Tuple{Nemo.arb}",
+    "location": "arb.html#Nemo.isnonzero-Tuple{arb}",
     "page": "Real balls",
     "title": "Nemo.isnonzero",
-    "category": "Method",
+    "category": "method",
     "text": "isnonzero(x::arb)\n\nReturn true if x is certainly not equal to zero, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Base.isfinite-Tuple{Nemo.arb}",
+    "location": "arb.html#Base.isfinite-Tuple{arb}",
     "page": "Real balls",
     "title": "Base.isfinite",
-    "category": "Method",
+    "category": "method",
     "text": "isfinite(x::arb)\n\nReturn true if x is finite, i.e. having finite midpoint and radius, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Nemo.isexact-Tuple{Nemo.arb}",
+    "location": "arb.html#Nemo.isexact-Tuple{arb}",
     "page": "Real balls",
     "title": "Nemo.isexact",
-    "category": "Method",
+    "category": "method",
     "text": "isexact(x::arb)\n\nReturn true if x is exact, i.e. has zero radius, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Nemo.isint-Tuple{Nemo.arb}",
+    "location": "arb.html#Nemo.isint-Tuple{arb}",
     "page": "Real balls",
     "title": "Nemo.isint",
-    "category": "Method",
+    "category": "method",
     "text": "isint(x::arb)\n\nReturn true if x is an exact integer, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Nemo.ispositive-Tuple{Nemo.arb}",
+    "location": "arb.html#Nemo.ispositive-Tuple{arb}",
     "page": "Real balls",
     "title": "Nemo.ispositive",
-    "category": "Method",
+    "category": "method",
     "text": "ispositive(x::arb)\n\nReturn true if x is certainly positive, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Nemo.isnonnegative-Tuple{Nemo.arb}",
+    "location": "arb.html#Nemo.isnonnegative-Tuple{arb}",
     "page": "Real balls",
     "title": "Nemo.isnonnegative",
-    "category": "Method",
+    "category": "method",
     "text": "isnonnegative(x::arb)\n\nReturn true if x is certainly nonnegative, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#AbstractAlgebra.Generic.isnegative-Tuple{Nemo.arb}",
+    "location": "arb.html#AbstractAlgebra.Generic.isnegative-Tuple{arb}",
     "page": "Real balls",
     "title": "AbstractAlgebra.Generic.isnegative",
-    "category": "Method",
+    "category": "method",
     "text": "isnegative(x::arb)\n\nReturn true if x is certainly negative, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Nemo.isnonpositive-Tuple{Nemo.arb}",
+    "location": "arb.html#Nemo.isnonpositive-Tuple{arb}",
     "page": "Real balls",
     "title": "Nemo.isnonpositive",
-    "category": "Method",
+    "category": "method",
     "text": "isnonpositive(x::arb)\n\nReturn true if x is certainly nonpositive, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Nemo.midpoint-Tuple{Nemo.arb}",
+    "location": "arb.html#Nemo.midpoint-Tuple{arb}",
     "page": "Real balls",
     "title": "Nemo.midpoint",
-    "category": "Method",
+    "category": "method",
     "text": "midpoint(x::arb)\n\nReturn the midpoint of the ball x as an Arb ball.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Nemo.radius-Tuple{Nemo.arb}",
+    "location": "arb.html#Nemo.radius-Tuple{arb}",
     "page": "Real balls",
     "title": "Nemo.radius",
-    "category": "Method",
+    "category": "method",
     "text": "radius(x::arb)\n\nReturn the radius of the ball x as an Arb ball.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Nemo.accuracy_bits-Tuple{Nemo.arb}",
+    "location": "arb.html#Nemo.accuracy_bits-Tuple{arb}",
     "page": "Real balls",
     "title": "Nemo.accuracy_bits",
-    "category": "Method",
+    "category": "method",
     "text": "accuracy_bits(x::arb)\n\nReturn the relative accuracy of x measured in bits, capped between typemax(Int) and -typemax(Int).\n\n\n\n"
 },
 
@@ -1913,98 +1913,98 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "arb.html#Nemo.overlaps-Tuple{Nemo.arb,Nemo.arb}",
+    "location": "arb.html#Nemo.overlaps-Tuple{arb,arb}",
     "page": "Real balls",
     "title": "Nemo.overlaps",
-    "category": "Method",
+    "category": "method",
     "text": "overlaps(x::arb, y::arb)\n\nReturns true if any part of the ball x overlaps any part of the ball y, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Base.contains-Tuple{Nemo.arb,Nemo.arb}",
+    "location": "arb.html#Base.contains-Tuple{arb,arb}",
     "page": "Real balls",
     "title": "Base.contains",
-    "category": "Method",
+    "category": "method",
     "text": "contains(x::arb, y::arb)\n\nReturns true if the ball x contains the ball y, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Base.contains-Tuple{Nemo.arb,Integer}",
+    "location": "arb.html#Base.contains-Tuple{arb,Integer}",
     "page": "Real balls",
     "title": "Base.contains",
-    "category": "Method",
+    "category": "method",
     "text": "contains(x::arb, y::Integer)\n\nReturns true if the ball x contains the given integer value, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Base.contains-Tuple{Nemo.arb,Nemo.fmpz}",
+    "location": "arb.html#Base.contains-Tuple{arb,fmpz}",
     "page": "Real balls",
     "title": "Base.contains",
-    "category": "Method",
+    "category": "method",
     "text": "contains(x::arb, y::fmpz)\n\nReturns true if the ball x contains the given integer value, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Base.contains-Tuple{Nemo.arb,Nemo.fmpq}",
+    "location": "arb.html#Base.contains-Tuple{arb,fmpq}",
     "page": "Real balls",
     "title": "Base.contains",
-    "category": "Method",
+    "category": "method",
     "text": "contains(x::arb, y::fmpq)\n\nReturns true if the ball x contains the given rational value, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Base.contains-Union{Tuple{Nemo.arb,Rational{T}}, Tuple{T}} where T<:Integer",
+    "location": "arb.html#Base.contains-Union{Tuple{T}, Tuple{arb,Rational{T}}} where T<:Integer",
     "page": "Real balls",
     "title": "Base.contains",
-    "category": "Method",
+    "category": "method",
     "text": "contains(x::arb, y::Rational{Integer})\n\nReturns true if the ball x contains the given rational value, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Base.contains-Tuple{Nemo.arb,BigFloat}",
+    "location": "arb.html#Base.contains-Tuple{arb,BigFloat}",
     "page": "Real balls",
     "title": "Base.contains",
-    "category": "Method",
+    "category": "method",
     "text": "contains(x::arb, y::BigFloat)\n\nReturns true if the ball x contains the given floating point value, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Nemo.contains_zero-Tuple{Nemo.arb}",
+    "location": "arb.html#Nemo.contains_zero-Tuple{arb}",
     "page": "Real balls",
     "title": "Nemo.contains_zero",
-    "category": "Method",
+    "category": "method",
     "text": "contains_zero(x::arb)\n\nReturns true if the ball x contains zero, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Nemo.contains_negative-Tuple{Nemo.arb}",
+    "location": "arb.html#Nemo.contains_negative-Tuple{arb}",
     "page": "Real balls",
     "title": "Nemo.contains_negative",
-    "category": "Method",
+    "category": "method",
     "text": "contains_negative(x::arb)\n\nReturns true if the ball x contains any negative value, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Nemo.contains_positive-Tuple{Nemo.arb}",
+    "location": "arb.html#Nemo.contains_positive-Tuple{arb}",
     "page": "Real balls",
     "title": "Nemo.contains_positive",
-    "category": "Method",
+    "category": "method",
     "text": "contains_positive(x::arb)\n\nReturns true if the ball x contains any positive value, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Nemo.contains_nonnegative-Tuple{Nemo.arb}",
+    "location": "arb.html#Nemo.contains_nonnegative-Tuple{arb}",
     "page": "Real balls",
     "title": "Nemo.contains_nonnegative",
-    "category": "Method",
+    "category": "method",
     "text": "contains_nonnegative(x::arb)\n\nReturns true if the ball x contains any nonnegative value, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Nemo.contains_nonpositive-Tuple{Nemo.arb}",
+    "location": "arb.html#Nemo.contains_nonpositive-Tuple{arb}",
     "page": "Real balls",
     "title": "Nemo.contains_nonpositive",
-    "category": "Method",
+    "category": "method",
     "text": "contains_nonpositive(x::arb)\n\nReturns true if the ball x contains any nonpositive value, otherwise return false.\n\n\n\n"
 },
 
@@ -2017,10 +2017,10 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "arb.html#Base.isequal-Tuple{Nemo.arb,Nemo.arb}",
+    "location": "arb.html#Base.isequal-Tuple{arb,arb}",
     "page": "Real balls",
     "title": "Base.isequal",
-    "category": "Method",
+    "category": "method",
     "text": "isequal(x::arb, y::arb)\n\nReturn true if the balls x and y are precisely equal, i.e. have the same midpoints and radii.\n\n\n\n"
 },
 
@@ -2033,10 +2033,10 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "arb.html#Base.abs-Tuple{Nemo.arb}",
+    "location": "arb.html#Base.abs-Tuple{arb}",
     "page": "Real balls",
     "title": "Base.abs",
-    "category": "Method",
+    "category": "method",
     "text": "abs(x::arb)\n\nReturn the absolute value of x.\n\n\n\n"
 },
 
@@ -2049,18 +2049,18 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "arb.html#Base.Math.ldexp-Tuple{Nemo.arb,Int64}",
+    "location": "arb.html#Base.Math.ldexp-Tuple{arb,Int64}",
     "page": "Real balls",
     "title": "Base.Math.ldexp",
-    "category": "Method",
+    "category": "method",
     "text": "ldexp(x::arb, y::Int)\n\nReturn 2^yx. Note that y can be positive, zero or negative.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Base.Math.ldexp-Tuple{Nemo.arb,Nemo.fmpz}",
+    "location": "arb.html#Base.Math.ldexp-Tuple{arb,fmpz}",
     "page": "Real balls",
     "title": "Base.Math.ldexp",
-    "category": "Method",
+    "category": "method",
     "text": "ldexp(x::arb, y::fmpz)\n\nReturn 2^yx. Note that y can be positive, zero or negative.\n\n\n\n"
 },
 
@@ -2073,26 +2073,26 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "arb.html#Nemo.trim-Tuple{Nemo.arb}",
+    "location": "arb.html#Nemo.trim-Tuple{arb}",
     "page": "Real balls",
     "title": "Nemo.trim",
-    "category": "Method",
+    "category": "method",
     "text": "trim(x::arb)\n\nReturn an arb interval containing x but which may be more economical, by rounding off insignificant bits from the midpoint.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Nemo.unique_integer-Tuple{Nemo.arb}",
+    "location": "arb.html#Nemo.unique_integer-Tuple{arb}",
     "page": "Real balls",
     "title": "Nemo.unique_integer",
-    "category": "Method",
+    "category": "method",
     "text": "unique_integer(x::arb)\n\nReturn a pair where the first value is a boolean and the second is an fmpz integer. The boolean indicates whether the interval x contains a unique integer. If this is the case, the second return value is set to this unique integer.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Nemo.setunion-Tuple{Nemo.arb,Nemo.arb}",
+    "location": "arb.html#Nemo.setunion-Tuple{arb,arb}",
     "page": "Real balls",
     "title": "Nemo.setunion",
-    "category": "Method",
+    "category": "method",
     "text": "setunion(x::arb, y::arb)\n\nReturn an arb containing the union of the intervals represented by x and y.\n\n\n\n"
 },
 
@@ -2105,66 +2105,66 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "arb.html#Nemo.const_pi-Tuple{Nemo.ArbField}",
+    "location": "arb.html#Nemo.const_pi-Tuple{ArbField}",
     "page": "Real balls",
     "title": "Nemo.const_pi",
-    "category": "Method",
+    "category": "method",
     "text": "const_pi(r::ArbField)\n\nReturn pi = 314159ldots as an element of r.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Nemo.const_e-Tuple{Nemo.ArbField}",
+    "location": "arb.html#Nemo.const_e-Tuple{ArbField}",
     "page": "Real balls",
     "title": "Nemo.const_e",
-    "category": "Method",
+    "category": "method",
     "text": "const_e(r::ArbField)\n\nReturn e = 271828ldots as an element of r.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Nemo.const_log2-Tuple{Nemo.ArbField}",
+    "location": "arb.html#Nemo.const_log2-Tuple{ArbField}",
     "page": "Real balls",
     "title": "Nemo.const_log2",
-    "category": "Method",
+    "category": "method",
     "text": "const_log2(r::ArbField)\n\nReturn log(2) = 069314ldots as an element of r.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Nemo.const_log10-Tuple{Nemo.ArbField}",
+    "location": "arb.html#Nemo.const_log10-Tuple{ArbField}",
     "page": "Real balls",
     "title": "Nemo.const_log10",
-    "category": "Method",
+    "category": "method",
     "text": "const_log10(r::ArbField)\n\nReturn log(10) = 2302585ldots as an element of r.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Nemo.const_euler-Tuple{Nemo.ArbField}",
+    "location": "arb.html#Nemo.const_euler-Tuple{ArbField}",
     "page": "Real balls",
     "title": "Nemo.const_euler",
-    "category": "Method",
+    "category": "method",
     "text": "const_euler(r::ArbField)\n\nReturn Euler\'s constant gamma = 0577215ldots as an element of r.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Nemo.const_catalan-Tuple{Nemo.ArbField}",
+    "location": "arb.html#Nemo.const_catalan-Tuple{ArbField}",
     "page": "Real balls",
     "title": "Nemo.const_catalan",
-    "category": "Method",
+    "category": "method",
     "text": "const_catalan(r::ArbField)\n\nReturn Catalan\'s constant C = 0915965ldots as an element of r.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Nemo.const_khinchin-Tuple{Nemo.ArbField}",
+    "location": "arb.html#Nemo.const_khinchin-Tuple{ArbField}",
     "page": "Real balls",
     "title": "Nemo.const_khinchin",
-    "category": "Method",
+    "category": "method",
     "text": "const_khinchin(r::ArbField)\n\nReturn Khinchin\'s constant K = 2685452ldots as an element of r.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Nemo.const_glaisher-Tuple{Nemo.ArbField}",
+    "location": "arb.html#Nemo.const_glaisher-Tuple{ArbField}",
     "page": "Real balls",
     "title": "Nemo.const_glaisher",
-    "category": "Method",
+    "category": "method",
     "text": "const_glaisher(r::ArbField)\n\nReturn Glaisher\'s constant A = 1282427ldots as an element of r.\n\n\n\n"
 },
 
@@ -2177,530 +2177,530 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "arb.html#Base.floor-Tuple{Nemo.arb}",
+    "location": "arb.html#Base.floor-Tuple{arb}",
     "page": "Real balls",
     "title": "Base.floor",
-    "category": "Method",
+    "category": "method",
     "text": "floor(x::arb)\n\nCompute the floor of x, i.e. the greatest integer not exceeding x, as an Arb.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Base.ceil-Tuple{Nemo.arb}",
+    "location": "arb.html#Base.ceil-Tuple{arb}",
     "page": "Real balls",
     "title": "Base.ceil",
-    "category": "Method",
+    "category": "method",
     "text": "ceil(x::arb)\n\nReturn the ceiling of x, i.e. the least integer not less than x, as an Arb.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Base.sqrt-Tuple{Nemo.arb}",
+    "location": "arb.html#Base.sqrt-Tuple{arb}",
     "page": "Real balls",
     "title": "Base.sqrt",
-    "category": "Method",
+    "category": "method",
     "text": "Base.sqrt(x::arb)\n\nReturn the square root of x.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Nemo.rsqrt-Tuple{Nemo.arb}",
+    "location": "arb.html#Nemo.rsqrt-Tuple{arb}",
     "page": "Real balls",
     "title": "Nemo.rsqrt",
-    "category": "Method",
+    "category": "method",
     "text": "rsqrt(x::arb)\n\nReturn the reciprocal of the square root of x, i.e. 1sqrtx.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Nemo.sqrt1pm1-Tuple{Nemo.arb}",
+    "location": "arb.html#Nemo.sqrt1pm1-Tuple{arb}",
     "page": "Real balls",
     "title": "Nemo.sqrt1pm1",
-    "category": "Method",
+    "category": "method",
     "text": "sqrt1pm1(x::arb)\n\nReturn sqrt1+x-1, evaluated accurately for small x.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Base.log-Tuple{Nemo.arb}",
+    "location": "arb.html#Base.log-Tuple{arb}",
     "page": "Real balls",
     "title": "Base.log",
-    "category": "Method",
+    "category": "method",
     "text": "log(x::arb)\n\nReturn the principal branch of the logarithm of x.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Base.log1p-Tuple{Nemo.arb}",
+    "location": "arb.html#Base.log1p-Tuple{arb}",
     "page": "Real balls",
     "title": "Base.log1p",
-    "category": "Method",
+    "category": "method",
     "text": "log1p(x::arb)\n\nReturn log(1+x), evaluated accurately for small x.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Base.exp-Tuple{Nemo.arb}",
+    "location": "arb.html#Base.exp-Tuple{arb}",
     "page": "Real balls",
     "title": "Base.exp",
-    "category": "Method",
+    "category": "method",
     "text": "exp(x::arb)\n\nReturn the exponential of x.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Base.expm1-Tuple{Nemo.arb}",
+    "location": "arb.html#Base.expm1-Tuple{arb}",
     "page": "Real balls",
     "title": "Base.expm1",
-    "category": "Method",
+    "category": "method",
     "text": "expm1(x::arb)\n\nReturn exp(x)-1, evaluated accurately for small x.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Base.sin-Tuple{Nemo.arb}",
+    "location": "arb.html#Base.sin-Tuple{arb}",
     "page": "Real balls",
     "title": "Base.sin",
-    "category": "Method",
+    "category": "method",
     "text": "sin(x::arb)\n\nReturn the sine of x.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Base.cos-Tuple{Nemo.arb}",
+    "location": "arb.html#Base.cos-Tuple{arb}",
     "page": "Real balls",
     "title": "Base.cos",
-    "category": "Method",
+    "category": "method",
     "text": "cos(x::arb)\n\nReturn the cosine of x.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Base.Math.sinpi-Tuple{Nemo.arb}",
+    "location": "arb.html#Base.Math.sinpi-Tuple{arb}",
     "page": "Real balls",
     "title": "Base.Math.sinpi",
-    "category": "Method",
+    "category": "method",
     "text": "sinpi(x::arb)\n\nReturn the sine of pi x.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Base.Math.cospi-Tuple{Nemo.arb}",
+    "location": "arb.html#Base.Math.cospi-Tuple{arb}",
     "page": "Real balls",
     "title": "Base.Math.cospi",
-    "category": "Method",
+    "category": "method",
     "text": "cospi(x::arb)\n\nReturn the cosine of pi x.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Base.tan-Tuple{Nemo.arb}",
+    "location": "arb.html#Base.tan-Tuple{arb}",
     "page": "Real balls",
     "title": "Base.tan",
-    "category": "Method",
+    "category": "method",
     "text": "tan(x::arb)\n\nReturn the tangent of x.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Base.Math.cot-Tuple{Nemo.arb}",
+    "location": "arb.html#Base.Math.cot-Tuple{arb}",
     "page": "Real balls",
     "title": "Base.Math.cot",
-    "category": "Method",
+    "category": "method",
     "text": "cot(x::arb)\n\nReturn the cotangent of x.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Nemo.tanpi-Tuple{Nemo.arb}",
+    "location": "arb.html#Nemo.tanpi-Tuple{arb}",
     "page": "Real balls",
     "title": "Nemo.tanpi",
-    "category": "Method",
+    "category": "method",
     "text": "tanpi(x::arb)\n\nReturn the tangent of pi x.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Nemo.cotpi-Tuple{Nemo.arb}",
+    "location": "arb.html#Nemo.cotpi-Tuple{arb}",
     "page": "Real balls",
     "title": "Nemo.cotpi",
-    "category": "Method",
+    "category": "method",
     "text": "cotpi(x::arb)\n\nReturn the cotangent of pi x.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Base.sinh-Tuple{Nemo.arb}",
+    "location": "arb.html#Base.sinh-Tuple{arb}",
     "page": "Real balls",
     "title": "Base.sinh",
-    "category": "Method",
+    "category": "method",
     "text": "sinh(x::arb)\n\nReturn the hyperbolic sine of x.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Base.cosh-Tuple{Nemo.arb}",
+    "location": "arb.html#Base.cosh-Tuple{arb}",
     "page": "Real balls",
     "title": "Base.cosh",
-    "category": "Method",
+    "category": "method",
     "text": "cosh(x::arb)\n\nReturn the hyperbolic cosine of x.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Base.tanh-Tuple{Nemo.arb}",
+    "location": "arb.html#Base.tanh-Tuple{arb}",
     "page": "Real balls",
     "title": "Base.tanh",
-    "category": "Method",
+    "category": "method",
     "text": "tanh(x::arb)\n\nReturn the hyperbolic tangent of x.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Base.Math.coth-Tuple{Nemo.arb}",
+    "location": "arb.html#Base.Math.coth-Tuple{arb}",
     "page": "Real balls",
     "title": "Base.Math.coth",
-    "category": "Method",
+    "category": "method",
     "text": "coth(x::arb)\n\nReturn the hyperbolic cotangent of x.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Base.atan-Tuple{Nemo.arb}",
+    "location": "arb.html#Base.atan-Tuple{arb}",
     "page": "Real balls",
     "title": "Base.atan",
-    "category": "Method",
+    "category": "method",
     "text": "atan(x::arb)\n\nReturn the arctangent of x.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Base.asin-Tuple{Nemo.arb}",
+    "location": "arb.html#Base.asin-Tuple{arb}",
     "page": "Real balls",
     "title": "Base.asin",
-    "category": "Method",
+    "category": "method",
     "text": "asin(x::arb)\n\nReturn the arcsine of x.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Base.acos-Tuple{Nemo.arb}",
+    "location": "arb.html#Base.acos-Tuple{arb}",
     "page": "Real balls",
     "title": "Base.acos",
-    "category": "Method",
+    "category": "method",
     "text": "acos(x::arb)\n\nReturn the arccosine of x.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Base.atanh-Tuple{Nemo.arb}",
+    "location": "arb.html#Base.atanh-Tuple{arb}",
     "page": "Real balls",
     "title": "Base.atanh",
-    "category": "Method",
+    "category": "method",
     "text": "atanh(x::arb)\n\nReturn the hyperbolic arctangent of x.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Base.asinh-Tuple{Nemo.arb}",
+    "location": "arb.html#Base.asinh-Tuple{arb}",
     "page": "Real balls",
     "title": "Base.asinh",
-    "category": "Method",
+    "category": "method",
     "text": "asinh(x::arb)\n\nReturn the hyperbolic arcsine of x.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Base.acosh-Tuple{Nemo.arb}",
+    "location": "arb.html#Base.acosh-Tuple{arb}",
     "page": "Real balls",
     "title": "Base.acosh",
-    "category": "Method",
+    "category": "method",
     "text": "acosh(x::arb)\n\nReturn the hyperbolic arccosine of x.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Base.Math.gamma-Tuple{Nemo.arb}",
+    "location": "arb.html#Base.Math.gamma-Tuple{arb}",
     "page": "Real balls",
     "title": "Base.Math.gamma",
-    "category": "Method",
+    "category": "method",
     "text": "gamma(x::arb)\n\nReturn the Gamma function evaluated at x.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Base.Math.lgamma-Tuple{Nemo.arb}",
+    "location": "arb.html#Base.Math.lgamma-Tuple{arb}",
     "page": "Real balls",
     "title": "Base.Math.lgamma",
-    "category": "Method",
+    "category": "method",
     "text": "lgamma(x::arb)\n\nReturn the logarithm of the Gamma function evaluated at x.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Nemo.rgamma-Tuple{Nemo.arb}",
+    "location": "arb.html#Nemo.rgamma-Tuple{arb}",
     "page": "Real balls",
     "title": "Nemo.rgamma",
-    "category": "Method",
+    "category": "method",
     "text": "rgamma(x::arb)\n\nReturn the reciprocal of the Gamma function evaluated at x.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Base.digamma-Tuple{Nemo.arb}",
+    "location": "arb.html#Nemo.digamma-Tuple{arb}",
     "page": "Real balls",
-    "title": "Base.digamma",
-    "category": "Method",
+    "title": "Nemo.digamma",
+    "category": "method",
     "text": "digamma(x::arb)\n\nReturn the  logarithmic derivative of the gamma function evaluated at x, i.e. psi(x).\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Base.zeta-Tuple{Nemo.arb}",
+    "location": "arb.html#Nemo.zeta-Tuple{arb}",
     "page": "Real balls",
-    "title": "Base.zeta",
-    "category": "Method",
+    "title": "Nemo.zeta",
+    "category": "method",
     "text": "zeta(x::arb)\n\nReturn the Riemann zeta function evaluated at x.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Nemo.sincos-Tuple{Nemo.arb}",
+    "location": "arb.html#Base.Math.sincos-Tuple{arb}",
     "page": "Real balls",
-    "title": "Nemo.sincos",
-    "category": "Method",
+    "title": "Base.Math.sincos",
+    "category": "method",
     "text": "sincos(x::arb)\n\nReturn a tuple s c consisting of the sine s and cosine c of x.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Nemo.sincospi-Tuple{Nemo.arb}",
+    "location": "arb.html#Nemo.sincospi-Tuple{arb}",
     "page": "Real balls",
     "title": "Nemo.sincospi",
-    "category": "Method",
+    "category": "method",
     "text": "sincospi(x::arb)\n\nReturn a tuple s c consisting of the sine s and cosine c of pi x.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Base.Math.sinpi-Tuple{Nemo.fmpq,Nemo.ArbField}",
+    "location": "arb.html#Base.Math.sinpi-Tuple{fmpq,ArbField}",
     "page": "Real balls",
     "title": "Base.Math.sinpi",
-    "category": "Method",
+    "category": "method",
     "text": "sinpi(x::fmpq, r::ArbField)\n\nReturn the sine of pi x in the given Arb field.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Base.Math.cospi-Tuple{Nemo.fmpq,Nemo.ArbField}",
+    "location": "arb.html#Base.Math.cospi-Tuple{fmpq,ArbField}",
     "page": "Real balls",
     "title": "Base.Math.cospi",
-    "category": "Method",
+    "category": "method",
     "text": "cospi(x::fmpq, r::ArbField)\n\nReturn the cosine of pi x in the given Arb field.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Nemo.sincospi-Tuple{Nemo.fmpq,Nemo.ArbField}",
+    "location": "arb.html#Nemo.sincospi-Tuple{fmpq,ArbField}",
     "page": "Real balls",
     "title": "Nemo.sincospi",
-    "category": "Method",
+    "category": "method",
     "text": "sincospi(x::fmpq, r::ArbField)\n\nReturn a tuple s c consisting of the sine and cosine of pi x in the given Arb field.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Nemo.sinhcosh-Tuple{Nemo.arb}",
+    "location": "arb.html#Nemo.sinhcosh-Tuple{arb}",
     "page": "Real balls",
     "title": "Nemo.sinhcosh",
-    "category": "Method",
+    "category": "method",
     "text": "sinhcosh(x::arb)\n\nReturn a tuple s c consisting of the hyperbolic sine and cosine of x.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Base.Math.atan2-Tuple{Nemo.arb,Nemo.arb}",
+    "location": "arb.html#Base.Math.atan2-Tuple{arb,arb}",
     "page": "Real balls",
     "title": "Base.Math.atan2",
-    "category": "Method",
+    "category": "method",
     "text": "atan2(x::arb, y::arb)\n\nReturn atan2(ba) = arg(a+bi).\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Nemo.agm-Tuple{Nemo.arb,Nemo.arb}",
+    "location": "arb.html#Nemo.agm-Tuple{arb,arb}",
     "page": "Real balls",
     "title": "Nemo.agm",
-    "category": "Method",
+    "category": "method",
     "text": "agm(x::arb, y::arb)\n\nReturn the arithmetic-geometric mean of x and y\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Base.zeta-Tuple{Nemo.arb,Nemo.arb}",
+    "location": "arb.html#Nemo.zeta-Tuple{arb,arb}",
     "page": "Real balls",
-    "title": "Base.zeta",
-    "category": "Method",
+    "title": "Nemo.zeta",
+    "category": "method",
     "text": "zeta(s::arb, a::arb)\n\nReturn the Hurwitz zeta function zeta(sa).\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Base.Math.hypot-Tuple{Nemo.arb,Nemo.arb}",
+    "location": "arb.html#Base.Math.hypot-Tuple{arb,arb}",
     "page": "Real balls",
     "title": "Base.Math.hypot",
-    "category": "Method",
+    "category": "method",
     "text": "hypot(x::arb, y::arb)\n\nReturn sqrtx^2 + y^2.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Nemo.root-Tuple{Nemo.arb,Int64}",
+    "location": "arb.html#Nemo.root-Tuple{arb,Int64}",
     "page": "Real balls",
     "title": "Nemo.root",
-    "category": "Method",
+    "category": "method",
     "text": "root(x::arb, n::Int)\n\nReturn the n-th root of x. We require x geq 0.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Nemo.fac-Tuple{Nemo.arb}",
+    "location": "arb.html#Nemo.fac-Tuple{arb}",
     "page": "Real balls",
     "title": "Nemo.fac",
-    "category": "Method",
+    "category": "method",
     "text": "fac(x::arb)\n\nReturn the factorial of x.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Nemo.fac-Tuple{Int64,Nemo.ArbField}",
+    "location": "arb.html#Nemo.fac-Tuple{Int64,ArbField}",
     "page": "Real balls",
     "title": "Nemo.fac",
-    "category": "Method",
+    "category": "method",
     "text": "fac(n::Int, r::ArbField)\n\nReturn the factorial of n in the given Arb field.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Nemo.binom-Tuple{Nemo.arb,UInt64}",
+    "location": "arb.html#Nemo.binom-Tuple{arb,UInt64}",
     "page": "Real balls",
     "title": "Nemo.binom",
-    "category": "Method",
+    "category": "method",
     "text": "binom(x::arb, n::UInt)\n\nReturn the binomial coefficient x choose n.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Nemo.binom-Tuple{UInt64,UInt64,Nemo.ArbField}",
+    "location": "arb.html#Nemo.binom-Tuple{UInt64,UInt64,ArbField}",
     "page": "Real balls",
     "title": "Nemo.binom",
-    "category": "Method",
+    "category": "method",
     "text": "binom(n::UInt, k::UInt, r::ArbField)\n\nReturn the binomial coefficient n choose k in the given Arb field.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Nemo.fib-Tuple{Nemo.fmpz,Nemo.ArbField}",
+    "location": "arb.html#Nemo.fib-Tuple{fmpz,ArbField}",
     "page": "Real balls",
     "title": "Nemo.fib",
-    "category": "Method",
+    "category": "method",
     "text": "fib(n::fmpz, r::ArbField)\n\nReturn the n-th Fibonacci number in the given Arb field.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Nemo.fib-Tuple{Int64,Nemo.ArbField}",
+    "location": "arb.html#Nemo.fib-Tuple{Int64,ArbField}",
     "page": "Real balls",
     "title": "Nemo.fib",
-    "category": "Method",
+    "category": "method",
     "text": "fib(n::Int, r::ArbField)\n\nReturn the n-th Fibonacci number in the given Arb field.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Base.Math.gamma-Tuple{Nemo.fmpz,Nemo.ArbField}",
+    "location": "arb.html#Base.Math.gamma-Tuple{fmpz,ArbField}",
     "page": "Real balls",
     "title": "Base.Math.gamma",
-    "category": "Method",
+    "category": "method",
     "text": "gamma(x::fmpz, r::ArbField)\n\nReturn the Gamma function evaluated at x in the given Arb field.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Base.Math.gamma-Tuple{Nemo.fmpq,Nemo.ArbField}",
+    "location": "arb.html#Base.Math.gamma-Tuple{fmpq,ArbField}",
     "page": "Real balls",
     "title": "Base.Math.gamma",
-    "category": "Method",
+    "category": "method",
     "text": "gamma(x::fmpq, r::ArbField)\n\nReturn the Gamma function evaluated at x in the given Arb field.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Base.zeta-Tuple{Int64,Nemo.ArbField}",
+    "location": "arb.html#Nemo.zeta-Tuple{Int64,ArbField}",
     "page": "Real balls",
-    "title": "Base.zeta",
-    "category": "Method",
+    "title": "Nemo.zeta",
+    "category": "method",
     "text": "zeta(n::Int, r::ArbField)\n\nReturn the Riemann zeta function zeta(n) as an element of the given Arb field.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Nemo.bernoulli-Tuple{Int64,Nemo.ArbField}",
+    "location": "arb.html#Nemo.bernoulli-Tuple{Int64,ArbField}",
     "page": "Real balls",
     "title": "Nemo.bernoulli",
-    "category": "Method",
+    "category": "method",
     "text": "bernoulli(n::Int, r::ArbField)\n\nReturn the n-th Bernoulli number as an element of the given Arb field.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Nemo.risingfac-Tuple{Nemo.arb,Int64}",
+    "location": "arb.html#Nemo.risingfac-Tuple{arb,Int64}",
     "page": "Real balls",
     "title": "Nemo.risingfac",
-    "category": "Method",
+    "category": "method",
     "text": "risingfac(x::arb, n::Int)\n\nReturn the rising factorial x(x + 1)ldots (x + n - 1) as an Arb.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Nemo.risingfac-Tuple{Nemo.fmpq,Int64,Nemo.ArbField}",
+    "location": "arb.html#Nemo.risingfac-Tuple{fmpq,Int64,ArbField}",
     "page": "Real balls",
     "title": "Nemo.risingfac",
-    "category": "Method",
+    "category": "method",
     "text": "risingfac(x::fmpq, n::Int, r::ArbField)\n\nReturn the rising factorial x(x + 1)ldots (x + n - 1) as an element of the given Arb field.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Nemo.risingfac2-Tuple{Nemo.arb,Int64}",
+    "location": "arb.html#Nemo.risingfac2-Tuple{arb,Int64}",
     "page": "Real balls",
     "title": "Nemo.risingfac2",
-    "category": "Method",
+    "category": "method",
     "text": "risingfac2(x::arb, n::Int)\n\nReturn a tuple containing the rising factorial x(x + 1)ldots (x + n - 1) and its derivative.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Nemo.polylog-Tuple{Nemo.arb,Nemo.arb}",
+    "location": "arb.html#Nemo.polylog-Tuple{arb,arb}",
     "page": "Real balls",
     "title": "Nemo.polylog",
-    "category": "Method",
+    "category": "method",
     "text": "polylog(s::arb, a::arb)\n\nReturn the polylogarithm Li_s(a).\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Nemo.polylog-Tuple{Int64,Nemo.arb}",
+    "location": "arb.html#Nemo.polylog-Tuple{Int64,arb}",
     "page": "Real balls",
     "title": "Nemo.polylog",
-    "category": "Method",
+    "category": "method",
     "text": "polylog(s::Int, a::arb)\n\nReturn the polylogarithm Li_s(a).\n\n\n\n"
 },
 
 {
-    "location": "arb.html#AbstractAlgebra.Generic.chebyshev_t-Tuple{Int64,Nemo.arb}",
+    "location": "arb.html#AbstractAlgebra.Generic.chebyshev_t-Tuple{Int64,arb}",
     "page": "Real balls",
     "title": "AbstractAlgebra.Generic.chebyshev_t",
-    "category": "Method",
+    "category": "method",
     "text": "chebyshev_t(n::Int, x::arb)\n\nReturn the value of the Chebyshev polynomial T_n(x).\n\n\n\n"
 },
 
 {
-    "location": "arb.html#AbstractAlgebra.Generic.chebyshev_u-Tuple{Int64,Nemo.arb}",
+    "location": "arb.html#AbstractAlgebra.Generic.chebyshev_u-Tuple{Int64,arb}",
     "page": "Real balls",
     "title": "AbstractAlgebra.Generic.chebyshev_u",
-    "category": "Method",
+    "category": "method",
     "text": "chebyshev_u(n::Int, x::arb)\n\nReturn the value of the Chebyshev polynomial U_n(x).\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Nemo.chebyshev_t2-Tuple{Int64,Nemo.arb}",
+    "location": "arb.html#Nemo.chebyshev_t2-Tuple{Int64,arb}",
     "page": "Real balls",
     "title": "Nemo.chebyshev_t2",
-    "category": "Method",
+    "category": "method",
     "text": "chebyshev_t2(n::Int, x::arb)\n\nReturn the tuple (T_n(x) T_n-1(x)).\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Nemo.chebyshev_u2-Tuple{Int64,Nemo.arb}",
+    "location": "arb.html#Nemo.chebyshev_u2-Tuple{Int64,arb}",
     "page": "Real balls",
     "title": "Nemo.chebyshev_u2",
-    "category": "Method",
+    "category": "method",
     "text": "chebyshev_u2(n::Int, x::arb)\n\nReturn the tuple (U_n(x) U_n-1(x))\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Nemo.bell-Tuple{Nemo.fmpz,Nemo.ArbField}",
+    "location": "arb.html#Nemo.bell-Tuple{fmpz,ArbField}",
     "page": "Real balls",
     "title": "Nemo.bell",
-    "category": "Method",
+    "category": "method",
     "text": "bell(n::fmpz, r::ArbField)\n\nReturn the Bell number B_n as an element of r.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Nemo.bell-Tuple{Int64,Nemo.ArbField}",
+    "location": "arb.html#Nemo.bell-Tuple{Int64,ArbField}",
     "page": "Real balls",
     "title": "Nemo.bell",
-    "category": "Method",
+    "category": "method",
     "text": "bell(n::Int, r::ArbField)\n\nReturn the Bell number B_n as an element of r.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Nemo.numpart-Tuple{Nemo.fmpz,Nemo.ArbField}",
+    "location": "arb.html#Nemo.numpart-Tuple{fmpz,ArbField}",
     "page": "Real balls",
     "title": "Nemo.numpart",
-    "category": "Method",
+    "category": "method",
     "text": "numpart(n::fmpz, r::ArbField)\n\nReturn the number of partitions p(n) as an element of r.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Nemo.numpart-Tuple{Int64,Nemo.ArbField}",
+    "location": "arb.html#Nemo.numpart-Tuple{Int64,ArbField}",
     "page": "Real balls",
     "title": "Nemo.numpart",
-    "category": "Method",
+    "category": "method",
     "text": "numpart(n::fmpz, r::ArbField)\n\nReturn the number of partitions p(n) as an element of r.\n\n\n\n"
 },
 
@@ -2713,10 +2713,10 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "arb.html#Nemo.lindep-Tuple{Array{Nemo.arb,1},Int64}",
+    "location": "arb.html#Nemo.lindep-Tuple{Array{arb,1},Int64}",
     "page": "Real balls",
     "title": "Nemo.lindep",
-    "category": "Method",
+    "category": "method",
     "text": "lindep(A::Array{arb, 1}, bits::Int)\n\nFind a small linear combination of the entries of the array A that is small *using LLL). The entries are first scaled by the given number of bits before truncating to integers for use in LLL. This function can be used to find linear dependence between a list of real numbers. The algorithm is heuristic only and returns an array of Nemo integers representing the linear combination.  \n\n\n\n"
 },
 
@@ -2761,10 +2761,10 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "acb.html#Nemo.onei-Tuple{Nemo.AcbField}",
+    "location": "acb.html#Nemo.onei-Tuple{AcbField}",
     "page": "Complex balls",
     "title": "Nemo.onei",
-    "category": "Method",
+    "category": "method",
     "text": "onei(R::AcbField)\n\nReturn exact one times i in the given Arb complex field.\n\n\n\n"
 },
 
@@ -2785,58 +2785,58 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "acb.html#Base.isfinite-Tuple{Nemo.acb}",
+    "location": "acb.html#Base.isfinite-Tuple{acb}",
     "page": "Complex balls",
     "title": "Base.isfinite",
-    "category": "Method",
+    "category": "method",
     "text": "isfinite(x::acb)\n\nReturn true if x is finite, i.e. its real and imaginary parts have finite midpoint and radius, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Nemo.isexact-Tuple{Nemo.acb}",
+    "location": "acb.html#Nemo.isexact-Tuple{acb}",
     "page": "Complex balls",
     "title": "Nemo.isexact",
-    "category": "Method",
+    "category": "method",
     "text": "isexact(x::acb)\n\nReturn true if x is exact, i.e. has its real and imaginary parts have zero radius, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Nemo.isint-Tuple{Nemo.acb}",
+    "location": "acb.html#Nemo.isint-Tuple{acb}",
     "page": "Complex balls",
     "title": "Nemo.isint",
-    "category": "Method",
+    "category": "method",
     "text": "isint(x::acb)\n\nReturn true if x is an exact integer, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Base.isreal-Tuple{Nemo.acb}",
+    "location": "acb.html#Base.isreal-Tuple{acb}",
     "page": "Complex balls",
     "title": "Base.isreal",
-    "category": "Method",
+    "category": "method",
     "text": "isint(x::acb)\n\nReturn true if x is purely real, i.e. having zero imaginary part, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Base.real-Tuple{Nemo.acb}",
+    "location": "acb.html#Base.real-Tuple{acb}",
     "page": "Complex balls",
     "title": "Base.real",
-    "category": "Method",
+    "category": "method",
     "text": "real(x::acb)\n\nReturn the real part of x as an arb.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Base.imag-Tuple{Nemo.acb}",
+    "location": "acb.html#Base.imag-Tuple{acb}",
     "page": "Complex balls",
     "title": "Base.imag",
-    "category": "Method",
+    "category": "method",
     "text": "imag(x::acb)\n\nReturn the imaginary part of x as an arb.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Nemo.accuracy_bits-Tuple{Nemo.acb}",
+    "location": "acb.html#Nemo.accuracy_bits-Tuple{acb}",
     "page": "Complex balls",
     "title": "Nemo.accuracy_bits",
-    "category": "Method",
+    "category": "method",
     "text": "accuracy_bits(x::acb)\n\nReturn the relative accuracy of x measured in bits, capped between typemax(Int) and -typemax(Int).\n\n\n\n"
 },
 
@@ -2849,50 +2849,50 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "acb.html#Nemo.overlaps-Tuple{Nemo.acb,Nemo.acb}",
+    "location": "acb.html#Nemo.overlaps-Tuple{acb,acb}",
     "page": "Complex balls",
     "title": "Nemo.overlaps",
-    "category": "Method",
+    "category": "method",
     "text": "overlaps(x::acb, y::acb)\n\nReturns true if any part of the box x overlaps any part of the box y, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Base.contains-Tuple{Nemo.acb,Nemo.acb}",
+    "location": "acb.html#Base.contains-Tuple{acb,acb}",
     "page": "Complex balls",
     "title": "Base.contains",
-    "category": "Method",
+    "category": "method",
     "text": "contains(x::acb, y::acb)\n\nReturns true if the box x contains the box y, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Base.contains-Tuple{Nemo.acb,Integer}",
+    "location": "acb.html#Base.contains-Tuple{acb,Integer}",
     "page": "Complex balls",
     "title": "Base.contains",
-    "category": "Method",
+    "category": "method",
     "text": "contains(x::acb, y::Integer)\n\nReturns true if the box x contains the given integer value, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Base.contains-Tuple{Nemo.acb,Nemo.fmpz}",
+    "location": "acb.html#Base.contains-Tuple{acb,fmpz}",
     "page": "Complex balls",
     "title": "Base.contains",
-    "category": "Method",
+    "category": "method",
     "text": "contains(x::acb, y::fmpz)\n\nReturns true if the box x contains the given integer value, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Base.contains-Tuple{Nemo.acb,Nemo.fmpq}",
+    "location": "acb.html#Base.contains-Tuple{acb,fmpq}",
     "page": "Complex balls",
     "title": "Base.contains",
-    "category": "Method",
+    "category": "method",
     "text": "contains(x::acb, y::fmpq)\n\nReturns true if the box x contains the given rational value, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Nemo.contains_zero-Tuple{Nemo.acb}",
+    "location": "acb.html#Nemo.contains_zero-Tuple{acb}",
     "page": "Complex balls",
     "title": "Nemo.contains_zero",
-    "category": "Method",
+    "category": "method",
     "text": "contains_zero(x::acb)\n\nReturns true if the box x contains zero, otherwise return false.\n\n\n\n"
 },
 
@@ -2905,10 +2905,10 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "acb.html#Base.isequal-Tuple{Nemo.acb,Nemo.acb}",
+    "location": "acb.html#Base.isequal-Tuple{acb,acb}",
     "page": "Complex balls",
     "title": "Base.isequal",
-    "category": "Method",
+    "category": "method",
     "text": "isequal(x::acb, y::acb)\n\nReturn true if the boxes x and y are precisely equal, i.e. their real and imaginary parts have the same midpoints and radii.\n\n\n\n"
 },
 
@@ -2921,10 +2921,10 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "acb.html#Base.abs-Tuple{Nemo.acb}",
+    "location": "acb.html#Base.abs-Tuple{acb}",
     "page": "Complex balls",
     "title": "Base.abs",
-    "category": "Method",
+    "category": "method",
     "text": "abs(x::acb)\n\nReturn the complex absolute value of x.\n\n\n\n"
 },
 
@@ -2937,18 +2937,18 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "acb.html#Base.Math.ldexp-Tuple{Nemo.acb,Int64}",
+    "location": "acb.html#Base.Math.ldexp-Tuple{acb,Int64}",
     "page": "Complex balls",
     "title": "Base.Math.ldexp",
-    "category": "Method",
+    "category": "method",
     "text": "ldexp(x::acb, y::Int)\n\nReturn 2^yx. Note that y can be positive, zero or negative.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Base.Math.ldexp-Tuple{Nemo.acb,Nemo.fmpz}",
+    "location": "acb.html#Base.Math.ldexp-Tuple{acb,fmpz}",
     "page": "Complex balls",
     "title": "Base.Math.ldexp",
-    "category": "Method",
+    "category": "method",
     "text": "ldexp(x::acb, y::fmpz)\n\nReturn 2^yx. Note that y can be positive, zero or negative.\n\n\n\n"
 },
 
@@ -2961,34 +2961,34 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "acb.html#Nemo.trim-Tuple{Nemo.acb}",
+    "location": "acb.html#Nemo.trim-Tuple{acb}",
     "page": "Complex balls",
     "title": "Nemo.trim",
-    "category": "Method",
+    "category": "method",
     "text": "trim(x::acb)\n\nReturn an acb box containing x but which may be more economical, by rounding off insignificant bits from midpoints.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Nemo.unique_integer-Tuple{Nemo.acb}",
+    "location": "acb.html#Nemo.unique_integer-Tuple{acb}",
     "page": "Complex balls",
     "title": "Nemo.unique_integer",
-    "category": "Method",
+    "category": "method",
     "text": "unique_integer(x::acb)\n\nReturn a pair where the first value is a boolean and the second is an fmpz integer. The boolean indicates whether the box x contains a unique integer. If this is the case, the second return value is set to this unique integer.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Base.conj-Tuple{Nemo.acb}",
+    "location": "acb.html#Base.conj-Tuple{acb}",
     "page": "Complex balls",
     "title": "Base.conj",
-    "category": "Method",
+    "category": "method",
     "text": "conj(x::acb)\n\nReturn the complex conjugate of x.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Base.angle-Tuple{Nemo.acb}",
+    "location": "acb.html#Base.angle-Tuple{acb}",
     "page": "Complex balls",
     "title": "Base.angle",
-    "category": "Method",
+    "category": "method",
     "text": "angle(x::acb)\n\nReturn the angle in radians that the complex vector x makes with the positive real axis in a counterclockwise direction.\n\n\n\n"
 },
 
@@ -3001,10 +3001,10 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "acb.html#Nemo.const_pi-Tuple{Nemo.AcbField}",
+    "location": "acb.html#Nemo.const_pi-Tuple{AcbField}",
     "page": "Complex balls",
     "title": "Nemo.const_pi",
-    "category": "Method",
+    "category": "method",
     "text": "const_pi(r::AcbField)\n\nReturn pi = 314159ldots as an element of r.\n\n\n\n"
 },
 
@@ -3017,546 +3017,546 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "acb.html#Base.sqrt-Tuple{Nemo.acb}",
+    "location": "acb.html#Base.sqrt-Tuple{acb}",
     "page": "Complex balls",
     "title": "Base.sqrt",
-    "category": "Method",
+    "category": "method",
     "text": "Base.sqrt(x::acb)\n\nReturn the square root of x.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Nemo.rsqrt-Tuple{Nemo.acb}",
+    "location": "acb.html#Nemo.rsqrt-Tuple{acb}",
     "page": "Complex balls",
     "title": "Nemo.rsqrt",
-    "category": "Method",
+    "category": "method",
     "text": "rsqrt(x::acb)\n\nReturn the reciprocal of the square root of x, i.e. 1sqrtx.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Base.log-Tuple{Nemo.acb}",
+    "location": "acb.html#Base.log-Tuple{acb}",
     "page": "Complex balls",
     "title": "Base.log",
-    "category": "Method",
+    "category": "method",
     "text": "log(x::acb)\n\nReturn the principal branch of the logarithm of x.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Base.log1p-Tuple{Nemo.acb}",
+    "location": "acb.html#Base.log1p-Tuple{acb}",
     "page": "Complex balls",
     "title": "Base.log1p",
-    "category": "Method",
+    "category": "method",
     "text": "log1p(x::acb)\n\nReturn log(1+x), evaluated accurately for small x.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Base.exp-Tuple{Nemo.acb}",
+    "location": "acb.html#Base.exp-Tuple{acb}",
     "page": "Complex balls",
     "title": "Base.exp",
-    "category": "Method",
+    "category": "method",
     "text": "exp(x::acb)\n\nReturn the exponential of x.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Nemo.exppii-Tuple{Nemo.acb}",
+    "location": "acb.html#Nemo.exppii-Tuple{acb}",
     "page": "Complex balls",
     "title": "Nemo.exppii",
-    "category": "Method",
+    "category": "method",
     "text": "exppii(x::acb)\n\nReturn the exponential of pi i x.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Base.sin-Tuple{Nemo.acb}",
+    "location": "acb.html#Base.sin-Tuple{acb}",
     "page": "Complex balls",
     "title": "Base.sin",
-    "category": "Method",
+    "category": "method",
     "text": "sin(x::acb)\n\nReturn the sine of x.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Base.cos-Tuple{Nemo.acb}",
+    "location": "acb.html#Base.cos-Tuple{acb}",
     "page": "Complex balls",
     "title": "Base.cos",
-    "category": "Method",
+    "category": "method",
     "text": "cos(x::acb)\n\nReturn the cosine of x.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Base.Math.sinpi-Tuple{Nemo.acb}",
+    "location": "acb.html#Base.Math.sinpi-Tuple{acb}",
     "page": "Complex balls",
     "title": "Base.Math.sinpi",
-    "category": "Method",
+    "category": "method",
     "text": "sinpi(x::acb)\n\nReturn the sine of pi x.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Base.Math.cospi-Tuple{Nemo.acb}",
+    "location": "acb.html#Base.Math.cospi-Tuple{acb}",
     "page": "Complex balls",
     "title": "Base.Math.cospi",
-    "category": "Method",
+    "category": "method",
     "text": "cospi(x::acb)\n\nReturn the cosine of pi x.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Base.tan-Tuple{Nemo.acb}",
+    "location": "acb.html#Base.tan-Tuple{acb}",
     "page": "Complex balls",
     "title": "Base.tan",
-    "category": "Method",
+    "category": "method",
     "text": "tan(x::acb)\n\nReturn the tangent of x.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Base.Math.cot-Tuple{Nemo.acb}",
+    "location": "acb.html#Base.Math.cot-Tuple{acb}",
     "page": "Complex balls",
     "title": "Base.Math.cot",
-    "category": "Method",
+    "category": "method",
     "text": "cot(x::acb)\n\nReturn the cotangent of x.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Nemo.tanpi-Tuple{Nemo.acb}",
+    "location": "acb.html#Nemo.tanpi-Tuple{acb}",
     "page": "Complex balls",
     "title": "Nemo.tanpi",
-    "category": "Method",
+    "category": "method",
     "text": "tanpi(x::acb)\n\nReturn the tangent of pi x.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Nemo.cotpi-Tuple{Nemo.acb}",
+    "location": "acb.html#Nemo.cotpi-Tuple{acb}",
     "page": "Complex balls",
     "title": "Nemo.cotpi",
-    "category": "Method",
+    "category": "method",
     "text": "cotpi(x::acb)\n\nReturn the cotangent of pi x.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Base.sinh-Tuple{Nemo.acb}",
+    "location": "acb.html#Base.sinh-Tuple{acb}",
     "page": "Complex balls",
     "title": "Base.sinh",
-    "category": "Method",
+    "category": "method",
     "text": "sinh(x::acb)\n\nReturn the hyperbolic sine of x.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Base.cosh-Tuple{Nemo.acb}",
+    "location": "acb.html#Base.cosh-Tuple{acb}",
     "page": "Complex balls",
     "title": "Base.cosh",
-    "category": "Method",
+    "category": "method",
     "text": "cosh(x::acb)\n\nReturn the hyperbolic cosine of x.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Base.tanh-Tuple{Nemo.acb}",
+    "location": "acb.html#Base.tanh-Tuple{acb}",
     "page": "Complex balls",
     "title": "Base.tanh",
-    "category": "Method",
+    "category": "method",
     "text": "tanh(x::acb)\n\nReturn the hyperbolic tangent of x.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Base.Math.coth-Tuple{Nemo.acb}",
+    "location": "acb.html#Base.Math.coth-Tuple{acb}",
     "page": "Complex balls",
     "title": "Base.Math.coth",
-    "category": "Method",
+    "category": "method",
     "text": "coth(x::acb)\n\nReturn the hyperbolic cotangent of x.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Base.atan-Tuple{Nemo.acb}",
+    "location": "acb.html#Base.atan-Tuple{acb}",
     "page": "Complex balls",
     "title": "Base.atan",
-    "category": "Method",
+    "category": "method",
     "text": "atan(x::acb)\n\nReturn the arctangent of x.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Nemo.logsinpi-Tuple{Nemo.acb}",
+    "location": "acb.html#Nemo.logsinpi-Tuple{acb}",
     "page": "Complex balls",
     "title": "Nemo.logsinpi",
-    "category": "Method",
+    "category": "method",
     "text": "logsinpi(x::acb)\n\nReturn logsin(pi x), constructed without branch cuts off the real line.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Base.Math.gamma-Tuple{Nemo.acb}",
+    "location": "acb.html#Base.Math.gamma-Tuple{acb}",
     "page": "Complex balls",
     "title": "Base.Math.gamma",
-    "category": "Method",
+    "category": "method",
     "text": "gamma(x::acb)\n\nReturn the Gamma function evaluated at x.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Base.Math.lgamma-Tuple{Nemo.acb}",
+    "location": "acb.html#Base.Math.lgamma-Tuple{acb}",
     "page": "Complex balls",
     "title": "Base.Math.lgamma",
-    "category": "Method",
+    "category": "method",
     "text": "lgamma(x::acb)\n\nReturn the logarithm of the Gamma function evaluated at x.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Nemo.rgamma-Tuple{Nemo.acb}",
+    "location": "acb.html#Nemo.rgamma-Tuple{acb}",
     "page": "Complex balls",
     "title": "Nemo.rgamma",
-    "category": "Method",
+    "category": "method",
     "text": "rgamma(x::acb)\n\nReturn the reciprocal of the Gamma function evaluated at x.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Base.digamma-Tuple{Nemo.acb}",
+    "location": "acb.html#Nemo.digamma-Tuple{acb}",
     "page": "Complex balls",
-    "title": "Base.digamma",
-    "category": "Method",
+    "title": "Nemo.digamma",
+    "category": "method",
     "text": "digamma(x::acb)\n\nReturn the  logarithmic derivative of the gamma function evaluated at x, i.e. psi(x).\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Base.zeta-Tuple{Nemo.acb}",
+    "location": "acb.html#Nemo.zeta-Tuple{acb}",
     "page": "Complex balls",
-    "title": "Base.zeta",
-    "category": "Method",
+    "title": "Nemo.zeta",
+    "category": "method",
     "text": "zeta(x::acb)\n\nReturn the Riemann zeta function evaluated at x.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Nemo.barnesg-Tuple{Nemo.acb}",
+    "location": "acb.html#Nemo.barnesg-Tuple{acb}",
     "page": "Complex balls",
     "title": "Nemo.barnesg",
-    "category": "Method",
+    "category": "method",
     "text": "barnesg(x::acb)\n\nReturn the Barnes G-function, evaluated at x.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Nemo.logbarnesg-Tuple{Nemo.acb}",
+    "location": "acb.html#Nemo.logbarnesg-Tuple{acb}",
     "page": "Complex balls",
     "title": "Nemo.logbarnesg",
-    "category": "Method",
+    "category": "method",
     "text": "logbarnesg(x::acb)\n\nReturn the logarithm of the Barnes G-function, evaluated at x.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Base.erf-Tuple{Nemo.acb}",
+    "location": "acb.html#Nemo.erf-Tuple{acb}",
     "page": "Complex balls",
-    "title": "Base.erf",
-    "category": "Method",
+    "title": "Nemo.erf",
+    "category": "method",
     "text": "erf(x::acb)\n\nReturn the error function evaluated at x.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Base.erfi-Tuple{Nemo.acb}",
+    "location": "acb.html#Nemo.erfi-Tuple{acb}",
     "page": "Complex balls",
-    "title": "Base.erfi",
-    "category": "Method",
+    "title": "Nemo.erfi",
+    "category": "method",
     "text": "erfi(x::acb)\n\nReturn the imaginary error function evaluated at x.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Nemo.ei-Tuple{Nemo.acb}",
+    "location": "acb.html#Nemo.ei-Tuple{acb}",
     "page": "Complex balls",
     "title": "Nemo.ei",
-    "category": "Method",
+    "category": "method",
     "text": "ei(x::acb)\n\nReturn the exponential integral evaluated at x.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Nemo.si-Tuple{Nemo.acb}",
+    "location": "acb.html#Nemo.si-Tuple{acb}",
     "page": "Complex balls",
     "title": "Nemo.si",
-    "category": "Method",
+    "category": "method",
     "text": "si(x::acb)\n\nReturn the sine integral evaluated at x.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Nemo.ci-Tuple{Nemo.acb}",
+    "location": "acb.html#Nemo.ci-Tuple{acb}",
     "page": "Complex balls",
     "title": "Nemo.ci",
-    "category": "Method",
+    "category": "method",
     "text": "ci(x::acb)\n\nReturn the exponential cosine integral evaluated at x.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Nemo.shi-Tuple{Nemo.acb}",
+    "location": "acb.html#Nemo.shi-Tuple{acb}",
     "page": "Complex balls",
     "title": "Nemo.shi",
-    "category": "Method",
+    "category": "method",
     "text": "shi(x::acb)\n\nReturn the hyperbolic sine integral evaluated at x.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Nemo.chi-Tuple{Nemo.acb}",
+    "location": "acb.html#Nemo.chi-Tuple{acb}",
     "page": "Complex balls",
     "title": "Nemo.chi",
-    "category": "Method",
+    "category": "method",
     "text": "chi(x::acb)\n\nReturn the hyperbolic cosine integral evaluated at x.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Nemo.modeta-Tuple{Nemo.acb}",
+    "location": "acb.html#Nemo.modeta-Tuple{acb}",
     "page": "Complex balls",
     "title": "Nemo.modeta",
-    "category": "Method",
+    "category": "method",
     "text": "modeta(x::acb)\n\nReturn the Dedekind eta function eta(tau) at tau = x.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Nemo.modweber_f-Tuple{Nemo.acb}",
+    "location": "acb.html#Nemo.modweber_f-Tuple{acb}",
     "page": "Complex balls",
     "title": "Nemo.modweber_f",
-    "category": "Method",
+    "category": "method",
     "text": "modweber_f(x::acb)\n\nReturn the modular Weber function mathfrakf(tau) = fraceta^2(tau)eta(tau2)eta(2tau) at x in the complex upper half plane.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Nemo.modweber_f1-Tuple{Nemo.acb}",
+    "location": "acb.html#Nemo.modweber_f1-Tuple{acb}",
     "page": "Complex balls",
     "title": "Nemo.modweber_f1",
-    "category": "Method",
+    "category": "method",
     "text": "modweber_f1(x::acb)\n\nReturn the modular Weber function mathfrakf_1(tau) = fraceta(tau2)eta(tau) at x in the complex upper half plane.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Nemo.modweber_f2-Tuple{Nemo.acb}",
+    "location": "acb.html#Nemo.modweber_f2-Tuple{acb}",
     "page": "Complex balls",
     "title": "Nemo.modweber_f2",
-    "category": "Method",
+    "category": "method",
     "text": "modweber_f2(x::acb)\n\nReturn the modular Weber function $\\mathfrak{f}_2(\\tau) = \\frac{\\sqrt{2}\\eta(2\\tau)}{\\eta(\\tau)}$ at x in the complex upper half plane.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Nemo.modj-Tuple{Nemo.acb}",
+    "location": "acb.html#Nemo.modj-Tuple{acb}",
     "page": "Complex balls",
     "title": "Nemo.modj",
-    "category": "Method",
+    "category": "method",
     "text": "modj(x::acb)\n\nReturn the j-invariant j(tau) at tau = x.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Nemo.modlambda-Tuple{Nemo.acb}",
+    "location": "acb.html#Nemo.modlambda-Tuple{acb}",
     "page": "Complex balls",
     "title": "Nemo.modlambda",
-    "category": "Method",
+    "category": "method",
     "text": "modlambda(x::acb)\n\nReturn the modular lambda function lambda(tau) at tau = x.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Nemo.moddelta-Tuple{Nemo.acb}",
+    "location": "acb.html#Nemo.moddelta-Tuple{acb}",
     "page": "Complex balls",
     "title": "Nemo.moddelta",
-    "category": "Method",
+    "category": "method",
     "text": "moddelta(x::acb)\n\nReturn the modular delta function Delta(tau) at tau = x.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Nemo.ellipk-Tuple{Nemo.acb}",
+    "location": "acb.html#Nemo.ellipk-Tuple{acb}",
     "page": "Complex balls",
     "title": "Nemo.ellipk",
-    "category": "Method",
+    "category": "method",
     "text": "ellipk(x::acb)\n\nReturn the complete elliptic integral K(x).\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Nemo.ellipe-Tuple{Nemo.acb}",
+    "location": "acb.html#Nemo.ellipe-Tuple{acb}",
     "page": "Complex balls",
     "title": "Nemo.ellipe",
-    "category": "Method",
+    "category": "method",
     "text": "ellipe(x::acb)\n\nReturn the complete elliptic integral E(x).\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Nemo.sincos-Tuple{Nemo.acb}",
+    "location": "acb.html#Base.Math.sincos-Tuple{acb}",
     "page": "Complex balls",
-    "title": "Nemo.sincos",
-    "category": "Method",
+    "title": "Base.Math.sincos",
+    "category": "method",
     "text": "sincos(x::acb)\n\nReturn a tuple s c consisting of the sine s and cosine c of x.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Nemo.sincospi-Tuple{Nemo.acb}",
+    "location": "acb.html#Nemo.sincospi-Tuple{acb}",
     "page": "Complex balls",
     "title": "Nemo.sincospi",
-    "category": "Method",
+    "category": "method",
     "text": "sincospi(x::acb)\n\nReturn a tuple s c consisting of the sine s and cosine c of pi x.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Nemo.sinhcosh-Tuple{Nemo.acb}",
+    "location": "acb.html#Nemo.sinhcosh-Tuple{acb}",
     "page": "Complex balls",
     "title": "Nemo.sinhcosh",
-    "category": "Method",
+    "category": "method",
     "text": "sinhcosh(x::acb)\n\nReturn a tuple s c consisting of the hyperbolic sine and cosine of x.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Nemo.agm-Tuple{Nemo.acb}",
+    "location": "acb.html#Nemo.agm-Tuple{acb}",
     "page": "Complex balls",
     "title": "Nemo.agm",
-    "category": "Method",
+    "category": "method",
     "text": "agm(x::acb)\n\nReturn the arithmetic-geometric mean of 1 and x.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Nemo.agm-Tuple{Nemo.acb,Nemo.acb}",
+    "location": "acb.html#Nemo.agm-Tuple{acb,acb}",
     "page": "Complex balls",
     "title": "Nemo.agm",
-    "category": "Method",
+    "category": "method",
     "text": "agm(x::acb, y::acb)\n\nReturn the arithmetic-geometric mean of x and y.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Base.polygamma-Tuple{Nemo.acb,Nemo.acb}",
+    "location": "acb.html#Nemo.polygamma-Tuple{acb,acb}",
     "page": "Complex balls",
-    "title": "Base.polygamma",
-    "category": "Method",
+    "title": "Nemo.polygamma",
+    "category": "method",
     "text": "polygamma(s::acb, a::acb)\n\nReturn the generalised polygamma function psi(sz).\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Base.zeta-Tuple{Nemo.acb,Nemo.acb}",
+    "location": "acb.html#Nemo.zeta-Tuple{acb,acb}",
     "page": "Complex balls",
-    "title": "Base.zeta",
-    "category": "Method",
+    "title": "Nemo.zeta",
+    "category": "method",
     "text": "zeta(s::acb, a::acb)\n\nReturn the Hurwitz zeta function zeta(sa).\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Nemo.risingfac-Tuple{Nemo.acb,Int64}",
+    "location": "acb.html#Nemo.risingfac-Tuple{acb,Int64}",
     "page": "Complex balls",
     "title": "Nemo.risingfac",
-    "category": "Method",
+    "category": "method",
     "text": "risingfac(x::acb, n::Int)\n\nReturn the rising factorial x(x + 1)ldots (x + n - 1) as an Acb.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Nemo.risingfac2-Tuple{Nemo.acb,Int64}",
+    "location": "acb.html#Nemo.risingfac2-Tuple{acb,Int64}",
     "page": "Complex balls",
     "title": "Nemo.risingfac2",
-    "category": "Method",
+    "category": "method",
     "text": "risingfac2(x::acb, n::Int)\n\nReturn a tuple containing the rising factorial x(x + 1)ldots (x + n - 1) and its derivative.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Nemo.polylog-Tuple{Nemo.acb,Nemo.acb}",
+    "location": "acb.html#Nemo.polylog-Tuple{acb,acb}",
     "page": "Complex balls",
     "title": "Nemo.polylog",
-    "category": "Method",
+    "category": "method",
     "text": "polylog(s::acb, a::acb)\n\n\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Nemo.polylog-Tuple{Int64,Nemo.acb}",
+    "location": "acb.html#Nemo.polylog-Tuple{Int64,acb}",
     "page": "Complex balls",
     "title": "Nemo.polylog",
-    "category": "Method",
+    "category": "method",
     "text": "polylog(s::Int, a::acb)\n\nReturn the polylogarithm Li_s(a).\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Nemo.li-Tuple{Nemo.acb}",
+    "location": "acb.html#Nemo.li-Tuple{acb}",
     "page": "Complex balls",
     "title": "Nemo.li",
-    "category": "Method",
+    "category": "method",
     "text": "li(x::acb)\n\nReturn the logarithmic integral, evaluated at x.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Nemo.lioffset-Tuple{Nemo.acb}",
+    "location": "acb.html#Nemo.lioffset-Tuple{acb}",
     "page": "Complex balls",
     "title": "Nemo.lioffset",
-    "category": "Method",
+    "category": "method",
     "text": "lioffset(x::acb)\n\nReturn the offset logarithmic integral, evaluated at x.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Nemo.expint-Tuple{Nemo.acb,Nemo.acb}",
+    "location": "acb.html#Nemo.expint-Tuple{acb,acb}",
     "page": "Complex balls",
     "title": "Nemo.expint",
-    "category": "Method",
+    "category": "method",
     "text": "expint(s::acb, x::acb)\n\nReturn the generalised exponential integral E_s(x).\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Base.Math.gamma-Tuple{Nemo.acb,Nemo.acb}",
+    "location": "acb.html#Base.Math.gamma-Tuple{acb,acb}",
     "page": "Complex balls",
     "title": "Base.Math.gamma",
-    "category": "Method",
+    "category": "method",
     "text": "gamma(s::acb, x::acb)\n\nReturn the upper incomplete gamma function Gamma(sx).\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Base.besselj-Tuple{Nemo.acb,Nemo.acb}",
+    "location": "acb.html#Nemo.besselj-Tuple{acb,acb}",
     "page": "Complex balls",
-    "title": "Base.besselj",
-    "category": "Method",
+    "title": "Nemo.besselj",
+    "category": "method",
     "text": "besselj(nu::acb, x::acb)\n\nReturn the Bessel function J_nu(x).\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Base.bessely-Tuple{Nemo.acb,Nemo.acb}",
+    "location": "acb.html#Nemo.bessely-Tuple{acb,acb}",
     "page": "Complex balls",
-    "title": "Base.bessely",
-    "category": "Method",
+    "title": "Nemo.bessely",
+    "category": "method",
     "text": "bessely(nu::acb, x::acb)\n\nReturn the Bessel function Y_nu(x).\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Base.besseli-Tuple{Nemo.acb,Nemo.acb}",
+    "location": "acb.html#Nemo.besseli-Tuple{acb,acb}",
     "page": "Complex balls",
-    "title": "Base.besseli",
-    "category": "Method",
+    "title": "Nemo.besseli",
+    "category": "method",
     "text": "besseli(nu::acb, x::acb)\n\nReturn the Bessel function I_nu(x).\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Base.besselk-Tuple{Nemo.acb,Nemo.acb}",
+    "location": "acb.html#Nemo.besselk-Tuple{acb,acb}",
     "page": "Complex balls",
-    "title": "Base.besselk",
-    "category": "Method",
+    "title": "Nemo.besselk",
+    "category": "method",
     "text": "besselk(nu::acb, x::acb)\n\nReturn the Bessel function K_nu(x).\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Nemo.hyp1f1-Tuple{Nemo.acb,Nemo.acb,Nemo.acb}",
+    "location": "acb.html#Nemo.hyp1f1-Tuple{acb,acb,acb}",
     "page": "Complex balls",
     "title": "Nemo.hyp1f1",
-    "category": "Method",
+    "category": "method",
     "text": "hyp1f1(a::acb, b::acb, x::acb)\n\nReturn the confluent hypergeometric function _1F1(abx).\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Nemo.hyp1f1r-Tuple{Nemo.acb,Nemo.acb,Nemo.acb}",
+    "location": "acb.html#Nemo.hyp1f1r-Tuple{acb,acb,acb}",
     "page": "Complex balls",
     "title": "Nemo.hyp1f1r",
-    "category": "Method",
+    "category": "method",
     "text": "hyp1f1r(a::acb, b::acb, x::acb)\n\nReturn the regularized confluent hypergeometric function _1F1(abx)  Gamma(b).\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Nemo.hyperu-Tuple{Nemo.acb,Nemo.acb,Nemo.acb}",
+    "location": "acb.html#Nemo.hyperu-Tuple{acb,acb,acb}",
     "page": "Complex balls",
     "title": "Nemo.hyperu",
-    "category": "Method",
+    "category": "method",
     "text": "hyperu(a::acb, b::acb, x::acb)\n\nReturn the confluent hypergeometric function U(abx).\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Nemo.hyp2f1-NTuple{4,Nemo.acb}",
+    "location": "acb.html#Nemo.hyp2f1-NTuple{4,acb}",
     "page": "Complex balls",
     "title": "Nemo.hyp2f1",
-    "category": "Method",
+    "category": "method",
     "text": "hyp2f1(a::acb, b::acb, c::acb, x::acb)\n\nReturn the Gauss hypergeometric function _2F_1(abcx).\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Nemo.jtheta-Tuple{Nemo.acb,Nemo.acb}",
+    "location": "acb.html#Nemo.jtheta-Tuple{acb,acb}",
     "page": "Complex balls",
     "title": "Nemo.jtheta",
-    "category": "Method",
+    "category": "method",
     "text": "jtheta(z::acb, tau::acb)\n\nReturn a tuple of four elements containing the Jacobi theta function values theta_1 theta_2 theta_3 theta_4 evaluated at z tau.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Nemo.ellipwp-Tuple{Nemo.acb,Nemo.acb}",
+    "location": "acb.html#Nemo.ellipwp-Tuple{acb,acb}",
     "page": "Complex balls",
     "title": "Nemo.ellipwp",
-    "category": "Method",
+    "category": "method",
     "text": "ellipwp(z::acb, tau::acb)\n\nReturn the Weierstrass elliptic function wp(ztau).\n\n\n\n"
 },
 
@@ -3569,10 +3569,10 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "acb.html#Nemo.lindep-Tuple{Array{Nemo.acb,1},Int64}",
+    "location": "acb.html#Nemo.lindep-Tuple{Array{acb,1},Int64}",
     "page": "Complex balls",
     "title": "Nemo.lindep",
-    "category": "Method",
+    "category": "method",
     "text": "lindep(A::Array{acb, 1}, bits::Int)\n\nFind a small linear combination of the entries of the array A that is small using LLL). The entries are first scaled by the given number of bits before truncating the real and imaginary parts to integers for use in LLL. This function can be used to find linear dependence between a list of complex numbers. The algorithm is heuristic only and returns an array of Nemo integers representing the linear combination.\n\n\n\n"
 },
 
@@ -3609,10 +3609,10 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "finitefield.html#Nemo.FlintFiniteField-Tuple{Nemo.fmpz,Int64,AbstractString}",
+    "location": "finitefield.html#Nemo.FlintFiniteField-Tuple{fmpz,Int64,AbstractString}",
     "page": "Finite fields",
     "title": "Nemo.FlintFiniteField",
-    "category": "Method",
+    "category": "method",
     "text": "FlintFiniteField(char::fmpz, deg::Int, s::AbstractString)\n\nReturns a tuple S x consisting of a finite field parent object S and generator x for the finite field of the given characteristic and degree. The string s is used to designate how the finite field generator will be printed. The characteristic must be prime. When a Conway polynomial is known, the field is generated using the Conway polynomial. Otherwise a random sparse, irreducible polynomial is used. The generator of the field is guaranteed to be a multiplicative generator only if the field is generated by a Conway polynomial. We require the degree to be positive.\n\n\n\n"
 },
 
@@ -3620,15 +3620,15 @@ var documenterSearchIndex = {"docs": [
     "location": "finitefield.html#Nemo.FlintFiniteField-Tuple{Integer,Int64,AbstractString}",
     "page": "Finite fields",
     "title": "Nemo.FlintFiniteField",
-    "category": "Method",
+    "category": "method",
     "text": "FlintFiniteField(char::Integer, deg::Int, s::AbstractString)\n\nReturns a tuple S x consisting of a finite field parent object S and generator x for the finite field of the given characteristic and degree. The string s is used to designate how the finite field generator will be printed. The characteristic must be prime. When a Conway polynomial is known, the field is generated using the Conway polynomial. Otherwise a random sparse, irreducible polynomial is used. The generator of the field is guaranteed to be a multiplicative generator only if the field is generated by a Conway polynomial. We require the degree to be positive.\n\n\n\n"
 },
 
 {
-    "location": "finitefield.html#Nemo.FlintFiniteField-Tuple{Nemo.fmpz_mod_poly,AbstractString}",
+    "location": "finitefield.html#Nemo.FlintFiniteField-Tuple{fmpz_mod_poly,AbstractString}",
     "page": "Finite fields",
     "title": "Nemo.FlintFiniteField",
-    "category": "Method",
+    "category": "method",
     "text": "FlintFiniteField(pol::fmpz_mod_poly, s::AbstractString)\n\nReturns a tuple S x consisting of a finite field parent object S and generator x for the finite field over F_p defined by the given polynomial, i.e. mathbbF_pt(pol). The characteristic is specified by the modulus of pol. The polynomial is required to be irreducible, but this is not checked. The string s is used to designate how the finite field generator will be printed. The generator will not be multiplicative in general.\n\n\n\n"
 },
 
@@ -3641,42 +3641,42 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "finitefield.html#AbstractAlgebra.Generic.gen-Tuple{Nemo.FqFiniteField}",
+    "location": "finitefield.html#AbstractAlgebra.Generic.gen-Tuple{FqFiniteField}",
     "page": "Finite fields",
     "title": "AbstractAlgebra.Generic.gen",
-    "category": "Method",
+    "category": "method",
     "text": "gen(a::FqFiniteField)\n\nReturn the generator of the finite field. Note that this is only guaranteed to be a multiplicative generator if the finite field is generated by a Conway polynomial automatically.\n\n\n\n"
 },
 
 {
-    "location": "finitefield.html#AbstractAlgebra.Generic.isgen-Tuple{Nemo.fq}",
+    "location": "finitefield.html#AbstractAlgebra.Generic.isgen-Tuple{fq}",
     "page": "Finite fields",
     "title": "AbstractAlgebra.Generic.isgen",
-    "category": "Method",
+    "category": "method",
     "text": "isgen(a::fq)\n\nReturn true if the given finite field element is the generator of the finite field, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "finitefield.html#AbstractAlgebra.Generic.coeff-Tuple{Nemo.fq,Int64}",
+    "location": "finitefield.html#AbstractAlgebra.Generic.coeff-Tuple{fq,Int64}",
     "page": "Finite fields",
     "title": "AbstractAlgebra.Generic.coeff",
-    "category": "Method",
+    "category": "method",
     "text": "coeff(x::fq, n::Int)\n\nReturn the degree n coefficient of the polynomial representing the given finite field element.\n\n\n\n"
 },
 
 {
-    "location": "finitefield.html#AbstractAlgebra.Generic.degree-Tuple{Nemo.FqFiniteField}",
+    "location": "finitefield.html#AbstractAlgebra.Generic.degree-Tuple{FqFiniteField}",
     "page": "Finite fields",
     "title": "AbstractAlgebra.Generic.degree",
-    "category": "Method",
+    "category": "method",
     "text": "degree(a::FqFiniteField)\n\nReturn the degree of the given finite field.\n\n\n\n"
 },
 
 {
-    "location": "finitefield.html#AbstractAlgebra.Generic.order-Tuple{Nemo.FqFiniteField}",
+    "location": "finitefield.html#AbstractAlgebra.Generic.order-Tuple{FqFiniteField}",
     "page": "Finite fields",
     "title": "AbstractAlgebra.Generic.order",
-    "category": "Method",
+    "category": "method",
     "text": "order(a::FqFiniteField)\n\nReturn the order, i.e. the number of elements in, the given finite field.\n\n\n\n"
 },
 
@@ -3689,34 +3689,34 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "finitefield.html#Base.LinAlg.trace-Tuple{Nemo.fq}",
+    "location": "finitefield.html#Base.trace-Tuple{fq}",
     "page": "Finite fields",
-    "title": "Base.LinAlg.trace",
-    "category": "Method",
+    "title": "Base.trace",
+    "category": "method",
     "text": "trace(x::fq)\n\nReturn the trace of a. This is an element of F_p, but the value returned is this value embedded in the original finite field.\n\n\n\n"
 },
 
 {
-    "location": "finitefield.html#Base.LinAlg.norm-Tuple{Nemo.fq}",
+    "location": "finitefield.html#Base.norm-Tuple{fq}",
     "page": "Finite fields",
-    "title": "Base.LinAlg.norm",
-    "category": "Method",
+    "title": "Base.norm",
+    "category": "method",
     "text": "norm(x::fq)\n\nReturn the norm of a. This is an element of F_p, but the value returned is this value embedded in the original finite field.\n\n\n\n"
 },
 
 {
-    "location": "finitefield.html#Nemo.frobenius-Tuple{Nemo.fq,Int64}",
+    "location": "finitefield.html#Nemo.frobenius-Tuple{fq,Int64}",
     "page": "Finite fields",
     "title": "Nemo.frobenius",
-    "category": "Method",
+    "category": "method",
     "text": "frobenius(x::fq, n = 1)\n\nReturn the iterated Frobenius sigma_p^n(a) where sigma_p is the Frobenius map sending the element a to a^p in the finite field of characteristic p. By default the Frobenius map is applied n = 1 times if n is not specified.\n\n\n\n"
 },
 
 {
-    "location": "finitefield.html#Nemo.pth_root-Tuple{Nemo.fq}",
+    "location": "finitefield.html#Nemo.pth_root-Tuple{fq}",
     "page": "Finite fields",
     "title": "Nemo.pth_root",
-    "category": "Method",
+    "category": "method",
     "text": "pth_root(x::fq)\n\nReturn the p-th root of a in the finite field of characteristic p. This is the inverse operation to the Frobenius map sigma_p.\n\n\n\n"
 },
 
@@ -3761,10 +3761,10 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "numberfield.html#AbstractAlgebra.Generic.gen-Tuple{Nemo.AnticNumberField}",
+    "location": "numberfield.html#AbstractAlgebra.Generic.gen-Tuple{AnticNumberField}",
     "page": "Number field arithmetic",
     "title": "AbstractAlgebra.Generic.gen",
-    "category": "Method",
+    "category": "method",
     "text": "gen(a::AnticNumberField)\n\nReturn the generator of the given number field.\n\n\n\n"
 },
 
@@ -3777,18 +3777,18 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "numberfield.html#Nemo.mul_red!-Tuple{Nemo.nf_elem,Nemo.nf_elem,Nemo.nf_elem,Bool}",
+    "location": "numberfield.html#Nemo.mul_red!-Tuple{nf_elem,nf_elem,nf_elem,Bool}",
     "page": "Number field arithmetic",
     "title": "Nemo.mul_red!",
-    "category": "Method",
+    "category": "method",
     "text": "mul_red!(z::nf_elem, x::nf_elem, y::nf_elem, red::Bool)\n\nMultiply a by b and set the existing number field element c to the result. Reduction modulo the defining polynomial is only performed if red is set to true. Note that a and b must be reduced. This function is provided for performance reasons as it saves allocating a new object for the result and eliminates associated garbage collection.\n\n\n\n"
 },
 
 {
-    "location": "numberfield.html#Nemo.reduce!-Tuple{Nemo.nf_elem}",
+    "location": "numberfield.html#Nemo.reduce!-Tuple{nf_elem}",
     "page": "Number field arithmetic",
     "title": "Nemo.reduce!",
-    "category": "Method",
+    "category": "method",
     "text": "reduce!(x::nf_elem)\n\nReduce the given number field element by the defining polynomial, in-place. This only needs to be done after accumulating values computed by mul_red! where reduction has not been performed. All standard Nemo number field functions automatically reduce their outputs.\n\n\n\n"
 },
 
@@ -3801,50 +3801,50 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "numberfield.html#Base.var-Tuple{Nemo.AnticNumberField}",
+    "location": "numberfield.html#Base.var-Tuple{AnticNumberField}",
     "page": "Number field arithmetic",
     "title": "Base.var",
-    "category": "Method",
+    "category": "method",
     "text": "var(a::AnticNumberField)\n\nReturns the identifier (as a symbol, not a string), that is used for printing the generator of the given number field.\n\n\n\n"
 },
 
 {
-    "location": "numberfield.html#AbstractAlgebra.Generic.isgen-Tuple{Nemo.nf_elem}",
+    "location": "numberfield.html#AbstractAlgebra.Generic.isgen-Tuple{nf_elem}",
     "page": "Number field arithmetic",
     "title": "AbstractAlgebra.Generic.isgen",
-    "category": "Method",
+    "category": "method",
     "text": "isgen(a::nf_elem)\n\nReturn true if the given number field element is the generator of the number field, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "numberfield.html#AbstractAlgebra.Generic.coeff-Tuple{Nemo.nf_elem,Int64}",
+    "location": "numberfield.html#AbstractAlgebra.Generic.coeff-Tuple{nf_elem,Int64}",
     "page": "Number field arithmetic",
     "title": "AbstractAlgebra.Generic.coeff",
-    "category": "Method",
+    "category": "method",
     "text": "coeff(x::nf_elem, n::Int)\n\nReturn the n-th coefficient of the polynomial representation of the given number field element. Coefficients are numbered from 0, starting with the constant coefficient.\n\n\n\n"
 },
 
 {
-    "location": "numberfield.html#Base.denominator-Tuple{Nemo.nf_elem}",
+    "location": "numberfield.html#Base.denominator-Tuple{nf_elem}",
     "page": "Number field arithmetic",
     "title": "Base.denominator",
-    "category": "Method",
+    "category": "method",
     "text": "denominator(a::nf_elem)\n\nReturn the denominator of the polynomial representation of the given number field element.\n\n\n\n"
 },
 
 {
-    "location": "numberfield.html#AbstractAlgebra.Generic.degree-Tuple{Nemo.AnticNumberField}",
+    "location": "numberfield.html#AbstractAlgebra.Generic.degree-Tuple{AnticNumberField}",
     "page": "Number field arithmetic",
     "title": "AbstractAlgebra.Generic.degree",
-    "category": "Method",
+    "category": "method",
     "text": "degree(a::AnticNumberField)\n\nReturn the degree of the given number field, i.e. the degree of its defining polynomial.\n\n\n\n"
 },
 
 {
-    "location": "numberfield.html#Nemo.signature-Tuple{Nemo.AnticNumberField}",
+    "location": "numberfield.html#Nemo.signature-Tuple{AnticNumberField}",
     "page": "Number field arithmetic",
     "title": "Nemo.signature",
-    "category": "Method",
+    "category": "method",
     "text": "signature(a::AnticNumberField)\n\nReturn the signature of the given number field, i.e. a tuple r s consisting of r, the number of real embeddings and s, half the number of complex embeddings.\n\n\n\n"
 },
 
@@ -3857,18 +3857,18 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "numberfield.html#Base.LinAlg.norm-Tuple{Nemo.nf_elem}",
+    "location": "numberfield.html#Base.norm-Tuple{nf_elem}",
     "page": "Number field arithmetic",
-    "title": "Base.LinAlg.norm",
-    "category": "Method",
+    "title": "Base.norm",
+    "category": "method",
     "text": "norm(a::nf_elem)\n\nReturn the absolute norm of a. The result will be a rational number.\n\n\n\n"
 },
 
 {
-    "location": "numberfield.html#Base.LinAlg.trace-Tuple{Nemo.nf_elem}",
+    "location": "numberfield.html#Base.trace-Tuple{nf_elem}",
     "page": "Number field arithmetic",
-    "title": "Base.LinAlg.trace",
-    "category": "Method",
+    "title": "Base.trace",
+    "category": "method",
     "text": "norm(a::nf_elem)\n\nReturn the absolute trace of a. The result will be a rational number.\n\n\n\n"
 },
 
@@ -3908,7 +3908,7 @@ var documenterSearchIndex = {"docs": [
     "location": "padic.html#Nemo.FlintPadicField-Tuple{Integer,Int64}",
     "page": "Padics",
     "title": "Nemo.FlintPadicField",
-    "category": "Method",
+    "category": "method",
     "text": "FlintPadicField(p::Integer, prec::Int)\n\nReturns the parent object for the p-adic field for given prime p, where the default absolute precision of elements of the field is given by prec.\n\n\n\n"
 },
 
@@ -3921,26 +3921,26 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "padic.html#AbstractAlgebra.Generic.O-Tuple{Nemo.FlintPadicField,Integer}",
+    "location": "padic.html#AbstractAlgebra.Generic.O-Tuple{FlintPadicField,Integer}",
     "page": "Padics",
     "title": "AbstractAlgebra.Generic.O",
-    "category": "Method",
+    "category": "method",
     "text": "O(R::FlintPadicField, m::Integer)\n\nConstruct the value 0 + O(p^n) given m = p^n. An exception results if m is not found to be a power of p = prime(R).\n\n\n\n"
 },
 
 {
-    "location": "padic.html#AbstractAlgebra.Generic.O-Tuple{Nemo.FlintPadicField,Nemo.fmpz}",
+    "location": "padic.html#AbstractAlgebra.Generic.O-Tuple{FlintPadicField,fmpz}",
     "page": "Padics",
     "title": "AbstractAlgebra.Generic.O",
-    "category": "Method",
+    "category": "method",
     "text": "O(R::FlintPadicField, m::fmpz)\n\nConstruct the value 0 + O(p^n) given m = p^n. An exception results if m is not found to be a power of p = prime(R).\n\n\n\n"
 },
 
 {
-    "location": "padic.html#AbstractAlgebra.Generic.O-Tuple{Nemo.FlintPadicField,Nemo.fmpq}",
+    "location": "padic.html#AbstractAlgebra.Generic.O-Tuple{FlintPadicField,fmpq}",
     "page": "Padics",
     "title": "AbstractAlgebra.Generic.O",
-    "category": "Method",
+    "category": "method",
     "text": "O(R::FlintPadicField, m::fmpq)\n\nConstruct the value 0 + O(p^n) given m = p^n. An exception results if m is not found to be a power of p = prime(R).\n\n\n\n"
 },
 
@@ -3953,42 +3953,42 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "padic.html#Nemo.prime-Tuple{Nemo.FlintPadicField}",
+    "location": "padic.html#Nemo.prime-Tuple{FlintPadicField}",
     "page": "Padics",
     "title": "Nemo.prime",
-    "category": "Method",
+    "category": "method",
     "text": "prime(R::FlintPadicField)\n\nReturn the prime p for the given p-adic field.\n\n\n\n"
 },
 
 {
-    "location": "padic.html#Base.precision-Tuple{Nemo.padic}",
+    "location": "padic.html#Base.precision-Tuple{padic}",
     "page": "Padics",
     "title": "Base.precision",
-    "category": "Method",
+    "category": "method",
     "text": "precision(a::padic)\n\nReturn the precision of the given p-adic field element, i.e. if the element is known to O(p^n) this function will return n.\n\n\n\n"
 },
 
 {
-    "location": "padic.html#AbstractAlgebra.Generic.valuation-Tuple{Nemo.padic}",
+    "location": "padic.html#AbstractAlgebra.Generic.valuation-Tuple{padic}",
     "page": "Padics",
     "title": "AbstractAlgebra.Generic.valuation",
-    "category": "Method",
+    "category": "method",
     "text": "valuation(a::padic)\n\nReturn the valuation of the given p-adic field element, i.e. if the given element is divisible by p^n but not a higher power of p then the function will return n.\n\n\n\n"
 },
 
 {
-    "location": "padic.html#Nemo.lift-Tuple{Nemo.FlintIntegerRing,Nemo.padic}",
+    "location": "padic.html#Nemo.lift-Tuple{FlintIntegerRing,padic}",
     "page": "Padics",
     "title": "Nemo.lift",
-    "category": "Method",
+    "category": "method",
     "text": "lift(R::FlintIntegerRing, a::padic)\n\nReturn a lift of the given p-adic field element to mathbbZ.\n\n\n\n"
 },
 
 {
-    "location": "padic.html#Nemo.lift-Tuple{Nemo.FlintRationalField,Nemo.padic}",
+    "location": "padic.html#Nemo.lift-Tuple{FlintRationalField,padic}",
     "page": "Padics",
     "title": "Nemo.lift",
-    "category": "Method",
+    "category": "method",
     "text": "lift(R::FlintRationalField, a::padic)\n\nReturn a lift of the given p-adic field element to mathbbQ.\n\n\n\n"
 },
 
@@ -4001,10 +4001,10 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "padic.html#Base.sqrt-Tuple{Nemo.padic}",
+    "location": "padic.html#Base.sqrt-Tuple{padic}",
     "page": "Padics",
     "title": "Base.sqrt",
-    "category": "Method",
+    "category": "method",
     "text": "sqrt(a::padic)\n\nReturn the p-adic square root of a. We define this only when the valuation of a is even. The precision of the output will be precision(a) - valuation(a)2. If the square root does not exist, an exception is thrown.\n\n\n\n"
 },
 
@@ -4017,26 +4017,26 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "padic.html#Base.exp-Tuple{Nemo.padic}",
+    "location": "padic.html#Base.exp-Tuple{padic}",
     "page": "Padics",
     "title": "Base.exp",
-    "category": "Method",
+    "category": "method",
     "text": "exp(a::padic)\n\nReturn the p-adic exponential of a. We define this only when the valuation of a is positive (unless a = 0). The precision of the output will be the same as the precision of the input. If the input is not valid an exception is thrown.\n\n\n\n"
 },
 
 {
-    "location": "padic.html#Base.log-Tuple{Nemo.padic}",
+    "location": "padic.html#Base.log-Tuple{padic}",
     "page": "Padics",
     "title": "Base.log",
-    "category": "Method",
+    "category": "method",
     "text": "log(a::padic)\n\nReturn the p-adic logarithm of a. We define this only when the valuation of a is zero (but not for a == 0). The precision of the output will be the same as the precision of the input. If the input is not valid an exception is thrown.\n\n\n\n"
 },
 
 {
-    "location": "padic.html#Nemo.teichmuller-Tuple{Nemo.padic}",
+    "location": "padic.html#Nemo.teichmuller-Tuple{padic}",
     "page": "Padics",
     "title": "Nemo.teichmuller",
-    "category": "Method",
+    "category": "method",
     "text": "teichmuller(a::padic)\n\nReturn the Teichmuller lift of the p-adic value a. We require the valuation of a to be nonnegative. The precision of the output will be the same as the precision of the input. For convenience, if a is congruent to zero modulo p we return zero. If the input is not valid an exception is thrown.\n\n\n\n"
 },
 
@@ -4073,34 +4073,34 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "matrix.html#Nemo.overlaps-Tuple{Nemo.arb_mat,Nemo.arb_mat}",
+    "location": "matrix.html#Nemo.overlaps-Tuple{arb_mat,arb_mat}",
     "page": "Matrices",
     "title": "Nemo.overlaps",
-    "category": "Method",
+    "category": "method",
     "text": "overlaps(x::arb_mat, y::arb_mat)\n\nReturns true if all entries of x overlap with the corresponding entry of y, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "matrix.html#Nemo.overlaps-Tuple{Nemo.acb_mat,Nemo.acb_mat}",
+    "location": "matrix.html#Nemo.overlaps-Tuple{acb_mat,acb_mat}",
     "page": "Matrices",
     "title": "Nemo.overlaps",
-    "category": "Method",
+    "category": "method",
     "text": "overlaps(x::acb_mat, y::acb_mat)\n\nReturns true if all entries of x overlap with the corresponding entry of y, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "matrix.html#Base.contains-Tuple{Nemo.arb_mat,Nemo.arb_mat}",
+    "location": "matrix.html#Base.contains-Tuple{arb_mat,arb_mat}",
     "page": "Matrices",
     "title": "Base.contains",
-    "category": "Method",
+    "category": "method",
     "text": "contains(x::arb_mat, y::arb_mat)\n\nReturns true if all entries of x contain the corresponding entry of y, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "matrix.html#Base.contains-Tuple{Nemo.acb_mat,Nemo.acb_mat}",
+    "location": "matrix.html#Base.contains-Tuple{acb_mat,acb_mat}",
     "page": "Matrices",
     "title": "Base.contains",
-    "category": "Method",
+    "category": "method",
     "text": "contains(x::acb_mat, y::acb_mat)\n\nReturns true if all entries of x contain the corresponding entry of y, otherwise return false.\n\n\n\n"
 },
 
@@ -4113,42 +4113,42 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "matrix.html#Base.:<<-Tuple{Nemo.fmpz_mat,Int64}",
+    "location": "matrix.html#Base.:<<-Tuple{fmpz_mat,Int64}",
     "page": "Matrices",
     "title": "Base.:<<",
-    "category": "Method",
+    "category": "method",
     "text": "<<(x::fmpz_mat, y::Int)\n\nReturn 2^yx.\n\n\n\n"
 },
 
 {
-    "location": "matrix.html#Base.:>>-Tuple{Nemo.fmpz_mat,Int64}",
+    "location": "matrix.html#Base.:>>-Tuple{fmpz_mat,Int64}",
     "page": "Matrices",
     "title": "Base.:>>",
-    "category": "Method",
+    "category": "method",
     "text": ">>(x::fmpz_mat, y::Int)\n\nReturn x2^y where rounding is towards zero.\n\n\n\n"
 },
 
 {
-    "location": "matrix.html#Nemo.det_divisor-Tuple{Nemo.fmpz_mat}",
+    "location": "matrix.html#Nemo.det_divisor-Tuple{fmpz_mat}",
     "page": "Matrices",
     "title": "Nemo.det_divisor",
-    "category": "Method",
+    "category": "method",
     "text": "det_divisor(x::fmpz_mat)\n\nReturn some positive divisor of the determinant of x, if the determinant is nonzero, otherwise return zero.\n\n\n\n"
 },
 
 {
-    "location": "matrix.html#Nemo.det_given_divisor-Tuple{Nemo.fmpz_mat,Integer,Bool}",
+    "location": "matrix.html#Nemo.det_given_divisor-Tuple{fmpz_mat,Integer,Bool}",
     "page": "Matrices",
     "title": "Nemo.det_given_divisor",
-    "category": "Method",
+    "category": "method",
     "text": "det_given_divisor(x::fmpz_mat, d::Integer, proved=true)\n\nReturn the determinant of x given a positive divisor of its determinant. If proved == true (the default), the output is guaranteed to be correct, otherwise a heuristic algorithm is used.\n\n\n\n"
 },
 
 {
-    "location": "matrix.html#Nemo.det_given_divisor-Tuple{Nemo.fmpz_mat,Nemo.fmpz,Bool}",
+    "location": "matrix.html#Nemo.det_given_divisor-Tuple{fmpz_mat,fmpz,Bool}",
     "page": "Matrices",
     "title": "Nemo.det_given_divisor",
-    "category": "Method",
+    "category": "method",
     "text": "det_given_divisor(x::fmpz_mat, d::fmpz, proved=true)\n\nReturn the determinant of x given a positive divisor of its determinant. If proved == true (the default), the output is guaranteed to be correct, otherwise a heuristic algorithm is used.\n\n\n\n"
 },
 
@@ -4161,26 +4161,26 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "matrix.html#Nemo.cansolve-Tuple{Nemo.fmpz_mat,Nemo.fmpz_mat}",
+    "location": "matrix.html#Nemo.cansolve-Tuple{fmpz_mat,fmpz_mat}",
     "page": "Matrices",
     "title": "Nemo.cansolve",
-    "category": "Method",
+    "category": "method",
     "text": "cansolve(a::fmpz_mat, b::fmpz_mat) -> Bool, fmpz_mat\n\nReturn true and a matrix x such that ax = b, or false and some matrix in case x does not exist.\n\n\n\n"
 },
 
 {
-    "location": "matrix.html#Nemo.solve_dixon-Tuple{Nemo.fmpz_mat,Nemo.fmpz_mat}",
+    "location": "matrix.html#Nemo.solve_dixon-Tuple{fmpz_mat,fmpz_mat}",
     "page": "Matrices",
     "title": "Nemo.solve_dixon",
-    "category": "Method",
+    "category": "method",
     "text": "solve_dixon(a::fmpz_mat, b::fmpz_mat)\n\nReturn a tuple (x m) consisting of a column vector x such that ax = b pmodm. The element  b must be a column vector with the same number > of rows as a and a must be a square matrix. If these conditions are not met or (x d) does not exist, an exception is raised.\n\n\n\n"
 },
 
 {
-    "location": "matrix.html#Nemo.solve_dixon-Tuple{Nemo.fmpq_mat,Nemo.fmpq_mat}",
+    "location": "matrix.html#Nemo.solve_dixon-Tuple{fmpq_mat,fmpq_mat}",
     "page": "Matrices",
     "title": "Nemo.solve_dixon",
-    "category": "Method",
+    "category": "method",
     "text": "solve_dixon(a::fmpq_mat, b::fmpq_mat)\n\nSolve ax = b by clearing denominators and using Dixon\'s algorithm. This is usually faster for large systems.\n\n\n\n"
 },
 
@@ -4193,10 +4193,10 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "matrix.html#Nemo.pseudo_inv-Tuple{Nemo.fmpz_mat}",
+    "location": "matrix.html#Nemo.pseudo_inv-Tuple{fmpz_mat}",
     "page": "Matrices",
     "title": "Nemo.pseudo_inv",
-    "category": "Method",
+    "category": "method",
     "text": "pseudo_inv(x::fmpz_mat)\n\nReturn a tuple (z d) consisting of a matrix z and denominator d such that zd is the inverse of x.\n\n\n\n"
 },
 
@@ -4209,10 +4209,10 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "matrix.html#Nemo.nullspace_right_rational-Tuple{Nemo.fmpz_mat}",
+    "location": "matrix.html#Nemo.nullspace_right_rational-Tuple{fmpz_mat}",
     "page": "Matrices",
     "title": "Nemo.nullspace_right_rational",
-    "category": "Method",
+    "category": "method",
     "text": "nullspace_right_rational(x::fmpz_mat)\n\nReturn the right rational nullspace of x, i.e. a set of vectors over mathbbZ giving a mathbbQ-basis for the nullspace of x considered as a matrix over mathbbQ.\n\n\n\n"
 },
 
@@ -4225,18 +4225,18 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "matrix.html#Nemo.reduce_mod-Tuple{Nemo.fmpz_mat,Integer}",
+    "location": "matrix.html#Nemo.reduce_mod-Tuple{fmpz_mat,Integer}",
     "page": "Matrices",
     "title": "Nemo.reduce_mod",
-    "category": "Method",
+    "category": "method",
     "text": "reduce_mod(x::fmpz_mat, y::Integer)\n\nReduce the entries of x modulo y and return the result.\n\n\n\n"
 },
 
 {
-    "location": "matrix.html#Nemo.reduce_mod-Tuple{Nemo.fmpz_mat,Nemo.fmpz}",
+    "location": "matrix.html#Nemo.reduce_mod-Tuple{fmpz_mat,fmpz}",
     "page": "Matrices",
     "title": "Nemo.reduce_mod",
-    "category": "Method",
+    "category": "method",
     "text": "reduce_mod(x::fmpz_mat, y::fmpz)\n\nReduce the entries of x modulo y and return the result.\n\n\n\n"
 },
 
@@ -4249,10 +4249,10 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "matrix.html#Nemo.lift-Tuple{Nemo.nmod_mat}",
+    "location": "matrix.html#Nemo.lift-Tuple{nmod_mat}",
     "page": "Matrices",
     "title": "Nemo.lift",
-    "category": "Method",
+    "category": "method",
     "text": "lift(a::nmod_mat)\n\nReturn a lift of the matrix a to a matrix over mathbbZ, i.e. where the entries of the returned matrix are those of a lifted to mathbbZ.\n\n\n\n"
 },
 
@@ -4265,26 +4265,26 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "matrix.html#Nemo.hadamard-Tuple{Nemo.FmpzMatSpace}",
+    "location": "matrix.html#Nemo.hadamard-Tuple{FmpzMatSpace}",
     "page": "Matrices",
     "title": "Nemo.hadamard",
-    "category": "Method",
+    "category": "method",
     "text": "hadamard(R::FmpzMatSpace)\n\nReturn the Hadamard matrix for the given matrix space. The number of rows and columns must be equal.\n\n\n\n"
 },
 
 {
-    "location": "matrix.html#Nemo.ishadamard-Tuple{Nemo.fmpz_mat}",
+    "location": "matrix.html#Nemo.ishadamard-Tuple{fmpz_mat}",
     "page": "Matrices",
     "title": "Nemo.ishadamard",
-    "category": "Method",
+    "category": "method",
     "text": "ishadamard(x::fmpz_mat)\n\nReturn true if the given matrix is Hadamard, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "matrix.html#Nemo.hilbert-Tuple{Nemo.FmpqMatSpace}",
+    "location": "matrix.html#Nemo.hilbert-Tuple{FmpqMatSpace}",
     "page": "Matrices",
     "title": "Nemo.hilbert",
-    "category": "Method",
+    "category": "method",
     "text": "hilbert(R::FmpqMatSpace)\n\nReturn the Hilbert matrix in the given matrix space. This is the matrix with entries H_ij = 1(i + j - 1).\n\n\n\n"
 },
 
@@ -4297,42 +4297,42 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "matrix.html#AbstractAlgebra.Generic.hnf-Tuple{Nemo.fmpz_mat}",
+    "location": "matrix.html#AbstractAlgebra.Generic.hnf-Tuple{fmpz_mat}",
     "page": "Matrices",
     "title": "AbstractAlgebra.Generic.hnf",
-    "category": "Method",
+    "category": "method",
     "text": "hnf(x::fmpz_mat)\n\nReturn the Hermite Normal Form of x.\n\n\n\n"
 },
 
 {
-    "location": "matrix.html#Nemo.hnf_with_transform-Tuple{Nemo.fmpz_mat}",
+    "location": "matrix.html#Nemo.hnf_with_transform-Tuple{fmpz_mat}",
     "page": "Matrices",
     "title": "Nemo.hnf_with_transform",
-    "category": "Method",
+    "category": "method",
     "text": "hnf_with_transform(x::fmpz_mat)\n\nCompute a tuple (H T) where H is the Hermite normal form of x and T is a transformation matrix so that H = Tx.\n\n\n\n"
 },
 
 {
-    "location": "matrix.html#Nemo.hnf_modular-Tuple{Nemo.fmpz_mat,Nemo.fmpz}",
+    "location": "matrix.html#Nemo.hnf_modular-Tuple{fmpz_mat,fmpz}",
     "page": "Matrices",
     "title": "Nemo.hnf_modular",
-    "category": "Method",
+    "category": "method",
     "text": "hnf_modular(x::fmpz_mat, d::fmpz)\n\nCompute the Hermite normal form of x given that d is a multiple of the determinant of the nonzero rows of x.\n\n\n\n"
 },
 
 {
-    "location": "matrix.html#Nemo.hnf_modular_eldiv-Tuple{Nemo.fmpz_mat,Nemo.fmpz}",
+    "location": "matrix.html#Nemo.hnf_modular_eldiv-Tuple{fmpz_mat,fmpz}",
     "page": "Matrices",
     "title": "Nemo.hnf_modular_eldiv",
-    "category": "Method",
+    "category": "method",
     "text": "hnf_modular_eldiv(x::fmpz_mat, d::fmpz)\n\nCompute the Hermite normal form of x given that d is a multiple of the largest elementary divisor of x. The matrix x must have full rank.\n\n\n\n"
 },
 
 {
-    "location": "matrix.html#Nemo.ishnf-Tuple{Nemo.fmpz_mat}",
+    "location": "matrix.html#Nemo.ishnf-Tuple{fmpz_mat}",
     "page": "Matrices",
     "title": "Nemo.ishnf",
-    "category": "Method",
+    "category": "method",
     "text": "ishnf(x::fmpz_mat)\n\nReturn true if the given matrix is in Hermite Normal Form, otherwise return false.\n\n\n\n"
 },
 
@@ -4345,50 +4345,50 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "matrix.html#Nemo.lll-Tuple{Nemo.fmpz_mat,Nemo.lll_ctx}",
+    "location": "matrix.html#Nemo.lll-Tuple{fmpz_mat,lll_ctx}",
     "page": "Matrices",
     "title": "Nemo.lll",
-    "category": "Method",
+    "category": "method",
     "text": "lll(x::fmpz_mat, ctx=lll_ctx(0.99, 0.51))\n\nReturn the LLL reduction of the matrix x. By default the matrix x is a mathbbZ-basis and the Gram matrix is maintained throughout in approximate form. The LLL is performed with reduction parameters delta = 099 and eta = 051. All of these defaults can be overridden by specifying an optional context object.\n\n\n\n"
 },
 
 {
-    "location": "matrix.html#Nemo.lll_with_transform-Tuple{Nemo.fmpz_mat,Nemo.lll_ctx}",
+    "location": "matrix.html#Nemo.lll_with_transform-Tuple{fmpz_mat,lll_ctx}",
     "page": "Matrices",
     "title": "Nemo.lll_with_transform",
-    "category": "Method",
+    "category": "method",
     "text": "Compute a tuple (L T) where L is the LLL reduction of a and T is a transformation matrix so that L = Ta. All the default parameters can be overridden by supplying an optional context object.\n\n\n\n"
 },
 
 {
-    "location": "matrix.html#Nemo.lll_gram-Tuple{Nemo.fmpz_mat,Nemo.lll_ctx}",
+    "location": "matrix.html#Nemo.lll_gram-Tuple{fmpz_mat,lll_ctx}",
     "page": "Matrices",
     "title": "Nemo.lll_gram",
-    "category": "Method",
+    "category": "method",
     "text": "lll_gram(x::fmpz_mat, ctx=lll_ctx(0.99, 0.51, :gram))\n\nGiven the Gram matrix x of a matrix, compute the Gram matrix of its LLL reduction.\n\n\n\n"
 },
 
 {
-    "location": "matrix.html#Nemo.lll_gram_with_transform-Tuple{Nemo.fmpz_mat,Nemo.lll_ctx}",
+    "location": "matrix.html#Nemo.lll_gram_with_transform-Tuple{fmpz_mat,lll_ctx}",
     "page": "Matrices",
     "title": "Nemo.lll_gram_with_transform",
-    "category": "Method",
+    "category": "method",
     "text": "lll_gram_with_transform(x::fmpz_mat, ctx=lll_ctx(0.99, 0.51, :gram))\n\nGiven the Gram matrix x of a matrix M, compute a tuple (L T) where L is the gram matrix of the LLL reduction of the matrix and T is a transformation matrix so that L = TM.\n\n\n\n"
 },
 
 {
-    "location": "matrix.html#Nemo.lll_with_removal-Tuple{Nemo.fmpz_mat,Nemo.fmpz,Nemo.lll_ctx}",
+    "location": "matrix.html#Nemo.lll_with_removal-Tuple{fmpz_mat,fmpz,lll_ctx}",
     "page": "Matrices",
     "title": "Nemo.lll_with_removal",
-    "category": "Method",
+    "category": "method",
     "text": "lll_with_removal(x::fmpz_mat, b::fmpz, ctx=lll_ctx(0.99, 0.51))\n\nCompute the LLL reduction of x and throw away rows whose norm exceeds the given bound b. Return a tuple (r L) where the first r rows of L are the rows remaining after removal.\n\n\n\n"
 },
 
 {
-    "location": "matrix.html#Nemo.lll_with_removal_transform-Tuple{Nemo.fmpz_mat,Nemo.fmpz,Nemo.lll_ctx}",
+    "location": "matrix.html#Nemo.lll_with_removal_transform-Tuple{fmpz_mat,fmpz,lll_ctx}",
     "page": "Matrices",
     "title": "Nemo.lll_with_removal_transform",
-    "category": "Method",
+    "category": "method",
     "text": "lll_with_removal_transform(x::fmpz_mat, b::fmpz, ctx=lll_ctx(0.99, 0.51))\n\nCompute a tuple (r L T) where the first r rows of L are those remaining from the LLL reduction after removal of vectors with norm exceeding the bound b and T is a transformation matrix so that L = Tx.\n\n\n\n"
 },
 
@@ -4401,26 +4401,26 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "matrix.html#AbstractAlgebra.Generic.snf-Tuple{Nemo.fmpz_mat}",
+    "location": "matrix.html#AbstractAlgebra.Generic.snf-Tuple{fmpz_mat}",
     "page": "Matrices",
     "title": "AbstractAlgebra.Generic.snf",
-    "category": "Method",
+    "category": "method",
     "text": "snf(x::fmpz_mat)\n\nCompute the Smith normal form of x.\n\n\n\n"
 },
 
 {
-    "location": "matrix.html#Nemo.snf_diagonal-Tuple{Nemo.fmpz_mat}",
+    "location": "matrix.html#Nemo.snf_diagonal-Tuple{fmpz_mat}",
     "page": "Matrices",
     "title": "Nemo.snf_diagonal",
-    "category": "Method",
+    "category": "method",
     "text": "snf_diagonal(x::fmpz_mat)\n\nGiven a diagonal matrix x compute the Smith normal form of x.\n\n\n\n"
 },
 
 {
-    "location": "matrix.html#Nemo.issnf-Tuple{Nemo.fmpz_mat}",
+    "location": "matrix.html#Nemo.issnf-Tuple{fmpz_mat}",
     "page": "Matrices",
     "title": "Nemo.issnf",
-    "category": "Method",
+    "category": "method",
     "text": "issnf(x::fmpz_mat)\n\nReturn true if x is in Smith normal form, otherwise return false.\n\n\n\n"
 },
 
@@ -4433,10 +4433,10 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "matrix.html#Nemo.strong_echelon_form-Tuple{Nemo.nmod_mat}",
+    "location": "matrix.html#Nemo.strong_echelon_form-Tuple{nmod_mat}",
     "page": "Matrices",
     "title": "Nemo.strong_echelon_form",
-    "category": "Method",
+    "category": "method",
     "text": "strong_echelon_form(a::nmod_mat)\n\nReturn the strong echeleon form of a. The matrix a must have at least as many rows as columns.\n\n\n\n"
 },
 
@@ -4449,10 +4449,10 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "matrix.html#Nemo.howell_form-Tuple{Nemo.nmod_mat}",
+    "location": "matrix.html#Nemo.howell_form-Tuple{nmod_mat}",
     "page": "Matrices",
     "title": "Nemo.howell_form",
-    "category": "Method",
+    "category": "method",
     "text": "howell_form(a::nmod_mat)\n\nReturn the Howell normal form of a. The matrix a must have at least as many rows as columns.\n\n\n\n"
 },
 
@@ -4465,10 +4465,10 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "matrix.html#Nemo.gso-Tuple{Nemo.fmpq_mat}",
+    "location": "matrix.html#Nemo.gso-Tuple{fmpq_mat}",
     "page": "Matrices",
     "title": "Nemo.gso",
-    "category": "Method",
+    "category": "method",
     "text": "gso(x::fmpq_mat)\n\nReturn the Gram-Schmidt Orthogonalisation of the matrix x.\n\n\n\n"
 },
 
@@ -4481,18 +4481,18 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "matrix.html#Base.exp-Tuple{Nemo.arb_mat}",
+    "location": "matrix.html#Base.exp-Tuple{arb_mat}",
     "page": "Matrices",
     "title": "Base.exp",
-    "category": "Method",
+    "category": "method",
     "text": "exp(x::arb_mat)\n\nReturns the exponential of the matrix x.\n\n\n\n"
 },
 
 {
-    "location": "matrix.html#Base.exp-Tuple{Nemo.acb_mat}",
+    "location": "matrix.html#Base.exp-Tuple{acb_mat}",
     "page": "Matrices",
     "title": "Base.exp",
-    "category": "Method",
+    "category": "method",
     "text": "exp(x::acb_mat)\n\nReturns the exponential of the matrix x.\n\n\n\n"
 },
 
@@ -4505,18 +4505,18 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "matrix.html#Nemo.bound_inf_norm-Tuple{Nemo.arb_mat}",
+    "location": "matrix.html#Nemo.bound_inf_norm-Tuple{arb_mat}",
     "page": "Matrices",
     "title": "Nemo.bound_inf_norm",
-    "category": "Method",
+    "category": "method",
     "text": "bound_inf_norm(x::arb_mat)\n\nReturns a nonnegative element z of type arb, such that z is an upper bound for the infinity norm for every matrix in x\n\n\n\n"
 },
 
 {
-    "location": "matrix.html#Nemo.bound_inf_norm-Tuple{Nemo.acb_mat}",
+    "location": "matrix.html#Nemo.bound_inf_norm-Tuple{acb_mat}",
     "page": "Matrices",
     "title": "Nemo.bound_inf_norm",
-    "category": "Method",
+    "category": "method",
     "text": "bound_inf_norm(x::acb_mat)\n\nReturns a nonnegative element z of type acb, such that z is an upper bound for the infinity norm for every matrix in x\n\n\n\n"
 },
 
@@ -4529,18 +4529,18 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "matrix.html#Base.Math.ldexp-Tuple{Nemo.arb_mat,Int64}",
+    "location": "matrix.html#Base.Math.ldexp-Tuple{arb_mat,Int64}",
     "page": "Matrices",
     "title": "Base.Math.ldexp",
-    "category": "Method",
+    "category": "method",
     "text": "ldexp(x::acb_mat, y::Int)\n\nReturn 2^yx. Note that y can be positive, zero or negative.\n\n\n\n"
 },
 
 {
-    "location": "matrix.html#Base.Math.ldexp-Tuple{Nemo.acb_mat,Int64}",
+    "location": "matrix.html#Base.Math.ldexp-Tuple{acb_mat,Int64}",
     "page": "Matrices",
     "title": "Base.Math.ldexp",
-    "category": "Method",
+    "category": "method",
     "text": "ldexp(x::acb_mat, y::Int)\n\nReturn 2^yx. Note that y can be positive, zero or negative.\n\n\n\n"
 },
 
@@ -4553,10 +4553,10 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "matrix.html#Base.isreal-Tuple{Nemo.acb_mat}",
+    "location": "matrix.html#Base.isreal-Tuple{acb_mat}",
     "page": "Matrices",
     "title": "Base.isreal",
-    "category": "Method",
+    "category": "method",
     "text": "isreal(M::acb_mat)\n\nReturns whether every entry of M has vanishing imaginary part.\n\n\n\n"
 },
 
@@ -4590,38 +4590,6 @@ var documenterSearchIndex = {"docs": [
     "title": "Factorisation",
     "category": "section",
     "text": "Nemo provides a unified interface to handle factorisations using the Fact objects. These can only be constructed using the factor function for the respective ring elements. This is best illustrated by an example.julia> fac = factor(ZZ(-6000361807272228723606))\n-1 * 2 * 229^3 * 43669^3 * 3\n\njulia> unit(fac)\n-1\n\njulia> -6000361807272228723606 == unit(fac) * prod([ p^e for (p, e) in fac])\ntrue\n\njulia> for (p, e) in fac; println(\"$p $e\"); end\n2 1\n229 3\n43669 3\n3 1\n\njulia> 229 in fac\ntrue\n\njulia> fac[229]\n3"
-},
-
-{
-    "location": "factor.html#Base.in-Union{Tuple{T,AbstractAlgebra.Fac{T}}, Tuple{T}} where T",
-    "page": "Factorisation",
-    "title": "Base.in",
-    "category": "Method",
-    "text": "in(a::T, b::Fac{T})\n\nTest whether a is a factor of b.\n\n\n\n"
-},
-
-{
-    "location": "factor.html#Base.getindex-Union{Tuple{AbstractAlgebra.Fac{T},Any}, Tuple{T}} where T",
-    "page": "Factorisation",
-    "title": "Base.getindex",
-    "category": "Method",
-    "text": "getindex(collection, key...)\n\nRetrieve the value(s) stored at the given key or index within a collection. The syntax a[i,j,...] is converted by the compiler to getindex(a, i, j, ...).\n\njulia> A = Dict(\"a\" => 1, \"b\" => 2)\nDict{String,Int64} with 2 entries:\n  \"b\" => 2\n  \"a\" => 1\n\njulia> getindex(A, \"a\")\n1\n\n\n\n"
-},
-
-{
-    "location": "factor.html#Base.length-Tuple{AbstractAlgebra.Fac}",
-    "page": "Factorisation",
-    "title": "Base.length",
-    "category": "Method",
-    "text": "length(a::Fac) -> Int\n\nReturns the number of factors of a, not including the unit.\n\n\n\n"
-},
-
-{
-    "location": "factor.html#AbstractAlgebra.unit-Tuple{AbstractAlgebra.Fac}",
-    "page": "Factorisation",
-    "title": "AbstractAlgebra.unit",
-    "category": "Method",
-    "text": "unit(a::Fac{T}) -> T\n\nReturns the unit of the factorization.\n\n\n\n"
 },
 
 {
