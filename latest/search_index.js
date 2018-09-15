@@ -385,14 +385,6 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "integer.html#Nemo.isprime-Tuple{fmpz}",
-    "page": "Integers",
-    "title": "Nemo.isprime",
-    "category": "method",
-    "text": "isprime(x::fmpz)\n\nReturn true if x is a prime number, otherwise return false.\n\n\n\n"
-},
-
-{
     "location": "integer.html#Nemo.isprobabprime-Tuple{fmpz}",
     "page": "Integers",
     "title": "Nemo.isprobabprime",
@@ -561,9 +553,9 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "integer.html#Base.base-Tuple{fmpz,Integer}",
+    "location": "integer.html#Nemo.base-Tuple{fmpz,Integer}",
     "page": "Integers",
-    "title": "Base.base",
+    "title": "Nemo.base",
     "category": "method",
     "text": "base(n::fmpz, b::Integer)\n\nReturn n as a string in base b. We require 2 leq b leq 62.\n\n\n\n"
 },
@@ -601,17 +593,17 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "integer.html#Base.prevpow2-Tuple{fmpz}",
+    "location": "integer.html#Nemo.prevpow2-Tuple{fmpz}",
     "page": "Integers",
-    "title": "Base.prevpow2",
+    "title": "Nemo.prevpow2",
     "category": "method",
     "text": "prevpow2(x::fmpz)\n\nReturn the previous power of 2 up to including x.\n\n\n\n"
 },
 
 {
-    "location": "integer.html#Base.nextpow2-Tuple{fmpz}",
+    "location": "integer.html#Nemo.nextpow2-Tuple{fmpz}",
     "page": "Integers",
-    "title": "Base.nextpow2",
+    "title": "Nemo.nextpow2",
     "category": "method",
     "text": "nextpow2(x::fmpz)\n\nReturn the next power of 2 that is at least x.\n\n\n\n"
 },
@@ -677,7 +669,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Univariate polynomials",
     "title": "Introduction",
     "category": "section",
-    "text": "Nemo allow the creation of dense, univariate polynomials over any computable ring R. There are two different kinds of implementation: a generic one for the case where no specific implementation exists (provided by AbstractAlgebra.jl), and efficient implementations of polynomials over numerous specific rings, usually provided by C/C++ libraries.The following table shows each of the polynomial types available in Nemo, the base ring R, and the Julia/Nemo types for that kind of polynomial (the type information is mainly of concern to developers).Base ring Library Element type Parent type\nGeneric ring R AbstractAlgebra.jl Generic.Poly{T} Generic.PolyRing{T}\nmathbbZ Flint fmpz_poly FmpzPolyRing\nmathbbZnmathbbZ (small n) Flint nmod_poly NmodPolyRing\nmathbbZnmathbbZ (large n) Flint fmpz_mod_poly FmpzModPolyRing\nmathbbQ Flint fmpq_poly FmpqPolyRing\nmathbbF_p^n (small p) Flint fq_nmod_poly FqNmodPolyRing\nmathbbF_p^n (large p) Flint fq_poly FqPolyRing\nmathbbR Arb arb_poly ArbPolyRing\nmathbbC Arb acb_poly AcbPolyRingThe string representation of the variable and the base ring R of a generic polynomial is stored in its parent object. All polynomial element types belong to the abstract type PolyElem and all of the polynomial ring types belong to the abstract type PolyRing. This enables one to write generic functions that can accept any Nemo univariate polynomial type."
+    "text": "Nemo allow the creation of dense, univariate polynomials over any computable ring R. There are two different kinds of implementation: a generic one for the case where no specific implementation exists (provided by AbstractAlgebra.jl), and efficient implementations of polynomials over numerous specific rings, usually provided by C/C++ libraries.The following table shows each of the polynomial types available in Nemo, the base ring R, and the Julia/Nemo types for that kind of polynomial (the type information is mainly of concern to developers).Base ring Library Element type Parent type\nGeneric ring R AbstractAlgebra.jl Generic.Poly{T} Generic.PolyRing{T}\nmathbbZ Flint fmpz_poly FmpzPolyRing\nmathbbZnmathbbZ (small n) Flint nmod_poly NmodPolyRing\nmathbbZnmathbbZ (large n) Flint fmpz_mod_poly FmpzModPolyRing\nmathbbQ Flint fmpq_poly FmpqPolyRing\nmathbbZpmathbbZ (prime p) Flint gfp_poly GFPPolyRing\nmathbbF_p^n (small p) Flint fq_nmod_poly FqNmodPolyRing\nmathbbF_p^n (large p) Flint fq_poly FqPolyRing\nmathbbR Arb arb_poly ArbPolyRing\nmathbbC Arb acb_poly AcbPolyRingThe string representation of the variable and the base ring R of a generic polynomial is stored in its parent object. All polynomial element types belong to the abstract type PolyElem and all of the polynomial ring types belong to the abstract type PolyRing. This enables one to write generic functions that can accept any Nemo univariate polynomial type."
 },
 
 {
@@ -889,6 +881,14 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
+    "location": "polynomial.html#Nemo.lift-Tuple{FmpzPolyRing,gfp_poly}",
+    "page": "Univariate polynomials",
+    "title": "Nemo.lift",
+    "category": "method",
+    "text": "function lift(R::FmpzPolyRing, y::gfp_poly)\n\nLift from a polynomial over mathbbZnmathbbZ to a polynomial over mathbbZ with minimal reduced nonnegative coefficients. The ring R specifies the ring to lift into.\n\n\n\n"
+},
+
+{
     "location": "polynomial.html#Nemo.lift-Tuple{FmpzPolyRing,fmpz_mod_poly}",
     "page": "Univariate polynomials",
     "title": "Nemo.lift",
@@ -901,7 +901,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Univariate polynomials",
     "title": "Lifting",
     "category": "section",
-    "text": "When working over a residue ring it is useful to be able to lift to the base ring of the residue ring, e.g. from mathbbZnmathbbZ to mathbbZ.lift(::FmpzPolyRing, ::nmod_poly)\nlift(::FmpzPolyRing, ::fmpz_mod_poly)ExamplesR = ResidueRing(ZZ, 123456789012345678949)\nS, x = PolynomialRing(R, \"x\")\nT, y = PolynomialRing(ZZ, \"y\")\n\nf = x^2 + 2x + 1\n\na = lift(T, f)"
+    "text": "When working over a residue ring it is useful to be able to lift to the base ring of the residue ring, e.g. from mathbbZnmathbbZ to mathbbZ.lift(::FmpzPolyRing, ::nmod_poly)\nlift(::FmpzPolyRing, ::gfp_poly)\nlift(::FmpzPolyRing, ::fmpz_mod_poly)ExamplesR = ResidueRing(ZZ, 123456789012345678949)\nS, x = PolynomialRing(R, \"x\")\nT, y = PolynomialRing(ZZ, \"y\")\n\nf = x^2 + 2x + 1\n\na = lift(T, f)"
 },
 
 {
@@ -921,49 +921,49 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "polynomial.html#Base.contains-Tuple{arb_poly,arb_poly}",
+    "location": "polynomial.html#Nemo.contains-Tuple{arb_poly,arb_poly}",
     "page": "Univariate polynomials",
-    "title": "Base.contains",
+    "title": "Nemo.contains",
     "category": "method",
     "text": "contains(x::arb_poly, y::arb_poly)\n\nReturn true if the coefficient balls of x contain the corresponding coefficient balls of y, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "polynomial.html#Base.contains-Tuple{acb_poly,acb_poly}",
+    "location": "polynomial.html#Nemo.contains-Tuple{acb_poly,acb_poly}",
     "page": "Univariate polynomials",
-    "title": "Base.contains",
+    "title": "Nemo.contains",
     "category": "method",
     "text": "contains(x::acb_poly, y::acb_poly)\n\nReturn true if the coefficient boxes of x contain the corresponding coefficient boxes of y, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "polynomial.html#Base.contains-Tuple{arb_poly,fmpz_poly}",
+    "location": "polynomial.html#Nemo.contains-Tuple{arb_poly,fmpz_poly}",
     "page": "Univariate polynomials",
-    "title": "Base.contains",
+    "title": "Nemo.contains",
     "category": "method",
     "text": "contains(x::arb_poly, y::fmpz_poly)\n\nReturn true if the coefficient balls of x contain the corresponding exact coefficients of y, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "polynomial.html#Base.contains-Tuple{arb_poly,fmpq_poly}",
+    "location": "polynomial.html#Nemo.contains-Tuple{arb_poly,fmpq_poly}",
     "page": "Univariate polynomials",
-    "title": "Base.contains",
+    "title": "Nemo.contains",
     "category": "method",
     "text": "contains(x::arb_poly, y::fmpq_poly)\n\nReturn true if the coefficient balls of x contain the corresponding exact coefficients of y, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "polynomial.html#Base.contains-Tuple{acb_poly,fmpz_poly}",
+    "location": "polynomial.html#Nemo.contains-Tuple{acb_poly,fmpz_poly}",
     "page": "Univariate polynomials",
-    "title": "Base.contains",
+    "title": "Nemo.contains",
     "category": "method",
     "text": "contains(x::acb_poly, y::fmpz_poly)\n\nReturn true if the coefficient boxes of x contain the corresponding exact coefficients of y, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "polynomial.html#Base.contains-Tuple{acb_poly,fmpq_poly}",
+    "location": "polynomial.html#Nemo.contains-Tuple{acb_poly,fmpq_poly}",
     "page": "Univariate polynomials",
-    "title": "Base.contains",
+    "title": "Nemo.contains",
     "category": "method",
     "text": "contains(x::acb_poly, y::fmpq_poly)\n\nReturn true if the coefficient boxes of x contain the corresponding exact coefficients of y, otherwise return false.\n\n\n\n"
 },
@@ -1009,6 +1009,14 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
+    "location": "polynomial.html#Nemo.isirreducible-Tuple{gfp_poly}",
+    "page": "Univariate polynomials",
+    "title": "Nemo.isirreducible",
+    "category": "method",
+    "text": "isirreducible(x::gfp_poly)\n\nReturn true if x is irreducible, otherwise return false.\n\n\n\n"
+},
+
+{
     "location": "polynomial.html#Nemo.isirreducible-Tuple{fmpz_mod_poly}",
     "page": "Univariate polynomials",
     "title": "Nemo.isirreducible",
@@ -1038,6 +1046,14 @@ var documenterSearchIndex = {"docs": [
     "title": "Nemo.issquarefree",
     "category": "method",
     "text": "issquarefree(x::nmod_poly)\n\nReturn true if x is squarefree, otherwise return false.\n\n\n\n"
+},
+
+{
+    "location": "polynomial.html#Nemo.issquarefree-Tuple{gfp_poly}",
+    "page": "Univariate polynomials",
+    "title": "Nemo.issquarefree",
+    "category": "method",
+    "text": "issquarefree(x::gfp_poly)\n\nReturn true if x is squarefree, otherwise return false.\n\n\n\n"
 },
 
 {
@@ -1081,6 +1097,14 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
+    "location": "polynomial.html#Nemo.factor-Tuple{gfp_poly}",
+    "page": "Univariate polynomials",
+    "title": "Nemo.factor",
+    "category": "method",
+    "text": "factor(x::gfp_poly)\n\nReturn the factorisation of x.\n\n\n\n"
+},
+
+{
     "location": "polynomial.html#Nemo.factor-Tuple{fmpz_mod_poly}",
     "page": "Univariate polynomials",
     "title": "Nemo.factor",
@@ -1110,6 +1134,14 @@ var documenterSearchIndex = {"docs": [
     "title": "Nemo.factor_squarefree",
     "category": "method",
     "text": "factor_squarefree(x::nmod_poly)\n\nReturn the squarefree factorisation of x.\n\n\n\n"
+},
+
+{
+    "location": "polynomial.html#Nemo.factor_squarefree-Tuple{gfp_poly}",
+    "page": "Univariate polynomials",
+    "title": "Nemo.factor_squarefree",
+    "category": "method",
+    "text": "factor_squarefree(x::gfp_poly)\n\nReturn the squarefree factorisation of x.\n\n\n\n"
 },
 
 {
@@ -1145,6 +1177,14 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
+    "location": "polynomial.html#Nemo.factor_distinct_deg-Tuple{gfp_poly}",
+    "page": "Univariate polynomials",
+    "title": "Nemo.factor_distinct_deg",
+    "category": "method",
+    "text": "factor_distinct_deg(x::gfp_poly)\n\nReturn the distinct degree factorisation of a squarefree polynomial x.\n\n\n\n"
+},
+
+{
     "location": "polynomial.html#Nemo.factor_distinct_deg-Tuple{fmpz_mod_poly}",
     "page": "Univariate polynomials",
     "title": "Nemo.factor_distinct_deg",
@@ -1173,7 +1213,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Univariate polynomials",
     "title": "Factorisation",
     "category": "section",
-    "text": "Polynomials can be factorised over certain rings. In general we use the same format for the output as the Julia factorisation function, namely an associative array with polynomial factors as keys and exponents as values.isirreducible(::nmod_poly)\nisirreducible(::fmpz_mod_poly)\nisirreducible(::fq_poly)\nisirreducible(::fq_nmod_poly)issquarefree(::nmod_poly)\nissquarefree(::fmpz_mod_poly)\nissquarefree(::fq_poly)\nissquarefree(::fq_nmod_poly)factor(::fmpz_poly)\nfactor(::nmod_poly)\nfactor(::fmpz_mod_poly)\nfactor(::fq_poly)\nfactor(::fq_nmod_poly)factor_squarefree(::nmod_poly)\nfactor_squarefree(::fmpz_mod_poly)\nfactor_squarefree(::fq_poly)\nfactor_squarefree(::fq_nmod_poly)factor_distinct_deg(::nmod_poly)\nfactor_distinct_deg(::fmpz_mod_poly)\nfactor_distinct_deg(::fq_poly)\nfactor_distinct_deg(::fq_nmod_poly)ExamplesR = ResidueRing(ZZ, 23)\nS, x = PolynomialRing(R, \"x\")\n\nf = x^2 + 2x + 1\ng = x^3 + 3x + 1\n\nR = factor(f*g)\nS = factor_squarefree(f*g)\nT = factor_distinct_deg((x + 1)*g*(x^5+x^3+x+1))"
+    "text": "Polynomials can be factorised over certain rings. In general we use the same format for the output as the Julia factorisation function, namely an associative array with polynomial factors as keys and exponents as values.isirreducible(::nmod_poly)\nisirreducible(::gfp_poly)\nisirreducible(::fmpz_mod_poly)\nisirreducible(::fq_poly)\nisirreducible(::fq_nmod_poly)issquarefree(::nmod_poly)\nissquarefree(::gfp_poly)\nissquarefree(::fmpz_mod_poly)\nissquarefree(::fq_poly)\nissquarefree(::fq_nmod_poly)factor(::fmpz_poly)\nfactor(::nmod_poly)\nfactor(::gfp_poly)\nfactor(::fmpz_mod_poly)\nfactor(::fq_poly)\nfactor(::fq_nmod_poly)factor_squarefree(::nmod_poly)\nfactor_squarefree(::gfp_poly)\nfactor_squarefree(::fmpz_mod_poly)\nfactor_squarefree(::fq_poly)\nfactor_squarefree(::fq_nmod_poly)factor_distinct_deg(::nmod_poly)\nfactor_distinct_deg(::gfp_poly)\nfactor_distinct_deg(::fmpz_mod_poly)\nfactor_distinct_deg(::fq_poly)\nfactor_distinct_deg(::fq_nmod_poly)ExamplesR = ResidueRing(ZZ, 23)\nS, x = PolynomialRing(R, \"x\")\n\nf = x^2 + 2x + 1\ng = x^3 + 3x + 1\n\nR = factor(f*g)\nS = factor_squarefree(f*g)\nT = factor_distinct_deg((x + 1)*g*(x^5+x^3+x+1))"
 },
 
 {
@@ -1454,6 +1494,30 @@ var documenterSearchIndex = {"docs": [
     "title": "Residue functionality",
     "category": "section",
     "text": "All the residue rings in Nemo implement the residue ring interface of AbstractAlgebra.jl:https://nemocas.github.io/AbstractAlgebra.jl/residue_rings.htmlIn addition, functionality for generic residue rings is available:https://nemocas.github.io/AbstractAlgebra.jl/residue.htmlThe other residue types in Nemo also implement this functionality."
+},
+
+{
+    "location": "residue.html#Base.gcdx-Tuple{Nemo.nmod,Nemo.nmod}",
+    "page": "Residue rings",
+    "title": "Base.gcdx",
+    "category": "method",
+    "text": "gcdx(a::nmod, b::nmod)\n\nCompute the extended gcd with the Euclidean structure inherited from mathbbZ.\n\n\n\n"
+},
+
+{
+    "location": "residue.html#Base.gcdx-Tuple{ResElem{fmpz},ResElem{fmpz}}",
+    "page": "Residue rings",
+    "title": "Base.gcdx",
+    "category": "method",
+    "text": "gcdx(a::ResElem{fmpz}, b::ResElem{fmpz})\n\nCompute the extended gcd with the Euclidean structure inherited from mathbbZ.\n\n\n\n"
+},
+
+{
+    "location": "residue.html#GCD-1",
+    "page": "Residue rings",
+    "title": "GCD",
+    "category": "section",
+    "text": "gcdx(::nmod, ::nmod)\ngcdx(::ResElem{fmpz}, ::ResElem{fmpz})ExamplesR = ResidueRing(ZZ, 123456789012345678949)\n\ng, s, t = gcdx(R(123), R(456))"
 },
 
 {
@@ -1865,9 +1929,9 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "arb.html#AbstractAlgebra.Generic.isnegative-Tuple{arb}",
+    "location": "arb.html#AbstractAlgebra.isnegative-Tuple{arb}",
     "page": "Real balls",
-    "title": "AbstractAlgebra.Generic.isnegative",
+    "title": "AbstractAlgebra.isnegative",
     "category": "method",
     "text": "isnegative(x::arb)\n\nReturn true if x is certainly negative, otherwise return false.\n\n\n\n"
 },
@@ -1921,49 +1985,49 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "arb.html#Base.contains-Tuple{arb,arb}",
+    "location": "arb.html#Nemo.contains-Tuple{arb,arb}",
     "page": "Real balls",
-    "title": "Base.contains",
+    "title": "Nemo.contains",
     "category": "method",
     "text": "contains(x::arb, y::arb)\n\nReturns true if the ball x contains the ball y, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Base.contains-Tuple{arb,Integer}",
+    "location": "arb.html#Nemo.contains-Tuple{arb,Integer}",
     "page": "Real balls",
-    "title": "Base.contains",
+    "title": "Nemo.contains",
     "category": "method",
     "text": "contains(x::arb, y::Integer)\n\nReturns true if the ball x contains the given integer value, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Base.contains-Tuple{arb,fmpz}",
+    "location": "arb.html#Nemo.contains-Tuple{arb,fmpz}",
     "page": "Real balls",
-    "title": "Base.contains",
+    "title": "Nemo.contains",
     "category": "method",
     "text": "contains(x::arb, y::fmpz)\n\nReturns true if the ball x contains the given integer value, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Base.contains-Tuple{arb,fmpq}",
+    "location": "arb.html#Nemo.contains-Tuple{arb,fmpq}",
     "page": "Real balls",
-    "title": "Base.contains",
+    "title": "Nemo.contains",
     "category": "method",
     "text": "contains(x::arb, y::fmpq)\n\nReturns true if the ball x contains the given rational value, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Base.contains-Union{Tuple{T}, Tuple{arb,Rational{T}}} where T<:Integer",
+    "location": "arb.html#Nemo.contains-Union{Tuple{T}, Tuple{arb,Rational{T}}} where T<:Integer",
     "page": "Real balls",
-    "title": "Base.contains",
+    "title": "Nemo.contains",
     "category": "method",
     "text": "contains(x::arb, y::Rational{Integer})\n\nReturns true if the ball x contains the given rational value, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Base.contains-Tuple{arb,BigFloat}",
+    "location": "arb.html#Nemo.contains-Tuple{arb,BigFloat}",
     "page": "Real balls",
-    "title": "Base.contains",
+    "title": "Nemo.contains",
     "category": "method",
     "text": "contains(x::arb, y::BigFloat)\n\nReturns true if the ball x contains the given floating point value, otherwise return false.\n\n\n\n"
 },
@@ -2393,17 +2457,17 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "arb.html#Base.Math.gamma-Tuple{arb}",
+    "location": "arb.html#Nemo.gamma-Tuple{arb}",
     "page": "Real balls",
-    "title": "Base.Math.gamma",
+    "title": "Nemo.gamma",
     "category": "method",
     "text": "gamma(x::arb)\n\nReturn the Gamma function evaluated at x.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Base.Math.lgamma-Tuple{arb}",
+    "location": "arb.html#Nemo.lgamma-Tuple{arb}",
     "page": "Real balls",
-    "title": "Base.Math.lgamma",
+    "title": "Nemo.lgamma",
     "category": "method",
     "text": "lgamma(x::arb)\n\nReturn the logarithm of the Gamma function evaluated at x.\n\n\n\n"
 },
@@ -2481,9 +2545,9 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "arb.html#Base.Math.atan2-Tuple{arb,arb}",
+    "location": "arb.html#Nemo.atan2-Tuple{arb,arb}",
     "page": "Real balls",
-    "title": "Base.Math.atan2",
+    "title": "Nemo.atan2",
     "category": "method",
     "text": "atan2(x::arb, y::arb)\n\nReturn atan2(ba) = arg(a+bi).\n\n\n\n"
 },
@@ -2569,17 +2633,17 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "arb.html#Base.Math.gamma-Tuple{fmpz,ArbField}",
+    "location": "arb.html#Nemo.gamma-Tuple{fmpz,ArbField}",
     "page": "Real balls",
-    "title": "Base.Math.gamma",
+    "title": "Nemo.gamma",
     "category": "method",
     "text": "gamma(x::fmpz, r::ArbField)\n\nReturn the Gamma function evaluated at x in the given Arb field.\n\n\n\n"
 },
 
 {
-    "location": "arb.html#Base.Math.gamma-Tuple{fmpq,ArbField}",
+    "location": "arb.html#Nemo.gamma-Tuple{fmpq,ArbField}",
     "page": "Real balls",
-    "title": "Base.Math.gamma",
+    "title": "Nemo.gamma",
     "category": "method",
     "text": "gamma(x::fmpq, r::ArbField)\n\nReturn the Gamma function evaluated at x in the given Arb field.\n\n\n\n"
 },
@@ -2701,7 +2765,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Real balls",
     "title": "Nemo.numpart",
     "category": "method",
-    "text": "numpart(n::fmpz, r::ArbField)\n\nReturn the number of partitions p(n) as an element of r.\n\n\n\n"
+    "text": "numpart(n::Int, r::ArbField)\n\nReturn the number of partitions p(n) as an element of r.\n\n\n\n"
 },
 
 {
@@ -2857,33 +2921,33 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "acb.html#Base.contains-Tuple{acb,acb}",
+    "location": "acb.html#Nemo.contains-Tuple{acb,acb}",
     "page": "Complex balls",
-    "title": "Base.contains",
+    "title": "Nemo.contains",
     "category": "method",
     "text": "contains(x::acb, y::acb)\n\nReturns true if the box x contains the box y, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Base.contains-Tuple{acb,Integer}",
+    "location": "acb.html#Nemo.contains-Tuple{acb,Integer}",
     "page": "Complex balls",
-    "title": "Base.contains",
+    "title": "Nemo.contains",
     "category": "method",
     "text": "contains(x::acb, y::Integer)\n\nReturns true if the box x contains the given integer value, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Base.contains-Tuple{acb,fmpz}",
+    "location": "acb.html#Nemo.contains-Tuple{acb,fmpz}",
     "page": "Complex balls",
-    "title": "Base.contains",
+    "title": "Nemo.contains",
     "category": "method",
     "text": "contains(x::acb, y::fmpz)\n\nReturns true if the box x contains the given integer value, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Base.contains-Tuple{acb,fmpq}",
+    "location": "acb.html#Nemo.contains-Tuple{acb,fmpq}",
     "page": "Complex balls",
-    "title": "Base.contains",
+    "title": "Nemo.contains",
     "category": "method",
     "text": "contains(x::acb, y::fmpq)\n\nReturns true if the box x contains the given rational value, otherwise return false.\n\n\n\n"
 },
@@ -3177,17 +3241,17 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "acb.html#Base.Math.gamma-Tuple{acb}",
+    "location": "acb.html#Nemo.gamma-Tuple{acb}",
     "page": "Complex balls",
-    "title": "Base.Math.gamma",
+    "title": "Nemo.gamma",
     "category": "method",
     "text": "gamma(x::acb)\n\nReturn the Gamma function evaluated at x.\n\n\n\n"
 },
 
 {
-    "location": "acb.html#Base.Math.lgamma-Tuple{acb}",
+    "location": "acb.html#Nemo.lgamma-Tuple{acb}",
     "page": "Complex balls",
-    "title": "Base.Math.lgamma",
+    "title": "Nemo.lgamma",
     "category": "method",
     "text": "lgamma(x::acb)\n\nReturn the logarithm of the Gamma function evaluated at x.\n\n\n\n"
 },
@@ -3473,9 +3537,9 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "acb.html#Base.Math.gamma-Tuple{acb,acb}",
+    "location": "acb.html#Nemo.gamma-Tuple{acb,acb}",
     "page": "Complex balls",
-    "title": "Base.Math.gamma",
+    "title": "Nemo.gamma",
     "category": "method",
     "text": "gamma(s::acb, x::acb)\n\nReturn the upper incomplete gamma function Gamma(sx).\n\n\n\n"
 },
@@ -3573,7 +3637,15 @@ var documenterSearchIndex = {"docs": [
     "page": "Complex balls",
     "title": "Nemo.lindep",
     "category": "method",
-    "text": "lindep(A::Array{acb, 1}, bits::Int)\n\nFind a small linear combination of the entries of the array A that is small using LLL). The entries are first scaled by the given number of bits before truncating the real and imaginary parts to integers for use in LLL. This function can be used to find linear dependence between a list of complex numbers. The algorithm is heuristic only and returns an array of Nemo integers representing the linear combination.\n\n\n\n"
+    "text": "lindep(A::Array{acb, 1}, bits::Int)\n\nFind a small linear combination of the entries of the array A that is small (using LLL). The entries are first scaled by the given number of bits before truncating the real and imaginary parts to integers for use in LLL. This function can be used to find linear dependence between a list of complex numbers. The algorithm is heuristic only and returns an array of Nemo integers representing the linear combination.\n\n\n\n"
+},
+
+{
+    "location": "acb.html#Nemo.lindep-Tuple{Array{acb,2},Int64}",
+    "page": "Complex balls",
+    "title": "Nemo.lindep",
+    "category": "method",
+    "text": "lindep(A::Array{acb, 2}, bits::Int)\n\nFind a (common) small linear combination of the entries in each row of the array A, that is small (using LLL). It is assumed that the complex numbers in each row of the array share the same linear combination. The entries are first scaled by the given number of bits before truncating the real and imaginary parts to integers for use in LLL. This function can be used to find a common linear dependence shared across a number of lists of complex numbers. The algorithm is heuristic only and returns an array of Nemo integers representing the common linear combination.\n\n\n\n"
 },
 
 {
@@ -3581,7 +3653,31 @@ var documenterSearchIndex = {"docs": [
     "page": "Complex balls",
     "title": "Linear dependence",
     "category": "section",
-    "text": "lindep(::Array{acb, 1}, n::Int)ExamplesCC = ComplexField(128)\n\na = CC(1.0050669478588622428791051888364775253, - 0.93725915669289182697903585868761513585)\n\nV = [CC(1), a, a^2, a^3, a^4, a^5];\nW = lindep(V, 20)"
+    "text": "lindep(::Array{acb, 1}, n::Int)lindep(A::Array{acb, 2}, bits::Int)ExamplesCC = ComplexField(128)\n\n# These are two of the roots of x^5 + 3x + 1\na = CC(1.0050669478588622428791051888364775253, - 0.93725915669289182697903585868761513585)\nb = CC(-0.33198902958450931620250069492231652319)\n\n# We recover the polynomial from one root....\nV1 = [CC(1), a, a^2, a^3, a^4, a^5];\nW = lindep(V1, 20)\n\n# ...or from two\nV2 = [CC(1), b, b^2, b^3, b^4, b^5];\nVs = [V1 V2]\'\nX = lindep(Vs, 20)"
+},
+
+{
+    "location": "gfp.html#",
+    "page": "Galois fields",
+    "title": "Galois fields",
+    "category": "page",
+    "text": "CurrentModule = Nemo"
+},
+
+{
+    "location": "gfp.html#Galois-fields-1",
+    "page": "Galois fields",
+    "title": "Galois fields",
+    "category": "section",
+    "text": "Nemo allows the creation of Galois fields of the form mathbbZpmathbbZ for a prime p. Note that these are not the same as finite fields of degree 1, as Conway polynomials are not used.For convenience, the following constructors are provided.GF(n::UInt)\nGF(n::Int)For example, one can create the Galois field of characteristic 7 as follows.R = GF(7)Elements of the field are then created in the usual way.a = R(3)Elements of Galois fields have type gfp_elem, and the type of the parent objects is GaloisField.The modulus p of an element of a Galois field is stored in its parent object.The gfp_elem type belong to the abstract type FinFieldElem and the GaloisField parent object type belongs to the abstract type FinField."
+},
+
+{
+    "location": "gfp.html#Galois-field-functionality-1",
+    "page": "Galois fields",
+    "title": "Galois field functionality",
+    "category": "section",
+    "text": "Galois fields in Nemo implement the residue ring interface of AbstractAlgebra.jl:https://nemocas.github.io/AbstractAlgebra.jl/residue_rings.htmlIn addition, all the functionality for generic residue rings is available:https://nemocas.github.io/AbstractAlgebra.jl/residue.html"
 },
 
 {
@@ -3689,17 +3785,9 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "finitefield.html#Base.trace-Tuple{fq}",
+    "location": "finitefield.html#LinearAlgebra.norm-Tuple{fq}",
     "page": "Finite fields",
-    "title": "Base.trace",
-    "category": "method",
-    "text": "trace(x::fq)\n\nReturn the trace of a. This is an element of F_p, but the value returned is this value embedded in the original finite field.\n\n\n\n"
-},
-
-{
-    "location": "finitefield.html#Base.norm-Tuple{fq}",
-    "page": "Finite fields",
-    "title": "Base.norm",
+    "title": "LinearAlgebra.norm",
     "category": "method",
     "text": "norm(x::fq)\n\nReturn the norm of a. This is an element of F_p, but the value returned is this value embedded in the original finite field.\n\n\n\n"
 },
@@ -3801,9 +3889,9 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "numberfield.html#Base.var-Tuple{AnticNumberField}",
+    "location": "numberfield.html#AbstractAlgebra.Generic.var-Tuple{AnticNumberField}",
     "page": "Number field arithmetic",
-    "title": "Base.var",
+    "title": "AbstractAlgebra.Generic.var",
     "category": "method",
     "text": "var(a::AnticNumberField)\n\nReturns the identifier (as a symbol, not a string), that is used for printing the generator of the given number field.\n\n\n\n"
 },
@@ -3857,19 +3945,11 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "numberfield.html#Base.norm-Tuple{nf_elem}",
+    "location": "numberfield.html#LinearAlgebra.norm-Tuple{nf_elem}",
     "page": "Number field arithmetic",
-    "title": "Base.norm",
+    "title": "LinearAlgebra.norm",
     "category": "method",
     "text": "norm(a::nf_elem)\n\nReturn the absolute norm of a. The result will be a rational number.\n\n\n\n"
-},
-
-{
-    "location": "numberfield.html#Base.trace-Tuple{nf_elem}",
-    "page": "Number field arithmetic",
-    "title": "Base.trace",
-    "category": "method",
-    "text": "norm(a::nf_elem)\n\nReturn the absolute trace of a. The result will be a rational number.\n\n\n\n"
 },
 
 {
@@ -4061,7 +4141,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Matrices",
     "title": "Matrices",
     "category": "section",
-    "text": "Nemo allow the creation of dense matrices over any computable ring R. There are two different kinds of implementation: a generic one for the case where no specific implementation exists (provided by AbstractAlgebra.jl), and efficient implementations of matrices over numerous specific rings, usually provided by C/C++ libraries.The following table shows each of the matrix types available in Nemo, the base ring R, and the Julia/Nemo types for that kind of matrix (the type information is mainly of concern to developers).Base ring Library Element type Parent type\nGeneric ring R AbstractAlgebra.jl Generic.Mat{T} Generic.MatSpace{T}\nmathbbZ Flint fmpz_mat FmpzMatSpace\nmathbbZnmathbbZ (small n) Flint nmod_mat NmodMatSpace\nmathbbQ Flint fmpq_mat FmpqMatSpace\nmathbbF_p^n (small p) Flint fq_nmod_mat FqNmodMatSpace\nmathbbF_p^n (large p) Flint fq_mat `FqMatSpace\nmathbbR Arb arb_mat ArbMatSpace\nmathbbC Arb acb_mat AcbMatSpaceThe dimensions and base ring R of a generic matrix are stored in its parent object. All matrix element types belong to the abstract type MatElem and all of the matrix space types belong to the abstract type MatSpace. This enables one to write generic functions that can accept any Nemo matrix type."
+    "text": "Nemo allow the creation of dense matrices over any computable ring R. There are two different kinds of implementation: a generic one for the case where no specific implementation exists (provided by AbstractAlgebra.jl), and efficient implementations of matrices over numerous specific rings, usually provided by C/C++ libraries.The following table shows each of the matrix types available in Nemo, the base ring R, and the Julia/Nemo types for that kind of matrix (the type information is mainly of concern to developers).Base ring Library Element type Parent type\nGeneric ring R AbstractAlgebra.jl Generic.Mat{T} Generic.MatSpace{T}\nmathbbZ Flint fmpz_mat FmpzMatSpace\nmathbbZnmathbbZ (small n) Flint nmod_mat NmodMatSpace\nmathbbQ Flint fmpq_mat FmpqMatSpace\nmathbbZpmathbbZ (small p) Flint gfp_mat GFPMatSpace\nmathbbF_p^n (small p) Flint fq_nmod_mat FqNmodMatSpace\nmathbbF_p^n (large p) Flint fq_mat `FqMatSpace\nmathbbR Arb arb_mat ArbMatSpace\nmathbbC Arb acb_mat AcbMatSpaceThe dimensions and base ring R of a generic matrix are stored in its parent object. All matrix element types belong to the abstract type MatElem and all of the matrix space types belong to the abstract type MatSpace. This enables one to write generic functions that can accept any Nemo matrix type."
 },
 
 {
@@ -4089,17 +4169,17 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "matrix.html#Base.contains-Tuple{arb_mat,arb_mat}",
+    "location": "matrix.html#Nemo.contains-Tuple{arb_mat,arb_mat}",
     "page": "Matrices",
-    "title": "Base.contains",
+    "title": "Nemo.contains",
     "category": "method",
     "text": "contains(x::arb_mat, y::arb_mat)\n\nReturns true if all entries of x contain the corresponding entry of y, otherwise return false.\n\n\n\n"
 },
 
 {
-    "location": "matrix.html#Base.contains-Tuple{acb_mat,acb_mat}",
+    "location": "matrix.html#Nemo.contains-Tuple{acb_mat,acb_mat}",
     "page": "Matrices",
-    "title": "Base.contains",
+    "title": "Nemo.contains",
     "category": "method",
     "text": "contains(x::acb_mat, y::acb_mat)\n\nReturns true if all entries of x contain the corresponding entry of y, otherwise return false.\n\n\n\n"
 },
@@ -4213,7 +4293,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Matrices",
     "title": "Nemo.nullspace_right_rational",
     "category": "method",
-    "text": "nullspace_right_rational(x::fmpz_mat)\n\nReturn the right rational nullspace of x, i.e. a set of vectors over mathbbZ giving a mathbbQ-basis for the nullspace of x considered as a matrix over mathbbQ.\n\n\n\n"
+    "text": "nullspace_right_rational(x::fmpz_mat)\n\nReturn a tuple (r U) consisting of a matrix U such that the first r columns form the right rational nullspace of x, i.e. a set of vectors over mathbbZ giving a mathbbQ-basis  for the nullspace of x considered as a matrix over\n\nmathbbQ\n\n.\n\n\n\n"
 },
 
 {
@@ -4257,11 +4337,19 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
+    "location": "matrix.html#Nemo.lift-Tuple{gfp_mat}",
+    "page": "Matrices",
+    "title": "Nemo.lift",
+    "category": "method",
+    "text": "lift(a::gfp_mat)\n\nReturn a lift of the matrix a to a matrix over mathbbZ, i.e. where the entries of the returned matrix are those of a lifted to mathbbZ.\n\n\n\n"
+},
+
+{
     "location": "matrix.html#Lifting-1",
     "page": "Matrices",
     "title": "Lifting",
     "category": "section",
-    "text": "lift(::nmod_mat)ExamplesR = ResidueRing(ZZ, 7)\nS = MatrixSpace(R, 3, 3)\n\na = S([4 5 6; 7 3 2; 1 4 5])\n  \n b = lift(a)"
+    "text": "lift(::nmod_mat)\nlift(::gfp_mat)ExamplesR = ResidueRing(ZZ, 7)\nS = MatrixSpace(R, 3, 3)\n\na = S([4 5 6; 7 3 2; 1 4 5])\n  \n b = lift(a)"
 },
 
 {
@@ -4393,11 +4481,27 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
+    "location": "matrix.html#Nemo.lll!-Tuple{fmpz_mat,lll_ctx}",
+    "page": "Matrices",
+    "title": "Nemo.lll!",
+    "category": "method",
+    "text": "lll!(x::fmpz_mat, ctx=lll_ctx(0.99, 0.51))\n\nPerform the LLL reduction of the matrix x inplace. By default the matrix x is a > mathbbZ-basis and the Gram matrix is maintained throughout in approximate form. The LLL is performed with reduction parameters delta = 099 and eta = 051. All of these defaults can be overridden by specifying an optional context object.\n\n\n\n"
+},
+
+{
+    "location": "matrix.html#Nemo.lll_gram!-Tuple{fmpz_mat,lll_ctx}",
+    "page": "Matrices",
+    "title": "Nemo.lll_gram!",
+    "category": "method",
+    "text": "lll_gram!(x::fmpz_mat, ctx=lll_ctx(0.99, 0.51, :gram))\n\nGiven the Gram matrix x of a matrix, compute the Gram matrix of its LLL reduction inplace.\n\n\n\n"
+},
+
+{
     "location": "matrix.html#Lattice-basis-reduction-1",
     "page": "Matrices",
     "title": "Lattice basis reduction",
     "category": "section",
-    "text": "Nemo provides LLL lattice basis reduction. Optionally one can specify the setup using a context object created by the following function.lll_ctx(delta::Float64, eta::Float64, rep=:zbasis, gram=:approx)Return a LLL context object specifying LLL parameters delta and eta and specifying the representation as either :zbasis or :gram and the Gram type as either :approx or :exact.lll(::fmpz_mat, ::lll_ctx)lll_with_transform(::fmpz_mat, ::lll_ctx)lll_gram(::fmpz_mat, ::lll_ctx)lll_gram_with_transform(::fmpz_mat, ::lll_ctx)lll_with_removal(::fmpz_mat, ::fmpz, ::lll_ctx)lll_with_removal_transform(::fmpz_mat, ::fmpz, ::lll_ctx)ExamplesS = MatrixSpace(ZZ, 3, 3)\n\nA = S([fmpz(2) 3 5; 1 4 7; 19 3 7])\n   \nL = lll(A, lll_ctx(0.95, 0.55, :zbasis, :approx)\nL, T = lll_with_transform(A)\n\nG == lll_gram(gram(A))\nG, T = lll_gram_with_transform(gram(A))\n\nr, L = lll_with_removal(A, fmpz(100))\nr, L, T = lll_with_removal_transform(A, fmpz(100))"
+    "text": "Nemo provides LLL lattice basis reduction. Optionally one can specify the setup using a context object created by the following function.lll_ctx(delta::Float64, eta::Float64, rep=:zbasis, gram=:approx)Return a LLL context object specifying LLL parameters delta and eta and specifying the representation as either :zbasis or :gram and the Gram type as either :approx or :exact.lll(::fmpz_mat, ::lll_ctx)lll_with_transform(::fmpz_mat, ::lll_ctx)lll_gram(::fmpz_mat, ::lll_ctx)lll_gram_with_transform(::fmpz_mat, ::lll_ctx)lll_with_removal(::fmpz_mat, ::fmpz, ::lll_ctx)lll_with_removal_transform(::fmpz_mat, ::fmpz, ::lll_ctx)lll!(::fmpz_mat, ::lll_ctx)lll_gram!(::fmpz_mat, ::lll_ctx)ExamplesS = MatrixSpace(ZZ, 3, 3)\n\nA = S([fmpz(2) 3 5; 1 4 7; 19 3 7])\n   \nL = lll(A, lll_ctx(0.95, 0.55, :zbasis, :approx)\nL, T = lll_with_transform(A)\n\nG == lll_gram(gram(A))\nG, T = lll_gram_with_transform(gram(A))\n\nr, L = lll_with_removal(A, fmpz(100))\nr, L, T = lll_with_removal_transform(A, fmpz(100))"
 },
 
 {
@@ -4441,11 +4545,19 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
+    "location": "matrix.html#Nemo.strong_echelon_form-Tuple{gfp_mat}",
+    "page": "Matrices",
+    "title": "Nemo.strong_echelon_form",
+    "category": "method",
+    "text": "strong_echelon_form(a::gfp_mat)\n\nReturn the strong echeleon form of a. The matrix a must have at least as many rows as columns.\n\n\n\n"
+},
+
+{
     "location": "matrix.html#Strong-Echelon-Form-1",
     "page": "Matrices",
     "title": "Strong Echelon Form",
     "category": "section",
-    "text": "strong_echelon_form(::nmod_mat)ExamplesR = ResidueRing(ZZ, 12)\nS = MatrixSpace(R, 3, 3)\n\nA = S([4 1 0; 0 0 5; 0 0 0 ])\n\nB = strong_echelon_form(A)"
+    "text": "strong_echelon_form(::nmod_mat)\nstrong_echelon_form(::gfp_mat)ExamplesR = ResidueRing(ZZ, 12)\nS = MatrixSpace(R, 3, 3)\n\nA = S([4 1 0; 0 0 5; 0 0 0 ])\n\nB = strong_echelon_form(A)"
 },
 
 {
@@ -4457,11 +4569,19 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
+    "location": "matrix.html#Nemo.howell_form-Tuple{gfp_mat}",
+    "page": "Matrices",
+    "title": "Nemo.howell_form",
+    "category": "method",
+    "text": "howell_form(a::gfp_mat)\n\nReturn the Howell normal form of a. The matrix a must have at least as many rows as columns.\n\n\n\n"
+},
+
+{
     "location": "matrix.html#Howell-Form-1",
     "page": "Matrices",
     "title": "Howell Form",
     "category": "section",
-    "text": "howell_form(::nmod_mat)ExamplesR = ResidueRing(ZZ, 12)\nS = MatrixSpace(R, 3, 3)\n\nA = S([4 1 0; 0 0 5; 0 0 0 ])\n\nB = howell_form(A)"
+    "text": "howell_form(::nmod_mat)\nhowell_form(::gfp_mat)ExamplesR = ResidueRing(ZZ, 12)\nS = MatrixSpace(R, 3, 3)\n\nA = S([4 1 0; 0 0 5; 0 0 0 ])\n\nB = howell_form(A)"
 },
 
 {
