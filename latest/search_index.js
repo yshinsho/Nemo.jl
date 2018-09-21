@@ -3725,7 +3725,23 @@ var documenterSearchIndex = {"docs": [
     "page": "Galois fields",
     "title": "Galois field functionality",
     "category": "section",
-    "text": "Galois fields in Nemo implement the residue ring interface of AbstractAlgebra.jl:https://nemocas.github.io/AbstractAlgebra.jl/residue_rings.htmlIn addition, all the functionality for generic residue rings is available:https://nemocas.github.io/AbstractAlgebra.jl/residue.html"
+    "text": "Galois fields in Nemo implement the residue ring interface of AbstractAlgebra.jl:https://nemocas.github.io/AbstractAlgebra.jl/residue_rings.htmlIn addition, all the functionality for generic residue rings is available:https://nemocas.github.io/AbstractAlgebra.jl/residue.htmlBelow we describe the functionality that is provided in addition to this interface."
+},
+
+{
+    "location": "gfp.html#AbstractAlgebra.Generic.order-Tuple{Nemo.GaloisField}",
+    "page": "Galois fields",
+    "title": "AbstractAlgebra.Generic.order",
+    "category": "method",
+    "text": "order(a::GaloisField) -> fmpz\n\nReturn the order, i.e. the number of elements in, the given Galois field.\n\n\n\n"
+},
+
+{
+    "location": "gfp.html#Basic-manipulation-1",
+    "page": "Galois fields",
+    "title": "Basic manipulation",
+    "category": "section",
+    "text": "characteristic(::GaloisField)order(::GaloisField)ExamplesF = GF(3)\n\na = characteristic(F)\nb = order(F)"
 },
 
 {
@@ -3769,19 +3785,11 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "finitefield.html#Nemo.FlintFiniteField-Tuple{fmpz_mod_poly,AbstractString}",
-    "page": "Finite fields",
-    "title": "Nemo.FlintFiniteField",
-    "category": "method",
-    "text": "FlintFiniteField(pol::fmpz_mod_poly, s::AbstractString)\n\nReturns a tuple S x consisting of a finite field parent object S and generator x for the finite field over F_p defined by the given polynomial, i.e. mathbbF_pt(pol). The characteristic is specified by the modulus of pol. The polynomial is required to be irreducible, but this is not checked. The string s is used to designate how the finite field generator will be printed. The generator will not be multiplicative in general.\n\n\n\n"
-},
-
-{
     "location": "finitefield.html#Constructors-1",
     "page": "Finite fields",
     "title": "Constructors",
     "category": "section",
-    "text": "In order to construct finite field elements in Nemo, one must first construct the finite field itself. This is accomplished with one of the following constructors.FlintFiniteField(::fmpz, ::Int, ::AbstractString)\nFlintFiniteField(::Integer, ::Int, ::AbstractString)FlintFiniteField(::fmpz_mod_poly, ::AbstractString)Here are some examples of creating finite fields and making use of the resulting parent objects to coerce various elements into those fields.ExamplesR, x = FiniteField(7, 3, \"x\")\nS, y = FiniteField(ZZ(12431351431561), 2, \"y\")\nT, t = PolynomialRing(ResidueRing(ZZ, 12431351431561), \"t\")\nU, z = FiniteField(t^2 + 7, \"z\")\n\na = R(5)\nb = R(x)\nc = S(ZZ(11))\nd = U(7)"
+    "text": "In order to construct finite field elements in Nemo, one must first construct the finite field itself. This is accomplished with one of the following constructors.FlintFiniteField(::fmpz, ::Int, ::AbstractString)\nFlintFiniteField(::Integer, ::Int, ::AbstractString)FlintFiniteField(::fmpz_mod_poly, ::AbstractString)\nFlintFiniteField(::gfp_fmpz_poly, ::AbstractString)Here are some examples of creating finite fields and making use of the resulting parent objects to coerce various elements into those fields.ExamplesR, x = FiniteField(7, 3, \"x\")\nS, y = FiniteField(ZZ(12431351431561), 2, \"y\")\nT, t = PolynomialRing(ResidueRing(ZZ, 12431351431561), \"t\")\nU, z = FiniteField(t^2 + 7, \"z\")\n\na = R(5)\nb = R(x)\nc = S(ZZ(11))\nd = U(7)"
 },
 
 {
@@ -3817,6 +3825,14 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
+    "location": "finitefield.html#AbstractAlgebra.Generic.characteristic-Tuple{FqFiniteField}",
+    "page": "Finite fields",
+    "title": "AbstractAlgebra.Generic.characteristic",
+    "category": "method",
+    "text": "characteristic(a::FqFiniteField)\n\nReturn the characteristic of the given finite field.\n\n\n\n"
+},
+
+{
     "location": "finitefield.html#AbstractAlgebra.Generic.order-Tuple{FqFiniteField}",
     "page": "Finite fields",
     "title": "AbstractAlgebra.Generic.order",
@@ -3829,7 +3845,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Finite fields",
     "title": "Basic manipulation",
     "category": "section",
-    "text": "gen(::FqFiniteField)isgen(::fq)coeff(::fq, ::Int)degree(::FqFiniteField)order(::FqFiniteField)ExamplesR, x = FiniteField(ZZ(7), 5, \"x\")\n\nc = gen(R)\nd = characteristic(R)\nf = order(R)\ng = degree(R)\nn = isgen(x)"
+    "text": "gen(::FqFiniteField)isgen(::fq)coeff(::fq, ::Int)degree(::FqFiniteField)characteristic(::FqFiniteField)order(::FqFiniteField)ExamplesR, x = FiniteField(ZZ(7), 5, \"x\")\n\nc = gen(R)\nd = characteristic(R)\nf = order(R)\ng = degree(R)\nn = isgen(x)"
 },
 
 {
@@ -4397,7 +4413,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Matrices",
     "title": "Nemo.lift",
     "category": "method",
-    "text": "lift(a::nmod_mat)\n\nReturn a lift of the matrix a to a matrix over mathbbZ, i.e. where the entries of the returned matrix are those of a lifted to mathbbZ.\n\n\n\n"
+    "text": "lift(a::Zmodn_mat)\n\nReturn a lift of the matrix a to a matrix over mathbbZ, i.e. where the entries of the returned matrix are those of a lifted to mathbbZ.\n\n\n\n"
 },
 
 {
