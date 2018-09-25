@@ -18,7 +18,7 @@ julia&gt; 229 in fac
 true
 
 julia&gt; fac[229]
-3</code></pre><h3><a class="nav-anchor" id="Basic-functionality-1" href="#Basic-functionality-1">Basic functionality</a></h3><p>Objects of type <code>Fac</code> are iterable, that is, if <code>a</code> is an object of type <code>Fac</code>, then <code>for (p, e) in a</code> will iterate through all pairs <code>(p, e)</code>, where <code>p</code> is a factor and <code>e</code> the corresponding exponent.</p><pre><code class="language-none">in{T}(a::T, ::Fac{T})
-getindex{T}(::Fac{T}, T)
-length(::Fac)
-unit(::Fac)</code></pre><footer><hr/><a class="previous" href="matrix.html"><span class="direction">Previous</span><span class="title">Matrices</span></a></footer></article></body></html>
+3</code></pre><h3><a class="nav-anchor" id="Basic-functionality-1" href="#Basic-functionality-1">Basic functionality</a></h3><p>Objects of type <code>Fac</code> are iterable, that is, if <code>a</code> is an object of type <code>Fac</code>, then <code>for (p, e) in a</code> will iterate through all pairs <code>(p, e)</code>, where <code>p</code> is a factor and <code>e</code> the corresponding exponent.</p><pre><code class="language-none">in(a::fmpz, ::Fac{fmpz})
+getindex(::Fac{fmpz}, fmpz)
+length(::Fac{fmpz})
+unit(::Fac{fmpz})</code></pre><footer><hr/><a class="previous" href="matrix.html"><span class="direction">Previous</span><span class="title">Matrices</span></a></footer></article></body></html>

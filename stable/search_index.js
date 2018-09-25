@@ -669,7 +669,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Univariate polynomials",
     "title": "Introduction",
     "category": "section",
-    "text": "Nemo allow the creation of dense, univariate polynomials over any computable ring R. There are two different kinds of implementation: a generic one for the case where no specific implementation exists (provided by AbstractAlgebra.jl), and efficient implementations of polynomials over numerous specific rings, usually provided by C/C++ libraries.The following table shows each of the polynomial types available in Nemo, the base ring R, and the Julia/Nemo types for that kind of polynomial (the type information is mainly of concern to developers).Base ring Library Element type Parent type\nGeneric ring R AbstractAlgebra.jl Generic.Poly{T} Generic.PolyRing{T}\nmathbbZ Flint fmpz_poly FmpzPolyRing\nmathbbZnmathbbZ (small n) Flint nmod_poly NmodPolyRing\nmathbbZnmathbbZ (large n) Flint fmpz_mod_poly FmpzModPolyRing\nmathbbQ Flint fmpq_poly FmpqPolyRing\nmathbbZpmathbbZ (prime p) Flint gfp_poly GFPPolyRing\nmathbbF_p^n (small p) Flint fq_nmod_poly FqNmodPolyRing\nmathbbF_p^n (large p) Flint fq_poly FqPolyRing\nmathbbR Arb arb_poly ArbPolyRing\nmathbbC Arb acb_poly AcbPolyRingThe string representation of the variable and the base ring R of a generic polynomial is stored in its parent object. All polynomial element types belong to the abstract type PolyElem and all of the polynomial ring types belong to the abstract type PolyRing. This enables one to write generic functions that can accept any Nemo univariate polynomial type."
+    "text": "Nemo allow the creation of dense, univariate polynomials over any computable ring R. There are two different kinds of implementation: a generic one for the case where no specific implementation exists (provided by AbstractAlgebra.jl), and efficient implementations of polynomials over numerous specific rings, usually provided by C/C++ libraries.The following table shows each of the polynomial types available in Nemo, the base ring R, and the Julia/Nemo types for that kind of polynomial (the type information is mainly of concern to developers).Base ring Library Element type Parent type\nGeneric ring R AbstractAlgebra.jl Generic.Poly{T} Generic.PolyRing{T}\nmathbbZ Flint fmpz_poly FmpzPolyRing\nmathbbZnmathbbZ (small n) Flint nmod_poly NmodPolyRing\nmathbbZnmathbbZ (large n) Flint fmpz_mod_poly FmpzModPolyRing\nmathbbQ Flint fmpq_poly FmpqPolyRing\nmathbbZpmathbbZ (small prime p) Flint gfp_poly GFPPolyRing\nmathbbZpmathbbZ (large prime p) Flint gfp_fmpz_poly GFPFmpzPolyRing\nmathbbF_p^n (small p) Flint fq_nmod_poly FqNmodPolyRing\nmathbbF_p^n (large p) Flint fq_poly FqPolyRing\nmathbbR Arb arb_poly ArbPolyRing\nmathbbC Arb acb_poly AcbPolyRingThe string representation of the variable and the base ring R of a generic polynomial is stored in its parent object. All polynomial element types belong to the abstract type PolyElem and all of the polynomial ring types belong to the abstract type PolyRing. This enables one to write generic functions that can accept any Nemo univariate polynomial type."
 },
 
 {
@@ -897,11 +897,19 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
+    "location": "polynomial.html#Nemo.lift-Tuple{FmpzPolyRing,gfp_fmpz_poly}",
+    "page": "Univariate polynomials",
+    "title": "Nemo.lift",
+    "category": "method",
+    "text": "function lift(R::FmpzPolyRing, y::gfp_fmpz_poly)\n\nLift from a polynomial over mathbbZnmathbbZ to a polynomial over mathbbZ with minimal reduced nonnegative coefficients. The ring R specifies the ring to lift into.\n\n\n\n"
+},
+
+{
     "location": "polynomial.html#Lifting-1",
     "page": "Univariate polynomials",
     "title": "Lifting",
     "category": "section",
-    "text": "When working over a residue ring it is useful to be able to lift to the base ring of the residue ring, e.g. from mathbbZnmathbbZ to mathbbZ.lift(::FmpzPolyRing, ::nmod_poly)\nlift(::FmpzPolyRing, ::gfp_poly)\nlift(::FmpzPolyRing, ::fmpz_mod_poly)ExamplesR = ResidueRing(ZZ, 123456789012345678949)\nS, x = PolynomialRing(R, \"x\")\nT, y = PolynomialRing(ZZ, \"y\")\n\nf = x^2 + 2x + 1\n\na = lift(T, f)"
+    "text": "When working over a residue ring it is useful to be able to lift to the base ring of the residue ring, e.g. from mathbbZnmathbbZ to mathbbZ.lift(::FmpzPolyRing, ::nmod_poly)\nlift(::FmpzPolyRing, ::gfp_poly)\nlift(::FmpzPolyRing, ::fmpz_mod_poly)\nlift(::FmpzPolyRing, ::gfp_fmpz_poly)ExamplesR = ResidueRing(ZZ, 123456789012345678949)\nS, x = PolynomialRing(R, \"x\")\nT, y = PolynomialRing(ZZ, \"y\")\n\nf = x^2 + 2x + 1\n\na = lift(T, f)"
 },
 
 {
@@ -1025,6 +1033,14 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
+    "location": "polynomial.html#Nemo.isirreducible-Tuple{gfp_fmpz_poly}",
+    "page": "Univariate polynomials",
+    "title": "Nemo.isirreducible",
+    "category": "method",
+    "text": "isirreducible(x::gfp_fmpz_poly)\n\nReturn true if x is irreducible, otherwise return false.\n\n\n\n"
+},
+
+{
     "location": "polynomial.html#Nemo.isirreducible-Tuple{fq_poly}",
     "page": "Univariate polynomials",
     "title": "Nemo.isirreducible",
@@ -1062,6 +1078,14 @@ var documenterSearchIndex = {"docs": [
     "title": "Nemo.issquarefree",
     "category": "method",
     "text": "issquarefree(x::fmpz_mod_poly)\n\nReturn true if x is squarefree, otherwise return false.\n\n\n\n"
+},
+
+{
+    "location": "polynomial.html#Nemo.issquarefree-Tuple{gfp_fmpz_poly}",
+    "page": "Univariate polynomials",
+    "title": "Nemo.issquarefree",
+    "category": "method",
+    "text": "issquarefree(x::gfp_fmpz_poly)\n\nReturn true if x is squarefree, otherwise return false.\n\n\n\n"
 },
 
 {
@@ -1113,6 +1137,14 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
+    "location": "polynomial.html#Nemo.factor-Tuple{gfp_fmpz_poly}",
+    "page": "Univariate polynomials",
+    "title": "Nemo.factor",
+    "category": "method",
+    "text": "factor(x::gfp_fmpz_poly)\n\nReturn the factorisation of x.\n\n\n\n"
+},
+
+{
     "location": "polynomial.html#Nemo.factor-Tuple{fq_poly}",
     "page": "Univariate polynomials",
     "title": "Nemo.factor",
@@ -1150,6 +1182,14 @@ var documenterSearchIndex = {"docs": [
     "title": "Nemo.factor_squarefree",
     "category": "method",
     "text": "factor_squarefree(x::fmpz_mod_poly)\n\nReturn the squarefree factorisation of x.\n\n\n\n"
+},
+
+{
+    "location": "polynomial.html#Nemo.factor_squarefree-Tuple{gfp_fmpz_poly}",
+    "page": "Univariate polynomials",
+    "title": "Nemo.factor_squarefree",
+    "category": "method",
+    "text": "factor_squarefree(x::gfp_fmpz_poly)\n\nReturn the squarefree factorisation of x.\n\n\n\n"
 },
 
 {
@@ -1193,6 +1233,14 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
+    "location": "polynomial.html#Nemo.factor_distinct_deg-Tuple{gfp_fmpz_poly}",
+    "page": "Univariate polynomials",
+    "title": "Nemo.factor_distinct_deg",
+    "category": "method",
+    "text": "factor_distinct_deg(x::fmpz_mod_poly)\n\nReturn the distinct degree factorisation of a squarefree polynomial x.\n\n\n\n"
+},
+
+{
     "location": "polynomial.html#Nemo.factor_distinct_deg-Tuple{fq_poly}",
     "page": "Univariate polynomials",
     "title": "Nemo.factor_distinct_deg",
@@ -1213,7 +1261,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Univariate polynomials",
     "title": "Factorisation",
     "category": "section",
-    "text": "Polynomials can be factorised over certain rings. In general we use the same format for the output as the Julia factorisation function, namely an associative array with polynomial factors as keys and exponents as values.isirreducible(::nmod_poly)\nisirreducible(::gfp_poly)\nisirreducible(::fmpz_mod_poly)\nisirreducible(::fq_poly)\nisirreducible(::fq_nmod_poly)issquarefree(::nmod_poly)\nissquarefree(::gfp_poly)\nissquarefree(::fmpz_mod_poly)\nissquarefree(::fq_poly)\nissquarefree(::fq_nmod_poly)factor(::fmpz_poly)\nfactor(::nmod_poly)\nfactor(::gfp_poly)\nfactor(::fmpz_mod_poly)\nfactor(::fq_poly)\nfactor(::fq_nmod_poly)factor_squarefree(::nmod_poly)\nfactor_squarefree(::gfp_poly)\nfactor_squarefree(::fmpz_mod_poly)\nfactor_squarefree(::fq_poly)\nfactor_squarefree(::fq_nmod_poly)factor_distinct_deg(::nmod_poly)\nfactor_distinct_deg(::gfp_poly)\nfactor_distinct_deg(::fmpz_mod_poly)\nfactor_distinct_deg(::fq_poly)\nfactor_distinct_deg(::fq_nmod_poly)ExamplesR = ResidueRing(ZZ, 23)\nS, x = PolynomialRing(R, \"x\")\n\nf = x^2 + 2x + 1\ng = x^3 + 3x + 1\n\nR = factor(f*g)\nS = factor_squarefree(f*g)\nT = factor_distinct_deg((x + 1)*g*(x^5+x^3+x+1))"
+    "text": "Polynomials can be factorised over certain rings. In general we use the same format for the output as the Julia factorisation function, namely an associative array with polynomial factors as keys and exponents as values.isirreducible(::nmod_poly)\nisirreducible(::gfp_poly)\nisirreducible(::fmpz_mod_poly)\nisirreducible(::gfp_fmpz_poly)\nisirreducible(::fq_poly)\nisirreducible(::fq_nmod_poly)issquarefree(::nmod_poly)\nissquarefree(::gfp_poly)\nissquarefree(::fmpz_mod_poly)\nissquarefree(::gfp_fmpz_poly)\nissquarefree(::fq_poly)\nissquarefree(::fq_nmod_poly)factor(::fmpz_poly)\nfactor(::nmod_poly)\nfactor(::gfp_poly)\nfactor(::fmpz_mod_poly)\nfactor(::gfp_fmpz_poly)\nfactor(::fq_poly)\nfactor(::fq_nmod_poly)factor_squarefree(::nmod_poly)\nfactor_squarefree(::gfp_poly)\nfactor_squarefree(::fmpz_mod_poly)\nfactor_squarefree(::gfp_fmpz_poly)\nfactor_squarefree(::fq_poly)\nfactor_squarefree(::fq_nmod_poly)factor_distinct_deg(::nmod_poly)\nfactor_distinct_deg(::gfp_poly)\nfactor_distinct_deg(::fmpz_mod_poly)\nfactor_distinct_deg(::gfp_fmpz_poly)\nfactor_distinct_deg(::fq_poly)\nfactor_distinct_deg(::fq_nmod_poly)ExamplesR = ResidueRing(ZZ, 23)\nS, x = PolynomialRing(R, \"x\")\n\nf = x^2 + 2x + 1\ng = x^3 + 3x + 1\n\nR = factor(f*g)\nS = factor_squarefree(f*g)\nT = factor_distinct_deg((x + 1)*g*(x^5+x^3+x+1))"
 },
 
 {
@@ -3677,7 +3725,23 @@ var documenterSearchIndex = {"docs": [
     "page": "Galois fields",
     "title": "Galois field functionality",
     "category": "section",
-    "text": "Galois fields in Nemo implement the residue ring interface of AbstractAlgebra.jl:https://nemocas.github.io/AbstractAlgebra.jl/residue_rings.htmlIn addition, all the functionality for generic residue rings is available:https://nemocas.github.io/AbstractAlgebra.jl/residue.html"
+    "text": "Galois fields in Nemo implement the residue ring interface of AbstractAlgebra.jl:https://nemocas.github.io/AbstractAlgebra.jl/residue_rings.htmlIn addition, all the functionality for generic residue rings is available:https://nemocas.github.io/AbstractAlgebra.jl/residue.htmlBelow we describe the functionality that is provided in addition to this interface."
+},
+
+{
+    "location": "gfp.html#AbstractAlgebra.Generic.order-Tuple{Nemo.GaloisField}",
+    "page": "Galois fields",
+    "title": "AbstractAlgebra.Generic.order",
+    "category": "method",
+    "text": "order(a::GaloisField) -> fmpz\n\nReturn the order, i.e. the number of elements in, the given Galois field.\n\n\n\n"
+},
+
+{
+    "location": "gfp.html#Basic-manipulation-1",
+    "page": "Galois fields",
+    "title": "Basic manipulation",
+    "category": "section",
+    "text": "characteristic(::GaloisField)order(::GaloisField)ExamplesF = GF(3)\n\na = characteristic(F)\nb = order(F)"
 },
 
 {
@@ -3721,19 +3785,11 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "finitefield.html#Nemo.FlintFiniteField-Tuple{fmpz_mod_poly,AbstractString}",
-    "page": "Finite fields",
-    "title": "Nemo.FlintFiniteField",
-    "category": "method",
-    "text": "FlintFiniteField(pol::fmpz_mod_poly, s::AbstractString)\n\nReturns a tuple S x consisting of a finite field parent object S and generator x for the finite field over F_p defined by the given polynomial, i.e. mathbbF_pt(pol). The characteristic is specified by the modulus of pol. The polynomial is required to be irreducible, but this is not checked. The string s is used to designate how the finite field generator will be printed. The generator will not be multiplicative in general.\n\n\n\n"
-},
-
-{
     "location": "finitefield.html#Constructors-1",
     "page": "Finite fields",
     "title": "Constructors",
     "category": "section",
-    "text": "In order to construct finite field elements in Nemo, one must first construct the finite field itself. This is accomplished with one of the following constructors.FlintFiniteField(::fmpz, ::Int, ::AbstractString)\nFlintFiniteField(::Integer, ::Int, ::AbstractString)FlintFiniteField(::fmpz_mod_poly, ::AbstractString)Here are some examples of creating finite fields and making use of the resulting parent objects to coerce various elements into those fields.ExamplesR, x = FiniteField(7, 3, \"x\")\nS, y = FiniteField(ZZ(12431351431561), 2, \"y\")\nT, t = PolynomialRing(ResidueRing(ZZ, 12431351431561), \"t\")\nU, z = FiniteField(t^2 + 7, \"z\")\n\na = R(5)\nb = R(x)\nc = S(ZZ(11))\nd = U(7)"
+    "text": "In order to construct finite field elements in Nemo, one must first construct the finite field itself. This is accomplished with one of the following constructors.FlintFiniteField(::fmpz, ::Int, ::AbstractString)\nFlintFiniteField(::Integer, ::Int, ::AbstractString)FlintFiniteField(::fmpz_mod_poly, ::AbstractString)\nFlintFiniteField(::gfp_fmpz_poly, ::AbstractString)Here are some examples of creating finite fields and making use of the resulting parent objects to coerce various elements into those fields.ExamplesR, x = FiniteField(7, 3, \"x\")\nS, y = FiniteField(ZZ(12431351431561), 2, \"y\")\nT, t = PolynomialRing(ResidueRing(ZZ, 12431351431561), \"t\")\nU, z = FiniteField(t^2 + 7, \"z\")\n\na = R(5)\nb = R(x)\nc = S(ZZ(11))\nd = U(7)"
 },
 
 {
@@ -3769,6 +3825,14 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
+    "location": "finitefield.html#AbstractAlgebra.Generic.characteristic-Tuple{FqFiniteField}",
+    "page": "Finite fields",
+    "title": "AbstractAlgebra.Generic.characteristic",
+    "category": "method",
+    "text": "characteristic(a::FqFiniteField)\n\nReturn the characteristic of the given finite field.\n\n\n\n"
+},
+
+{
     "location": "finitefield.html#AbstractAlgebra.Generic.order-Tuple{FqFiniteField}",
     "page": "Finite fields",
     "title": "AbstractAlgebra.Generic.order",
@@ -3781,7 +3845,15 @@ var documenterSearchIndex = {"docs": [
     "page": "Finite fields",
     "title": "Basic manipulation",
     "category": "section",
-    "text": "gen(::FqFiniteField)isgen(::fq)coeff(::fq, ::Int)degree(::FqFiniteField)order(::FqFiniteField)ExamplesR, x = FiniteField(ZZ(7), 5, \"x\")\n\nc = gen(R)\nd = characteristic(R)\nf = order(R)\ng = degree(R)\nn = isgen(x)"
+    "text": "gen(::FqFiniteField)isgen(::fq)coeff(::fq, ::Int)degree(::FqFiniteField)characteristic(::FqFiniteField)order(::FqFiniteField)ExamplesR, x = FiniteField(ZZ(7), 5, \"x\")\n\nc = gen(R)\nd = characteristic(R)\nf = order(R)\ng = degree(R)\nn = isgen(x)"
+},
+
+{
+    "location": "finitefield.html#LinearAlgebra.tr-Tuple{fq}",
+    "page": "Finite fields",
+    "title": "LinearAlgebra.tr",
+    "category": "method",
+    "text": "tr(x::fq)\n\nReturn the trace of a. This is an element of F_p, but the value returned is this value embedded in the original finite field.\n\n\n\n"
 },
 
 {
@@ -3813,7 +3885,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Finite fields",
     "title": "Special functions",
     "category": "section",
-    "text": "Various special functions with finite field specific behaviour are defined.trace(::fq)norm(::fq)frobenius(::fq, ::Int)pth_root(::fq)ExamplesR, x = FiniteField(ZZ(7), 5, \"x\")\n\na = x^4 + 3x^2 + 6x + 1\n\nb = trace(a)\nc = norm(a)\nd = frobenius(a)\nf = frobenius(a, 3)\ng = pth_root(a)"
+    "text": "Various special functions with finite field specific behaviour are defined.tr(::fq)norm(::fq)frobenius(::fq, ::Int)pth_root(::fq)ExamplesR, x = FiniteField(ZZ(7), 5, \"x\")\n\na = x^4 + 3x^2 + 6x + 1\n\nb = tr(a)\nc = norm(a)\nd = frobenius(a)\nf = frobenius(a, 3)\ng = pth_root(a)"
 },
 
 {
@@ -3953,11 +4025,19 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
+    "location": "numberfield.html#LinearAlgebra.tr-Tuple{nf_elem}",
+    "page": "Number field arithmetic",
+    "title": "LinearAlgebra.tr",
+    "category": "method",
+    "text": "tr(a::nf_elem)\n\nReturn the absolute trace of a. The result will be a rational number.\n\n\n\n"
+},
+
+{
     "location": "numberfield.html#Norm-and-trace-1",
     "page": "Number field arithmetic",
     "title": "Norm and trace",
     "category": "section",
-    "text": "norm(::nf_elem)trace(::nf_elem)ExamplesR, x = PolynomialRing(QQ, \"x\")\nK, a = NumberField(x^3 + 3x + 1, \"a\")\n\nc = 3a^2 - a + 1\n\nd = norm(c)\nf = trace(c)"
+    "text": "norm(::nf_elem)tr(::nf_elem)ExamplesR, x = PolynomialRing(QQ, \"x\")\nK, a = NumberField(x^3 + 3x + 1, \"a\")\n\nc = 3a^2 - a + 1\n\nd = norm(c)\nf = tr(c)"
 },
 
 {
@@ -4333,7 +4413,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Matrices",
     "title": "Nemo.lift",
     "category": "method",
-    "text": "lift(a::nmod_mat)\n\nReturn a lift of the matrix a to a matrix over mathbbZ, i.e. where the entries of the returned matrix are those of a lifted to mathbbZ.\n\n\n\n"
+    "text": "lift(a::Zmodn_mat)\n\nReturn a lift of the matrix a to a matrix over mathbbZ, i.e. where the entries of the returned matrix are those of a lifted to mathbbZ.\n\n\n\n"
 },
 
 {
@@ -4717,7 +4797,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Factorisation",
     "title": "Basic functionality",
     "category": "section",
-    "text": "Objects of type Fac are iterable, that is, if a is an object of type Fac, then for (p, e) in a will iterate through all pairs (p, e), where p is a factor and e the corresponding exponent.in{T}(a::T, ::Fac{T})\ngetindex{T}(::Fac{T}, T)\nlength(::Fac)\nunit(::Fac)"
+    "text": "Objects of type Fac are iterable, that is, if a is an object of type Fac, then for (p, e) in a will iterate through all pairs (p, e), where p is a factor and e the corresponding exponent.in(a::fmpz, ::Fac{fmpz})\ngetindex(::Fac{fmpz}, fmpz)\nlength(::Fac{fmpz})\nunit(::Fac{fmpz})"
 },
 
 ]}
