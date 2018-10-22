@@ -1493,7 +1493,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Puiseux series",
     "title": "Base.sqrt",
     "category": "method",
-    "text": "sqrt{T <: RingElem}(a::FlintPuiseuxSeriesElem{T})\n\nReturn the square root of the given Puiseux series.\n\n\n\nsqrt(a::PuiseuxSeriesElem)\n\nReturn the square root of the given Puiseux series a.\n\n\n\n"
+    "text": "sqrt(a::PuiseuxSeriesElem)\n\nReturn the square root of the given Puiseux series a.\n\n\n\nsqrt{T <: RingElem}(a::FlintPuiseuxSeriesElem{T})\n\nReturn the square root of the given Puiseux series.\n\n\n\n"
 },
 
 {
@@ -1501,7 +1501,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Puiseux series",
     "title": "Base.exp",
     "category": "method",
-    "text": "exp{T <: RingElem}(a::FlintPuiseuxSeriesElem{T})\n\nReturn the exponential of the given Puiseux series.\n\n\n\nexp(a::PuiseuxSeriesElem)\n\nReturn the exponential of the given Puiseux series a.\n\n\n\n"
+    "text": "exp(a::PuiseuxSeriesElem)\n\nReturn the exponential of the given Puiseux series a.\n\n\n\nexp{T <: RingElem}(a::FlintPuiseuxSeriesElem{T})\n\nReturn the exponential of the given Puiseux series.\n\n\n\n"
 },
 
 {
@@ -3726,6 +3726,14 @@ var documenterSearchIndex = {"docs": [
     "title": "Galois field functionality",
     "category": "section",
     "text": "Galois fields in Nemo implement the residue ring interface of AbstractAlgebra.jl:https://nemocas.github.io/AbstractAlgebra.jl/residue_rings.htmlIn addition, all the functionality for generic residue rings is available:https://nemocas.github.io/AbstractAlgebra.jl/residue.htmlBelow we describe the functionality that is provided in addition to this interface."
+},
+
+{
+    "location": "gfp.html#AbstractAlgebra.Generic.characteristic-Tuple{Nemo.GaloisField}",
+    "page": "Galois fields",
+    "title": "AbstractAlgebra.Generic.characteristic",
+    "category": "method",
+    "text": "characteristic(a::GaloisField) -> fmpz\n\nReturn the characteristic of the given Galois field.\n\n\n\n"
 },
 
 {
