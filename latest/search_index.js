@@ -469,7 +469,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Nemo.moebiusmu",
     "category": "method",
-    "text": "moebiusmu(x::fmpz)\n\nReturns the Moebius mu function of x as an \\code{Int}. The value returned is either -1, 0 or 1. If x  0 we throw a DomainError().\n\n\n\n"
+    "text": "moebiusmu(x::fmpz)\n\nReturns the Moebius mu function of x as an Int. The value returned is either -1, 0 or 1. If x  0 we throw a DomainError().\n\n\n\n"
 },
 
 {
