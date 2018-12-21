@@ -3945,17 +3945,17 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "numberfield.html#Nemo.mul_red!-Tuple{nf_elem,nf_elem,nf_elem,Bool}",
+    "location": "numberfield.html#AbstractAlgebra.mul_red!-Tuple{nf_elem,nf_elem,nf_elem,Bool}",
     "page": "Number field arithmetic",
-    "title": "Nemo.mul_red!",
+    "title": "AbstractAlgebra.mul_red!",
     "category": "method",
     "text": "mul_red!(z::nf_elem, x::nf_elem, y::nf_elem, red::Bool)\n\nMultiply a by b and set the existing number field element c to the result. Reduction modulo the defining polynomial is only performed if red is set to true. Note that a and b must be reduced. This function is provided for performance reasons as it saves allocating a new object for the result and eliminates associated garbage collection.\n\n\n\n"
 },
 
 {
-    "location": "numberfield.html#Nemo.reduce!-Tuple{nf_elem}",
+    "location": "numberfield.html#AbstractAlgebra.reduce!-Tuple{nf_elem}",
     "page": "Number field arithmetic",
-    "title": "Nemo.reduce!",
+    "title": "AbstractAlgebra.reduce!",
     "category": "method",
     "text": "reduce!(x::nf_elem)\n\nReduce the given number field element by the defining polynomial, in-place. This only needs to be done after accumulating values computed by mul_red! where reduction has not been performed. All standard Nemo number field functions automatically reduce their outputs.\n\n\n\n"
 },
