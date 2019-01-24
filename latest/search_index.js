@@ -437,7 +437,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Nemo.primorial",
     "category": "method",
-    "text": "primorial(x::Int)\n\nReturn the primorial of n, i.e. the product of all primes less than or equal to n. If n  0 we throw a DomainError().\n\n\n\n"
+    "text": "primorial(x::Int)\n\nReturn the primorial of x, i.e. the product of all primes less than or equal to x. If x  0 we throw a DomainError().\n\n\n\n"
 },
 
 {
@@ -445,7 +445,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Nemo.fib",
     "category": "method",
-    "text": "fib(x::Int)\n\nReturn the n-th Fibonacci number F_n. We define F_1 = 1, F_2 = 1 and F_i + 1 = F_i + F_i - 1 for all i  2. We require n geq 0. For convenience, we define F_0 = 0.\n\n\n\n"
+    "text": "fib(x::Int)\n\nReturn the x-th Fibonacci number F_x. We define F_1 = 1, F_2 = 1 and F_i + 1 = F_i + F_i - 1 for all i  2. We require n geq 0. For convenience, we define F_0 = 0.\n\n\n\n"
 },
 
 {
@@ -453,7 +453,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Nemo.bell",
     "category": "method",
-    "text": "bell(x::Int)\n\nReturn the Bell number B_n.\n\n\n\n"
+    "text": "bell(x::Int)\n\nReturn the Bell number B_x.\n\n\n\n"
 },
 
 {
@@ -749,7 +749,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Univariate polynomials",
     "title": "Nemo.evaluate2",
     "category": "method",
-    "text": "evaluate2(x::acb_poly, y::fmpq)\n\nReturn a tuple p q consisting of the polynomial x evaluated at y and its derivative evaluated at y.\n\n\n\n"
+    "text": "evaluate2(x::acb_poly, y::fmpz)\n\nReturn a tuple p q consisting of the polynomial x evaluated at y and its derivative evaluated at y.\n\n\n\n"
 },
 
 {
@@ -853,7 +853,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Univariate polynomials",
     "title": "Nemo.roots_upper_bound",
     "category": "method",
-    "text": "roots_upper_bound(f::arb_poly) -> arb\n\nReturns an upper bound for the absolute value of all complex roots of f.\n\n\n\n"
+    "text": "roots_upper_bound(x::arb_poly) -> arb\n\nReturns an upper bound for the absolute value of all complex roots of x.\n\n\n\n"
 },
 
 {
@@ -861,7 +861,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Univariate polynomials",
     "title": "Nemo.roots_upper_bound",
     "category": "method",
-    "text": "roots_upper_bound(f::acb_poly) -> arb\n\nReturns an upper bound for the absolute value of all complex roots of f.\n\n\n\n"
+    "text": "roots_upper_bound(x::acb_poly) -> arb\n\nReturns an upper bound for the absolute value of all complex roots of x.\n\n\n\n"
 },
 
 {
@@ -885,7 +885,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Univariate polynomials",
     "title": "Nemo.lift",
     "category": "method",
-    "text": "function lift(R::FmpzPolyRing, y::gfp_poly)\n\nLift from a polynomial over mathbbZnmathbbZ to a polynomial over mathbbZ with minimal reduced nonnegative coefficients. The ring R specifies the ring to lift into.\n\n\n\n"
+    "text": "lift(R::FmpzPolyRing, y::gfp_poly)\n\nLift from a polynomial over mathbbZnmathbbZ to a polynomial over mathbbZ with minimal reduced nonnegative coefficients. The ring R specifies the ring to lift into.\n\n\n\n"
 },
 
 {
@@ -1493,7 +1493,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Puiseux series",
     "title": "Base.sqrt",
     "category": "method",
-    "text": "sqrt{T <: RingElem}(a::FlintPuiseuxSeriesElem{T})\n\nReturn the square root of the given Puiseux series.\n\n\n\n"
+    "text": "sqrt(a::FlintPuiseuxSeriesElem{T}) where T <: RingElem\n\nReturn the square root of the given Puiseux series.\n\n\n\n"
 },
 
 {
@@ -1501,7 +1501,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Puiseux series",
     "title": "Base.exp",
     "category": "method",
-    "text": "exp{T <: RingElem}(a::FlintPuiseuxSeriesElem{T})\n\nReturn the exponential of the given Puiseux series.\n\n\n\n"
+    "text": "exp(a::FlintPuiseuxSeriesElem{T}) where T <: RingElem\n\nReturn the exponential of the given Puiseux series.\n\n\n\n"
 },
 
 {
@@ -1629,7 +1629,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Fraction fields",
     "title": "Base.:>>",
     "category": "method",
-    "text": "<<(a::fmpq, b::Int)\n\nReturn 2^ba.\n\n\n\n"
+    "text": ">>(a::fmpq, b::Int)\n\nReturn 2^ba.\n\n\n\n"
 },
 
 {
@@ -2069,7 +2069,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Real balls",
     "title": "Nemo.contains",
     "category": "method",
-    "text": "contains(x::arb, y::Rational{Integer})\n\nReturns true if the ball x contains the given rational value, otherwise return false.\n\n\n\n"
+    "text": "contains(x::arb, y::Rational{T}) where {T <: Integer}\n\nReturns true if the ball x contains the given rational value, otherwise return false.\n\n\n\n"
 },
 
 {
@@ -2877,7 +2877,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Complex balls",
     "title": "Nemo.onei",
     "category": "method",
-    "text": "onei(R::AcbField)\n\nReturn exact one times i in the given Arb complex field.\n\n\n\n"
+    "text": "onei(r::AcbField)\n\nReturn exact one times i in the given Arb complex field.\n\n\n\n"
 },
 
 {
@@ -2925,7 +2925,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Complex balls",
     "title": "Base.isreal",
     "category": "method",
-    "text": "isint(x::acb)\n\nReturn true if x is purely real, i.e. having zero imaginary part, otherwise return false.\n\n\n\n"
+    "text": "isreal(x::acb)\n\nReturn true if x is purely real, i.e. having zero imaginary part, otherwise return false.\n\n\n\n"
 },
 
 {
@@ -3653,7 +3653,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Complex balls",
     "title": "Nemo.hyp2f1",
     "category": "method",
-    "text": "hyp2f1(a::acb, b::acb, c::acb, x::acb)\n\nReturn the Gauss hypergeometric function _2F_1(abcx).\n\n\n\n"
+    "text": "hyp2f1(a::acb, b::acb, c::acb, x::acb; flags=0)\n\nReturn the Gauss hypergeometric function _2F_1(abcx).\n\n\n\n"
 },
 
 {
@@ -3733,7 +3733,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Galois fields",
     "title": "AbstractAlgebra.Generic.characteristic",
     "category": "method",
-    "text": "characteristic(a::GaloisField) -> fmpz\n\nReturn the characteristic of the given Galois field.\n\n\n\n"
+    "text": "characteristic(R::GaloisField) -> fmpz\n\nReturn the characteristic of the given Galois field.\n\n\n\n"
 },
 
 {
@@ -3741,7 +3741,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Galois fields",
     "title": "AbstractAlgebra.Generic.order",
     "category": "method",
-    "text": "order(a::GaloisField) -> fmpz\n\nReturn the order, i.e. the number of elements in, the given Galois field.\n\n\n\n"
+    "text": "order(R::GaloisField) -> fmpz\n\nReturn the order, i.e. the number of elements in, the given Galois field.\n\n\n\n"
 },
 
 {
@@ -3781,7 +3781,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Finite fields",
     "title": "Nemo.FlintFiniteField",
     "category": "method",
-    "text": "FlintFiniteField(char::fmpz, deg::Int, s::AbstractString)\n\nReturns a tuple S x consisting of a finite field parent object S and generator x for the finite field of the given characteristic and degree. The string s is used to designate how the finite field generator will be printed. The characteristic must be prime. When a Conway polynomial is known, the field is generated using the Conway polynomial. Otherwise a random sparse, irreducible polynomial is used. The generator of the field is guaranteed to be a multiplicative generator only if the field is generated by a Conway polynomial. We require the degree to be positive.\n\n\n\n"
+    "text": "FlintFiniteField(char::fmpz, deg::Int, s::AbstractString; cached = true)\n\nReturns a tuple S x consisting of a finite field parent object S and generator x for the finite field of the given characteristic and degree. The string s is used to designate how the finite field generator will be printed. The characteristic must be prime. When a Conway polynomial is known, the field is generated using the Conway polynomial. Otherwise a random sparse, irreducible polynomial is used. The generator of the field is guaranteed to be a multiplicative generator only if the field is generated by a Conway polynomial. We require the degree to be positive.\n\n\n\n"
 },
 
 {
@@ -3789,7 +3789,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Finite fields",
     "title": "Nemo.FlintFiniteField",
     "category": "method",
-    "text": "FlintFiniteField(char::Integer, deg::Int, s::AbstractString)\n\nReturns a tuple S x consisting of a finite field parent object S and generator x for the finite field of the given characteristic and degree. The string s is used to designate how the finite field generator will be printed. The characteristic must be prime. When a Conway polynomial is known, the field is generated using the Conway polynomial. Otherwise a random sparse, irreducible polynomial is used. The generator of the field is guaranteed to be a multiplicative generator only if the field is generated by a Conway polynomial. We require the degree to be positive.\n\n\n\n"
+    "text": "FlintFiniteField(char::Integer, deg::Int, s::AbstractString; cached = true)\n\nReturns a tuple S x consisting of a finite field parent object S and generator x for the finite field of the given characteristic and degree. The string s is used to designate how the finite field generator will be printed. The characteristic must be prime. When a Conway polynomial is known, the field is generated using the Conway polynomial. Otherwise a random sparse, irreducible polynomial is used. The generator of the field is guaranteed to be a multiplicative generator only if the field is generated by a Conway polynomial. We require the degree to be positive.\n\n\n\n"
 },
 
 {
@@ -4077,7 +4077,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Padics",
     "title": "Nemo.FlintPadicField",
     "category": "method",
-    "text": "FlintPadicField(p::Integer, prec::Int)\n\nReturns the parent object for the p-adic field for given prime p, where the default absolute precision of elements of the field is given by prec.\n\n\n\n"
+    "text": "FlintPadicField(p::Integer, prec::Int; kw...)\n\nReturns the parent object for the p-adic field for given prime p, where the default absolute precision of elements of the field is given by prec.\n\n\n\n"
 },
 
 {
@@ -4421,7 +4421,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Matrices",
     "title": "Nemo.lift",
     "category": "method",
-    "text": "lift(a::Zmodn_mat)\n\nReturn a lift of the matrix a to a matrix over mathbbZ, i.e. where the entries of the returned matrix are those of a lifted to mathbbZ.\n\n\n\n"
+    "text": "lift(a::T) where {T <: Zmodn_mat}\n\nReturn a lift of the matrix a to a matrix over mathbbZ, i.e. where the entries of the returned matrix are those of a lifted to mathbbZ.\n\n\n\n"
 },
 
 {
@@ -4525,7 +4525,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Matrices",
     "title": "Nemo.lll",
     "category": "method",
-    "text": "lll(x::fmpz_mat, ctx=lll_ctx(0.99, 0.51))\n\nReturn the LLL reduction of the matrix x. By default the matrix x is a mathbbZ-basis and the Gram matrix is maintained throughout in approximate form. The LLL is performed with reduction parameters delta = 099 and eta = 051. All of these defaults can be overridden by specifying an optional context object.\n\n\n\n"
+    "text": "lll(x::fmpz_mat, ctx::lll_ctx = lll_ctx(0.99, 0.51))\n\nReturn the LLL reduction of the matrix x. By default the matrix x is a mathbbZ-basis and the Gram matrix is maintained throughout in approximate form. The LLL is performed with reduction parameters delta = 099 and eta = 051. All of these defaults can be overridden by specifying an optional context object.\n\n\n\n"
 },
 
 {
@@ -4533,7 +4533,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Matrices",
     "title": "Nemo.lll_with_transform",
     "category": "method",
-    "text": "Compute a tuple (L T) where L is the LLL reduction of a and T is a transformation matrix so that L = Ta. All the default parameters can be overridden by supplying an optional context object.\n\n\n\n"
+    "text": "lll_with_transform(x::fmpz_mat, ctx::lll_ctx = lll_ctx(0.99, 0.51))\n\nCompute a tuple (L T) where L is the LLL reduction of a and T is a transformation matrix so that L = Ta. All the default parameters can be overridden by supplying an optional context object.\n\n\n\n"
 },
 
 {
@@ -4541,7 +4541,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Matrices",
     "title": "Nemo.lll_gram",
     "category": "method",
-    "text": "lll_gram(x::fmpz_mat, ctx=lll_ctx(0.99, 0.51, :gram))\n\nGiven the Gram matrix x of a matrix, compute the Gram matrix of its LLL reduction.\n\n\n\n"
+    "text": "lll_gram(x::fmpz_mat, ctx::lll_ctx = lll_ctx(0.99, 0.51, :gram))\n\nGiven the Gram matrix x of a matrix, compute the Gram matrix of its LLL reduction.\n\n\n\n"
 },
 
 {
@@ -4549,7 +4549,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Matrices",
     "title": "Nemo.lll_gram_with_transform",
     "category": "method",
-    "text": "lll_gram_with_transform(x::fmpz_mat, ctx=lll_ctx(0.99, 0.51, :gram))\n\nGiven the Gram matrix x of a matrix M, compute a tuple (L T) where L is the gram matrix of the LLL reduction of the matrix and T is a transformation matrix so that L = TM.\n\n\n\n"
+    "text": "lll_gram_with_transform(x::fmpz_mat, ctx::lll_ctx = lll_ctx(0.99, 0.51, :gram))\n\nGiven the Gram matrix x of a matrix M, compute a tuple (L T) where L is the gram matrix of the LLL reduction of the matrix and T is a transformation matrix so that L = TM.\n\n\n\n"
 },
 
 {
@@ -4557,7 +4557,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Matrices",
     "title": "Nemo.lll_with_removal",
     "category": "method",
-    "text": "lll_with_removal(x::fmpz_mat, b::fmpz, ctx=lll_ctx(0.99, 0.51))\n\nCompute the LLL reduction of x and throw away rows whose norm exceeds the given bound b. Return a tuple (r L) where the first r rows of L are the rows remaining after removal.\n\n\n\n"
+    "text": "lll_with_removal(x::fmpz_mat, b::fmpz, ctx::lll_ctx = lll_ctx(0.99, 0.51))\n\nCompute the LLL reduction of x and throw away rows whose norm exceeds the given bound b. Return a tuple (r L) where the first r rows of L are the rows remaining after removal.\n\n\n\n"
 },
 
 {
@@ -4565,7 +4565,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Matrices",
     "title": "Nemo.lll_with_removal_transform",
     "category": "method",
-    "text": "lll_with_removal_transform(x::fmpz_mat, b::fmpz, ctx=lll_ctx(0.99, 0.51))\n\nCompute a tuple (r L T) where the first r rows of L are those remaining from the LLL reduction after removal of vectors with norm exceeding the bound b and T is a transformation matrix so that L = Tx.\n\n\n\n"
+    "text": "lll_with_removal_transform(x::fmpz_mat, b::fmpz, ctx::lll_ctx = lll_ctx(0.99, 0.51))\n\nCompute a tuple (r L T) where the first r rows of L are those remaining from the LLL reduction after removal of vectors with norm exceeding the bound b and T is a transformation matrix so that L = Tx.\n\n\n\n"
 },
 
 {
@@ -4573,7 +4573,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Matrices",
     "title": "Nemo.lll!",
     "category": "method",
-    "text": "lll!(x::fmpz_mat, ctx=lll_ctx(0.99, 0.51))\n\nPerform the LLL reduction of the matrix x inplace. By default the matrix x is a > mathbbZ-basis and the Gram matrix is maintained throughout in approximate form. The LLL is performed with reduction parameters delta = 099 and eta = 051. All of these defaults can be overridden by specifying an optional context object.\n\n\n\n"
+    "text": "lll!(x::fmpz_mat, ctx::lll_ctx = lll_ctx(0.99, 0.51))\n\nPerform the LLL reduction of the matrix x inplace. By default the matrix x is a > mathbbZ-basis and the Gram matrix is maintained throughout in approximate form. The LLL is performed with reduction parameters delta = 099 and eta = 051. All of these defaults can be overridden by specifying an optional context object.\n\n\n\n"
 },
 
 {
@@ -4581,7 +4581,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Matrices",
     "title": "Nemo.lll_gram!",
     "category": "method",
-    "text": "lll_gram!(x::fmpz_mat, ctx=lll_ctx(0.99, 0.51, :gram))\n\nGiven the Gram matrix x of a matrix, compute the Gram matrix of its LLL reduction inplace.\n\n\n\n"
+    "text": "lll_gram!(x::fmpz_mat, ctx::lll_ctx = lll_ctx(0.99, 0.51, :gram))\n\nGiven the Gram matrix x of a matrix, compute the Gram matrix of its LLL reduction inplace.\n\n\n\n"
 },
 
 {
@@ -4741,7 +4741,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Matrices",
     "title": "Base.Math.ldexp",
     "category": "method",
-    "text": "ldexp(x::acb_mat, y::Int)\n\nReturn 2^yx. Note that y can be positive, zero or negative.\n\n\n\n"
+    "text": "ldexp(x::arb_mat, y::Int)\n\nReturn 2^yx. Note that y can be positive, zero or negative.\n\n\n\n"
 },
 
 {
@@ -4765,7 +4765,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Matrices",
     "title": "Base.isreal",
     "category": "method",
-    "text": "isreal(M::acb_mat)\n\nReturns whether every entry of M has vanishing imaginary part.\n\n\n\n"
+    "text": "isreal(x::acb_mat)\n\nReturns whether every entry of x has vanishing imaginary part.\n\n\n\n"
 },
 
 {
