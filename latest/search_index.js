@@ -389,7 +389,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Nemo.isprobabprime",
     "category": "method",
-    "text": "isprobabprime(x::fmpz)\n\nReturn true if x is a very probably a prime number, otherwise return false. No counterexamples are known to this test, but it is conjectured that infinitely many exist.\n\n\n\n"
+    "text": "isprobabprime(x::fmpz)\n\nReturn true if x is very probably a prime number, otherwise return false. No counterexamples are known to this test, but it is conjectured that infinitely many exist.\n\n\n\n"
 },
 
 {
@@ -397,7 +397,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Nemo.factor",
     "category": "method",
-    "text": "factor(a::fmpz)\n\nReturn a factorisation of a using a Fac struct (see the documentation on factorisation in Nemo.\n\n\n\n"
+    "text": "factor(a::fmpz)\n\nReturn a factorisation of a using a Fac struct (see the documentation on factorisation in Nemo).\n\n\n\n"
 },
 
 {
@@ -1325,7 +1325,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Power series and Laurent series",
     "title": "Power series and Laurent series",
     "category": "section",
-    "text": "Nemo allows the creation of capped relative and absolute power series over any computable ring R. Capped relative power series are power series of the form a_jx^j + a_j+1x^j+1 + cdots + a_k-1x^k-1 + O(x^k) where j geq 0, a_j in R and the relative precision k - j is at most equal to some specified precision n. On the other hand capped absolute power series are power series of the form a_jx^j + a_j+1x^j+1 + cdots + a_n-1x^n-1 + O(x^n) where j geq 0, a_j in R and the precision n is fixed.There are two different kinds of implementation: a generic one for the case where no specific implementation exists (provided by AbstractAlgebra.jl), and efficient implementations of power series over numerous specific rings, usually provided by C/C++ libraries.The following table shows each of the relative power series types available in Nemo, the base ring R, and the Julia/Nemo types for that kind of series (the type information is mainly of concern to developers).Base ring Library Element type Parent type\nGeneric ring R AbstractAlgebra.jl `Generic.RelSeries{T} Generic.RelSeriesRing{T}\nmathbbZ Flint fmpz_rel_series FmpzRelSeriesRing\nmathbbZnmathbbZ (small n) Flint nmodrelseries NmodRelSeriesRing\nmathbbZnmathbbZ Flint fmpz_mod_rel_series FmpzModRelSeriesRing\nmathbbQ Flint fmpq_rel_series FmpqRelSeriesRing\nmathbbF_p^n (small p) Flint fq_nmod_rel_series FqNmodRelSeriesRing\nmathbbF_p^n (large p) Flint fq_rel_series FqRelSeriesRingAll relative power series elements belong to the abstract type RelSeriesElem and all of the relative power series ring types belong to the abstract type RelSeriesRing.The maximum relative precision, the string representation of the variable and the base ring R of a generic power series are stored in its parent object. Here is the corresponding table for the absolute power series types.Base ring Library Element type Parent type\nGeneric ring R AbstractAlgebra.jl Generic.AbsSeries{T} Generic.AbsSeriesRing{T}\nmathbbZ Flint fmpz_abs_series FmpzAbsSeriesRing\nmathbbZnmathbbZ Flint fmpz_mod_abs_series FmpzModAbsSeriesRing\nmathbbQ Flint fmpq_abs_series FmpqAbsSeriesRing\nmathbbF_p^n (small n) Flint fq_nmod_abs_series FqNmodAbsSeriesRing\nmathbbF_p^n (large n) Flint fq_abs_series FqAbsSeriesRingAll absolute power series elements belong to the abstract type AbsSeriesElem and all of the absolute power series ring types belong to the abstract type AbsSeriesRing.The absolute precision, the string representation of the variable and the base ring R of a generic power series are stored in its parent object. All power series element types belong to the abstract type SeriesElem and all of the power series ring types belong to the abstract type SeriesRing. This enables one to write generic functions that can accept any Nemo power series type.AbstractAlgebra.jl also provides Nemo with a generic implementation of Laurent series over a given ring R. For completeness, we list it here.Base ring Library Element type Parent type\nGeneric ring R AbstractAlgebra.jl Generic.LaurentSeriesRingElem{T} Generic.LaurenSeriesRing{T}\nGeneric field K AbstractAlgebra.jl Generic.LaurentSeriesFieldElem{T} Generic.LaurenSeriesField{T}"
+    "text": "Nemo allows the creation of capped relative and absolute power series over any computable ring R. Capped relative power series are power series of the form a_jx^j + a_j+1x^j+1 + cdots + a_k-1x^k-1 + O(x^k) where j geq 0, a_j in R and the relative precision k - j is at most equal to some specified precision n. On the other hand capped absolute power series are power series of the form a_jx^j + a_j+1x^j+1 + cdots + a_n-1x^n-1 + O(x^n) where j geq 0, a_j in R and the precision n is fixed.There are two different kinds of implementation: a generic one for the case where no specific implementation exists (provided by AbstractAlgebra.jl), and efficient implementations of power series over numerous specific rings, usually provided by C/C++ libraries.The following table shows each of the relative power series types available in Nemo, the base ring R, and the Julia/Nemo types for that kind of series (the type information is mainly of concern to developers).Base ring Library Element type Parent type\nGeneric ring R AbstractAlgebra.jl `Generic.RelSeries{T} Generic.RelSeriesRing{T}\nmathbbZ Flint fmpz_rel_series FmpzRelSeriesRing\nmathbbZnmathbbZ (small n) Flint nmodrelseries NmodRelSeriesRing\nmathbbZnmathbbZ Flint fmpz_mod_rel_series FmpzModRelSeriesRing\nmathbbQ Flint fmpq_rel_series FmpqRelSeriesRing\nmathbbF_p^n (small p) Flint fq_nmod_rel_series FqNmodRelSeriesRing\nmathbbF_p^n (large p) Flint fq_rel_series FqRelSeriesRingAll relative power series elements belong to the abstract type RelSeriesElem and all of the relative power series ring types belong to the abstract type RelSeriesRing.The maximum relative precision, the string representation of the variable and the base ring R of a generic power series are stored in its parent object. Here is the corresponding table for the absolute power series types.Base ring Library Element type Parent type\nGeneric ring R AbstractAlgebra.jl Generic.AbsSeries{T} Generic.AbsSeriesRing{T}\nmathbbZ Flint fmpz_abs_series FmpzAbsSeriesRing\nmathbbZnmathbbZ Flint fmpz_mod_abs_series FmpzModAbsSeriesRing\nmathbbQ Flint fmpq_abs_series FmpqAbsSeriesRing\nmathbbF_p^n (small n) Flint fq_nmod_abs_series FqNmodAbsSeriesRing\nmathbbF_p^n (large n) Flint fq_abs_series FqAbsSeriesRingAll absolute power series elements belong to the abstract type AbsSeriesElem and all of the absolute power series ring types belong to the abstract type AbsSeriesRing.The absolute precision, the string representation of the variable and the base ring R of a generic power series are stored in its parent object. All power series element types belong to the abstract type SeriesElem and all of the power series ring types belong to the abstract type SeriesRing. This enables one to write generic functions that can accept any Nemo power series type.AbstractAlgebra.jl also provides Nemo with a generic implementation of Laurent series over a given ring R. For completeness, we list it here.Base ring Library Element type Parent type\nGeneric ring R AbstractAlgebra.jl Generic.LaurentSeriesRingElem{T} Generic.LaurentSeriesRing{T}\nGeneric field K AbstractAlgebra.jl Generic.LaurentSeriesFieldElem{T} Generic.LaurentSeriesField{T}"
 },
 
 {
@@ -1357,7 +1357,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Power series and Laurent series",
     "title": "Base.log",
     "category": "method",
-    "text": "log(a::fmpqrelseries)\n\nReturn log(a). Requires the constant term to be one.\n\n\n\n"
+    "text": "log(a::fmpq_rel_series)\n\nReturn log(a). Requires the constant term to be one.\n\n\n\n"
 },
 
 {
@@ -1365,7 +1365,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Power series and Laurent series",
     "title": "Base.sqrt",
     "category": "method",
-    "text": "sqrt(a::fmpqrelseries)\n\nReturn the power series square root of a. Requires a constant term equal to one.\n\n\n\n"
+    "text": "sqrt(a::fmpq_rel_series)\n\nReturn the power series square root of a. Requires a constant term equal to one.\n\n\n\n"
 },
 
 {
@@ -1373,7 +1373,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Power series and Laurent series",
     "title": "Base.tan",
     "category": "method",
-    "text": "tan(a::fmpqrelseries)\n\nReturn tan(a). Requires a zero constant term.\n\n\n\n"
+    "text": "tan(a::fmpq_rel_series)\n\nReturn tan(a). Requires a zero constant term.\n\n\n\n"
 },
 
 {
@@ -1381,7 +1381,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Power series and Laurent series",
     "title": "Base.tanh",
     "category": "method",
-    "text": "tanh(a::fmpqrelseries)\n\nReturn tanh(a). Requires a zero constant term.\n\n\n\n"
+    "text": "tanh(a::fmpq_rel_series)\n\nReturn tanh(a). Requires a zero constant term.\n\n\n\n"
 },
 
 {
@@ -1389,7 +1389,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Power series and Laurent series",
     "title": "Base.sin",
     "category": "method",
-    "text": "sin(a::fmpqrelseries)\n\nReturn sin(a). Requires a zero constant term.\n\n\n\n"
+    "text": "sin(a::fmpq_rel_series)\n\nReturn sin(a). Requires a zero constant term.\n\n\n\n"
 },
 
 {
@@ -1397,7 +1397,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Power series and Laurent series",
     "title": "Base.sinh",
     "category": "method",
-    "text": "sinh(a::fmpqrelseries)\n\nReturn sinh(a). Requires a zero constant term.\n\n\n\n"
+    "text": "sinh(a::fmpq_rel_series)\n\nReturn sinh(a). Requires a zero constant term.\n\n\n\n"
 },
 
 {
@@ -1405,7 +1405,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Power series and Laurent series",
     "title": "Base.cos",
     "category": "method",
-    "text": "cos(a::fmpqrelseries)\n\nReturn cos(a). Requires a zero constant term.\n\n\n\n"
+    "text": "cos(a::fmpq_rel_series)\n\nReturn cos(a). Requires a zero constant term.\n\n\n\n"
 },
 
 {
@@ -1413,7 +1413,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Power series and Laurent series",
     "title": "Base.cosh",
     "category": "method",
-    "text": "cosh(a::fmpqrelseries)\n\nReturn cosh(a). Requires a zero constant term.\n\n\n\n"
+    "text": "cosh(a::fmpq_rel_series)\n\nReturn cosh(a). Requires a zero constant term.\n\n\n\n"
 },
 
 {
@@ -1421,7 +1421,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Power series and Laurent series",
     "title": "Base.asin",
     "category": "method",
-    "text": "asin(a::fmpqrelseries)\n\nReturn asin(a). Requires a zero constant term.\n\n\n\n"
+    "text": "asin(a::fmpq_rel_series)\n\nReturn asin(a). Requires a zero constant term.\n\n\n\n"
 },
 
 {
@@ -1429,7 +1429,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Power series and Laurent series",
     "title": "Base.asinh",
     "category": "method",
-    "text": "asinh(a::fmpqrelseries)\n\nReturn asinh(a). Requires a zero constant term.\n\n\n\n"
+    "text": "asinh(a::fmpq_rel_series)\n\nReturn asinh(a). Requires a zero constant term.\n\n\n\n"
 },
 
 {
@@ -1437,7 +1437,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Power series and Laurent series",
     "title": "Base.atan",
     "category": "method",
-    "text": "atan(a::fmpqrelseries)\n\nReturn atan(a). Requires a zero constant term.\n\n\n\n"
+    "text": "atan(a::fmpq_rel_series)\n\nReturn atan(a). Requires a zero constant term.\n\n\n\n"
 },
 
 {
@@ -1445,7 +1445,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Power series and Laurent series",
     "title": "Base.atanh",
     "category": "method",
-    "text": "atanh(a::fmpqrelseries)\n\nReturn atanh(a). Requires a zero constant term.\n\n\n\n"
+    "text": "atanh(a::fmpq_rel_series)\n\nReturn atanh(a). Requires a zero constant term.\n\n\n\n"
 },
 
 {
@@ -2309,7 +2309,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Real balls",
     "title": "Base.sqrt",
     "category": "method",
-    "text": "Base.sqrt(x::arb)\n\nReturn the square root of x.\n\n\n\n"
+    "text": "sqrt(x::arb)\n\nReturn the square root of x.\n\n\n\n"
 },
 
 {
@@ -2829,7 +2829,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Real balls",
     "title": "Nemo.lindep",
     "category": "method",
-    "text": "lindep(A::Array{arb, 1}, bits::Int)\n\nFind a small linear combination of the entries of the array A that is small *using LLL). The entries are first scaled by the given number of bits before truncating to integers for use in LLL. This function can be used to find linear dependence between a list of real numbers. The algorithm is heuristic only and returns an array of Nemo integers representing the linear combination.  \n\n\n\n"
+    "text": "lindep(A::Array{arb, 1}, bits::Int)\n\nFind a small linear combination of the entries of the array A that is small (using LLL). The entries are first scaled by the given number of bits before truncating to integers for use in LLL. This function can be used to find linear dependence between a list of real numbers. The algorithm is heuristic only and returns an array of Nemo integers representing the linear combination.  \n\n\n\n"
 },
 
 {
@@ -2853,7 +2853,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Complex balls",
     "title": "Complex balls",
     "category": "section",
-    "text": "Arbitrary precision complex ball arithmetic is supplied by Arb which provides a ball representation which tracks error bounds rigorously. Complex numbers are  represented in in rectangular form a+bi where ab are arb balls.The Arb complex field is constructed using the AcbField constructor. This constructs the parent object for the Arb complex field.We defineComplexField = AcbFieldso that one can construct the Arb complex field parent using ComplexField instead of AcbField.The types of complex boxes in Nemo are given in the following table, along with the libraries that provide them and the associated types of the parent objects.Library Field Element type Parent type\nArb mathbbC (boxes) acb AcbFieldAll the complex field types belong to the Field abstract type and the types of elements in this field, i.e. complex boxes in this case, belong to the FieldElem abstract type."
+    "text": "Arbitrary precision complex ball arithmetic is supplied by Arb which provides a ball representation which tracks error bounds rigorously. Complex numbers are  represented in rectangular form a+bi where ab are arb balls.The Arb complex field is constructed using the AcbField constructor. This constructs the parent object for the Arb complex field.We defineComplexField = AcbFieldso that one can construct the Arb complex field parent using ComplexField instead of AcbField.The types of complex boxes in Nemo are given in the following table, along with the libraries that provide them and the associated types of the parent objects.Library Field Element type Parent type\nArb mathbbC (boxes) acb AcbFieldAll the complex field types belong to the Field abstract type and the types of elements in this field, i.e. complex boxes in this case, belong to the FieldElem abstract type."
 },
 
 {
@@ -2893,7 +2893,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Complex balls",
     "title": "Basic functionality",
     "category": "section",
-    "text": "The following basic functionality is provided by the default Arb complex field implementation in Nemo, to support construction of generic rings over complex fields. Any custom complex field implementation in Nemo should provide analogues of these functions along with the usual arithmetic operations.parent_type(::Type{acb})Gives the type of the parent object of an Arb complex field element.elem_type(R::AcbField)Given the parent object for an Arb complex field, return the type of elements of the field.mul!(c::acb, a::acb, b::acb)Multiply a by b and set the existing Arb complex field element c to the result. This function is provided for performance reasons as it saves allocating a new object for the result and eliminates associated garbage collection.addeq!(c::acb, a::acb)In-place addition. Adds a to c and sets c to the result. This function is provided for performance reasons as it saves allocating a new object for the result and eliminates associated garbage collection.deepcopy(a::acb)Return a copy of the Arb complex field element a, recursively copying the internal data. Arb complex field elements are mutable in Nemo so a shallow copy is not sufficient.Given the parent object R for an Arb complex field, the following coercion functions are provided to coerce various elements into the Arb complex field. Developers provide these by overloading the call operator for the complex field parent objects.R()Coerce zero into the Arb complex field.R(n::Integer)\nR(f::fmpz)\nR(q::fmpq)Coerce an integer or rational value into the Arb complex field.R(f::Float64)\nR(f::BigFloat)Coerce the given floating point number into the Arb complex field.R(f::AbstractString)\nR(f::AbstractString, g::AbstractString)Coerce the decimal number, given as a string, into the Arb complex field. In each case f is the real part and g is the imaginary part.R(f::arb)Coerce the given Arb real ball into the Arb complex field.R(f::acb)Take an Arb complex field element that is already in an Arb field and simply return it. A copy of the original is not made.Here are some examples of coercing elements into the Arb complex field.RR = RealField(64)\nCC = ComplexField(64)\n\na = CC(3)\nb = CC(QQ(2,3))\nc = CC(\"3 +/- 0.0001\")\nd = CC(\"-1.24e+12345\")\nf = CC(\"nan +/- inf\")\ng = CC(RR(3))In addition to the above, developers of custom complex field types must ensure that they provide the equivalent of the function base_ring(R::AcbField) which should return Union{}. In addition to this they should ensure that each complex field element contains a field parent specifying the parent object of the complex field element, or at least supply the equivalent of the function parent(a::acb) to return the parent object of a complex field element."
+    "text": "The following basic functionality is provided by the default Arb complex field implementation in Nemo, to support construction of generic rings over complex fields. Any custom complex field implementation in Nemo should provide analogues of these functions along with the usual arithmetic operations.parent_type(::Type{acb})Gives the type of the parent object of an Arb complex field element.elem_type(R::AcbField)Given the parent object for an Arb complex field, return the type of elements of the field.mul!(c::acb, a::acb, b::acb)Multiply a by b and set the existing Arb complex field element c to the result. This function is provided for performance reasons as it saves allocating a new object for the result and eliminates associated garbage collection.addeq!(c::acb, a::acb)In-place addition adds a to c and sets c to the result. This function is provided for performance reasons as it saves allocating a new object for the result and eliminates associated garbage collection.deepcopy(a::acb)Return a copy of the Arb complex field element a, recursively copying the internal data. Arb complex field elements are mutable in Nemo so a shallow copy is not sufficient.Given the parent object R for an Arb complex field, the following coercion functions are provided to coerce various elements into the Arb complex field. Developers provide these by overloading the call operator for the complex field parent objects.R()Coerce zero into the Arb complex field.R(n::Integer)\nR(f::fmpz)\nR(q::fmpq)Coerce an integer or rational value into the Arb complex field.R(f::Float64)\nR(f::BigFloat)Coerce the given floating point number into the Arb complex field.R(f::AbstractString)\nR(f::AbstractString, g::AbstractString)Coerce the decimal number, given as a string, into the Arb complex field. In each case f is the real part and g is the imaginary part.R(f::arb)Coerce the given Arb real ball into the Arb complex field.R(f::acb)Take an Arb complex field element that is already in an Arb field and simply return it. A copy of the original is not made.Here are some examples of coercing elements into the Arb complex field.RR = RealField(64)\nCC = ComplexField(64)\n\na = CC(3)\nb = CC(QQ(2,3))\nc = CC(\"3 +/- 0.0001\")\nd = CC(\"-1.24e+12345\")\nf = CC(\"nan +/- inf\")\ng = CC(RR(3))In addition to the above, developers of custom complex field types must ensure that they provide the equivalent of the function base_ring(R::AcbField) which should return Union{}. In addition to this they should ensure that each complex field element contains a field parent specifying the parent object of the complex field element, or at least supply the equivalent of the function parent(a::acb) to return the parent object of a complex field element."
 },
 
 {
@@ -4117,7 +4117,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Padics",
     "title": "Big-oh notation",
     "category": "section",
-    "text": "Elements of p-adic fields can  be constructed using the big-oh notation. For this purpose we define the following functions.O(::FlintPadicField, ::Integer)\nO(::FlintPadicField, ::fmpz)\nO(::FlintPadicField, ::fmpq)The O(p^n) construction can be used to construct p-adic values of precision n by adding it to integer values representing the p-adic value modulo p^n as in the examples.ExamplesR = PadicField(7, 30)\nS = PadicField(ZZ(65537), 30)\n\nc = 1 + 2*7 + 4*7^2 + O(R, 7^3)\nd = 13 + 357*ZZ(65537) + O(S, ZZ(65537)^12)\nf = ZZ(1)//7^2 + ZZ(2)//7 + 3 + 4*7 + O(R, 7^2)Beware that the expression 1 + 2*p + 3*p^2 + O(R, p^n) is actually computed as a normal Julia expression. Therefore if \\code{Int} values are used instead of Flint integers or Julia bignums, overflow may result in evaluating the value."
+    "text": "Elements of p-adic fields can  be constructed using the big-oh notation. For this purpose we define the following functions.O(::FlintPadicField, ::Integer)\nO(::FlintPadicField, ::fmpz)\nO(::FlintPadicField, ::fmpq)The O(p^n) construction can be used to construct p-adic values of precision n by adding it to integer values representing the p-adic value modulo p^n as in the examples.ExamplesR = PadicField(7, 30)\nS = PadicField(ZZ(65537), 30)\n\nc = 1 + 2*7 + 4*7^2 + O(R, 7^3)\nd = 13 + 357*ZZ(65537) + O(S, ZZ(65537)^12)\nf = ZZ(1)//7^2 + ZZ(2)//7 + 3 + 4*7 + O(R, 7^2)Beware that the expression 1 + 2*p + 3*p^2 + O(R, p^n) is actually computed as a normal Julia expression. Therefore if {Int} values are used instead of Flint integers or Julia bignums, overflow may result in evaluating the value."
 },
 
 {
