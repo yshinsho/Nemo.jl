@@ -69,7 +69,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Types in Nemo",
     "title": "Types in Nemo",
     "category": "section",
-    "text": "Nemo is fully compatible with AbstractAlgebra.jl, but specialises implementations of various commonly used rings with a highly optimised C implementation, provided by the C libraries wrapped by Nemo.Below, we give a list of all of the specialised types available in Nemo that implement rings using a specialised C library. The types of elements of the respective rings and other mathematical structures are given, and in parentheses we list the types of the parent objects of the given rings and structures.Flint\nfmpz (FlintIntegerRing)\nfmpq (FlintRationalField)\nnmod (NmodRing)\nfq_nmod (FqNmodFiniteField)\nfq (FqFiniteField)\npadic (FlintPadicField)\nfmpz_poly (FmpzPolyRing)\nfmpq_poly (FmpqPolyRing)\nnmod_poly (NmodPolyRing)\nfmpz_mod_poly (FmpzModPolyRing)\nfq_poly (FqPolyRing)\nfq_nmod_poly (FqNmodPolyRing)\nfmpz_mpoly (FmpzMPolyRing)\nfmpz_rel_series (FmpzRelSeriesRing)\nfmpz_abs_series (FmpzAbsSeriesRing)\nfmpq_rel_series (FmpqRelSeriesRing)\nfmpq_abs_series (FmpqAbsSeriesRing)\nfmpz_mod_rel_series (FmpzModRelSeriesRing)\nfmpz_mod_abs_series (FmpzModAbsSeriesRing)\nnmod_rel_series (NmodRelSeriesRing)\nfq_nmod_rel_series (FqNmodRelSeriesRing)\nfq_nmod_abs_series (FqNmodAbsSeriesRing)\nfq_rel_series (FqRelSeriesRing)\nfq_abs_series (FqAbsSeriesRing)\nfmpz_mat (FmpzMatSpace)\nfmpq_mat (FmpqMatSpace)\nnmod_mat (NmodMatSpace)\nfq_nmod_mat (FqNmodMatSpace)\nfq_mat (FqMatSpace)\nperm (PermGroup)\nAntic\nnf_elem (AnticNumberField)\nArb\narb (ArbField)\nacb (AcbField)\narb_poly (ArbPolyRing)\nacb_poly (AcbPolyRing)\narb_mat (ArbMatSpace)\nacb_mat (AcbMatSpace)"
+    "text": "Nemo is fully compatible with AbstractAlgebra.jl, but specialises implementations of various commonly used rings with a highly optimised C implementation, provided by the C libraries wrapped by Nemo.Below, we give a list of all of the specialised types available in Nemo that implement rings using a specialised C library. The types of elements of the respective rings and other mathematical structures are given, and in parentheses we list the types of the parent objects of the given rings and structures.Flint\nfmpz (FlintIntegerRing)\nfmpq (FlintRationalField)\nnmod (NmodRing)\nfq_nmod (FqNmodFiniteField)\nfq (FqFiniteField)\npadic (FlintPadicField)\nqadic (FlintQadicField)\nfmpz_poly (FmpzPolyRing)\nfmpq_poly (FmpqPolyRing)\nnmod_poly (NmodPolyRing)\nfmpz_mod_poly (FmpzModPolyRing)\nfq_poly (FqPolyRing)\nfq_nmod_poly (FqNmodPolyRing)\nfmpz_mpoly (FmpzMPolyRing)\nfmpz_rel_series (FmpzRelSeriesRing)\nfmpz_abs_series (FmpzAbsSeriesRing)\nfmpq_rel_series (FmpqRelSeriesRing)\nfmpq_abs_series (FmpqAbsSeriesRing)\nfmpz_mod_rel_series (FmpzModRelSeriesRing)\nfmpz_mod_abs_series (FmpzModAbsSeriesRing)\nnmod_rel_series (NmodRelSeriesRing)\nfq_nmod_rel_series (FqNmodRelSeriesRing)\nfq_nmod_abs_series (FqNmodAbsSeriesRing)\nfq_rel_series (FqRelSeriesRing)\nfq_abs_series (FqAbsSeriesRing)\nfmpz_mat (FmpzMatSpace)\nfmpq_mat (FmpqMatSpace)\nnmod_mat (NmodMatSpace)\nfq_nmod_mat (FqNmodMatSpace)\nfq_mat (FqMatSpace)\nperm (PermGroup)\nAntic\nnf_elem (AnticNumberField)\nArb\narb (ArbField)\nacb (AcbField)\narb_poly (ArbPolyRing)\nacb_poly (AcbPolyRing)\narb_mat (ArbMatSpace)\nacb_mat (AcbMatSpace)"
 },
 
 {
@@ -4214,6 +4214,182 @@ var documenterSearchIndex = {"docs": [
     "title": "Special functions",
     "category": "section",
     "text": "Base.exp(::padic)log(::padic)teichmuller(::padic)ExamplesR = PadicField(7, 30)\n\na = 1 + 7 + 2*7^2 + O(R, 7^3)\nb = 2 + 5*7 + 3*7^2 + O(R, 7^3)\nc = 3*7 + 2*7^2 + O(R, 7^5)\n\nc = exp(c)\nd = log(a)\nc = exp(R(0))\nd = log(R(1))\nf = teichmuller(b)"
+},
+
+{
+    "location": "qadic.html#",
+    "page": "Qadics",
+    "title": "Qadics",
+    "category": "page",
+    "text": "CurrentModule = Nemo"
+},
+
+{
+    "location": "qadic.html#Qadics-1",
+    "page": "Qadics",
+    "title": "Qadics",
+    "category": "section",
+    "text": "Q-adic fields, that is, unramified extensions of p-adic fields, are provided in Nemo by Flint. This allows construction of q-adic fields for any prime power q.Q-adic fields are constructed using the FlintQadicField function. However, for convenience we defineQadicField = FlintQadicFieldso that q-adic fields can be constructed using QadicField rather than FlintQadicField. Note that this is the name of the constructor, but not of qadic field type.The types of q-adic fields in Nemo are given in the following table, along with the libraries that provide them and the associated types of the parent objects.Library Field Element type Parent type\nFlint mathbbQ_q qadic QadicFieldAll the q-adic field types belong to the Field abstract type and the q-adic field element types belong to the FieldElem abstract type."
+},
+
+{
+    "location": "qadic.html#P-adic-functionality-1",
+    "page": "Qadics",
+    "title": "P-adic functionality",
+    "category": "section",
+    "text": "Q-adic fields in Nemo implement the AbstractAlgebra.jl field interface.https://nemocas.github.io/AbstractAlgebra.jl/fields.htmlBelow, we document all the additional function that is provide by Nemo for p-adic fields."
+},
+
+{
+    "location": "qadic.html#Nemo.FlintQadicField-Tuple{Integer,Int64,Int64}",
+    "page": "Qadics",
+    "title": "Nemo.FlintQadicField",
+    "category": "method",
+    "text": "FlintQadicField(p::Integer, d::Int, prec::Int)\n\nReturns the parent object for the q-adic field for given prime p and degree d, where the default absolute precision of elements of the field is given by prec.\n\n\n\n"
+},
+
+{
+    "location": "qadic.html#Constructors-1",
+    "page": "Qadics",
+    "title": "Constructors",
+    "category": "section",
+    "text": "In order to construct q-adic field elements in Nemo, one must first construct the q-adic field itself. This is accomplished with one of the following constructors.FlintQadicField(::Integer, ::Int, ::Int)It is also possible to call the inner constructor directly. It has the following form.FlintQadicField(p::fmpz, d::Int, prec::Int)Returns the parent object for the q-adic field for given prime p and degree d, where the default absolute precision of elements of the field is given by prec.Here are some examples of creating q-adic fields and making use of the resulting parent objects to coerce various elements into those fields.ExamplesR = QadicField(7, 1, 30)\nS = QadicField(ZZ(65537), 1, 30)\n\na = R()\nb = S(1)\nc = S(ZZ(123))\nd = R(ZZ(1)//7^2)"
+},
+
+{
+    "location": "qadic.html#AbstractAlgebra.Generic.O-Tuple{FlintQadicField,Integer}",
+    "page": "Qadics",
+    "title": "AbstractAlgebra.Generic.O",
+    "category": "method",
+    "text": "O(R::FlintQadicField, m::Integer)\n\nConstruct the value 0 + O(p^n) given m = p^n. An exception results if m is not found to be a power of p = prime(R).\n\n\n\n"
+},
+
+{
+    "location": "qadic.html#AbstractAlgebra.Generic.O-Tuple{FlintQadicField,fmpz}",
+    "page": "Qadics",
+    "title": "AbstractAlgebra.Generic.O",
+    "category": "method",
+    "text": "O(R::FlintQadicField, m::fmpz)\n\nConstruct the value 0 + O(p^n) given m = p^n. An exception results if m is not found to be a power of p = prime(R).\n\n\n\n"
+},
+
+{
+    "location": "qadic.html#AbstractAlgebra.Generic.O-Tuple{FlintQadicField,fmpq}",
+    "page": "Qadics",
+    "title": "AbstractAlgebra.Generic.O",
+    "category": "method",
+    "text": "O(R::FlintQadicField, m::fmpq)\n\nConstruct the value 0 + O(p^n) given m = p^n. An exception results if m is not found to be a power of p = prime(R).\n\n\n\n"
+},
+
+{
+    "location": "qadic.html#Big-oh-notation-1",
+    "page": "Qadics",
+    "title": "Big-oh notation",
+    "category": "section",
+    "text": "Elements of p-adic fields can  be constructed using the big-oh notation. For this purpose we define the following functions.O(::FlintQadicField, ::Integer)\nO(::FlintQadicField, ::fmpz)\nO(::FlintQadicField, ::fmpq)The O(p^n) construction can be used to construct q-adic values of precision n by adding it to integer values representing the q-adic value modulo p^n as in the examples.ExamplesR = QadicField(7, 30)\nS = QadicField(ZZ(65537), 30)\n\nc = 1 + 2*7 + 4*7^2 + O(R, 7^3)\nd = 13 + 357*ZZ(65537) + O(S, ZZ(65537)^12)\nf = ZZ(1)//7^2 + ZZ(2)//7 + 3 + 4*7 + O(R, 7^2)Beware that the expression 1 + 2*p + 3*p^2 + O(R, p^n) is actually computed as a normal Julia expression. Therefore if {Int} values are used instead of Flint integers or Julia bignums, overflow may result in evaluating the value."
+},
+
+{
+    "location": "qadic.html#Nemo.prime-Tuple{FlintQadicField}",
+    "page": "Qadics",
+    "title": "Nemo.prime",
+    "category": "method",
+    "text": "prime(R::FlintQadicField)\n\nReturn the prime q for the given q-adic field.\n\n\n\n"
+},
+
+{
+    "location": "qadic.html#Base.precision-Tuple{qadic}",
+    "page": "Qadics",
+    "title": "Base.precision",
+    "category": "method",
+    "text": "precision(a::qadic)\n\nReturn the precision of the given q-adic field element, i.e. if the element is known to O(p^n) this function will return n.\n\n\n\n"
+},
+
+{
+    "location": "qadic.html#AbstractAlgebra.Generic.valuation-Tuple{qadic}",
+    "page": "Qadics",
+    "title": "AbstractAlgebra.Generic.valuation",
+    "category": "method",
+    "text": "valuation(a::qadic)\n\nReturn the valuation of the given q-adic field element, i.e. if the given element is divisible by p^n but not a higher power of q then the function will return n.\n\n\n\n"
+},
+
+{
+    "location": "qadic.html#Nemo.lift-Tuple{FmpqPolyRing,qadic}",
+    "page": "Qadics",
+    "title": "Nemo.lift",
+    "category": "method",
+    "text": "lift(R::FmpqPolyRing, a::qadic)\n\nReturn a lift of the given q-adic field element to mathbbQx.\n\n\n\n"
+},
+
+{
+    "location": "qadic.html#Nemo.lift-Tuple{FmpzPolyRing,qadic}",
+    "page": "Qadics",
+    "title": "Nemo.lift",
+    "category": "method",
+    "text": "lift(R::FmpzPolyRing, a::qadic)\n\nReturn a lift of the given q-adic field element to mathbbZx if possible.\n\n\n\n"
+},
+
+{
+    "location": "qadic.html#Basic-manipulation-1",
+    "page": "Qadics",
+    "title": "Basic manipulation",
+    "category": "section",
+    "text": "prime(::FlintQadicField)precision(::qadic)valuation(::qadic)lift(::FmpqPolyRing, ::qadic)\nlift(::FmpzPolyRing, ::qadic)ExamplesR = QadicField(7, 1, 30)\n\na = 1 + 2*7 + 4*7^2 + O(R, 7^3)\nb = 7^2 + 3*7^3 + O(R, 7^5)\nc = R(2)\n\nk = precision(a)\nm = prime(R)\nn = valuation(b)\nQx, x = FlintQQ[\"x\"]\np = lift(Qx, a)\nZy, y = FlintZZ[\"y\"]\nq = lift(Zy, divexact(a, b))"
+},
+
+{
+    "location": "qadic.html#Base.sqrt-Tuple{qadic}",
+    "page": "Qadics",
+    "title": "Base.sqrt",
+    "category": "method",
+    "text": "sqrt(a::qadic)\n\nReturn the q-adic square root of a. We define this only when the valuation of a is even. The precision of the output will be precision(a) - valuation(a)2. If the square root does not exist, an exception is thrown.\n\n\n\n"
+},
+
+{
+    "location": "qadic.html#Square-root-1",
+    "page": "Qadics",
+    "title": "Square root",
+    "category": "section",
+    "text": "Base.sqrt(::qadic)ExamplesR = QadicField(7, 1, 30)\n\na = 1 + 7 + 2*7^2 + O(R, 7^3)\nb = 2 + 3*7 + O(R, 7^5)\nc = 7^2 + 2*7^3 + O(R, 7^4)\n\nd = sqrt(a)\nf = sqrt(b)\nf = sqrt(c)\ng = sqrt(R(121))"
+},
+
+{
+    "location": "qadic.html#Base.exp-Tuple{qadic}",
+    "page": "Qadics",
+    "title": "Base.exp",
+    "category": "method",
+    "text": "exp(a::qadic)\n\nReturn the q-adic exponential of a. We define this only when the valuation of a is positive (unless a = 0). The precision of the output will be the same as the precision of the input. If the input is not valid an exception is thrown.\n\n\n\n"
+},
+
+{
+    "location": "qadic.html#Base.log-Tuple{qadic}",
+    "page": "Qadics",
+    "title": "Base.log",
+    "category": "method",
+    "text": "log(a::qadic)\n\nReturn the q-adic logarithm of a. We define this only when the valuation of a is zero (but not for a == 0). The precision of the output will be the same as the precision of the input. If the input is not valid an exception is thrown.\n\n\n\n"
+},
+
+{
+    "location": "qadic.html#Nemo.teichmuller-Tuple{qadic}",
+    "page": "Qadics",
+    "title": "Nemo.teichmuller",
+    "category": "method",
+    "text": "teichmuller(a::qadic)\n\nReturn the Teichmuller lift of the q-adic value a. We require the valuation of a to be nonnegative. The precision of the output will be the same as the precision of the input. For convenience, if a is congruent to zero modulo q we return zero. If the input is not valid an exception is thrown.\n\n\n\n"
+},
+
+{
+    "location": "qadic.html#Nemo.frobenius-Tuple{qadic,Int64}",
+    "page": "Qadics",
+    "title": "Nemo.frobenius",
+    "category": "method",
+    "text": "frobenius(a::qadic, e::Int = 1)\n\nReturn the image of the e-th power of Frobenius on the q-adic value a. The precision of the output will be the same as the precision of the input.\n\n\n\n"
+},
+
+{
+    "location": "qadic.html#Special-functions-1",
+    "page": "Qadics",
+    "title": "Special functions",
+    "category": "section",
+    "text": "Base.exp(::qadic)log(::qadic)teichmuller(::qadic)frobenius(::qadic, ::Int)ExamplesR = QadicField(7, 30)\n\na = 1 + 7 + 2*7^2 + O(R, 7^3)\nb = 2 + 5*7 + 3*7^2 + O(R, 7^3)\nc = 3*7 + 2*7^2 + O(R, 7^5)\n\nc = exp(c)\nd = log(a)\nc = exp(R(0))\nd = log(R(1))\nf = teichmuller(b)\ng = frobenius(a, 2)"
 },
 
 {
