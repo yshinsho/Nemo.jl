@@ -21,7 +21,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Getting Started",
     "title": "Installation",
     "category": "section",
-    "text": "To use Nemo we require Julia 0.6 or higher. Please see http://julialang.org/downloads for instructions on how to obtain julia for your system.At the Julia prompt simply typejulia> Pkg.add(\"Nemo\")\njulia> Pkg.build(\"Nemo\")"
+    "text": "To use Nemo we require Julia 1.0 or higher. Please see http://julialang.org/downloads for instructions on how to obtain julia for your system.At the Julia prompt simply typejulia> using Pkg; Pkg.add(\"Nemo\")"
 },
 
 {
@@ -30,6 +30,14 @@ var documenterSearchIndex = {"docs": [
     "title": "Quick start",
     "category": "section",
     "text": "Here are some examples of using Nemo.This example computes recursive univariate polynomials.julia> using Nemo\n\njulia> R, x = PolynomialRing(ZZ, \"x\")\n(Univariate Polynomial Ring in x over Integer Ring,x)\n\njulia> S, y = PolynomialRing(R, \"y\")\n(Univariate Polynomial Ring in y over Univariate Polynomial Ring in x over Integer Ring,y)\n\njulia> T, z = PolynomialRing(S, \"z\")\n(Univariate Polynomial Ring in z over Univariate Polynomial Ring in y over Univariate Polynomial Ring in x over Integer Ring,z)\n\njulia> f = x + y + z + 1\nz+(y+(x+1))\n\njulia> p = f^30; # semicolon supresses output\n\njulia> @time q = p*(p+1);\n  0.325521 seconds (140.64 k allocations: 3.313 MB)Here is an example using generic recursive ring constructions.julia> using Nemo\n\njulia> R, x = FiniteField(7, 11, \"x\")\n(Finite field of degree 11 over F_7,x)\n\njulia> S, y = PolynomialRing(R, \"y\")\n(Univariate Polynomial Ring in y over Finite field of degree 11 over F_7,y)\n\njulia> T = ResidueRing(S, y^3 + 3x*y + 1)\nResidue ring of Univariate Polynomial Ring in y over Finite field of degree 11 over F_7 modulo y^3+(3*x)*y+(1)\n\njulia> U, z = PolynomialRing(T, \"z\")\n(Univariate Polynomial Ring in z over Residue ring of Univariate Polynomial Ring in y over Finite field of degree 11 over F_7 modulo y^3+(3*x)*y+(1),z)\n\njulia> f = (3y^2 + y + x)*z^2 + ((x + 2)*y^2 + x + 1)*z + 4x*y + 3;\n\njulia> g = (7y^2 - y + 2x + 7)*z^2 + (3y^2 + 4x + 1)*z + (2x + 1)*y + 1;\n\njulia> s = f^12;\n\njulia> t = (s + g)^12;\n\njulia> @time resultant(s, t)\n  0.426612 seconds (705.88 k allocations: 52.346 MB, 2.79% gc time)\n(x^10+4*x^8+6*x^7+3*x^6+4*x^5+x^4+6*x^3+5*x^2+x)*y^2+(5*x^10+x^8+4*x^7+3*x^5+5*x^4+3*x^3+x^2+x+6)*y+(2*x^10+6*x^9+5*x^8+5*x^7+x^6+6*x^5+5*x^4+4*x^3+x+3)Here is an example using matrices.julia> using Nemo\n\njulia> R, x = PolynomialRing(ZZ, \"x\")\n(Univariate Polynomial Ring in x over Integer Ring,x)\n\njulia> S = MatrixSpace(R, 40, 40)\nMatrix Space of 40 rows and 40 columns over Univariate Polynomial Ring in x over Integer Ring\n\njulia> M = rand(S, 2:2, -20:20)\n\njulia> @time det(M);\n  0.131212 seconds (1.12 M allocations: 39.331 MiB, 4.77% gc time)And here is an example with power series.julia> using Nemo\n\njulia> R, x = QQ[\"x\"]\n(Univariate Polynomial Ring in x over Rational Field,x)\n\njulia> S, t = PowerSeriesRing(R, 100, \"t\")\n(Univariate power series ring in t over Univariate Polynomial Ring in x over Rational Field,t+O(t^101))\n\njulia> u = t + O(t^100)\nt+O(t^100)\n\njulia> @time divexact((u*exp(x*u)), (exp(u)-1));\n  0.042663 seconds (64.01 k allocations: 1.999 MB, 15.40% gc time)"
+},
+
+{
+    "location": "index.html#Building-dependencies-from-source-1",
+    "page": "Getting Started",
+    "title": "Building dependencies from source",
+    "category": "section",
+    "text": "Nemo depends on various C libraries which are installed using binaries by default. Building from source can be enabled by setting the environment variable NEMO_SOURCE_BUILD=1 and then doing Pkg.build(\"Nemo\") or Pkg.add(\"Nemo\") depending on whether Nemo was already installed."
 },
 
 {
