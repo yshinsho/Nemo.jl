@@ -393,6 +393,14 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
+    "location": "integer.html#Nemo.isprime-Tuple{fmpz}",
+    "page": "Integers",
+    "title": "Nemo.isprime",
+    "category": "method",
+    "text": "isprime(x::fmpz)\n\nReturn true if x is a prime number, otherwise return false.\n\n\n\n"
+},
+
+{
     "location": "integer.html#Nemo.isprobabprime-Tuple{fmpz}",
     "page": "Integers",
     "title": "Nemo.isprobabprime",
