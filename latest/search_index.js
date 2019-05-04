@@ -4553,9 +4553,9 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "matrix.html#Nemo.pseudo_inv-Tuple{fmpz_mat}",
+    "location": "matrix.html#AbstractAlgebra.Generic.pseudo_inv-Tuple{fmpz_mat}",
     "page": "Matrices",
-    "title": "Nemo.pseudo_inv",
+    "title": "AbstractAlgebra.Generic.pseudo_inv",
     "category": "method",
     "text": "pseudo_inv(x::fmpz_mat)\n\nReturn a tuple (z d) consisting of a matrix z and denominator d such that zd is the inverse of x.\n\n\n\n"
 },
