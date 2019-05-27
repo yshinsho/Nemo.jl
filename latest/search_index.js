@@ -4673,9 +4673,9 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "matrix.html#Nemo.hnf_with_transform-Tuple{fmpz_mat}",
+    "location": "matrix.html#AbstractAlgebra.Generic.hnf_with_transform-Tuple{fmpz_mat}",
     "page": "Matrices",
-    "title": "Nemo.hnf_with_transform",
+    "title": "AbstractAlgebra.Generic.hnf_with_transform",
     "category": "method",
     "text": "hnf_with_transform(x::fmpz_mat)\n\nCompute a tuple (H T) where H is the Hermite normal form of x and T is a transformation matrix so that H = Tx.\n\n\n\n"
 },
@@ -4697,9 +4697,9 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "matrix.html#Nemo.ishnf-Tuple{fmpz_mat}",
+    "location": "matrix.html#AbstractAlgebra.Generic.ishnf-Tuple{fmpz_mat}",
     "page": "Matrices",
-    "title": "Nemo.ishnf",
+    "title": "AbstractAlgebra.Generic.ishnf",
     "category": "method",
     "text": "ishnf(x::fmpz_mat)\n\nReturn true if the given matrix is in Hermite Normal Form, otherwise return false.\n\n\n\n"
 },
