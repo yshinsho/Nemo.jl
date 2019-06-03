@@ -13,7 +13,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Getting Started",
     "title": "Getting Started",
     "category": "section",
-    "text": "Nemo is a computer algebra package for the Julia programming language, maintained by William Hart,  Tommy Hofmann, Claus Fieker, Fredrik Johansson with additional code by Oleksandr Motsak, Marek Kaluba and other contributors.http://nemocas.org (Website)\nhttps://github.com/Nemocas/Nemo.jl (Source code)\nhttp://nemocas.github.io/Nemo.jl/latest/ (Online documentation)The features of Nemo so far include:Multiprecision integers and rationals\nIntegers modulo n\np-adic numbers\nFinite fields (prime and non-prime order)\nNumber field arithmetic\nArbitrary precision real and complex balls\nUnivariate polynomials and matrices over the aboveNemo depends on AbstractAlgebra.jl which provides Nemo with generic routines for:Univariate and multivariate polynomials\nAbsolute and relative power series\nLaurent series\nFraction fields\nResidue rings\nMatrices and linear algebra\nYoung Tableaux\nPermutation groups\nCharacters"
+    "text": "Nemo is a computer algebra package for the Julia programming language, maintained by William Hart,  Tommy Hofmann, Claus Fieker, Fredrik Johansson with additional code by Oleksandr Motsak, Marek Kaluba and other contributors.http://nemocas.org (Website)\nhttps://github.com/Nemocas/Nemo.jl (Source code)\nhttp://nemocas.github.io/Nemo.jl/latest/ (Online documentation)The features of Nemo so far include:Multiprecision integers and rationals\nIntegers modulo n\np-adic numbers\nFinite fields (prime and non-prime order)\nNumber field arithmetic\nArbitrary precision real and complex balls\nUnivariate and multivariate polynomials and matrices over the aboveNemo depends on AbstractAlgebra.jl which provides Nemo with generic routines for:Univariate and multivariate polynomials\nAbsolute and relative power series\nLaurent series\nFraction fields\nResidue rings\nMatrices and linear algebra\nYoung Tableaux\nPermutation groups\nCharacters"
 },
 
 {
@@ -1326,6 +1326,38 @@ var documenterSearchIndex = {"docs": [
     "title": "Special functions",
     "category": "section",
     "text": "cyclotomic(::Int, ::fmpz_poly)swinnerton_dyer(::Int, ::fmpz_poly)cos_minpoly(::Int, ::fmpz_poly)theta_qexp(::Int, ::Int, ::fmpz_poly)eta_qexp(::Int, ::Int, ::fmpz_poly)ExamplesR, x = PolynomialRing(ZZ, \"x\")\nS, y = PolynomialRing(R, \"y\")\n\nh = cyclotomic(120, x)\nj = swinnerton_dyer(5, x)\nk = cos_minpoly(30, x)\nl = theta_qexp(3, 30, x)\nm = eta_qexp(24, 30, x)\no = cyclotomic(10, 1 + x + x^2)"
+},
+
+{
+    "location": "mpolynomial.html#",
+    "page": "Multivariate polynomials",
+    "title": "Multivariate polynomials",
+    "category": "page",
+    "text": "CurrentModule = Nemo"
+},
+
+{
+    "location": "mpolynomial.html#Multivariate-polynomials-1",
+    "page": "Multivariate polynomials",
+    "title": "Multivariate polynomials",
+    "category": "section",
+    "text": ""
+},
+
+{
+    "location": "mpolynomial.html#Introduction-1",
+    "page": "Multivariate polynomials",
+    "title": "Introduction",
+    "category": "section",
+    "text": "Nemo allow the creation of sparse, distributed multivariate polynomials over any computable ring R. There are two different kinds of implementation: a generic one for the case where no specific implementation exists (provided by AbstractAlgebra.jl), and efficient implementations of polynomials over numerous specific rings, usually provided by C/C++ libraries.The following table shows each of the polynomial types available in Nemo, the base ring R, and the Julia/Nemo types for that kind of polynomial (the type information is mainly of concern to developers).Base ring Library Element type Parent type\nGeneric ring R AbstractAlgebra.jl Generic.MPoly{T} Generic.MPolyRing{T}\nmathbbZ Flint fmpz_mpoly FmpzMPolyRing\nmathbbZnmathbbZ (small n) Flint nmod_mpoly NmodMPolyRing\nmathbbQ Flint fmpq_mpoly FmpqMPolyRingThe following are not implemented yet, but will be available soon:mathbbZpmathbbZ(small prime p)  | Flint               | gfp_mpoly         | GFPMPolyRing mathbbF_p^n (small p)              | Flint               | fq_nmod_mpoly     | FqNmodMPolyRingThe string representation of the variables and the base ring R of a generic polynomial is stored in its parent object. All polynomial element types belong to the abstract type MPolyElem and all of the polynomial ring types belong to the abstract type MPolyRing. This enables one to write generic functions that can accept any Nemo multivariate polynomial type."
+},
+
+{
+    "location": "mpolynomial.html#Polynomial-functionality-1",
+    "page": "Multivariate polynomials",
+    "title": "Polynomial functionality",
+    "category": "section",
+    "text": "All multivariate polynomial types in Nemo follow the AbstractAlgebra.jl multivariate polynomial interface:https://nemocas.github.io/AbstractAlgebra.jl/mpolynomial_rings.htmlGeneric multivariate polynomials are also available, and Nemo multivariate polynomial types also implement all of the same functionality.https://nemocas.github.io/AbstractAlgebra.jl/mpolynomial.htmlWe describe here only functions that are in addition to that guaranteed by AbstractAlgebra.jl, for specific coefficient rings."
 },
 
 {
