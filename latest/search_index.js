@@ -5009,6 +5009,30 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
+    "location": "matrix.html#LinearAlgebra.eigvals-Tuple{acb_mat}",
+    "page": "Matrices",
+    "title": "LinearAlgebra.eigvals",
+    "category": "method",
+    "text": "eigvals(A::acb_mat)\n\nReturns the eigenvalues of A as a vector of tuples (acb, Int). Each tuple (z, k) corresponds to a cluser of k eigenvalues of A.This function is experimental.\n\n\n\n"
+},
+
+{
+    "location": "matrix.html#Nemo.eigvals_simple-Tuple{acb_mat}",
+    "page": "Matrices",
+    "title": "Nemo.eigvals_simple",
+    "category": "method",
+    "text": "eigvals_simple(A::acb_mat, alg = :default)\n\nReturns the eigenvalues of A as a vector of acb. It is assumed that A has only simple eigenvalues.The algorithm used can be changed by setting the alg keyword to :vdhoeven_mourrain or :rump. This function is experimental.\n\n\n\n"
+},
+
+{
+    "location": "matrix.html#Eigenvalues-and-Eigenvectors-(experimental)-1",
+    "page": "Matrices",
+    "title": "Eigenvalues and Eigenvectors (experimental)",
+    "category": "section",
+    "text": "eigvals(::acb_mat)\neigvals_simple(a::acb_mat)A = CC[1 2 3; 0 4 5; 0 0 6]\neigvals_simple(A)\nA = CC[2 2 3; 0 2 5; 0 0 2])\neigvals(A)"
+},
+
+{
     "location": "factor.html#",
     "page": "Factorisation",
     "title": "Factorisation",
