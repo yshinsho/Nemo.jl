@@ -2377,6 +2377,14 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
+    "location": "arb.html#Nemo.sqrtpos-Tuple{arb}",
+    "page": "Real balls",
+    "title": "Nemo.sqrtpos",
+    "category": "method",
+    "text": "sqrtpos(x::arb)\n\nReturn the sqrt root of x, assuming that x represents a nonnegative number. Thus any negative number in the input interval is discarded.\n\n\n\n"
+},
+
+{
     "location": "arb.html#Base.log-Tuple{arb}",
     "page": "Real balls",
     "title": "Base.log",
@@ -2869,7 +2877,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Real balls",
     "title": "Mathematical and special functions",
     "category": "section",
-    "text": "floor(::arb)ceil(::arb)Base.sqrt(::arb)rsqrt(::arb)sqrt1pm1(::arb)log(::arb)log1p(::arb)Base.exp(::arb)expm1(::arb)sin(::arb)cos(::arb)sinpi(::arb)cospi(::arb)tan(::arb)cot(::arb)tanpi(::arb)cotpi(::arb)sinh(::arb)cosh(::arb)tanh(::arb)coth(::arb)atan(::arb)asin(::arb)acos(::arb)atanh(::arb)asinh(::arb)acosh(::arb)gamma(::arb)lgamma(::arb)rgamma(::arb)digamma(::arb)zeta(::arb)sincos(::arb)sincospi(::arb)sinpi(::fmpq, ::ArbField)cospi(::fmpq, ::ArbField)sincospi(::fmpq, ::ArbField)sinhcosh(::arb)atan2(::arb, ::arb)agm(::arb, ::arb)zeta(::arb, ::arb)hypot(::arb, ::arb)root(::arb, ::Int)fac(::arb)fac(::Int, ::ArbField)binom(::arb, ::UInt)binom(::UInt, ::UInt, ::ArbField)fib(::fmpz, ::ArbField)fib(::Int, ::ArbField)gamma(::fmpz, ::ArbField)gamma(::fmpq, ::ArbField)zeta(::Int, ::ArbField)bernoulli(::Int, ::ArbField)risingfac(::arb, ::Int)risingfac(::fmpq, ::Int, ::ArbField)risingfac2(::arb, ::Int)polylog(::arb, ::arb)polylog(::Int, ::arb)chebyshev_t(::Int, ::arb)chebyshev_u(::Int, ::arb)chebyshev_t2(::Int, ::arb)chebyshev_u2(::Int, ::arb)bell(::fmpz, ::ArbField)bell(::Int, ::ArbField)numpart(::fmpz, ::ArbField)numpart(::Int, ::ArbField)ExamplesRR = RealField(64)\n\na = floor(exp(RR(1)))\nb = sinpi(QQ(5,6), RR)\nc = gamma(QQ(1,3), RealField(256))\nd = bernoulli(1000, RealField(53))\nf = polylog(3, RR(-10))"
+    "text": "floor(::arb)ceil(::arb)Base.sqrt(::arb)rsqrt(::arb)sqrt1pm1(::arb)sqrtpos(::arb)log(::arb)log1p(::arb)Base.exp(::arb)expm1(::arb)sin(::arb)cos(::arb)sinpi(::arb)cospi(::arb)tan(::arb)cot(::arb)tanpi(::arb)cotpi(::arb)sinh(::arb)cosh(::arb)tanh(::arb)coth(::arb)atan(::arb)asin(::arb)acos(::arb)atanh(::arb)asinh(::arb)acosh(::arb)gamma(::arb)lgamma(::arb)rgamma(::arb)digamma(::arb)zeta(::arb)sincos(::arb)sincospi(::arb)sinpi(::fmpq, ::ArbField)cospi(::fmpq, ::ArbField)sincospi(::fmpq, ::ArbField)sinhcosh(::arb)atan2(::arb, ::arb)agm(::arb, ::arb)zeta(::arb, ::arb)hypot(::arb, ::arb)root(::arb, ::Int)fac(::arb)fac(::Int, ::ArbField)binom(::arb, ::UInt)binom(::UInt, ::UInt, ::ArbField)fib(::fmpz, ::ArbField)fib(::Int, ::ArbField)gamma(::fmpz, ::ArbField)gamma(::fmpq, ::ArbField)zeta(::Int, ::ArbField)bernoulli(::Int, ::ArbField)risingfac(::arb, ::Int)risingfac(::fmpq, ::Int, ::ArbField)risingfac2(::arb, ::Int)polylog(::arb, ::arb)polylog(::Int, ::arb)chebyshev_t(::Int, ::arb)chebyshev_u(::Int, ::arb)chebyshev_t2(::Int, ::arb)chebyshev_u2(::Int, ::arb)bell(::fmpz, ::ArbField)bell(::Int, ::ArbField)numpart(::fmpz, ::ArbField)numpart(::Int, ::ArbField)ExamplesRR = RealField(64)\n\na = floor(exp(RR(1)))\nb = sinpi(QQ(5,6), RR)\nc = gamma(QQ(1,3), RealField(256))\nd = bernoulli(1000, RealField(53))\nf = polylog(3, RR(-10))"
 },
 
 {
