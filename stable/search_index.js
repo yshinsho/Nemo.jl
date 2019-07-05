@@ -13,7 +13,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Getting Started",
     "title": "Getting Started",
     "category": "section",
-    "text": "Nemo is a computer algebra package for the Julia programming language, maintained by William Hart,  Tommy Hofmann, Claus Fieker, Fredrik Johansson with additional code by Oleksandr Motsak, Marek Kaluba and other contributors.http://nemocas.org (Website)\nhttps://github.com/Nemocas/Nemo.jl (Source code)\nhttp://nemocas.github.io/Nemo.jl/latest/ (Online documentation)The features of Nemo so far include:Multiprecision integers and rationals\nIntegers modulo n\np-adic numbers\nFinite fields (prime and non-prime order)\nNumber field arithmetic\nArbitrary precision real and complex balls\nUnivariate polynomials and matrices over the aboveNemo depends on AbstractAlgebra.jl which provides Nemo with generic routines for:Univariate and multivariate polynomials\nAbsolute and relative power series\nLaurent series\nFraction fields\nResidue rings\nMatrices and linear algebra\nYoung Tableaux\nPermutation groups\nCharacters"
+    "text": "Nemo is a computer algebra package for the Julia programming language, maintained by William Hart,  Tommy Hofmann, Claus Fieker, Fredrik Johansson with additional code by Oleksandr Motsak, Marek Kaluba and other contributors.http://nemocas.org (Website)\nhttps://github.com/Nemocas/Nemo.jl (Source code)\nhttp://nemocas.github.io/Nemo.jl/latest/ (Online documentation)The features of Nemo so far include:Multiprecision integers and rationals\nIntegers modulo n\np-adic numbers\nFinite fields (prime and non-prime order)\nNumber field arithmetic\nArbitrary precision real and complex balls\nUnivariate and multivariate polynomials and matrices over the aboveNemo depends on AbstractAlgebra.jl which provides Nemo with generic routines for:Univariate and multivariate polynomials\nAbsolute and relative power series\nLaurent series\nFraction fields\nResidue rings\nMatrices and linear algebra\nYoung Tableaux\nPermutation groups\nCharacters"
 },
 
 {
@@ -1329,6 +1329,38 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
+    "location": "mpolynomial.html#",
+    "page": "Multivariate polynomials",
+    "title": "Multivariate polynomials",
+    "category": "page",
+    "text": "CurrentModule = Nemo"
+},
+
+{
+    "location": "mpolynomial.html#Multivariate-polynomials-1",
+    "page": "Multivariate polynomials",
+    "title": "Multivariate polynomials",
+    "category": "section",
+    "text": ""
+},
+
+{
+    "location": "mpolynomial.html#Introduction-1",
+    "page": "Multivariate polynomials",
+    "title": "Introduction",
+    "category": "section",
+    "text": "Nemo allow the creation of sparse, distributed multivariate polynomials over any computable ring R. There are two different kinds of implementation: a generic one for the case where no specific implementation exists (provided by AbstractAlgebra.jl), and efficient implementations of polynomials over numerous specific rings, usually provided by C/C++ libraries.The following table shows each of the polynomial types available in Nemo, the base ring R, and the Julia/Nemo types for that kind of polynomial (the type information is mainly of concern to developers).Base ring Library Element type Parent type\nGeneric ring R AbstractAlgebra.jl Generic.MPoly{T} Generic.MPolyRing{T}\nmathbbZ Flint fmpz_mpoly FmpzMPolyRing\nmathbbZnmathbbZ (small n) Flint nmod_mpoly NmodMPolyRing\nmathbbQ Flint fmpq_mpoly FmpqMPolyRingThe following are not implemented yet, but will be available soon:mathbbZpmathbbZ(small prime p)  | Flint               | gfp_mpoly         | GFPMPolyRing mathbbF_p^n (small p)              | Flint               | fq_nmod_mpoly     | FqNmodMPolyRingThe string representation of the variables and the base ring R of a generic polynomial is stored in its parent object. All polynomial element types belong to the abstract type MPolyElem and all of the polynomial ring types belong to the abstract type MPolyRing. This enables one to write generic functions that can accept any Nemo multivariate polynomial type."
+},
+
+{
+    "location": "mpolynomial.html#Polynomial-functionality-1",
+    "page": "Multivariate polynomials",
+    "title": "Polynomial functionality",
+    "category": "section",
+    "text": "All multivariate polynomial types in Nemo follow the AbstractAlgebra.jl multivariate polynomial interface:https://nemocas.github.io/AbstractAlgebra.jl/mpolynomial_rings.htmlGeneric multivariate polynomials are also available, and Nemo multivariate polynomial types also implement all of the same functionality.https://nemocas.github.io/AbstractAlgebra.jl/mpolynomial.htmlWe describe here only functions that are in addition to that guaranteed by AbstractAlgebra.jl, for specific coefficient rings."
+},
+
+{
     "location": "series.html#",
     "page": "Power series and Laurent series",
     "title": "Power series and Laurent series",
@@ -2345,6 +2377,14 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
+    "location": "arb.html#Nemo.sqrtpos-Tuple{arb}",
+    "page": "Real balls",
+    "title": "Nemo.sqrtpos",
+    "category": "method",
+    "text": "sqrtpos(x::arb)\n\nReturn the sqrt root of x, assuming that x represents a nonnegative number. Thus any negative number in the input interval is discarded.\n\n\n\n"
+},
+
+{
     "location": "arb.html#Base.log-Tuple{arb}",
     "page": "Real balls",
     "title": "Base.log",
@@ -2837,7 +2877,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Real balls",
     "title": "Mathematical and special functions",
     "category": "section",
-    "text": "floor(::arb)ceil(::arb)Base.sqrt(::arb)rsqrt(::arb)sqrt1pm1(::arb)log(::arb)log1p(::arb)Base.exp(::arb)expm1(::arb)sin(::arb)cos(::arb)sinpi(::arb)cospi(::arb)tan(::arb)cot(::arb)tanpi(::arb)cotpi(::arb)sinh(::arb)cosh(::arb)tanh(::arb)coth(::arb)atan(::arb)asin(::arb)acos(::arb)atanh(::arb)asinh(::arb)acosh(::arb)gamma(::arb)lgamma(::arb)rgamma(::arb)digamma(::arb)zeta(::arb)sincos(::arb)sincospi(::arb)sinpi(::fmpq, ::ArbField)cospi(::fmpq, ::ArbField)sincospi(::fmpq, ::ArbField)sinhcosh(::arb)atan2(::arb, ::arb)agm(::arb, ::arb)zeta(::arb, ::arb)hypot(::arb, ::arb)root(::arb, ::Int)fac(::arb)fac(::Int, ::ArbField)binom(::arb, ::UInt)binom(::UInt, ::UInt, ::ArbField)fib(::fmpz, ::ArbField)fib(::Int, ::ArbField)gamma(::fmpz, ::ArbField)gamma(::fmpq, ::ArbField)zeta(::Int, ::ArbField)bernoulli(::Int, ::ArbField)risingfac(::arb, ::Int)risingfac(::fmpq, ::Int, ::ArbField)risingfac2(::arb, ::Int)polylog(::arb, ::arb)polylog(::Int, ::arb)chebyshev_t(::Int, ::arb)chebyshev_u(::Int, ::arb)chebyshev_t2(::Int, ::arb)chebyshev_u2(::Int, ::arb)bell(::fmpz, ::ArbField)bell(::Int, ::ArbField)numpart(::fmpz, ::ArbField)numpart(::Int, ::ArbField)ExamplesRR = RealField(64)\n\na = floor(exp(RR(1)))\nb = sinpi(QQ(5,6), RR)\nc = gamma(QQ(1,3), RealField(256))\nd = bernoulli(1000, RealField(53))\nf = polylog(3, RR(-10))"
+    "text": "floor(::arb)ceil(::arb)Base.sqrt(::arb)rsqrt(::arb)sqrt1pm1(::arb)sqrtpos(::arb)log(::arb)log1p(::arb)Base.exp(::arb)expm1(::arb)sin(::arb)cos(::arb)sinpi(::arb)cospi(::arb)tan(::arb)cot(::arb)tanpi(::arb)cotpi(::arb)sinh(::arb)cosh(::arb)tanh(::arb)coth(::arb)atan(::arb)asin(::arb)acos(::arb)atanh(::arb)asinh(::arb)acosh(::arb)gamma(::arb)lgamma(::arb)rgamma(::arb)digamma(::arb)zeta(::arb)sincos(::arb)sincospi(::arb)sinpi(::fmpq, ::ArbField)cospi(::fmpq, ::ArbField)sincospi(::fmpq, ::ArbField)sinhcosh(::arb)atan2(::arb, ::arb)agm(::arb, ::arb)zeta(::arb, ::arb)hypot(::arb, ::arb)root(::arb, ::Int)fac(::arb)fac(::Int, ::ArbField)binom(::arb, ::UInt)binom(::UInt, ::UInt, ::ArbField)fib(::fmpz, ::ArbField)fib(::Int, ::ArbField)gamma(::fmpz, ::ArbField)gamma(::fmpq, ::ArbField)zeta(::Int, ::ArbField)bernoulli(::Int, ::ArbField)risingfac(::arb, ::Int)risingfac(::fmpq, ::Int, ::ArbField)risingfac2(::arb, ::Int)polylog(::arb, ::arb)polylog(::Int, ::arb)chebyshev_t(::Int, ::arb)chebyshev_u(::Int, ::arb)chebyshev_t2(::Int, ::arb)chebyshev_u2(::Int, ::arb)bell(::fmpz, ::ArbField)bell(::Int, ::ArbField)numpart(::fmpz, ::ArbField)numpart(::Int, ::ArbField)ExamplesRR = RealField(64)\n\na = floor(exp(RR(1)))\nb = sinpi(QQ(5,6), RR)\nc = gamma(QQ(1,3), RealField(256))\nd = bernoulli(1000, RealField(53))\nf = polylog(3, RR(-10))"
 },
 
 {
@@ -4974,6 +5014,30 @@ var documenterSearchIndex = {"docs": [
     "title": "Conversion to Julia matrices",
     "category": "section",
     "text": "Julia matrices use a different data structure than Nemo matrices. Conversion to Julia matrices is usually only required for interfacing with other packages. It isn\'t necessary to convert Nemo matrices to Julia matrices in order to manipulate them.This conversion can be performed with standard Julia syntax, such as the following, where A is an fmpz_mat: Matrix{Int}(A)\nMatrix{BigInt}(A)In case the matrix cannot be converted without loss, an InexactError is thrown: in this case, cast to a matrix of BigInts rather than Ints. "
+},
+
+{
+    "location": "matrix.html#LinearAlgebra.eigvals-Tuple{acb_mat}",
+    "page": "Matrices",
+    "title": "LinearAlgebra.eigvals",
+    "category": "method",
+    "text": "eigvals(A::acb_mat)\n\nReturns the eigenvalues of A as a vector of tuples (acb, Int). Each tuple (z, k) corresponds to a cluser of k eigenvalues of A.This function is experimental.\n\n\n\n"
+},
+
+{
+    "location": "matrix.html#Nemo.eigvals_simple-Tuple{acb_mat}",
+    "page": "Matrices",
+    "title": "Nemo.eigvals_simple",
+    "category": "method",
+    "text": "eigvals_simple(A::acb_mat, alg = :default)\n\nReturns the eigenvalues of A as a vector of acb. It is assumed that A has only simple eigenvalues.The algorithm used can be changed by setting the alg keyword to :vdhoeven_mourrain or :rump. This function is experimental.\n\n\n\n"
+},
+
+{
+    "location": "matrix.html#Eigenvalues-and-Eigenvectors-(experimental)-1",
+    "page": "Matrices",
+    "title": "Eigenvalues and Eigenvectors (experimental)",
+    "category": "section",
+    "text": "eigvals(::acb_mat)\neigvals_simple(a::acb_mat)A = CC[1 2 3; 0 4 5; 0 0 6]\neigvals_simple(A)\nA = CC[2 2 3; 0 2 5; 0 0 2])\neigvals(A)"
 },
 
 {
