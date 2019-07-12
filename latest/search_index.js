@@ -41,6 +41,14 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
+    "location": "index.html#Experimental-threading-support-for-flint-1",
+    "page": "Getting Started",
+    "title": "Experimental threading support for flint",
+    "category": "section",
+    "text": "Enabling a threaded version of flint can be done by setting the evironment variable NEMO_THREADED=1. To set the actual number of threads, use Nemo.flint_set_num_threads($numberofthreads)."
+},
+
+{
     "location": "about.html#",
     "page": "About Nemo",
     "title": "About Nemo",
