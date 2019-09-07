@@ -4469,7 +4469,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Matrices",
     "title": "Matrices",
     "category": "section",
-    "text": "Nemo allow the creation of dense matrices over any computable ring R. There are two different kinds of implementation: a generic one for the case where no specific implementation exists (provided by AbstractAlgebra.jl), and efficient implementations of matrices over numerous specific rings, usually provided by C/C++ libraries.The following table shows each of the matrix types available in Nemo, the base ring R, and the Julia/Nemo types for that kind of matrix (the type information is mainly of concern to developers).Base ring Library Element type Parent type\nGeneric ring R AbstractAlgebra.jl Generic.Mat{T} Generic.MatSpace{T}\nmathbbZ Flint fmpz_mat FmpzMatSpace\nmathbbZnmathbbZ (small n) Flint nmod_mat NmodMatSpace\nmathbbQ Flint fmpq_mat FmpqMatSpace\nmathbbZpmathbbZ (small p) Flint gfp_mat GFPMatSpace\nmathbbF_p^n (small p) Flint fq_nmod_mat FqNmodMatSpace\nmathbbF_p^n (large p) Flint fq_mat `FqMatSpace\nmathbbR Arb arb_mat ArbMatSpace\nmathbbC Arb acb_mat AcbMatSpaceThe dimensions and base ring R of a generic matrix are stored in its parent object. All matrix element types belong to the abstract type MatElem and all of the matrix space types belong to the abstract type MatSpace. This enables one to write generic functions that can accept any Nemo matrix type."
+    "text": "Nemo allow the creation of dense matrices over any computable ring R. There are two different kinds of implementation: a generic one for the case where no specific implementation exists (provided by AbstractAlgebra.jl), and efficient implementations of matrices over numerous specific rings, usually provided by C/C++ libraries.The following table shows each of the matrix types available in Nemo, the base ring R, and the Julia/Nemo types for that kind of matrix (the type information is mainly of concern to developers).Base ring Library Element type Parent type\nGeneric ring R AbstractAlgebra.jl Generic.Mat{T} Generic.MatSpace{T}\nmathbbZ Flint fmpz_mat FmpzMatSpace\nmathbbZnmathbbZ (small n) Flint nmod_mat NmodMatSpace\nmathbbQ Flint fmpq_mat FmpqMatSpace\nmathbbZpmathbbZ (small p) Flint gfp_mat GFPMatSpace\nmathbbF_p^n (small p) Flint fq_nmod_mat FqNmodMatSpace\nmathbbF_p^n (large p) Flint fq_mat `FqMatSpace\nmathbbR Arb arb_mat ArbMatSpace\nmathbbC Arb acb_mat AcbMatSpaceThe dimensions and base ring R of a generic matrix are stored in its parent object.All matrix element types belong to the abstract type MatElem and all of the matrix space types belong to the abstract type MatSpace. This enables one to write generic functions that can accept any Nemo matrix type."
 },
 
 {
@@ -4537,6 +4537,14 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
+    "location": "matrix.html#Scaling-1",
+    "page": "Matrices",
+    "title": "Scaling",
+    "category": "section",
+    "text": "<<(::fmpz_mat, ::Int)>>(::fmpz_mat, ::Int)ExamplesS = MatrixSpace(ZZ, 3, 3)\n\nA = S([fmpz(2) 3 5; 1 4 7; 9 6 3])\n\nB = A<<5\nC = B>>2"
+},
+
+{
     "location": "matrix.html#Nemo.det_divisor-Tuple{fmpz_mat}",
     "page": "Matrices",
     "title": "Nemo.det_divisor",
@@ -4561,11 +4569,11 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "matrix.html#Scaling-1",
+    "location": "matrix.html#Determinant-1",
     "page": "Matrices",
-    "title": "Scaling",
+    "title": "Determinant",
     "category": "section",
-    "text": "<<(::fmpz_mat, ::Int)>>(::fmpz_mat, ::Int)ExamplesS = MatrixSpace(ZZ, 3, 3)\n\nA = S([fmpz(2) 3 5; 1 4 7; 9 6 3])\n \nB = A<<5\nC = B>>2##i# Determinantdet_divisor(::fmpz_mat)det_given_divisor(::fmpz_mat, ::Integer, ::Bool)\ndet_given_divisor(::fmpz_mat, ::fmpz, ::Bool)ExamplesS = MatrixSpace(ZZ, 3, 3)\n\nA = S([fmpz(2) 3 5; 1 4 7; 9 6 3])\n \nc = det_divisor(A)\nd = det_given_divisor(A, c)"
+    "text": "det_divisor(::fmpz_mat)det_given_divisor(::fmpz_mat, ::Integer, ::Bool)\ndet_given_divisor(::fmpz_mat, ::fmpz, ::Bool)ExamplesS = MatrixSpace(ZZ, 3, 3)\n\nA = S([fmpz(2) 3 5; 1 4 7; 9 6 3])\n\nc = det_divisor(A)\nd = det_given_divisor(A, c)"
 },
 
 {
@@ -4597,7 +4605,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Matrices",
     "title": "Linear solving",
     "category": "section",
-    "text": "cansolve(::fmpz_mat, ::fmpz_mat)solve_dixon(::fmpz_mat, ::fmpz_mat)\nsolve_dixon(::fmpq_mat, ::fmpq_mat)ExamplesS = MatrixSpace(ZZ, 3, 3)\nT = MatrixSpace(ZZ, 3, 1)\n\nA = S([fmpz(2) 3 5; 1 4 7; 9 2 2])   \nB = T([fmpz(4), 5, 7])\n\nX, m = solve_dixon(A, B)"
+    "text": "cansolve(::fmpz_mat, ::fmpz_mat)solve_dixon(::fmpz_mat, ::fmpz_mat)\nsolve_dixon(::fmpq_mat, ::fmpq_mat)ExamplesS = MatrixSpace(ZZ, 3, 3)\nT = MatrixSpace(ZZ, 3, 1)\n\nA = S([fmpz(2) 3 5; 1 4 7; 9 2 2])\nB = T([fmpz(4), 5, 7])\n\nX, m = solve_dixon(A, B)"
 },
 
 {
@@ -4613,7 +4621,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Matrices",
     "title": "Pseudo inverse",
     "category": "section",
-    "text": "pseudo_inv(::fmpz_mat)ExamplesS = MatrixSpace(ZZ, 3, 3)\n\nA = S([1 0 1; 2 3 1; 5 6 7])\n  \nB, d = pseudo_inv(A)"
+    "text": "pseudo_inv(::fmpz_mat)ExamplesS = MatrixSpace(ZZ, 3, 3)\n\nA = S([1 0 1; 2 3 1; 5 6 7])\n\nB, d = pseudo_inv(A)"
 },
 
 {
@@ -4653,7 +4661,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Matrices",
     "title": "Modular reduction",
     "category": "section",
-    "text": "reduce_mod(::fmpz_mat, ::Integer)\nreduce_mod(::fmpz_mat, ::fmpz)ExamplesS = MatrixSpace(ZZ, 3, 3)\n\nA = S([fmpz(2) 3 5; 1 4 7; 9 2 2])\n   \nreduce_mod(A, ZZ(5))\nreduce_mod(A, 2)"
+    "text": "reduce_mod(::fmpz_mat, ::Integer)\nreduce_mod(::fmpz_mat, ::fmpz)ExamplesS = MatrixSpace(ZZ, 3, 3)\n\nA = S([fmpz(2) 3 5; 1 4 7; 9 2 2])\n\nreduce_mod(A, ZZ(5))\nreduce_mod(A, 2)"
 },
 
 {
@@ -4677,7 +4685,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Matrices",
     "title": "Lifting",
     "category": "section",
-    "text": "lift(::nmod_mat)\nlift(::gfp_mat)ExamplesR = ResidueRing(ZZ, 7)\nS = MatrixSpace(R, 3, 3)\n\na = S([4 5 6; 7 3 2; 1 4 5])\n  \n b = lift(a)"
+    "text": "lift(::nmod_mat)\nlift(::gfp_mat)ExamplesR = ResidueRing(ZZ, 7)\nS = MatrixSpace(R, 3, 3)\n\na = S([4 5 6; 7 3 2; 1 4 5])\n\n b = lift(a)"
 },
 
 {
@@ -4757,7 +4765,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Matrices",
     "title": "Hermite Normal Form",
     "category": "section",
-    "text": "hnf(::fmpz_mat)hnf_with_transform(::fmpz_mat)hnf_modular(::fmpz_mat, ::fmpz)hnf_modular_eldiv(::fmpz_mat, ::fmpz)ishnf(::fmpz_mat)ExamplesS = MatrixSpace(ZZ, 3, 3)\n\nA = S([fmpz(2) 3 5; 1 4 7; 19 3 7])\n   \nB = hnf(A)\nH, T = hnf_with_transform(A)\nM = hnf_modular(A, fmpz(27))\nN = hnf_modular_eldiv(A, fmpz(27))\nishnf(M)"
+    "text": "hnf(::fmpz_mat)hnf_with_transform(::fmpz_mat)hnf_modular(::fmpz_mat, ::fmpz)hnf_modular_eldiv(::fmpz_mat, ::fmpz)ishnf(::fmpz_mat)ExamplesS = MatrixSpace(ZZ, 3, 3)\n\nA = S([fmpz(2) 3 5; 1 4 7; 19 3 7])\n\nB = hnf(A)\nH, T = hnf_with_transform(A)\nM = hnf_modular(A, fmpz(27))\nN = hnf_modular_eldiv(A, fmpz(27))\nishnf(M)"
 },
 
 {
@@ -4829,7 +4837,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Matrices",
     "title": "Lattice basis reduction",
     "category": "section",
-    "text": "Nemo provides LLL lattice basis reduction. Optionally one can specify the setup using a context object created by the following function.lll_ctx(delta::Float64, eta::Float64, rep=:zbasis, gram=:approx)Return a LLL context object specifying LLL parameters delta and eta and specifying the representation as either :zbasis or :gram and the Gram type as either :approx or :exact.lll(::fmpz_mat, ::lll_ctx)lll_with_transform(::fmpz_mat, ::lll_ctx)lll_gram(::fmpz_mat, ::lll_ctx)lll_gram_with_transform(::fmpz_mat, ::lll_ctx)lll_with_removal(::fmpz_mat, ::fmpz, ::lll_ctx)lll_with_removal_transform(::fmpz_mat, ::fmpz, ::lll_ctx)lll!(::fmpz_mat, ::lll_ctx)lll_gram!(::fmpz_mat, ::lll_ctx)ExamplesS = MatrixSpace(ZZ, 3, 3)\n\nA = S([fmpz(2) 3 5; 1 4 7; 19 3 7])\n   \nL = lll(A, lll_ctx(0.95, 0.55, :zbasis, :approx)\nL, T = lll_with_transform(A)\n\nG == lll_gram(gram(A))\nG, T = lll_gram_with_transform(gram(A))\n\nr, L = lll_with_removal(A, fmpz(100))\nr, L, T = lll_with_removal_transform(A, fmpz(100))"
+    "text": "Nemo provides LLL lattice basis reduction. Optionally one can specify the setup using a context object created by the following function.lll_ctx(delta::Float64, eta::Float64, rep=:zbasis, gram=:approx)Return a LLL context object specifying LLL parameters delta and eta and specifying the representation as either :zbasis or :gram and the Gram type as either :approx or :exact.lll(::fmpz_mat, ::lll_ctx)lll_with_transform(::fmpz_mat, ::lll_ctx)lll_gram(::fmpz_mat, ::lll_ctx)lll_gram_with_transform(::fmpz_mat, ::lll_ctx)lll_with_removal(::fmpz_mat, ::fmpz, ::lll_ctx)lll_with_removal_transform(::fmpz_mat, ::fmpz, ::lll_ctx)lll!(::fmpz_mat, ::lll_ctx)lll_gram!(::fmpz_mat, ::lll_ctx)ExamplesS = MatrixSpace(ZZ, 3, 3)\n\nA = S([fmpz(2) 3 5; 1 4 7; 19 3 7])\n\nL = lll(A, lll_ctx(0.95, 0.55, :zbasis, :approx)\nL, T = lll_with_transform(A)\n\nG == lll_gram(gram(A))\nG, T = lll_gram_with_transform(gram(A))\n\nr, L = lll_with_removal(A, fmpz(100))\nr, L, T = lll_with_removal_transform(A, fmpz(100))"
 },
 
 {
@@ -4861,7 +4869,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Matrices",
     "title": "Smith Normal Form",
     "category": "section",
-    "text": "snf(::fmpz_mat)snf_diagonal(::fmpz_mat)issnf(::fmpz_mat)ExamplesS = MatrixSpace(ZZ, 3, 3)\n\nA = S([fmpz(2) 3 5; 1 4 7; 19 3 7])\n   \nB = snf(A)\nissnf(B) == true\n\nB = S([fmpz(2) 0 0; 0 4 0; 0 0 7])\n\nC = snf_diagonal(B)"
+    "text": "snf(::fmpz_mat)snf_diagonal(::fmpz_mat)issnf(::fmpz_mat)ExamplesS = MatrixSpace(ZZ, 3, 3)\n\nA = S([fmpz(2) 3 5; 1 4 7; 19 3 7])\n\nB = snf(A)\nissnf(B) == true\n\nB = S([fmpz(2) 0 0; 0 4 0; 0 0 7])\n\nC = snf_diagonal(B)"
 },
 
 {
@@ -5021,7 +5029,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Matrices",
     "title": "Conversion to Julia matrices",
     "category": "section",
-    "text": "Julia matrices use a different data structure than Nemo matrices. Conversion to Julia matrices is usually only required for interfacing with other packages. It isn\'t necessary to convert Nemo matrices to Julia matrices in order to manipulate them.This conversion can be performed with standard Julia syntax, such as the following, where A is an fmpz_mat: Matrix{Int}(A)\nMatrix{BigInt}(A)In case the matrix cannot be converted without loss, an InexactError is thrown: in this case, cast to a matrix of BigInts rather than Ints. "
+    "text": "Julia matrices use a different data structure than Nemo matrices. Conversion to Julia matrices is usually only required for interfacing with other packages. It isn\'t necessary to convert Nemo matrices to Julia matrices in order to manipulate them.This conversion can be performed with standard Julia syntax, such as the following, where A is an fmpz_mat:Matrix{Int}(A)\nMatrix{BigInt}(A)In case the matrix cannot be converted without loss, an InexactError is thrown: in this case, cast to a matrix of BigInts rather than Ints."
 },
 
 {
