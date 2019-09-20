@@ -2893,7 +2893,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Real balls",
     "title": "Nemo.lindep",
     "category": "method",
-    "text": "lindep(A::Array{arb, 1}, bits::Int)\n\nFind a small linear combination of the entries of the array A that is small (using LLL). The entries are first scaled by the given number of bits before truncating to integers for use in LLL. This function can be used to find linear dependence between a list of real numbers. The algorithm is heuristic only and returns an array of Nemo integers representing the linear combination.  \n\n\n\n"
+    "text": "lindep(A::Array{arb, 1}, bits::Int)\n\nFind a small linear combination of the entries of the array A that is small (using LLL). The entries are first scaled by the given number of bits before truncating to integers for use in LLL. This function can be used to find linear dependence between a list of real numbers. The algorithm is heuristic only and returns an array of Nemo integers representing the linear combination.\n\n\n\n"
 },
 
 {
@@ -5045,7 +5045,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Matrices",
     "title": "Nemo.eigvals_simple",
     "category": "method",
-    "text": "eigvals_simple(A::acb_mat, alg = :default)\n\nReturns the eigenvalues of A as a vector of acb. It is assumed that A has only simple eigenvalues.The algorithm used can be changed by setting the alg keyword to :vdhoeven_mourrain or :rump. This function is experimental.\n\n\n\n"
+    "text": "eigvals_simple(A::acb_mat, alg = :default)\n\nReturns the eigenvalues of A as a vector of acb. It is assumed that A has only simple eigenvalues.The algorithm used can be changed by setting the alg keyword to :vdhoeven_mourrain or :rump.This function is experimental.\n\n\n\n"
 },
 
 {
