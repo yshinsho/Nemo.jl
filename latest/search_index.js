@@ -409,14 +409,6 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "integer.html#Nemo.isprobabprime-Tuple{fmpz}",
-    "page": "Integers",
-    "title": "Nemo.isprobabprime",
-    "category": "method",
-    "text": "isprobabprime(x::fmpz)\n\nReturn true if x is very probably a prime number, otherwise return false. No counterexamples are known to this test, but it is conjectured that infinitely many exist.\n\n\n\n"
-},
-
-{
     "location": "integer.html#Nemo.factor-Tuple{fmpz}",
     "page": "Integers",
     "title": "Nemo.factor",
