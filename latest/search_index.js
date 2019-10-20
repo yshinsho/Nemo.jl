@@ -3953,6 +3953,62 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
+    "location": "ff_embedding.html#",
+    "page": "Finite field embeddings",
+    "title": "Finite field embeddings",
+    "category": "page",
+    "text": "CurrentModule = Nemo"
+},
+
+{
+    "location": "ff_embedding.html#Finite-field-embeddings-1",
+    "page": "Finite field embeddings",
+    "title": "Finite field embeddings",
+    "category": "section",
+    "text": ""
+},
+
+{
+    "location": "ff_embedding.html#Introduction-1",
+    "page": "Finite field embeddings",
+    "title": "Introduction",
+    "category": "section",
+    "text": "Nemo allows the construction of finite field embeddings making use of the algorithm of Bosma, Cannon and Steel behind the scenes to ensure compatibility. Critical routines (e.g. polynomial factorization, matrix computations) are provided by the C library Flint, whereas high level tasks are written directly in Nemo."
+},
+
+{
+    "location": "ff_embedding.html#Embedding-functionality-1",
+    "page": "Finite field embeddings",
+    "title": "Embedding functionality",
+    "category": "section",
+    "text": "It is possible to explicitly call the embedding embed function to create an embedding, but it is also possible to directly ask for the conversion of a finite field element x in some other finite field k via calling k(x). The resulting embedding is of type FinFieldMorphism. It is also possible to compute the preimage map of an embedding via the preimage_map function, applied to an embedding or directly to the finite fields (this actually first computes the embedding), or via conversion. An error is thrown if the element you want to compute the preimage of is not in the image of the embedding."
+},
+
+{
+    "location": "ff_embedding.html#Nemo.embed-Tuple{FqNmodFiniteField,FqNmodFiniteField}",
+    "page": "Finite field embeddings",
+    "title": "Nemo.embed",
+    "category": "method",
+    "text": "embed(k::T, K::T) where T <: FinField\n\nEmbed k in K, with some additionnal computations in order to satisfy compatibility conditions with previous and future embeddings.\n\n\n\n"
+},
+
+{
+    "location": "ff_embedding.html#Computing-an-embedding-1",
+    "page": "Finite field embeddings",
+    "title": "Computing an embedding",
+    "category": "section",
+    "text": "embed(::FqNmodFiniteField, ::FqNmodFiniteField)Examplesjulia> k2, x2 = FiniteField(19, 2, \"x2\")\n(Finite field of degree 2 over F_19, x2)\n\njulia> k4, x4 = FiniteField(19, 4, \"x4\")\n(Finite field of degree 4 over F_19, x4)\n\njulia> f = embed(k2, k4)\nMorphism from Finite field of degree 2 over F_19\nto Finite field of degree 4 over F_19\n\njulia> y = f(x2)\n6*x4^3+5*x4^2+9*x4+17\n\njulia> z = k4(x2)\n6*x4^3+5*x4^2+9*x4+17"
+},
+
+{
+    "location": "ff_embedding.html#Computed-the-preimage-of-an-embedding-1",
+    "page": "Finite field embeddings",
+    "title": "Computed the preimage of an embedding",
+    "category": "section",
+    "text": "preimage_map(::FqNmodFiniteField, ::FqNmodFiniteField)\npreimage_map(::FinFieldMorphism)Examplesjulia> k7, x7 = FiniteField(13, 7, \"x7\")\n(Finite field of degree 7 over F_13, x7)\n\njulia> k21, x21 = FiniteField(13, 21, \"x21\")\n(Finite field of degree 21 over F_13, x21)\n\njulia> s = preimage_map(k7, k21)\nPreimage of the morphism from Finite field of degree 7 over F_13\nto Finite field of degree 21 over F_13\n\njulia> y = k21(x7);\n\njulia> z = s(y)\nx7\n\njulia> t = k7(y)\nx7"
+},
+
+{
     "location": "numberfield.html#",
     "page": "Number field arithmetic",
     "title": "Number field arithmetic",
