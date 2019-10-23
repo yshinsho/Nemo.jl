@@ -1581,7 +1581,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Residue rings",
     "title": "Residue rings",
     "category": "section",
-    "text": "Nemo allows the creation of residue rings of the form R(a) for an element a of a ring R.We don\'t require (a) to be a prime or maximal ideal. Instead, we allow the creation of the residue ring R(a) for any nonzero a and simply raise an exception if an impossible inverse is encountered during computations  involving elements of R(a). Of course, a GCD function must be available for the base ring R.There is a generic implementation of residue rings of this form in AbstractAlgebra.jl, which accepts any ring R as base ring.The associated types of parent object and elements for each kind of residue rings in Nemo are given in the following table.Base ring Library Element type Parent type\nGeneric ring R AbstractAlgebra.jl Generic.Res{T} Generic.ResRing{T}\nmathbbZ Flint nmod NmodRingThe modulus a of a residue ring is stored in its parent object.All residue element types belong to the abstract type ResElem and all the residue ring parent object types belong to the abstract type ResRing. This enables one to write generic functions that accept any Nemo residue type."
+    "text": "Nemo allows the creation of residue rings of the form R(a) for an element a of a ring R.We don\'t require (a) to be a prime or maximal ideal. Instead, we allow the creation of the residue ring R(a) for any nonzero a and simply raise an exception if an impossible inverse is encountered during computations  involving elements of R(a). Of course, a GCD function must be available for the base ring R.There is a generic implementation of residue rings of this form in AbstractAlgebra.jl, which accepts any ring R as base ring.The associated types of parent object and elements for each kind of residue rings in Nemo are given in the following table.Base ring Library Element type Parent type\nGeneric ring R AbstractAlgebra.jl Generic.Res{T} Generic.ResRing{T}\nmathbbZ (Int modulus) Flint nmod NmodRing\nmathbbZ (ZZ modulus) Flint fmpz_mod FmpzModRingThe modulus a of a residue ring is stored in its parent object.All residue element types belong to the abstract type ResElem and all the residue ring parent object types belong to the abstract type ResRing. This enables one to write generic functions that accept any Nemo residue type."
 },
 
 {
@@ -1590,22 +1590,6 @@ var documenterSearchIndex = {"docs": [
     "title": "Residue functionality",
     "category": "section",
     "text": "All the residue rings in Nemo implement the residue ring interface of AbstractAlgebra.jl:https://nemocas.github.io/AbstractAlgebra.jl/residue_rings.htmlIn addition, functionality for generic residue rings is available:https://nemocas.github.io/AbstractAlgebra.jl/residue.htmlThe other residue types in Nemo also implement this functionality."
-},
-
-{
-    "location": "residue.html#Base.gcdx-Tuple{Nemo.nmod,Nemo.nmod}",
-    "page": "Residue rings",
-    "title": "Base.gcdx",
-    "category": "method",
-    "text": "gcdx(a::nmod, b::nmod)\n\nCompute the extended gcd with the Euclidean structure inherited from mathbbZ.\n\n\n\n"
-},
-
-{
-    "location": "residue.html#Base.gcdx-Tuple{ResElem{fmpz},ResElem{fmpz}}",
-    "page": "Residue rings",
-    "title": "Base.gcdx",
-    "category": "method",
-    "text": "gcdx(a::ResElem{fmpz}, b::ResElem{fmpz})\n\nCompute the extended gcd with the Euclidean structure inherited from mathbbZ.\n\n\n\n"
 },
 
 {
@@ -3773,7 +3757,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Galois fields",
     "title": "Galois fields",
     "category": "section",
-    "text": "Nemo allows the creation of Galois fields of the form mathbbZpmathbbZ for a prime p. Note that these are not the same as finite fields of degree 1, as Conway polynomials are not used.For convenience, the following constructors are provided.GF(n::UInt)\nGF(n::Int)For example, one can create the Galois field of characteristic 7 as follows.R = GF(7)Elements of the field are then created in the usual way.a = R(3)Elements of Galois fields have type gfp_elem, and the type of the parent objects is GaloisField.The modulus p of an element of a Galois field is stored in its parent object.The gfp_elem type belong to the abstract type FinFieldElem and the GaloisField parent object type belongs to the abstract type FinField."
+    "text": "Nemo allows the creation of Galois fields of the form mathbbZpmathbbZ for a prime p. Note that these are not the same as finite fields of degree 1, as Conway polynomials are not used and no generator is given.For convenience, the following constructors are provided.GF(n::UInt)\nGF(n::Int)\nGF(n::fmpz)For example, one can create the Galois field of characteristic 7 as follows.R = GF(7)Elements of the field are then created in the usual way.a = R(3)Elements of Galois fields have type gfp_elem when p is given to the constructor as an Int or UInt, and of type gfp_fmpz_elem if p is given as an fmpz, and the type of the parent objects is GaloisField or GaloisFmpzField respectively.The modulus p of an element of a Galois field is stored in its parent object.The gfp_elem and gfp_fmpz_elem types belong to the abstract type FinFieldElem and the GaloisField and GaloisFmpzField parent object types belong to the abstract type FinField."
 },
 
 {
@@ -3793,6 +3777,14 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
+    "location": "gfp.html#AbstractAlgebra.Generic.characteristic-Tuple{Nemo.GaloisFmpzField}",
+    "page": "Galois fields",
+    "title": "AbstractAlgebra.Generic.characteristic",
+    "category": "method",
+    "text": "characteristic(F::GaloisFmpzField)\n\nReturn the characteristic of the given Galois field.\n\n\n\n"
+},
+
+{
     "location": "gfp.html#AbstractAlgebra.Generic.order-Tuple{Nemo.GaloisField}",
     "page": "Galois fields",
     "title": "AbstractAlgebra.Generic.order",
@@ -3801,11 +3793,19 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
+    "location": "gfp.html#AbstractAlgebra.Generic.order-Tuple{Nemo.GaloisFmpzField}",
+    "page": "Galois fields",
+    "title": "AbstractAlgebra.Generic.order",
+    "category": "method",
+    "text": "order(F::GaloisFmpzField)\n\nReturn the order, i.e. the number of elements in, the given Galois field.\n\n\n\n"
+},
+
+{
     "location": "gfp.html#Basic-manipulation-1",
     "page": "Galois fields",
     "title": "Basic manipulation",
     "category": "section",
-    "text": "characteristic(::GaloisField)order(::GaloisField)ExamplesF = GF(3)\n\na = characteristic(F)\nb = order(F)"
+    "text": "characteristic(::GaloisField)\ncharacteristic(::GaloisFmpzField)order(::GaloisField)\norder(::GaloisFmpzField)ExamplesF = GF(3)\n\na = characteristic(F)\nb = order(F)"
 },
 
 {
