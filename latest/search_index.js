@@ -4001,9 +4001,9 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "ff_embedding.html#Computed-the-preimage-of-an-embedding-1",
+    "location": "ff_embedding.html#Computing-the-preimage-of-an-embedding-1",
     "page": "Finite field embeddings",
-    "title": "Computed the preimage of an embedding",
+    "title": "Computing the preimage of an embedding",
     "category": "section",
     "text": "preimage_map(::FqNmodFiniteField, ::FqNmodFiniteField)\npreimage_map(::FinFieldMorphism)Examplesjulia> k7, x7 = FiniteField(13, 7, \"x7\")\n(Finite field of degree 7 over F_13, x7)\n\njulia> k21, x21 = FiniteField(13, 21, \"x21\")\n(Finite field of degree 21 over F_13, x21)\n\njulia> s = preimage_map(k7, k21)\nPreimage of the morphism from Finite field of degree 7 over F_13\nto Finite field of degree 21 over F_13\n\njulia> y = k21(x7);\n\njulia> z = s(y)\nx7\n\njulia> t = k7(y)\nx7"
 },
