@@ -509,7 +509,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Nemo.eulerphi",
     "category": "method",
-    "text": "eulerphi(x::fmpz)\n\nReturn the value of the Euler phi function at x, i.e. the number of positive integers less than x that are coprime with x.\n\n\n\n"
+    "text": "eulerphi(x::fmpz)\n\nReturn the value of the Euler phi function at x, i.e. the number of positive integers up to x (inclusive) that are coprime with x.\n\n\n\n"
 },
 
 {
