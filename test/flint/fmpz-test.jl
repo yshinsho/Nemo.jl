@@ -135,7 +135,7 @@ end
 
 @testset "fmpz.exact_division..." begin
    @test divexact(fmpz(24), fmpz(12)) == 2
-   @test_throws ErrorException divexact(fmpz(24), fmpz(11))
+   @test_throws ArgumentError divexact(fmpz(24), fmpz(11))
 end
 
 @testset "fmpz.gcd_lcm..." begin
@@ -223,7 +223,7 @@ end
 
    @test rem(-12, fmpz(3)) == 0
 
-   @test_throws ErrorException divexact(ZZ(2), 3)
+   @test_throws ArgumentError divexact(ZZ(2), 3)
 end
 
 @testset "fmpz.shift.." begin

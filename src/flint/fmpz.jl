@@ -299,12 +299,12 @@ end
 
 function divexact(x::fmpz, y::fmpz)
     iszero(y) && throw(DivideError())
-    z = fmpz()
+    q = fmpz()
     r = fmpz()
     ccall((:fmpz_tdiv_qr, :libflint), Nothing,
-          (Ref{fmpz}, Ref{fmpz}, Ref{fmpz}, Ref{fmpz}), z, r, x, y)
-    r != 0 && error("Not an exact division in divexact")
-    return z
+          (Ref{fmpz}, Ref{fmpz}, Ref{fmpz}, Ref{fmpz}), q, r, x, y)
+    !iszero(r) && throw(ArgumentError("Not an exact division in divexact"))
+    return q
 end
 
 function rem(x::fmpz, c::fmpz)
@@ -388,16 +388,6 @@ end
 #   Ad hoc exact division
 #
 ###############################################################################
-
-function divexact(x::fmpz, y::Int)
-    y == 0 && throw(DivideError())
-    q = fmpz()
-    r = fmpz()
-    ccall((:fmpz_tdiv_qr, :libflint), Nothing,
-          (Ref{fmpz}, Ref{fmpz}, Ref{fmpz}, Ref{fmpz}), q, r, x, fmpz(y))
-    r != 0 && error("Not an exact division in divexact")
-    return q
-end
 
 divexact(x::fmpz, y::Integer) = divexact(x, fmpz(y))
 
