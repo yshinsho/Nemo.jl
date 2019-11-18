@@ -425,27 +425,27 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "integer.html#Nemo.fac-Tuple{Int64}",
+    "location": "integer.html#Nemo.factorial-Tuple{Int64}",
     "page": "Integers",
-    "title": "Nemo.fac",
+    "title": "Nemo.factorial",
     "category": "method",
-    "text": "fac(x::Int)\n\nReturn the factorial of x, i.e. x = 123ldots x. We require x geq 0.\n\n\n\n"
+    "text": "factorial(x::Int)\n\nReturn the factorial of x, i.e. x = 123ldots x. We require x geq 0.\n\n\n\n"
 },
 
 {
-    "location": "integer.html#Nemo.risingfac-Tuple{fmpz,Int64}",
+    "location": "integer.html#Nemo.rising_factorial-Tuple{fmpz,Int64}",
     "page": "Integers",
-    "title": "Nemo.risingfac",
+    "title": "Nemo.rising_factorial",
     "category": "method",
-    "text": "risingfac(x::fmpz, y::Int)\n\nReturn the rising factorial of x, i.e. x(x + 1)(x + 2)ldots (x + n - 1). If n  0 we throw a DomainError().\n\n\n\n"
+    "text": "rising_factorial(x::fmpz, y::Int)\n\nReturn the rising factorial of x, i.e. x(x + 1)(x + 2)ldots (x + n - 1). If n  0 we throw a DomainError().\n\n\n\n"
 },
 
 {
-    "location": "integer.html#Nemo.risingfac-Tuple{Int64,Int64}",
+    "location": "integer.html#Nemo.rising_factorial-Tuple{Int64,Int64}",
     "page": "Integers",
-    "title": "Nemo.risingfac",
+    "title": "Nemo.rising_factorial",
     "category": "method",
-    "text": "risingfac(x::Int, y::Int)\n\nReturn the rising factorial of x, i.e. x(x + 1)(x + 2)ldots (x + n - 1). If n  0 we throw a DomainError().\n\n\n\n"
+    "text": "rising_factorial(x::Int, y::Int)\n\nReturn the rising factorial of x, i.e. x(x + 1)(x + 2)ldots (x + n - 1). If n  0 we throw a DomainError().\n\n\n\n"
 },
 
 {
@@ -457,11 +457,11 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "integer.html#Nemo.fib-Tuple{Int64}",
+    "location": "integer.html#Nemo.fibonacci-Tuple{Int64}",
     "page": "Integers",
-    "title": "Nemo.fib",
+    "title": "Nemo.fibonacci",
     "category": "method",
-    "text": "fib(x::Int)\n\nReturn the x-th Fibonacci number F_x. We define F_1 = 1, F_2 = 1 and F_i + 1 = F_i + F_i - 1 for all i  2. We require n geq 0. For convenience, we define F_0 = 0.\n\n\n\n"
+    "text": "fibonacci(x::Int)\n\nReturn the x-th Fibonacci number F_x. We define F_1 = 1, F_2 = 1 and F_i + 1 = F_i + F_i - 1 for all i  2. We require n geq 0. For convenience, we define F_0 = 0.\n\n\n\n"
 },
 
 {
@@ -473,59 +473,43 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "integer.html#Nemo.binom-Tuple{Int64,Int64}",
+    "location": "integer.html#Nemo.binomial-Tuple{Int64,Int64}",
     "page": "Integers",
-    "title": "Nemo.binom",
+    "title": "Nemo.binomial",
     "category": "method",
-    "text": "binom(n::Int, k::Int)\n\nReturn the binomial coefficient fracn(n - k)k. If n k  0 or k  n we return 0.\n\n\n\n"
+    "text": "binomial(n::Int, k::Int)\n\nReturn the binomial coefficient fracn(n - k)k. If n k  0 or k  n we return 0.\n\n\n\n"
 },
 
 {
-    "location": "integer.html#Nemo.moebiusmu-Tuple{fmpz}",
+    "location": "integer.html#Nemo.moebius_mu-Tuple{fmpz}",
     "page": "Integers",
-    "title": "Nemo.moebiusmu",
+    "title": "Nemo.moebius_mu",
     "category": "method",
-    "text": "moebiusmu(x::fmpz)\n\nReturns the Moebius mu function of x as an Int. The value returned is either -1, 0 or 1. If x  0 we throw a DomainError().\n\n\n\n"
+    "text": "moebius_mu(x::fmpz)\n\nReturns the Moebius mu function of x as an Int. The value returned is either -1, 0 or 1. If x  0 we throw a DomainError().\n\n\n\n"
 },
 
 {
-    "location": "integer.html#Nemo.jacobi-Tuple{fmpz,fmpz}",
+    "location": "integer.html#Nemo.jacobi_symbol-Tuple{fmpz,fmpz}",
     "page": "Integers",
-    "title": "Nemo.jacobi",
+    "title": "Nemo.jacobi_symbol",
     "category": "method",
-    "text": "jacobi(x::fmpz, y::fmpz)\n\nReturn the value of the Jacobi symbol left(fracxyright). If y leq x or x  0, we throw a DomainError().\n\n\n\n"
+    "text": "jacobi_symbol(x::fmpz, y::fmpz)\n\nReturn the value of the Jacobi symbol left(fracxyright). If y leq 0, we throw a DomainError().\n\n\n\n"
 },
 
 {
-    "location": "integer.html#Nemo.sigma-Tuple{fmpz,Int64}",
+    "location": "integer.html#Nemo.divisor_sigma-Tuple{fmpz,Int64}",
     "page": "Integers",
-    "title": "Nemo.sigma",
+    "title": "Nemo.divisor_sigma",
     "category": "method",
-    "text": "sigma(x::fmpz, y::Int)\n\nReturn the value of the sigma function, i.e. sum_0  d  x d^y. If y  0 we throw a DomainError().\n\n\n\n"
+    "text": "divisor_sigma(x::fmpz, y::Int)\n\nReturn the value of the sigma function, i.e. sum_0  d  x d^y. If y  0 we throw a DomainError().\n\n\n\n"
 },
 
 {
-    "location": "integer.html#Nemo.eulerphi-Tuple{fmpz}",
+    "location": "integer.html#Nemo.euler_phi-Tuple{fmpz}",
     "page": "Integers",
-    "title": "Nemo.eulerphi",
+    "title": "Nemo.euler_phi",
     "category": "method",
-    "text": "eulerphi(x::fmpz)\n\nReturn the value of the Euler phi function at x, i.e. the number of positive integers up to x (inclusive) that are coprime with x.\n\n\n\n"
-},
-
-{
-    "location": "integer.html#Nemo.numpart-Tuple{Int64}",
-    "page": "Integers",
-    "title": "Nemo.numpart",
-    "category": "method",
-    "text": "numpart(x::Int)\n\nReturn the number of partitions of x. This function is not available on Windows 64.\n\n\n\n"
-},
-
-{
-    "location": "integer.html#Nemo.numpart-Tuple{fmpz}",
-    "page": "Integers",
-    "title": "Nemo.numpart",
-    "category": "method",
-    "text": "numpart(x::fmpz)\n\nReturn the number of partitions of x. This function is not available on Windows 64.\n\n\n\n"
+    "text": "euler_phi(x::fmpz)\n\nReturn the value of the Euler phi function at x, i.e. the number of positive integers up to x (inclusive) that are coprime with x.\n\n\n\n"
 },
 
 {
@@ -533,7 +517,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Number theoretic functionality",
     "category": "section",
-    "text": "divisible(::fmpz, ::Int)\ndivisible(::fmpz, ::fmpz)issquare(::fmpz)isprime(::fmpz)isprobabprime(::fmpz)factor(::fmpz)divisor_lenstra(::fmpz, ::fmpz, ::fmpz)fac(::Int)risingfac(::fmpz, ::Int)\nrisingfac(::Int, ::Int)primorial(::Int)fib(::Int)bell(::Int)binom(::Int, ::Int)moebiusmu(::fmpz)jacobi(::fmpz, ::fmpz)sigma(::fmpz, ::Int)eulerphi(::fmpz)numpart(::Int)\nnumpart(::fmpz) Examplesisprime(ZZ(13))\nn = fac(100)\ns = sigma(ZZ(128), 10)\na = eulerphi(ZZ(12480))\np = numpart(1000)\nf = factor(ZZ(12))"
+    "text": "divisible(::fmpz, ::Int)\ndivisible(::fmpz, ::fmpz)issquare(::fmpz)isprime(::fmpz)isprobabprime(::fmpz)factor(::fmpz)divisor_lenstra(::fmpz, ::fmpz, ::fmpz)Nemo.factorial(::Int)rising_factorial(::fmpz, ::Int)\nrising_factorial(::Int, ::Int)primorial(::Int)fibonacci(::Int)bell(::Int)Nemo.binomial(::Int, ::Int)moebius_mu(::fmpz)jacobi_symbol(::fmpz, ::fmpz)divisor_sigma(::fmpz, ::Int)euler_phi(::fmpz)number_of_partitions(::Integer)\nnumber_of_partitions(::fmpz) Examplesisprime(ZZ(13))\nn = Nemo.factorial(100)\ns = divisor_sigma(ZZ(128), 10)\na = euler_phi(ZZ(12480))\np = number_of_partitions(1000)\nf = factor(ZZ(12))"
 },
 
 {
