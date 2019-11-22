@@ -437,7 +437,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Nemo.rising_factorial",
     "category": "method",
-    "text": "rising_factorial(x::fmpz, y::fmpz)\n\nReturn the rising factorial of x, i.e. x(x + 1)(x + 2)cdots (x + n - 1). If n  0 we throw a DomainError().\n\n\n\n"
+    "text": "rising_factorial(x::fmpz, n::fmpz)\n\nReturn the rising factorial of x, i.e. x(x + 1)(x + 2)cdots (x + n - 1). If n  0 we throw a DomainError().\n\n\n\n"
 },
 
 {
@@ -445,7 +445,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Nemo.rising_factorial",
     "category": "method",
-    "text": "rising_factorial(x::fmpz, y::Int)\n\nReturn the rising factorial of x, i.e. x(x + 1)(x + 2)ldots (x + n - 1). If n  0 we throw a DomainError().\n\n\n\n"
+    "text": "rising_factorial(x::fmpz, n::Int)\n\nReturn the rising factorial of x, i.e. x(x + 1)(x + 2)ldots (x + n - 1). If n  0 we throw a DomainError().\n\n\n\n"
 },
 
 {
@@ -453,7 +453,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Nemo.rising_factorial",
     "category": "method",
-    "text": "rising_factorial(x::Int, y::Int)\n\nReturn the rising factorial of x, i.e. x(x + 1)(x + 2)ldots (x + n - 1). If n  0 we throw a DomainError().\n\n\n\n"
+    "text": "rising_factorial(x::Int, n::Int)\n\nReturn the rising factorial of x, i.e. x(x + 1)(x + 2)ldots (x + n - 1). If n  0 we throw a DomainError().\n\n\n\n"
 },
 
 {
