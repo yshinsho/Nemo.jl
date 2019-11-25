@@ -4117,7 +4117,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Number field arithmetic",
     "title": "AbstractAlgebra.mul_red!",
     "category": "method",
-    "text": "mul_red!(z::nf_elem, x::nf_elem, y::nf_elem, red::Bool)\n\nMultiply a by b and set the existing number field element c to the result. Reduction modulo the defining polynomial is only performed if red is set to true. Note that a and b must be reduced. This function is provided for performance reasons as it saves allocating a new object for the result and eliminates associated garbage collection.\n\n\n\n"
+    "text": "mul_red!(z::nf_elem, x::nf_elem, y::nf_elem, red::Bool)\n\nMultiply x by y and set the existing number field element z to the result. Reduction modulo the defining polynomial is only performed if red is set to true. Note that x and y must be reduced. This function is provided for performance reasons as it saves allocating a new object for the result and eliminates associated garbage collection.\n\n\n\n"
 },
 
 {
