@@ -477,7 +477,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Nemo.fibonacci",
     "category": "method",
-    "text": "fibonacci(x::Int)\n\nReturn the x-th Fibonacci number F_x. We define F_1 = 1, F_2 = 1 and F_i + 1 = F_i + F_i - 1 for all i  2. We require n geq 0. For convenience, we define F_0 = 0.\n\n\n\n"
+    "text": "fibonacci(x::Int)\n\nReturn the x-th Fibonacci number F_x. We define F_1 = 1, F_2 = 1 and F_i + 1 = F_i + F_i - 1 for all i  2. The sequence is defined for all integers.\n\n\n\n"
 },
 
 {
@@ -485,7 +485,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Nemo.fibonacci",
     "category": "method",
-    "text": "fibonacci(x::fmpz)\n\nReturn the x-th Fibonacci number F_x. We define F_1 = 1, F_2 = 1 and F_i + 1 = F_i + F_i - 1 for all i  2. We require n geq 0. For convenience, we define F_0 = 0.\n\n\n\n"
+    "text": "fibonacci(x::fmpz)\n\nReturn the x-th Fibonacci number F_x. We define F_1 = 1, F_2 = 1 and F_i + 1 = F_i + F_i - 1 for all i  2. The sequence is defined for all integers.\n\n\n\n"
 },
 
 {
@@ -501,7 +501,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Nemo.moebius_mu",
     "category": "method",
-    "text": "moebius_mu(x::Int)\n\nReturns the Moebius mu function of x as an Int. The value returned is either -1, 0 or 1. If x  0 we throw a DomainError().\n\n\n\n"
+    "text": "moebius_mu(x::Int)\n\nReturns the Moebius mu function of x as an Int. The value returned is either -1, 0 or 1. If x leq 0 we throw a DomainError().\n\n\n\n"
 },
 
 {
@@ -509,7 +509,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Nemo.moebius_mu",
     "category": "method",
-    "text": "moebius_mu(x::fmpz)\n\nReturns the Moebius mu function of x as an Int. The value returned is either -1, 0 or 1. If x  0 we throw a DomainError().\n\n\n\n"
+    "text": "moebius_mu(x::fmpz)\n\nReturns the Moebius mu function of x as an Int. The value returned is either -1, 0 or 1. If x leq 0 we throw a DomainError().\n\n\n\n"
 },
 
 {
@@ -533,7 +533,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Nemo.divisor_sigma",
     "category": "method",
-    "text": "divisor_sigma(x::Int, y::Int)\n\nReturn the value of the sigma function, i.e. sum_0  d  x d^y. If y  0 we throw a DomainError().\n\n\n\n"
+    "text": "divisor_sigma(x::Int, y::Int)\n\nReturn the value of the sigma function, i.e. sum_0  d  x d^y. If x leq 0 or y  0 we throw a DomainError().\n\n\n\n"
 },
 
 {
@@ -541,7 +541,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Nemo.divisor_sigma",
     "category": "method",
-    "text": "divisor_sigma(x::fmpz, y::Int)\n\nReturn the value of the sigma function, i.e. sum_0  d  x d^y. If y  0 we throw a DomainError().\n\n\n\n"
+    "text": "divisor_sigma(x::fmpz, y::Int)\n\nReturn the value of the sigma function, i.e. sum_0  d  x d^y. If \"x \\leq 0$ or y  0 we throw a DomainError().\n\n\n\n"
 },
 
 {
@@ -549,7 +549,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Nemo.divisor_sigma",
     "category": "method",
-    "text": "divisor_sigma(x::fmpz, y::fmpz)\n\nReturn the value of the sigma function, i.e. sum_0  d  x d^y. If y  0 we throw a DomainError().\n\n\n\n"
+    "text": "divisor_sigma(x::fmpz, y::fmpz)\n\nReturn the value of the sigma function, i.e. sum_0  d  x d^y. If x leq 0 or y  0 we throw a DomainError().\n\n\n\n"
 },
 
 {
@@ -557,7 +557,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Nemo.euler_phi",
     "category": "method",
-    "text": "euler_phi(x::Int)\n\nReturn the value of the Euler phi function at x, i.e. the number of positive integers up to x (inclusive) that are coprime with x.\n\n\n\n"
+    "text": "euler_phi(x::Int)\n\nReturn the value of the Euler phi function at x, i.e. the number of positive integers up to x (inclusive) that are coprime with x. An exception is raised if x leq 0.\n\n\n\n"
 },
 
 {
@@ -565,7 +565,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Nemo.euler_phi",
     "category": "method",
-    "text": "euler_phi(x::fmpz)\n\nReturn the value of the Euler phi function at x, i.e. the number of positive integers up to x (inclusive) that are coprime with x.\n\n\n\n"
+    "text": "euler_phi(x::fmpz)\n\nReturn the value of the Euler phi function at x, i.e. the number of positive integers up to x (inclusive) that are coprime with x. An exception is raised if x leq 0. \n\n\n\n"
 },
 
 {
