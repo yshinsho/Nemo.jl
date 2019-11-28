@@ -477,7 +477,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Nemo.fibonacci",
     "category": "method",
-    "text": "fibonacci(x::Int)\n\nReturn the x-th Fibonacci number F_x. We define F_1 = 1, F_2 = 1 and F_i + 1 = F_i + F_i - 1 for all i  2. The sequence is defined for all integers.\n\n\n\n"
+    "text": "fibonacci(x::Int)\n\nReturn the x-th Fibonacci number F_x. We define F_1 = 1, F_2 = 1 and F_i + 1 = F_i + F_i - 1 for all integers i.\n\n\n\n"
 },
 
 {
@@ -485,7 +485,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Nemo.fibonacci",
     "category": "method",
-    "text": "fibonacci(x::fmpz)\n\nReturn the x-th Fibonacci number F_x. We define F_1 = 1, F_2 = 1 and F_i + 1 = F_i + F_i - 1 for all i  2. The sequence is defined for all integers.\n\n\n\n"
+    "text": "fibonacci(x::fmpz)\n\nReturn the x-th Fibonacci number F_x. We define F_1 = 1, F_2 = 1 and F_i + 1 = F_i + F_i - 1 for all integers i.\n\n\n\n"
 },
 
 {
