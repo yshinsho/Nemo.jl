@@ -4477,7 +4477,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Qadics",
     "title": "Nemo.prime",
     "category": "method",
-    "text": "prime(R::FlintQadicField)\n\nReturn the prime q for the given q-adic field.\n\n\n\n"
+    "text": "prime(R::FlintQadicField)\n\nReturn the prime p for the given q-adic field.\n\n\n\n"
 },
 
 {
