@@ -1761,11 +1761,27 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
+    "location": "fraction.html#Base.floor-Tuple{fmpq}",
+    "page": "Fraction fields",
+    "title": "Base.floor",
+    "category": "method",
+    "text": "floor(a::fmpq)\n\nReturns the greatest integer that is less than or equal to a. The result is returned as a rational with denominator 1.\n\n\n\n"
+},
+
+{
+    "location": "fraction.html#Base.ceil-Tuple{fmpq}",
+    "page": "Fraction fields",
+    "title": "Base.ceil",
+    "category": "method",
+    "text": ";     ceil(a::fmpq)\n\nReturns the least integer that is greater than or equal to a. The result is returned as a rational with denominator 1.\n\n\n\n"
+},
+
+{
     "location": "fraction.html#Basic-manipulation-1",
     "page": "Fraction fields",
     "title": "Basic manipulation",
     "category": "section",
-    "text": "abs(::fmpq)height(::fmpq)height_bits(::fmpq)<<(::fmpq, ::Int)>>(::fmpq, ::Int)Rational fractions can be compared with each other and with integers. Julia provides the full range of operators   leq geq which depend on the following functions.isless(::fmpq, ::fmpq)\nisless(::Integer, ::fmpq)\nisless(::fmpq, ::Integer)\nisless(::fmpq, ::fmpz)\nisless(::fmpz, ::fmpq)Examplesd = abs(ZZ(11)//3)\n4 <= ZZ(7)//ZZ(3)"
+    "text": "abs(::fmpq)height(::fmpq)height_bits(::fmpq)<<(::fmpq, ::Int)>>(::fmpq, ::Int)Rational fractions can be compared with each other and with integers. Julia provides the full range of operators   leq geq which depend on the following functions.isless(::fmpq, ::fmpq)\nisless(::Integer, ::fmpq)\nisless(::fmpq, ::Integer)\nisless(::fmpq, ::fmpz)\nisless(::fmpz, ::fmpq)floor(::fmpq)\nceil(::fmpq)Examplesd = abs(ZZ(11)//3)\n4 <= ZZ(7)//ZZ(3)"
 },
 
 {
