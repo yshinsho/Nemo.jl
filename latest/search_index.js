@@ -565,7 +565,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Nemo.euler_phi",
     "category": "method",
-    "text": "euler_phi(x::fmpz)\n\nReturn the value of the Euler phi function at x, i.e. the number of positive integers up to x (inclusive) that are coprime with x. An exception is raised if x leq 0. \n\n\n\n"
+    "text": "euler_phi(x::fmpz)\n\nReturn the value of the Euler phi function at x, i.e. the number of positive integers up to x (inclusive) that are coprime with x. An exception is raised if x leq 0.\n\n\n\n"
 },
 
 {
