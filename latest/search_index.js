@@ -1773,7 +1773,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Fraction fields",
     "title": "Base.ceil",
     "category": "method",
-    "text": ";     ceil(a::fmpq)\n\nReturns the least integer that is greater than or equal to a. The result is returned as a rational with denominator 1.\n\n\n\n"
+    "text": "ceil(a::fmpq)\n\nReturns the least integer that is greater than or equal to a. The result is returned as a rational with denominator 1.\n\n\n\n"
 },
 
 {
@@ -3989,7 +3989,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Finite fields",
     "title": "LinearAlgebra.tr",
     "category": "method",
-    "text": "tr(x::fq)\n\nReturn the trace of a. This is an element of F_p, but the value returned is this value embedded in the original finite field.\n\n\n\n"
+    "text": "tr(x::fq)\n\nReturn the trace of a. This is an element of mathbbF_p, but the value returned is this value embedded in the original finite field.\n\n\n\n"
 },
 
 {
@@ -3997,7 +3997,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Finite fields",
     "title": "LinearAlgebra.norm",
     "category": "method",
-    "text": "norm(x::fq)\n\nReturn the norm of a. This is an element of F_p, but the value returned is this value embedded in the original finite field.\n\n\n\n"
+    "text": "norm(x::fq)\n\nReturn the norm of a. This is an element of mathbbF_p, but the value returned is this value embedded in the original finite field.\n\n\n\n"
 },
 
 {
