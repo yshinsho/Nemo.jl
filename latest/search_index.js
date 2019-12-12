@@ -1341,7 +1341,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Univariate polynomials",
     "title": "Nemo.cyclotomic",
     "category": "method",
-    "text": "cyclotomic(n::Int, x::fmpz_poly)\n\nReturn the nth cyclotomic polynomial, defined as Phi_n(x) = prod_omega (x-omega) where omega runs over all the  nth primitive roots of unity.\n\n\n\n"
+    "text": "cyclotomic(n::Int, x::fmpz_poly)\n\nReturn the nth cyclotomic polynomial, defined as Phi_n(x) = prod_omega (x-omega) where omega runs over all the nth primitive roots of unity.\n\n\n\n"
 },
 
 {
@@ -1349,7 +1349,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Univariate polynomials",
     "title": "Nemo.swinnerton_dyer",
     "category": "method",
-    "text": "swinnerton_dyer(n::Int, x::fmpz_poly)\n\nReturn the Swinnerton-Dyer polynomial S_n, defined as the integer  polynomial S_n = prod (x pm sqrt2 pm sqrt3 pm sqrt5 pm ldots pm sqrtp_n)  where p_n denotes the n-th prime number and all combinations of signs are taken. This polynomial has degree 2^n and is irreducible over the integers (it is the minimal polynomial of sqrt2 + ldots + sqrtp_n).\n\n\n\n"
+    "text": "swinnerton_dyer(n::Int, x::fmpz_poly)\n\nReturn the Swinnerton-Dyer polynomial S_n, defined as the integer polynomial S_n = prod (x pm sqrt2 pm sqrt3 pm sqrt5 pm ldots pm sqrtp_n) where p_n denotes the n-th prime number and all combinations of signs are taken. This polynomial has degree 2^n and is irreducible over the integers (it is the minimal polynomial of sqrt2 + ldots + sqrtp_n).\n\n\n\n"
 },
 
 {
@@ -1357,7 +1357,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Univariate polynomials",
     "title": "Nemo.cos_minpoly",
     "category": "method",
-    "text": "cos_minpoly(n::Int, x::fmpz_poly)\n\nReturn the minimal polynomial of 2 cos(2 pi  n). For suitable choice of  n, this gives the minimal polynomial of 2 cos(a pi) or 2 sin(a pi) for any rational a.\n\n\n\n"
+    "text": "cos_minpoly(n::Int, x::fmpz_poly)\n\nReturn the minimal polynomial of 2 cos(2 pi  n). For suitable choice of n, this gives the minimal polynomial of 2 cos(a pi) or 2 sin(a pi) for any rational a.\n\n\n\n"
 },
 
 {
@@ -1365,7 +1365,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Univariate polynomials",
     "title": "Nemo.theta_qexp",
     "category": "method",
-    "text": "theta_qexp(e::Int, n::Int, x::fmpz_poly)\n\nReturn the q-expansion to length n of the Jacobi theta function raised to the power r, i.e. vartheta(q)^r where  vartheta(q) = 1 + sum_k=1^infty q^k^2.\n\n\n\n"
+    "text": "theta_qexp(e::Int, n::Int, x::fmpz_poly)\n\nReturn the q-expansion to length n of the Jacobi theta function raised to the power r, i.e. vartheta(q)^r where vartheta(q) = 1 + sum_k=1^infty q^k^2.\n\n\n\n"
 },
 
 {
@@ -1373,7 +1373,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Univariate polynomials",
     "title": "Nemo.eta_qexp",
     "category": "method",
-    "text": "eta_qexp(e::Int, n::Int, x::fmpz_poly)\n\nReturn the q-expansion to length n of the Dedekind eta function (without  the leading factor q^124) raised to the power r, i.e. (q^-124 eta(q))^r = prod_k=1^infty (1 - q^k)^r. In particular, r = -1 gives the generating function of the partition function p(k), and r = 24 gives, after multiplication by q, the modular discriminant Delta(q) which generates the Ramanujan tau function tau(k).\n\n\n\n"
+    "text": "eta_qexp(e::Int, n::Int, x::fmpz_poly)\n\nReturn the q-expansion to length n of the Dedekind eta function (without the leading factor q^124) raised to the power r, i.e. (q^-124 eta(q))^r = prod_k=1^infty (1 - q^k)^r. In particular, r = -1 gives the generating function of the partition function p(k), and r = 24 gives, after multiplication by q, the modular discriminant Delta(q) which generates the Ramanujan tau function tau(k).\n\n\n\n"
 },
 
 {
