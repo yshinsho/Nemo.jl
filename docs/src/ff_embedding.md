@@ -52,7 +52,6 @@ julia> z = k4(x2)
 
 ```@docs
 preimage_map(::FqNmodFiniteField, ::FqNmodFiniteField)
-preimage_map(::FinFieldMorphism)
 ```
 
 **Examples**
