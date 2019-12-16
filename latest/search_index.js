@@ -409,6 +409,14 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
+    "location": "integer.html#Nemo.isprobable_prime-Tuple{fmpz}",
+    "page": "Integers",
+    "title": "Nemo.isprobable_prime",
+    "category": "method",
+    "text": "isprobable_prime(x::fmpz)\n\nReturn true if x is very probably a prime number, otherwise return false. No counterexamples are known to this test, but it is conjectured that infinitely many exist.\n\n\n\n"
+},
+
+{
     "location": "integer.html#Nemo.factor-Tuple{fmpz}",
     "page": "Integers",
     "title": "Nemo.factor",
@@ -486,6 +494,22 @@ var documenterSearchIndex = {"docs": [
     "title": "Nemo.fibonacci",
     "category": "method",
     "text": "fibonacci(x::fmpz)\n\nReturn the x-th Fibonacci number F_x. We define F_1 = 1, F_2 = 1 and F_i + 1 = F_i + F_i - 1 for all integers i.\n\n\n\n"
+},
+
+{
+    "location": "integer.html#Nemo.bell-Tuple{fmpz}",
+    "page": "Integers",
+    "title": "Nemo.bell",
+    "category": "method",
+    "text": "bell(x::fmpz)\n\nReturn the Bell number B_x.\n\n\n\n"
+},
+
+{
+    "location": "integer.html#Nemo.bell-Tuple{Int64}",
+    "page": "Integers",
+    "title": "Nemo.bell",
+    "category": "method",
+    "text": "bell(x::Int)\n\nReturn the Bell number B_x.\n\n\n\n"
 },
 
 {
@@ -589,7 +613,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Number theoretic functionality",
     "category": "section",
-    "text": "divisible(::fmpz, ::Int)\ndivisible(::fmpz, ::fmpz)issquare(::fmpz)isprime(::fmpz)isprobabprime(::fmpz)factor(::fmpz)divisor_lenstra(::fmpz, ::fmpz, ::fmpz)factorial(::fmpz)rising_factorial(::fmpz, ::fmpz)\nrising_factorial(::fmpz, ::Int)\nrising_factorial(::Int, ::Int)primorial(::fmpz)\nprimorial(::Int)fibonacci(::Int)\nfibonacci(::fmpz)bell(:fmpz)\nbell(::Int)binomial(::fmpz, ::fmpz)moebius_mu(::Int)\nmoebius_mu(::fmpz)jacobi_symbol(::Int, ::Int)\njacobi_symbol(::fmpz, ::fmpz)divisor_sigma(::Int, ::Int)\ndivisor_sigma(::fmpz, ::Int)\ndivisor_sigma(::fmpz, ::fmpz)euler_phi(::Int)\neuler_phi(::fmpz)number_of_partitions(::Int)\nnumber_of_partitions(::fmpz) Examplesisprime(ZZ(13))\nn = factorial(ZZ(100))\ns = divisor_sigma(ZZ(128), 10)\na = euler_phi(ZZ(12480))\np = number_of_partitions(ZZ(1000))\nf = factor(ZZ(12))"
+    "text": "divisible(::fmpz, ::Int)\ndivisible(::fmpz, ::fmpz)issquare(::fmpz)isprime(::fmpz)isprobable_prime(::fmpz)factor(::fmpz)divisor_lenstra(::fmpz, ::fmpz, ::fmpz)factorial(::fmpz)rising_factorial(::fmpz, ::fmpz)\nrising_factorial(::fmpz, ::Int)\nrising_factorial(::Int, ::Int)primorial(::fmpz)\nprimorial(::Int)fibonacci(::Int)\nfibonacci(::fmpz)bell(::fmpz)\nbell(::Int)binomial(::fmpz, ::fmpz)moebius_mu(::Int)\nmoebius_mu(::fmpz)jacobi_symbol(::Int, ::Int)\njacobi_symbol(::fmpz, ::fmpz)divisor_sigma(::Int, ::Int)\ndivisor_sigma(::fmpz, ::Int)\ndivisor_sigma(::fmpz, ::fmpz)euler_phi(::Int)\neuler_phi(::fmpz)number_of_partitions(::Int)\nnumber_of_partitions(::fmpz) Examplesisprime(ZZ(13))\nn = factorial(ZZ(100))\ns = divisor_sigma(ZZ(128), 10)\na = euler_phi(ZZ(12480))\np = number_of_partitions(ZZ(1000))\nf = factor(ZZ(12))"
 },
 
 {
@@ -1597,7 +1621,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Puiseux series",
     "title": "Base.sqrt",
     "category": "method",
-    "text": "sqrt(a::Generic.PuiseuxSeriesElem{T}) where T <: RingElement\n\nReturn the square root of the given Puiseux series a.\n\n\n\nsqrt(a::FlintPuiseuxSeriesElem{T}) where T <: RingElem\n\nReturn the square root of the given Puiseux series.\n\n\n\n"
+    "text": "sqrt(a::FlintPuiseuxSeriesElem{T}) where T <: RingElem\n\nReturn the square root of the given Puiseux series.\n\n\n\nsqrt(a::Generic.PuiseuxSeriesElem{T}) where T <: RingElement\n\nReturn the square root of the given Puiseux series a.\n\n\n\n"
 },
 
 {
@@ -1605,7 +1629,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Puiseux series",
     "title": "Base.exp",
     "category": "method",
-    "text": "exp(a::AbstractAlgebra.RelSeriesElem)\n\nReturn the exponential of the power series a.\n\n\n\nexp(a::Generic.LaurentSeriesElem)\n\nReturn the exponential of the power series a.\n\n\n\nexp(a::Generic.PuiseuxSeriesElem{T}) where T <: RingElement\n\nReturn the exponential of the given Puiseux series a.\n\n\n\nexp(a::FlintPuiseuxSeriesElem{T}) where T <: RingElem\n\nReturn the exponential of the given Puiseux series.\n\n\n\n"
+    "text": "exp(a::FlintPuiseuxSeriesElem{T}) where T <: RingElem\n\nReturn the exponential of the given Puiseux series.\n\n\n\nexp(a::AbstractAlgebra.RelSeriesElem)\n\nReturn the exponential of the power series a.\n\n\n\nexp(a::Generic.LaurentSeriesElem)\n\nReturn the exponential of the power series a.\n\n\n\nexp(a::Generic.PuiseuxSeriesElem{T}) where T <: RingElement\n\nReturn the exponential of the given Puiseux series a.\n\n\n\n"
 },
 
 {
@@ -1649,11 +1673,27 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
+    "location": "residue.html#Base.gcdx-Tuple{Nemo.nmod,Nemo.nmod}",
+    "page": "Residue rings",
+    "title": "Base.gcdx",
+    "category": "method",
+    "text": "gcdx(a::nmod, b::nmod)\n\nCompute the extended gcd with the Euclidean structure inherited from mathbbZ.\n\n\n\n"
+},
+
+{
+    "location": "residue.html#Base.gcdx-Tuple{Nemo.fmpz_mod,Nemo.fmpz_mod}",
+    "page": "Residue rings",
+    "title": "Base.gcdx",
+    "category": "method",
+    "text": "gcdx(a::fmpz_mod, b::fmpz_mod)\n\nCompute the extended gcd with the Euclidean structure inherited from mathbbZ.\n\n\n\n"
+},
+
+{
     "location": "residue.html#GCD-1",
     "page": "Residue rings",
     "title": "GCD",
     "category": "section",
-    "text": "gcdx(::nmod, ::nmod)\ngcdx(::ResElem{fmpz}, ::ResElem{fmpz})ExamplesR = ResidueRing(ZZ, 123456789012345678949)\n\ng, s, t = gcdx(R(123), R(456))"
+    "text": "gcdx(::nmod, ::nmod)\ngcdx(::fmpz_mod, ::fmpz_mod)ExamplesR = ResidueRing(ZZ, 123456789012345678949)\n\ng, s, t = gcdx(R(123), R(456))"
 },
 
 {
@@ -4062,6 +4102,22 @@ var documenterSearchIndex = {"docs": [
     "title": "Computing an embedding",
     "category": "section",
     "text": "embed(::FqNmodFiniteField, ::FqNmodFiniteField)Examplesjulia> k2, x2 = FiniteField(19, 2, \"x2\")\n(Finite field of degree 2 over F_19, x2)\n\njulia> k4, x4 = FiniteField(19, 4, \"x4\")\n(Finite field of degree 4 over F_19, x4)\n\njulia> f = embed(k2, k4)\nMorphism from Finite field of degree 2 over F_19\nto Finite field of degree 4 over F_19\n\njulia> y = f(x2)\n6*x4^3+5*x4^2+9*x4+17\n\njulia> z = k4(x2)\n6*x4^3+5*x4^2+9*x4+17"
+},
+
+{
+    "location": "ff_embedding.html#AbstractAlgebra.Generic.preimage_map-Tuple{FqNmodFiniteField,FqNmodFiniteField}",
+    "page": "Finite field embeddings",
+    "title": "AbstractAlgebra.Generic.preimage_map",
+    "category": "method",
+    "text": "preimage_map(k::T, k::T) where T <: FinField\n\nComputes the preimage map corresponding to the embedding of k into K.\n\n\n\n"
+},
+
+{
+    "location": "ff_embedding.html#AbstractAlgebra.Generic.preimage_map-Tuple{Nemo.FinFieldMorphism}",
+    "page": "Finite field embeddings",
+    "title": "AbstractAlgebra.Generic.preimage_map",
+    "category": "method",
+    "text": "preimage_map(f::FinFieldMorphism)\n\nCompute the preimage map corresponding to the embedding f.\n\n\n\n"
 },
 
 {
