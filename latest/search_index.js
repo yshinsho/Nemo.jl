@@ -565,7 +565,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Nemo.divisor_sigma",
     "category": "method",
-    "text": "divisor_sigma(x::fmpz, y::Int)\n\nReturn the value of the sigma function, i.e. sum_0  d  x d^y. If \"x \\leq 0$ or y  0 we throw a DomainError().\n\n\n\n"
+    "text": "divisor_sigma(x::fmpz, y::Int)\n\nReturn the value of the sigma function, i.e. sum_0  d  x d^y. If x leq 0 or y  0 we throw a DomainError().\n\n\n\n"
 },
 
 {
@@ -741,7 +741,23 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Bit twiddling",
     "category": "section",
-    "text": "popcount(::fmpz)prevpow2(::fmpz)nextpow2(::fmpz)trailing_zeros(::fmpz)clrbit!(::fmpz, ::Int)setbit!(::fmpz, ::Int)combit!(::fmpz, ::Int)Examplesa = fmpz(12)\n\np = popcount(a)\nb = nextpow2(a)\ncombit!(a, 2)"
+    "text": "popcount(::fmpz)prevpow2(::fmpz)nextpow2(::fmpz)trailing_zeros(::fmpz)clrbit!(::fmpz, ::Int)setbit!(::fmpz, ::Int)combit!(::fmpz, ::Int)"
+},
+
+{
+    "location": "integer.html#Nemo.rand_bits-Tuple{FlintIntegerRing,Int64}",
+    "page": "Integers",
+    "title": "Nemo.rand_bits",
+    "category": "method",
+    "text": "rand_bits(::FlintIntegerRing, b::Int)\n\nReturn a random signed integer whose absolute value has b bits.\n\n\n\n"
+},
+
+{
+    "location": "integer.html#Random-generation-1",
+    "page": "Integers",
+    "title": "Random generation",
+    "category": "section",
+    "text": "rand_bits(::FlintIntegerRing, ::Int)Examplesa = fmpz(12)\n\np = popcount(a)\nb = nextpow2(a)\ncombit!(a, 2)"
 },
 
 {
@@ -1934,6 +1950,22 @@ var documenterSearchIndex = {"docs": [
     "title": "Rational enumeration",
     "category": "section",
     "text": "Various methods exist to enumerate rationals.next_minimal(::fmpq)next_signed_minimal(::fmpq)next_calkin_wilf(::fmpq)next_signed_calkin_wilf(::fmpq)Examplesnext_minimal(fmpz(2)//3)\nnext_signed_minimal(-fmpz(21)//31)\nnext_calkin_wilf(fmpz(321)//113)\nnext_signed_calkin_wilf(-fmpz(51)//(17))"
+},
+
+{
+    "location": "fraction.html#Nemo.rand_bits-Tuple{FlintRationalField,Int64}",
+    "page": "Fraction fields",
+    "title": "Nemo.rand_bits",
+    "category": "method",
+    "text": "rand_bits(::FlintRationalField, b::Int)\n\nReturn a random signed rational whose numerator and denominator both have b bits before canonicalisation. Note that the resulting numerator and denominator can be smaller than b bits.\n\n\n\n"
+},
+
+{
+    "location": "fraction.html#Random-generation-1",
+    "page": "Fraction fields",
+    "title": "Random generation",
+    "category": "section",
+    "text": "rand_bits(::FlintRationalField, b::Int)"
 },
 
 {
