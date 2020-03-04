@@ -1637,7 +1637,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Puiseux series",
     "title": "Base.sqrt",
     "category": "method",
-    "text": "sqrt(a::FlintPuiseuxSeriesElem{T}) where T <: RingElem\n\nReturn the square root of the given Puiseux series.\n\n\n\nsqrt(a::Generic.PuiseuxSeriesElem{T}) where T <: RingElement\n\nReturn the square root of the given Puiseux series a.\n\n\n\n"
+    "text": "sqrt(a::Generic.PuiseuxSeriesElem{T}) where T <: RingElement\n\nReturn the square root of the given Puiseux series a.\n\n\n\nsqrt(a::FlintPuiseuxSeriesElem{T}) where T <: RingElem\n\nReturn the square root of the given Puiseux series.\n\n\n\n"
 },
 
 {
@@ -1645,7 +1645,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Puiseux series",
     "title": "Base.exp",
     "category": "method",
-    "text": "exp(a::FlintPuiseuxSeriesElem{T}) where T <: RingElem\n\nReturn the exponential of the given Puiseux series.\n\n\n\nexp(a::AbstractAlgebra.RelSeriesElem)\n\nReturn the exponential of the power series a.\n\n\n\nexp(a::Generic.LaurentSeriesElem)\n\nReturn the exponential of the power series a.\n\n\n\nexp(a::Generic.PuiseuxSeriesElem{T}) where T <: RingElement\n\nReturn the exponential of the given Puiseux series a.\n\n\n\n"
+    "text": "exp(a::AbstractAlgebra.RelSeriesElem)\n\nReturn the exponential of the power series a.\n\n\n\nexp(a::Generic.LaurentSeriesElem)\n\nReturn the exponential of the power series a.\n\n\n\nexp(a::Generic.PuiseuxSeriesElem{T}) where T <: RingElement\n\nReturn the exponential of the given Puiseux series a.\n\n\n\nexp(a::FlintPuiseuxSeriesElem{T}) where T <: RingElem\n\nReturn the exponential of the given Puiseux series.\n\n\n\n"
 },
 
 {
@@ -4677,7 +4677,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Matrices",
     "title": "Matrices",
     "category": "section",
-    "text": "Nemo allow the creation of dense matrices over any computable ring R. There are two different kinds of implementation: a generic one for the case where no specific implementation exists (provided by AbstractAlgebra.jl), and efficient implementations of matrices over numerous specific rings, usually provided by C/C++ libraries.The following table shows each of the matrix types available in Nemo, the base ring R, and the Julia/Nemo types for that kind of matrix (the type information is mainly of concern to developers).Base ring Library Element type Parent type\nGeneric ring R AbstractAlgebra.jl Generic.Mat{T} Generic.MatSpace{T}\nmathbbZ Flint fmpz_mat FmpzMatSpace\nmathbbZnmathbbZ (small n) Flint nmod_mat NmodMatSpace\nmathbbZnmathbbZ (large n) Flint fmpz_mod_mat FmpzModMatSpace\nmathbbQ Flint fmpq_mat FmpqMatSpace\nmathbbZpmathbbZ (small p) Flint gfp_mat GFPMatSpace\nmathbbF_p^n (small p) Flint fq_nmod_mat FqNmodMatSpace\nmathbbF_p^n (large p) Flint fq_mat `FqMatSpace\nmathbbR Arb arb_mat ArbMatSpace\nmathbbC Arb acb_mat AcbMatSpaceThe dimensions and base ring R of a generic matrix are stored in its parent object.All matrix element types belong to the abstract type MatElem and all of the matrix space types belong to the abstract type MatSpace. This enables one to write generic functions that can accept any Nemo matrix type."
+    "text": "Nemo allow the creation of dense matrices over any computable ring R. There are two different kinds of implementation: a generic one for the case where no specific implementation exists (provided by AbstractAlgebra.jl), and efficient implementations of matrices over numerous specific rings, usually provided by C/C++ libraries.The following table shows each of the matrix types available in Nemo, the base ring R, and the Julia/Nemo types for that kind of matrix (the type information is mainly of concern to developers).Base ring Library Element type Parent type\nGeneric ring R AbstractAlgebra.jl Generic.Mat{T} Generic.MatSpace{T}\nmathbbZ Flint fmpz_mat FmpzMatSpace\nmathbbZnmathbbZ (small n) Flint nmod_mat NmodMatSpace\nmathbbZnmathbbZ (large n) Flint fmpz_mod_mat FmpzModMatSpace\nmathbbQ Flint fmpq_mat FmpqMatSpace\nmathbbZpmathbbZ (small p) Flint gfp_mat GFPMatSpace\nmathbbF_p^n (small p) Flint fq_nmod_mat FqNmodMatSpace\nmathbbF_p^n (large p) Flint fq_mat `FqMatSpace\nmathbbR Arb arb_mat ArbMatSpace\nmathbbC Arb acb_mat AcbMatSpaceThe dimensions and base ring R of a generic matrix are stored in its parent object.All matrix element types belong to the abstract type MatElem and all of the matrix space types belong to the abstract type MatSpace. This enables one to write generic functions that can accept any Nemo matrix type.Note that the preferred way to create matrices is not to use the type constructors but to use the matrix function, see also the Constructors section of the AbstractAlgebra manual."
 },
 
 {
