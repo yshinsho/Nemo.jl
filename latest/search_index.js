@@ -1637,7 +1637,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Puiseux series",
     "title": "Base.sqrt",
     "category": "method",
-    "text": "sqrt(a::FlintPuiseuxSeriesElem{T}) where T <: RingElem\n\nReturn the square root of the given Puiseux series.\n\n\n\nsqrt(a::Generic.PuiseuxSeriesElem{T}) where T <: RingElement\n\nReturn the square root of the given Puiseux series a.\n\n\n\n"
+    "text": "sqrt(a::Generic.PuiseuxSeriesElem{T}) where T <: RingElement\n\nReturn the square root of the given Puiseux series a.\n\n\n\nsqrt(a::FlintPuiseuxSeriesElem{T}) where T <: RingElem\n\nReturn the square root of the given Puiseux series.\n\n\n\n"
 },
 
 {
@@ -1645,7 +1645,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Puiseux series",
     "title": "Base.exp",
     "category": "method",
-    "text": "exp(a::FlintPuiseuxSeriesElem{T}) where T <: RingElem\n\nReturn the exponential of the given Puiseux series.\n\n\n\nexp(a::AbstractAlgebra.RelSeriesElem)\n\nReturn the exponential of the power series a.\n\n\n\nexp(a::Generic.LaurentSeriesElem)\n\nReturn the exponential of the power series a.\n\n\n\nexp(a::Generic.PuiseuxSeriesElem{T}) where T <: RingElement\n\nReturn the exponential of the given Puiseux series a.\n\n\n\n"
+    "text": "exp(a::AbstractAlgebra.RelSeriesElem)\n\nReturn the exponential of the power series a.\n\n\n\nexp(a::Generic.LaurentSeriesElem)\n\nReturn the exponential of the power series a.\n\n\n\nexp(a::Generic.PuiseuxSeriesElem{T}) where T <: RingElement\n\nReturn the exponential of the given Puiseux series a.\n\n\n\nexp(a::FlintPuiseuxSeriesElem{T}) where T <: RingElem\n\nReturn the exponential of the given Puiseux series.\n\n\n\n"
 },
 
 {
@@ -4281,19 +4281,11 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "numberfield.html#Nemo.signature-Tuple{AnticNumberField}",
-    "page": "Number field arithmetic",
-    "title": "Nemo.signature",
-    "category": "method",
-    "text": "signature(a::AnticNumberField)\n\nReturn the signature of the given number field, i.e. a tuple r s consisting of r, the number of real embeddings and s, half the number of complex embeddings.\n\n\n\n"
-},
-
-{
     "location": "numberfield.html#Basic-manipulation-1",
     "page": "Number field arithmetic",
     "title": "Basic manipulation",
     "category": "section",
-    "text": "var(::AnticNumberField)isgen(::nf_elem)coeff(::nf_elem, ::Int)denominator(::nf_elem)degree(::AnticNumberField)signature(::AnticNumberField)ExamplesR, x = PolynomialRing(QQ, \"x\")\nK, a = NumberField(x^3 + 3x + 1, \"a\")\n\nd = a^2 + 2a - 7\nm = gen(K)\n\nc = coeff(d, 1)\nisgen(m)\nq = degree(K)\nr, s = signature(K)\nv = var(R)"
+    "text": "var(::AnticNumberField)isgen(::nf_elem)coeff(::nf_elem, ::Int)denominator(::nf_elem)degree(::AnticNumberField)ExamplesR, x = PolynomialRing(QQ, \"x\")\nK, a = NumberField(x^3 + 3x + 1, \"a\")\n\nd = a^2 + 2a - 7\nm = gen(K)\n\nc = coeff(d, 1)\nisgen(m)\nq = degree(K)\nr, s = signature(K)\nv = var(R)"
 },
 
 {
