@@ -85,7 +85,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Types in Nemo",
     "title": "Types in Nemo",
     "category": "section",
-    "text": "Nemo is fully compatible with AbstractAlgebra.jl, but specialises implementations of various commonly used rings with a highly optimised C implementation, provided by the C libraries wrapped by Nemo.Below, we give a list of all of the specialised types available in Nemo that implement rings using a specialised C library. The types of elements of the respective rings and other mathematical structures are given, and in parentheses we list the types of the parent objects of the given rings and structures.Flint\nfmpz (FlintIntegerRing)\nfmpq (FlintRationalField)\nnmod (NmodRing)\nfq_nmod (FqNmodFiniteField)\nfq (FqFiniteField)\npadic (FlintPadicField)\nqadic (FlintQadicField)\nfmpz_poly (FmpzPolyRing)\nfmpq_poly (FmpqPolyRing)\nnmod_poly (NmodPolyRing)\nfmpz_mod_poly (FmpzModPolyRing)\nfq_poly (FqPolyRing)\nfq_nmod_poly (FqNmodPolyRing)\nfmpz_mpoly (FmpzMPolyRing)\nfmpz_rel_series (FmpzRelSeriesRing)\nfmpz_abs_series (FmpzAbsSeriesRing)\nfmpq_rel_series (FmpqRelSeriesRing)\nfmpq_abs_series (FmpqAbsSeriesRing)\nfmpz_mod_rel_series (FmpzModRelSeriesRing)\nfmpz_mod_abs_series (FmpzModAbsSeriesRing)\nnmod_rel_series (NmodRelSeriesRing)\nfq_nmod_rel_series (FqNmodRelSeriesRing)\nfq_nmod_abs_series (FqNmodAbsSeriesRing)\nfq_rel_series (FqRelSeriesRing)\nfq_abs_series (FqAbsSeriesRing)\nfmpz_mat (FmpzMatSpace)\nfmpq_mat (FmpqMatSpace)\nnmod_mat (NmodMatSpace)\nfq_nmod_mat (FqNmodMatSpace)\nfq_mat (FqMatSpace)\nperm (PermGroup)\nAntic\nnf_elem (AnticNumberField)\nArb\narb (ArbField)\nacb (AcbField)\narb_poly (ArbPolyRing)\nacb_poly (AcbPolyRing)\narb_mat (ArbMatSpace)\nacb_mat (AcbMatSpace)"
+    "text": "Nemo is fully compatible with AbstractAlgebra.jl, but specialises implementations of various commonly used rings with a highly optimised C implementation, provided by the C libraries wrapped by Nemo.Below, we give a list of all of the specialised types available in Nemo that implement rings using a specialised C library. The types of elements of the respective rings and other mathematical structures are given, and in parentheses we list the types of the parent objects of the given rings and structures.Flint\nfmpz (FlintIntegerRing)\nfmpq (FlintRationalField)\nnmod (NmodRing)\nfq_nmod (FqNmodFiniteField)\nfq (FqFiniteField)\npadic (FlintPadicField)\nqadic (FlintQadicField)\nfmpz_poly (FmpzPolyRing)\nfmpq_poly (FmpqPolyRing)\nnmod_poly (NmodPolyRing)\nfmpz_mod_poly (FmpzModPolyRing)\nfq_poly (FqPolyRing)\nfq_nmod_poly (FqNmodPolyRing)\nfmpz_mpoly (FmpzMPolyRing)\nfmpz_rel_series (FmpzRelSeriesRing)\nfmpz_abs_series (FmpzAbsSeriesRing)\nfmpq_rel_series (FmpqRelSeriesRing)\nfmpq_abs_series (FmpqAbsSeriesRing)\nfmpz_mod_rel_series (FmpzModRelSeriesRing)\nfmpz_mod_abs_series (FmpzModAbsSeriesRing)\nnmod_rel_series (NmodRelSeriesRing)\nfq_nmod_rel_series (FqNmodRelSeriesRing)\nfq_nmod_abs_series (FqNmodAbsSeriesRing)\nfq_rel_series (FqRelSeriesRing)\nfq_abs_series (FqAbsSeriesRing)\nfmpz_mat (FmpzMatSpace)\nfmpq_mat (FmpqMatSpace)\nnmod_mat (NmodMatSpace)\nfq_nmod_mat (FqNmodMatSpace)\nfq_mat (FqMatSpace)\nperm (SymmetricGroup)\nAntic\nnf_elem (AnticNumberField)\nArb\narb (ArbField)\nacb (AcbField)\narb_poly (ArbPolyRing)\nacb_poly (AcbPolyRing)\narb_mat (ArbMatSpace)\nacb_mat (AcbMatSpace)"
 },
 
 {
@@ -1645,7 +1645,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Puiseux series",
     "title": "Base.sqrt",
     "category": "method",
-    "text": "sqrt(a::Generic.PuiseuxSeriesElem{T}) where T <: RingElement\n\nReturn the square root of the given Puiseux series a.\n\n\n\nsqrt(a::FlintPuiseuxSeriesElem{T}) where T <: RingElem\n\nReturn the square root of the given Puiseux series.\n\n\n\n"
+    "text": "sqrt(a::FlintPuiseuxSeriesElem{T}) where T <: RingElem\n\nReturn the square root of the given Puiseux series.\n\n\n\nsqrt(a::Generic.PuiseuxSeriesElem{T}) where T <: RingElement\n\nReturn the square root of the given Puiseux series a.\n\n\n\n"
 },
 
 {
@@ -1653,7 +1653,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Puiseux series",
     "title": "Base.exp",
     "category": "method",
-    "text": "exp(a::AbstractAlgebra.RelSeriesElem)\n\nReturn the exponential of the power series a.\n\n\n\nexp(a::Generic.LaurentSeriesElem)\n\nReturn the exponential of the power series a.\n\n\n\nexp(a::Generic.PuiseuxSeriesElem{T}) where T <: RingElement\n\nReturn the exponential of the given Puiseux series a.\n\n\n\nexp(a::FlintPuiseuxSeriesElem{T}) where T <: RingElem\n\nReturn the exponential of the given Puiseux series.\n\n\n\n"
+    "text": "exp(a::FlintPuiseuxSeriesElem{T}) where T <: RingElem\n\nReturn the exponential of the given Puiseux series.\n\n\n\nexp(a::AbstractAlgebra.RelSeriesElem)\n\nReturn the exponential of the power series a.\n\n\n\nexp(a::Generic.LaurentSeriesElem)\n\nReturn the exponential of the power series a.\n\n\n\nexp(a::Generic.PuiseuxSeriesElem{T}) where T <: RingElement\n\nReturn the exponential of the given Puiseux series a.\n\n\n\n"
 },
 
 {
