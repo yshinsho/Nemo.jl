@@ -741,7 +741,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Bit twiddling",
     "category": "section",
-    "text": "popcount(::fmpz)prevpow2(::fmpz)nextpow2(::fmpz)trailing_zeros(::fmpz)clrbit!(::fmpz, ::Int)setbit!(::fmpz, ::Int)combit!(::fmpz, ::Int)"
+    "text": "popcount(::fmpz)prevpow2(::fmpz)nextpow2(::fmpz)trailing_zeros(::fmpz)clrbit!(::fmpz, ::Int)setbit!(::fmpz, ::Int)combit!(::fmpz, ::Int)Examplesa = fmpz(12)\n\np = popcount(a)\nb = nextpow2(a)\ncombit!(a, 2)"
 },
 
 {
@@ -753,11 +753,19 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
+    "location": "integer.html#Nemo.rand_bits_prime-Tuple{FlintIntegerRing,Int64,Bool}",
+    "page": "Integers",
+    "title": "Nemo.rand_bits_prime",
+    "category": "method",
+    "text": "rand_bits_prime(::FlintIntegerRing, n::Int, proved::Bool=true)\n\nReturn a random prime number with the given number of bits. If only a probable prime is required, one can pass proved=false.\n\n\n\n"
+},
+
+{
     "location": "integer.html#Random-generation-1",
     "page": "Integers",
     "title": "Random generation",
     "category": "section",
-    "text": "rand_bits(::FlintIntegerRing, ::Int)Examplesa = fmpz(12)\n\np = popcount(a)\nb = nextpow2(a)\ncombit!(a, 2)"
+    "text": "rand_bits(::FlintIntegerRing, ::Int)rand_bits_prime(::FlintIntegerRing, ::Int, ::Bool)Examplesa = rand_bits(ZZ, 23)\nb = rand_bits_prime(ZZ, 7)"
 },
 
 {
