@@ -157,7 +157,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Integer functionality",
     "category": "section",
-    "text": "Nemo integers implement the whole of the ring and Euclidean ring interfaces of AbstractAlgebra.jl.https://nemocas.github.io/AbstractAlgebra.jl/rings.htmlhttps://nemocas.github.io/AbstractAlgebra.jl/euclidean.htmlBelow, we describe the functionality that is specific to the Nemo/Flint integer ring."
+    "text": "Nemo integers implement the whole of the ring and Euclidean ring interfaces of AbstractAlgebra.jl.https://nemocas.github.io/AbstractAlgebra.jl/latest/rings.htmlhttps://nemocas.github.io/AbstractAlgebra.jl/latest/euclidean.htmlBelow, we describe the functionality that is specific to the Nemo/Flint integer ring."
 },
 
 {
@@ -797,7 +797,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Univariate polynomials",
     "title": "Polynomial functionality",
     "category": "section",
-    "text": "All univariate polynomial types in Nemo follow the AbstractAlgebra.jl univariate polynomial interface:https://nemocas.github.io/AbstractAlgebra.jl/polynomial_rings.htmlGeneric polynomials are also available, and Nemo univariate polynomial types also implement all of the same functionality.We describe here only functions that are in addition to that guaranteed by AbstractAlgebra.jl, for specific coefficient rings."
+    "text": "All univariate polynomial types in Nemo follow the AbstractAlgebra.jl univariate polynomial interface:https://nemocas.github.io/AbstractAlgebra.jl/latest/polynomial_rings.htmlGeneric polynomials are also available, and Nemo univariate polynomial types also implement all of the same functionality.We describe here only functions that are in addition to that guaranteed by AbstractAlgebra.jl, for specific coefficient rings."
 },
 
 {
@@ -1461,7 +1461,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Multivariate polynomials",
     "title": "Polynomial functionality",
     "category": "section",
-    "text": "All multivariate polynomial types in Nemo follow the AbstractAlgebra.jl multivariate polynomial interface:https://nemocas.github.io/AbstractAlgebra.jl/mpolynomial_rings.htmlGeneric multivariate polynomials are also available, and Nemo multivariate polynomial types also implement all of the same functionality.https://nemocas.github.io/AbstractAlgebra.jl/mpolynomial.htmlWe describe here only functions that are in addition to that guaranteed by AbstractAlgebra.jl, for specific coefficient rings."
+    "text": "All multivariate polynomial types in Nemo follow the AbstractAlgebra.jl multivariate polynomial interface:https://nemocas.github.io/AbstractAlgebra.jl/latest/mpolynomial_rings.htmlGeneric multivariate polynomials are also available, and Nemo multivariate polynomial types also implement all of the same functionality.https://nemocas.github.io/AbstractAlgebra.jl/latest/mpolynomial.htmlWe describe here only functions that are in addition to that guaranteed by AbstractAlgebra.jl, for specific coefficient rings."
 },
 
 {
@@ -1501,7 +1501,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Power series and Laurent series",
     "title": "Power series functionality",
     "category": "section",
-    "text": "Power series rings in Nemo implement the AbstractAlgebra.jl series interface:https://nemocas.github.io/AbstractAlgebra.jl/series_rings.htmlIn addition, generic power series and Laurent series are provided by AbstractAlgebra.jl:https://nemocas.github.io/AbstractAlgebra.jl/series.htmlPower series rings in Nemo also implement this generic functionality. We list below only the functionality that differs from this generic functionality, for specific rings provided by Nemo."
+    "text": "Power series rings in Nemo implement the AbstractAlgebra.jl series interface:https://nemocas.github.io/AbstractAlgebra.jl/latest/series_rings.htmlIn addition, generic power series and Laurent series are provided by AbstractAlgebra.jl:https://nemocas.github.io/AbstractAlgebra.jl/latest/series.htmlPower series rings in Nemo also implement this generic functionality. We list below only the functionality that differs from this generic functionality, for specific rings provided by Nemo."
 },
 
 {
@@ -1637,7 +1637,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Puiseux series",
     "title": "Puiseux series functionality",
     "category": "section",
-    "text": "Puiseux series rings in Nemo implement the AbstractAlgebra.jl series interface, with the exception of the pol_length and polcoeff functions:https://nemocas.github.io/AbstractAlgebra.jl/series_rings.htmlIn addition, generic Puiseux series are provided by AbstractAlgebra.jl:https://nemocas.github.io/AbstractAlgebra.jl/puiseux.htmlPuiseux series rings in Nemo also implement this generic functionality. We list below only the functionality that differs from this generic functionality, for specific rings provided by Nemo."
+    "text": "Puiseux series rings in Nemo implement the AbstractAlgebra.jl series interface, with the exception of the pol_length and polcoeff functions:https://nemocas.github.io/AbstractAlgebra.jl/latest/series_rings.htmlIn addition, generic Puiseux series are provided by AbstractAlgebra.jl:https://nemocas.github.io/AbstractAlgebra.jl/latest/puiseux.htmlPuiseux series rings in Nemo also implement this generic functionality. We list below only the functionality that differs from this generic functionality, for specific rings provided by Nemo."
 },
 
 {
@@ -1645,7 +1645,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Puiseux series",
     "title": "Base.sqrt",
     "category": "method",
-    "text": "sqrt(a::Generic.PuiseuxSeriesElem{T}) where T <: RingElement\n\nReturn the square root of the given Puiseux series a.\n\n\n\nsqrt(a::FlintPuiseuxSeriesElem{T}) where T <: RingElem\n\nReturn the square root of the given Puiseux series.\n\n\n\n"
+    "text": "sqrt(a::FlintPuiseuxSeriesElem{T}) where T <: RingElem\n\nReturn the square root of the given Puiseux series.\n\n\n\nsqrt(a::Generic.PuiseuxSeriesElem{T}) where T <: RingElement\n\nReturn the square root of the given Puiseux series a.\n\n\n\n"
 },
 
 {
@@ -1653,7 +1653,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Puiseux series",
     "title": "Base.exp",
     "category": "method",
-    "text": "exp(a::AbstractAlgebra.RelSeriesElem)\n\nReturn the exponential of the power series a.\n\n\n\nexp(a::Generic.LaurentSeriesElem)\n\nReturn the exponential of the power series a.\n\n\n\nexp(a::Generic.PuiseuxSeriesElem{T}) where T <: RingElement\n\nReturn the exponential of the given Puiseux series a.\n\n\n\nexp(a::FlintPuiseuxSeriesElem{T}) where T <: RingElem\n\nReturn the exponential of the given Puiseux series.\n\n\n\n"
+    "text": "exp(a::FlintPuiseuxSeriesElem{T}) where T <: RingElem\n\nReturn the exponential of the given Puiseux series.\n\n\n\nexp(a::AbstractAlgebra.RelSeriesElem)\n\nReturn the exponential of the power series a.\n\n\n\nexp(a::Generic.LaurentSeriesElem)\n\nReturn the exponential of the power series a.\n\n\n\nexp(a::Generic.PuiseuxSeriesElem{T}) where T <: RingElement\n\nReturn the exponential of the given Puiseux series a.\n\n\n\n"
 },
 
 {
@@ -1693,7 +1693,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Residue rings",
     "title": "Residue functionality",
     "category": "section",
-    "text": "All the residue rings in Nemo implement the residue ring interface of AbstractAlgebra.jl:https://nemocas.github.io/AbstractAlgebra.jl/residue_rings.htmlIn addition, functionality for generic residue rings is available:https://nemocas.github.io/AbstractAlgebra.jl/residue.htmlThe other residue types in Nemo also implement this functionality."
+    "text": "All the residue rings in Nemo implement the residue ring interface of AbstractAlgebra.jl:https://nemocas.github.io/AbstractAlgebra.jl/latest/residue_rings.htmlIn addition, functionality for generic residue rings is available:https://nemocas.github.io/AbstractAlgebra.jl/latest/residue.htmlThe other residue types in Nemo also implement this functionality."
 },
 
 {
@@ -1741,7 +1741,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Fraction fields",
     "title": "Fraction functionality",
     "category": "section",
-    "text": "All fraction types in Nemo implement the AbstractAlgebra.jl fraction field interface:https://nemocas.github.io/AbstractAlgebra.jl/fraction_fields.htmlIn addition, generic fractions fields are implemented in AbstractAlgebra.jl, with the following functionality:https://nemocas.github.io/AbstractAlgebra.jl/fraction.htmlAll fraction types in Nemo also implement this generic functionality."
+    "text": "All fraction types in Nemo implement the AbstractAlgebra.jl fraction field interface:https://nemocas.github.io/AbstractAlgebra.jl/latest/fraction_fields.htmlIn addition, generic fractions fields are implemented in AbstractAlgebra.jl, with the following functionality:https://nemocas.github.io/AbstractAlgebra.jl/latest/fraction.htmlAll fraction types in Nemo also implement this generic functionality."
 },
 
 {
@@ -2077,7 +2077,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Real balls",
     "title": "Real ball functionality",
     "category": "section",
-    "text": "Real balls in Nemo implement the full AbstractAlgebra.jl field interface.https://nemocas.github.io/AbstractAlgebra.jl/fields.htmlBelow, we document the additional functionality provided for real balls."
+    "text": "Real balls in Nemo implement the full AbstractAlgebra.jl field interface.https://nemocas.github.io/AbstractAlgebra.jl/latest/fields.htmlBelow, we document the additional functionality provided for real balls."
 },
 
 {
@@ -3061,7 +3061,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Complex balls",
     "title": "Complex ball functionality",
     "category": "section",
-    "text": "The complex balls in Nemo implement the AbstractAlgebra.jl field interface.https://nemocas.github.io/AbstractAlgebra.jl/fields.htmlBelow, we document the additional functionality provided for complex balls."
+    "text": "The complex balls in Nemo implement the AbstractAlgebra.jl field interface.https://nemocas.github.io/AbstractAlgebra.jl/latest/fields.htmlBelow, we document the additional functionality provided for complex balls."
 },
 
 {
@@ -3925,7 +3925,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Galois fields",
     "title": "Galois field functionality",
     "category": "section",
-    "text": "Galois fields in Nemo implement the residue ring interface of AbstractAlgebra.jl:https://nemocas.github.io/AbstractAlgebra.jl/residue_rings.htmlIn addition, all the functionality for generic residue rings is available:https://nemocas.github.io/AbstractAlgebra.jl/residue.htmlBelow we describe the functionality that is provided in addition to this interface."
+    "text": "Galois fields in Nemo implement the residue ring interface of AbstractAlgebra.jl:https://nemocas.github.io/AbstractAlgebra.jl/latest/residue_rings.htmlIn addition, all the functionality for generic residue rings is available:https://nemocas.github.io/AbstractAlgebra.jl/latest/residue.htmlBelow we describe the functionality that is provided in addition to this interface."
 },
 
 {
@@ -3989,7 +3989,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Finite fields",
     "title": "Finite field functionality",
     "category": "section",
-    "text": "Finite fields in Nemo implement the entire AbstractAlgebra.jl field interface.https://nemocas.github.io/AbstractAlgebra.jl/fields.htmlBelow we describe the functionality that is provided in addition to this interface."
+    "text": "Finite fields in Nemo implement the entire AbstractAlgebra.jl field interface.https://nemocas.github.io/AbstractAlgebra.jl/latest/fields.htmlBelow we describe the functionality that is provided in addition to this interface."
 },
 
 {
@@ -4197,7 +4197,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Number field arithmetic",
     "title": "Number field functionality",
     "category": "section",
-    "text": "The number fields in Nemo implement the full AbstractAlgebra.jl field interface.https://nemocas.github.io/AbstractAlgebra.jl/fields.htmlBelow, we document the additional functionality provided for number field elements."
+    "text": "The number fields in Nemo implement the full AbstractAlgebra.jl field interface.https://nemocas.github.io/AbstractAlgebra.jl/latest/fields.htmlBelow, we document the additional functionality provided for number field elements."
 },
 
 {
@@ -4341,7 +4341,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Padics",
     "title": "P-adic functionality",
     "category": "section",
-    "text": "P-adic fields in Nemo implement the AbstractAlgebra.jl field interface.https://nemocas.github.io/AbstractAlgebra.jl/fields.htmlBelow, we document all the additional function that is provide by Nemo for p-adic fields."
+    "text": "P-adic fields in Nemo implement the AbstractAlgebra.jl field interface.https://nemocas.github.io/AbstractAlgebra.jl/latest/fields.htmlBelow, we document all the additional function that is provide by Nemo for p-adic fields."
 },
 
 {
@@ -4509,7 +4509,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Qadics",
     "title": "P-adic functionality",
     "category": "section",
-    "text": "Q-adic fields in Nemo implement the AbstractAlgebra.jl field interface.https://nemocas.github.io/AbstractAlgebra.jl/fields.htmlBelow, we document all the additional function that is provide by Nemo for p-adic fields."
+    "text": "Q-adic fields in Nemo implement the AbstractAlgebra.jl field interface.https://nemocas.github.io/AbstractAlgebra.jl/latest/fields.htmlBelow, we document all the additional function that is provide by Nemo for p-adic fields."
 },
 
 {
@@ -4685,7 +4685,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Matrices",
     "title": "Matrix functionality",
     "category": "section",
-    "text": "All matrix spaces in Nemo follow the AbstractAlgebra.jl matrix interface:https://nemocas.github.io/AbstractAlgebra.jl/matrix_spaces.htmlIn addition, AbstractAlgebra.jl provides a great deal of generic functionality for matrices. Some of this functionality is also provided by C libraries, such as Flint, for various specific rings.https://nemocas.github.io/AbstractAlgebra.jl/matrix.htmlIn the following, we list the functionality which is provided in addition to the generic matrix functionality, for specific rings in Nemo."
+    "text": "All matrix spaces in Nemo follow the AbstractAlgebra.jl matrix interface:https://nemocas.github.io/AbstractAlgebra.jl/latest/matrix_spaces.htmlIn addition, AbstractAlgebra.jl provides a great deal of generic functionality for matrices. Some of this functionality is also provided by C libraries, such as Flint, for various specific rings.https://nemocas.github.io/AbstractAlgebra.jl/latest/matrix.htmlIn the following, we list the functionality which is provided in addition to the generic matrix functionality, for specific rings in Nemo."
 },
 
 {
