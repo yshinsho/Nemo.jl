@@ -440,4 +440,11 @@ end
       y = (log(R(0.5) + I*x)) / (exp(-PI*x) + exp(PI*x))^2
    end
    @show Nemo.integrate(CC, F, 0, 1)
+
+   RR = ArbField(36)
+   a = RR(10)^(-fmpz(10)^25)
+   @show a
+   @show acos(a)
+   @show cos(acos(a))
+   @test overlaps(a, cos(acos(a)))
 end
