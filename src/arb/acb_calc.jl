@@ -35,7 +35,7 @@ function integrate(C::AcbField, F, a, b;
    else
       t = BigFloat(rel_tol, RoundDown)
       cgoal_clong = Ref{Clong}()
-      ccall((:mpfr_get_d_2exp, :libmpfr), Float64, (Ref{Clong}, Ref{BigFloat}, Cint), cgoal_clong, t, Base.MPFR.to_mpfr(RoundDown))
+      ccall((:mpfr_get_d_2exp, :libmpfr), Float64, (Ref{Clong}, Ref{BigFloat}, Cint), cgoal_clong, t, Base.MPFR.MPFRRoundDown)
       cgoal = -Int(cgoal_clong[]) + 1
    end
 
@@ -47,7 +47,7 @@ function integrate(C::AcbField, F, a, b;
    else
       t = BigFloat(abs_tol, RoundDown)
       expo = Ref{Clong}()
-      d = ccall((:mpfr_get_d_2exp, :libmpfr), Float64, (Ref{Clong}, Ref{BigFloat}, Cint), expo, t, Base.MPFR.to_mpfr(RoundDown))
+      d = ccall((:mpfr_get_d_2exp, :libmpfr), Float64, (Ref{Clong}, Ref{BigFloat}, Cint), expo, t, Base.MPFR.MPFRRoundDown)
       ccall((:mag_set_d, libarb), Nothing, (Ref{mag_struct}, Float64), ctol, d)
       ccall((:mag_mul_2exp_si, libarb), Nothing, (Ref{mag_struct}, Ref{mag_struct}, Int), ctol, ctol, Int(expo[]))
    end
@@ -67,6 +67,8 @@ function integrate(C::AcbField, F, a, b;
       res, acb_calc_func_wrap_c(), F, lower, upper, cgoal, ctol, opts, prec(C))
 
    ccall((:mag_clear, libarb), Nothing, (Ref{mag_struct},), ctol)
+
+   @show ARB_CALC_SUCCESS
 
    if status == ARB_CALC_SUCCESS
       nothing

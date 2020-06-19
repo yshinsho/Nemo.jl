@@ -432,4 +432,12 @@ end
    @test overlaps(res, CC(2))
    @test imag(res) == CC(0)
    @test radius(real(res)) < 4e-18
+
+   F = function(x)
+      R = parent(x)
+      I = onei(R)
+      PI = const_pi(R)
+      y = (log(R(0.5) + I*x)) / (exp(-PI*x) + exp(PI*x))^2
+   end
+   @show Nemo.integrate(CC, F, 0, 1)
 end
