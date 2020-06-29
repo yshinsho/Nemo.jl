@@ -11,9 +11,9 @@
   dependencies = [
   "build_GMP.v6.1.2.jl",
   "build_MPFR.v4.0.2.jl",
-  "build_FLINT.v0.0.1.jl",
-  "build_Arb.v2.17.0.jl",
-  "build_Antic.v0.1.0.jl",
+  "build_FLINT.v2.6.0.jl",
+  "build_Arb.v2.18.0.jl",
+  "build_Antic.v0.2.1+1.jl",
    ]
 
   for file in dependencies
